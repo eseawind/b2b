@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="/templates/default/style/supply.css" />
+	
+<script type='text/javascript' src='/dwr/interface/Productclass.js'></script>
+<script type='text/javascript' src='/dwr/engine.js'></script>
+<script type='text/javascript' src='/dwr/util.js'></script>
+<script type='text/javascript' src='/dwr/interface/AreaInfo.js'></script>
+
+
+<script language="javascript">
+
+	var fectureArray=new Array();
+	fectureArray=['请选择'];
+	function setChangeType() {
+		Productclass.getClassTypeLevels(function(data){
+			DWRUtil.removeAllOptions("changeType");
+			DWRUtil.addOptions("changeType",fectureArray);
+			DWRUtil.addOptions("changeType",data);
+		})
+		setProvince();
+	}
+	function setProvince(){	
+		AreaInfo.getAreaByParent('5J2mc0X0G85BH',function(data){
+			DWRUtil.removeAllOptions("province");
+			DWRUtil.addOptions("province",fectureArray);
+			DWRUtil.addOptions("province",data);
+		})
+	}
+	function setCitys(prov){
+	   var provence=prov;
+		 AreaInfo.getAreaByParent(provence,function(data){
+				   DWRUtil.removeAllOptions("eparchy_codeS");
+					 DWRUtil.addOptions("eparchy_codeS",fectureArray);
+					 DWRUtil.addOptions("eparchy_codeS",data);
+				   DWRUtil.removeAllOptions("city");
+					 DWRUtil.addOptions("city",fectureArray);
+		});
+	}	
+	function checkSel() {
+		if(document.getElementById("changeType").value=='请选择')	{
+			alert('请选择企业分类!');
+			return false;
+		}	
+		var changeType = document.getElementById("changeType").value;
+		var province = document.getElementById("province").value;
+		var eparchy_codeS = document.getElementById("eparchy_codeS").value;	
+		window.open('/inc/include/searchEnterprisePage.html?changeType='+changeType+'&province='+province+'&eparchy_codeS='+eparchy_codeS);
+	}
+	
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{ecms:this name="ch_name"/}---{ecms:base name="webtitle"/}</title>
+</head>
+<body onload="javascript:setChangeType();setProvince();"  >
+<!--头部-->
+{ecms:include file="/templates/default/templates/top.html"/}
+<!--内容-->
+
+<!--ad 10个广告位-->
+	<div class="ad">
+		<img src="/templates/default/images/ad/ba_120_1.gif" />
+	</div>
+	
+<div id="main" >
+	<div class="main_box">
+
+		<div class="path">您当前位置：<a href="/">首页</a> > <a href="/default/enterprise">企业库</a> > 企业列表 </div>
+		<div class="cp_choose_search">
+		<span>快速筛选: </span>
+		<select name="changeType" id="changeType"><option>企业分类</option></select> |  
+		<select name="province" id="province" onclick="setCitys(this.value);" ><option>所属省份</option></select> | 
+		<select name="eparchy_codeS" id="eparchy_codeS" ><option>所属城市</option></select> | 
+		 <input name="" type="button" value="筛 选" onclick="checkSel()"/>
+		</div>
+		<div class="list_left">
+			<div class="list_left_box">
+			  <table width="100%" border="0" align="center" cellpadding="0" cellspacing="0">
+                <tr>
+                  <th width="52%">公司信息</th>
+                  <th width="12%">所在地区</th>
+                  <th width="12%">联系人</th>
+                  <th width="14%">联系方式</th>
+                </tr>
+                
+                {ecms:articlelist row="7" orderby="indate"}
+                <tr>
+                  <td>
+									  <span class="content_name link_xian"><a href="/inc/include/InterimPages.jsp?cust_id=[field:info_id/]">[field:title/]</a></span>[已核实]</br>
+									  
+									  <script language="javascript">
+											var memo = '[field:scope/]'.substring(0,100);
+											document.write(memo);
+										</script>
+									  
+									  <br>
+										<font style="font-size:12px; color:#333;">主营：</font>
+											[field:group_memo/]
+										<br>
+									  <span class="link_xian"><a href="/inc/include/InterimPages.jsp?cust_id=[field:info_id/]">查看该公司发布的供应信息</a></span>
+									  <div class="button" style="float:left; margin-right:5px;"><a href="/inc/include/InterimPages.jsp?cust_id=[field:info_id/]">发送留言</a></div> 
+									  <div class="button" style="float:left;"><a href="/inc/include/InterimPages.jsp?cust_id=[field:info_id/]">联系方式</a></div> 
+									</td>
+                  <td align="center"><script src="/templates/default/jsp/area.jsp?cust_id=[field:info_id/]"></script></td>
+                  <td align="center">[field:juristic/]</td>
+                  <td align="center">[field:group_contact_phone/]</td>
+                </tr>
+                {/ecms:articlelist}
+				
+			</table>
+				<div class="cplist_page lin1">{ecms:listpage row="7" type="0"/}</div>
+			  
+		</div>
+		</div>
+		<div class="list_right">
+			
+			
+			<div class="list_right_box">
+				<div class="ad_180"><img src="/templates/default/images/ad/ad3_180.gif" /></div>
+				<div class="ad_180"><img src="/templates/default/images/ad/ad1_180.gif" /></div>
+				<div class="ad_180"><img src="/templates/default/images/ad/ad2_180.gif" /></div>
+				
+			</div>
+		</div>
+	</div>
+</div>
+<!--footer-->
+<div id="link">友情链接:
+	{ecms:friendlink row="25"}
+		<a href="[field:link_url/]">[field:link_name/]</a> |
+	{/ecms:friendlink}
+</div>
+<!--footer-->
+{ecms:include file="/templates/default/templates/footer.html"/}
+</body>
+</html>
+
+
+

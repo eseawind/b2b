@@ -1,0 +1,194 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{ecms:custbase name='cust_aim'/}</title>
+<link href="/company/enterprise/public/default/css/new-ym-layout.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/prototype.js"></script>
+<script type="text/javascript" src="/company/enterprise/public/default/js/setClassName.js"></script>
+</head>
+
+<body>
+<table width="950" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+	   <div class="new-ym-header">
+	      <div class="new-ym-header4">&nbsp;&nbsp;&nbsp;&nbsp;
+	      	<a id="dis9" href=""/>首  页</a>&nbsp;&nbsp;&nbsp;	
+	      		{ecms:channel type="top" row="8" orderby="show_no"}
+				<a id="dis[field:show_no/]" href="[field:churl/]">[field:ch_name/]</a>&nbsp;&nbsp;&nbsp;
+			 	{/ecms:channel}
+			 <script language="javascript">
+				setTopName();
+			  </script>
+	      </div> 
+	   </div>
+	   <div class="new-ym-header1">
+	      <div class="new-ym-header2">{ecms:custbase name='cust_aim'/}<!--合肥贞龙信息科技有限责任公司--></div>
+	   </div>
+	   <div class="new-ym-header3">
+	      <div class="new-ym-header5">目前位置：<a href="/">首页</a>&nbsp;-&gt;&nbsp;<a href="">公司采购</a></div>
+	   </div>
+	</td>
+  </tr>
+  <tr>
+    <td valign="top" width="950">
+	   <div class="new-ym-left">
+	      <div class="new-ym-left1">
+		    <div class="new-ym-left2">
+			   <div class="new-ym-left4">
+			     联系方式
+			   </div>
+			</div>
+			<div class="new-ym-left3">
+			   <div class="new-ym-left5">
+			      <ol>
+				    <li>法人代表：{ecms:custbase name='juristic'/}</li>			 
+						<li>邮箱：{ecms:custbase name='email'/}</li>
+						<li>电话：{ecms:custbase name='group_contact_phone'/}</li>
+						<li>传真：{ecms:custbase name='fax_nbr'/}</li>
+						<li>地址：{ecms:custbase name='company_address'/}</li>
+						<li>邮编：{ecms:custbase name='post_code'/}</li>
+						<li>网站地址：{ecms:custbase name='website'/}</li>
+				  </ol>
+			   </div>
+			</div>
+		  </div>
+		  <div class="new-ym-left1">
+		    <div class="new-ym-left2">
+			   <div class="new-ym-left4">
+			     友情链接
+			   </div>
+			</div>
+			<div class="new-ym-left3">
+			   <div class="new-ym-left6">
+			      <ol>
+				    {ecms:friendlink row="10"}
+				   <li><a href="[field:link_url/]">[field:link_name/]</a></li>
+				   {/ecms:friendlink}
+				    <!--<li><a href="#">合肥贞龙信息科技有限责任公司</a></li>
+							  <li><a href="#">合肥贞龙信息科技有限责任公司</a></li>  -->
+				  	</ol>
+			   </div>
+			</div>
+		  </div>
+	   </div>
+	   <div class="new-ym-right">
+	      <div class="new-ym-right1">
+		    <div class="new-ym-right2">
+			  <div class="new-ym-right4">公司简介</div>
+			<!--  <div class="new-ym-right6"><a href="#">更多>></a></div> -->
+			</div>
+			<div class="new-ym-right3">
+			  <div class="new-ym-right5">
+			    <div class="new-ym-right7">
+			    	<img src="{ecms:custbase name='mini_img'/}" id="be_img" width="140" height="130" />  <!--/images/new-xy03.gif-->
+			    </div>
+				<div class="new-ym-right8">
+					{ecms:custbase name='scope'/}
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="new-ym-right1">
+		    <div class="new-ym-right2">
+			  <div class="new-ym-right4">公司产品</div>
+			  <div class="new-ym-right6"><a href="product.html">更多>></a></div>
+			</div>
+			<div class="new-ym-right3">
+				  <div class="new-ym-right5">
+				   <table width="600" align="left" border="0" cellspacing="0" cellpadding="0" style="margin-bottom:10px;">
+					<tr>
+          				{ecms:articlelist titlelen="10" all="index" cmodel="product" row="4"}
+						<td width="20%">
+							<div class="new-ym-right52">
+								<a href="[field:arcurl/]">[field:imgurl/]</a>
+							</div>
+							<div class="new-ym-right51">
+								<a href="[field:arcurl/]">[field:title/]</a>
+							</div>
+						</td>
+						<td width="15"></td>
+						{/ecms:articlelist}
+					</tr>
+				   </table>
+				  </div>
+			</div>
+		 </div>
+	   <div class="new-ym-right1">
+		    <div class="new-ym-right2">
+			  	  <div class="new-ym-right4">公司采购</div>
+			  		<div class="new-ym-right6">&nbsp;<!--a href="/moreList.jsp?rsrv_str1=3"  target="blank">更多>></a--></div>
+				</div>
+				
+				<div class="new-ym-right3">
+			  		<div class="new-ym-right9">
+							<table width="98%" border="0" align="center" cellpadding="8" cellspacing="0">
+							<tr>
+								<td colspan="3" align="left">
+									{ecms:classlist cmodel="stock" row="100"}
+										<a href="[field:class_path/]">[field:class_name/]</a>
+									{/ecms:classlist}
+								</td>
+							</tr>
+								
+							<tr>
+							  <td width="20%" class="list_right_cp_lmt">产品图片</td>
+							  <td width="50%" class="list_right_cp_lmt">产品名称/简介</td>
+							  <td class="list_right_cp_lmt">发布日期</td>
+							</tr>
+							
+							{ecms:articlelist orderby="indate"  titlelen="10"  cmodel="stock" row="10"}
+							<tr>
+							  <td class="list_right_cp_xian"><a href="[field:arcurl/]">[field:imgurl/]</a></td>
+							  <td class="list_right_cp_xian">
+							  <span class="span"><a href="[field:arcurl/]">[field:title/]</a></span></br>
+					  		  <font>[field:info_dsec/]</font></br>
+							  </td>
+							  <td class="list_right_cp_xian">[field:in_date/]</td>
+							</tr>
+							{/ecms:articlelist}
+						</table>
+				  	 	{ecms:listpage row="10" type="0"/}
+				  	</div>
+				</div>  
+		  </div>  
+		 </div>
+	</td>
+  </tr>
+    
+</table>
+<div class="moban-bottom">
+		  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	  <tr>
+	    <td height="80">Copyright◎2008 合肥贞龙信息科技有限责任公司  版权所有 </br>
+	    咨询电话：0551-5310317 | 传真：0551-5310317 | 邮箱：admin@bizoss.com </br>
+			地址：安徽合肥高新区 技术支持：b2b.bizoss.com</br>
+			<img src="/images/cn.gif"></td>
+	  </tr>
+	</table> 
+	  </div>
+	  
+	  <script language="javascript">
+		function ResizeImages()
+		{
+		   var myimg,oldwidth;
+		   var maxwidth=200;
+		   for(i=0;i<document.images.length;i++){
+		     myimg = document.images[i];
+		     if(myimg.width > maxwidth)
+		     {
+		        oldwidth = myimg.width;
+		        myimg.style.width = maxwidth;
+		        myimg.style.height = "auto";
+		     }
+		   }
+		}
+		ResizeImages();
+	   </script>
+</body>
+		
+</html>
+
+
+

@@ -1,0 +1,49 @@
+@import url("../style/layout.css");
+.box_left{ float:left; width:710px; padding:5px 10px; height:auto; background:url(../images/abtob_600_bg.gif) no-repeat left bottom;}
+.box_right{ float:left; width:186px; padding:5px 0 5px 10px; height:auto; background:url(../images/abtob_270_bg.gif) no-repeat left bottom;}
+.box_right li{ float:left; width:96%; line-height:24px;}
+
+/*×ó±ßÐÅÏ¢*/
+.ljbutton{
+	float:left;
+	height: 32px;
+	line-height:32px;
+	font-weight: bold;
+	padding-left: 16px;
+	font-size: 14px;
+	background: url(../images/lmt.gif) left center no-repeat;
+}
+.zcbutton{
+	float:left;
+	margin-left: 10px;
+	color: #fff;
+	width:86px;
+	height: 30px;
+   line-height:30px;
+	font-weight: bold;
+	font-size: 14px;
+	text-align: center;
+	background: url(../images/erbg.gif) left center no-repeat;
+}
+.company_list{
+	float: left;
+	width: 336px;
+	height: auto;
+	padding: 6px 0 6px 12px;
+}
+
+.company_list dt{
+	float:left;
+	width:332px;
+	color:#16387C;
+	height: auto;
+	font-size: 14px;
+	font-weight: bold;
+	padding:5px 0;}
+	
+.company_list dd{
+	float:left;
+	width:auto;
+	padding-right: 6px;
+	WHITE-SPACE: nowrap;
+}

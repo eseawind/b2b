@@ -1,0 +1,1040 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="stylesheet" type="text/css"
+			href="/templates/default/style/supply.css" />
+		<script language="javascript" src="/js/Calendar_Ly.js"></script>
+
+		<script language="javascript" src="/templates/default/js/disImage.js"></script>
+		<script language="javascript"
+			src="/templates/default/js/selectArea.js"></script>
+		<script type='text/javascript' src='/dwr/interface/AreaInfo.js'></script>
+		<script type='text/javascript' src='/dwr/engine.js'></script>
+		<script type='text/javascript' src='/dwr/util.js'></script>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>供应---安徽制造业信息化商务平台(http://www.huipoo.com)</title>
+	</head>
+	<body onLoad="setProvince();">
+		<!--头部-->
+		<div id="top">
+			<div class="width link_xian">
+				<div class="left">
+					<A title=将本站设为你的首页
+						onclick="this.style.behavior='url(#default#homepage)';this.sethomepage('http://'+window.location.host);return false;"
+						href="javascript:;">设为首页</a> |
+					<a href=javascript:window.external.AddFavorite(top.location.href)>添加到收藏夹</a>
+				</div>
+				<div class="right">
+
+					<a href="/member/index.html">登录</a> |
+					<a href="/admin/index.jsp">运营商</a> |
+					<a href="/member/Newcregister.html">免费注册</a> |
+					<a href="/member/mainMenu/default.jsp">发布信息</a>
+				</div>
+			</div>
+			<!--//logo-->
+			<div id="logo">
+				<div class="logo_img"
+					style="background: url(/templates/default/images/logo.png) no-repeat top center !important; background: none; _filter: progid : DXImageTransform . Microsoft . AlphaImageLoader(enabled = true, sizingMethod = image, src = '/templates/default/images/logo.png'">
+					<h1>
+						<a href="http://b2b.bizoss.com"
+							title="安徽制造业信息化商务平台(http://www.huipoo.com)">
+							安徽制造业信息化商务平台(http://www.huipoo.com) </a>
+					</h1>
+				</div>
+			</div>
+			<!--logo//-->
+
+			<div class="nav_search_box">
+				<div class="search_list">
+					<span><input type="radio" name="search" checked
+							onclick="tradeType('8855381456')" />产品</span> |
+					<span><input type="radio" name="search"
+							onclick="tradeType('7830633062')">
+							供应
+					</span> |
+					<span><input type="radio" name="search"
+							onclick="tradeType('6871426767')">
+							求购
+					</span> |
+					<span><input type="radio" name="search"
+							onclick="tradeType('5563378845')">
+							企业
+					</span> |
+					<span><input type="radio" name="search"
+							onclick="tradeType('1455415210')" />新闻</span> |
+					<!--span>more</span-->
+				</div>
+				<div class="search_box">
+					<strong style="float: left; font-size: 14px;">商品搜索</strong>
+					<div class="search_box_bg">
+						<span> <input name="keyword" id="keyword" type="text"
+								style="font-size: 14px; width: 300px; color: #666; line-height: 18px; height: 18px;"
+								value="请输入您想查找的关键字" onclick="this.value=''" ,size="42" />
+							<input type="submit" name="Submit" value="全站搜索"
+								onClick="Search()" class="search_button" />
+						</span>
+					</div>
+					<!--img src="/templates/default/images/king_button.gif" /-->
+				</div>
+				<input type="hidden" name="tradeTypecode" id="tradeTypecode"
+					value="8855381456" />
+			</div>
+		</div>
+
+		<div id="nav">
+			<div class="nav_menu">
+				<ul>
+					<li class="nav_menu_bg" id="dis0">
+						<span><a href="/">首页</a>
+						</span>
+					</li>
+
+					<li id="dis10">
+						<span><a href="/supply/index.html">供应</a>
+						</span> |
+					</li>
+					<li id="dis9">
+						<span><a href="/stock/index.html">求购</a>
+						</span> |
+					</li>
+					<li id="dis8">
+						<span><a href="/product/index.html">产品库</a>
+						</span> |
+					</li>
+					<li id="dis7">
+						<span><a href="/enterprise/index.html">企业库</a>
+						</span> |
+					</li>
+					<li id="dis6">
+						<span><a href="/price/index.html">行情</a>
+						</span> |
+					</li>
+					<li id="dis5">
+						<span><a href="/info/index.html">资讯</a>
+						</span> |
+					</li>
+					<li id="dis4">
+						<span><a href="/expo/index.html">会展</a>
+						</span> |
+					</li>
+					<li id="dis3">
+						<span><a href="/twoHand/index.html">二手</a>
+						</span> |
+					</li>
+					<li id="dis2">
+						<span><a href="/job/index.html">人才</a>
+						</span> |
+					</li>
+					<li id="dis1">
+						<span><a href="/book/index.html">图书</a>
+						</span> |
+					</li>
+					<li id="dis0">
+						<span><a href="/aiwen/index.html">木业学院</a>
+						</span> |
+					</li>
+					<li>
+						<span><a href="http://www.wanglong.cc/bbs">论坛</a>
+						</span> |
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<script type="text/javascript"
+			src="/templates/default/js/setClassName.js"></script>
+		<script type="text/javascript"
+			src="/templates/default/js/topSearch.js"></script>
+		<script type="text/javascript" src="/js/prototype.js"></script>
+		<script language="javascript">
+		setTopName();//设置头部高亮----setClassName.js
+</script>
+
+		<!--内容-->
+		<!--ad 10个广告位-->
+		<div id="main">
+			<div class="main_box">
+				<div class="path">
+					您当前位置：
+					<a href="/">首页</a> >
+					<a href="/default/supply">供应信息</a>
+				</div>
+				<div class="cp_choose">
+					请选择分类寻找产品
+				</div>
+				<div class="cp_choose_box">
+					<ul>
+
+						<li>
+							<a href="/supply/class/513591993212924/">木材(609)</a>
+						</li>
+						<li>
+							<a href="/supply/class/513629259155440/">竹及竹制品(394)</a>
+						</li>
+						<li>
+							<a href="/supply/class/513647892126699/">单板与簿木(318)</a>
+						</li>
+						<li>
+							<a href="/supply/class/513666525097957/">胶合板(901)</a>
+						</li>
+						<li>
+							<a href="/supply/class/513685158069215/">纤维板(161)</a>
+						</li>
+						<li>
+							<a href="/supply/class/513703791040473/">刨花板(114)</a>
+						</li>
+						<li>
+							<a href="/supply/class/513722424011731/">装饰板&人造板(495)</a>
+						</li>
+						<li>
+							<a href="/supply/class/513741056982990/">饰面材料&家具配件(135)</a>
+						</li>
+						<li>
+							<a href="/supply/class/513778322925506/">木地板(876)</a>
+						</li>
+						<li>
+							<a href="/supply/class/513796955896764/">实木家具(1482)</a>
+						</li>
+						<li>
+							<a href="/supply/class/513815588868022/">木制品&工程实例(1156)</a>
+						</li>
+						<li>
+							<a href="/supply/class/513834221839281/">人造板家具(132)</a>
+						</li>
+						<li>
+							<a href="/supply/class/513852854810539/">木工机械(2372)</a>
+						</li>
+						<li>
+							<a href="/supply/class/513871487781797/">人造板机械(793)</a>
+						</li>
+						<li>
+							<a href="/supply/class/513890120753055/">木业化工(208)</a>
+						</li>
+						<li>
+							<a href="/supply/class/513908753724313/">木业综合(356)</a>
+						</li>
+						<li>
+							<a href="/supply/class/513927386695572/">项目(167)</a>
+						</li>
+						<li>
+							<a href="/supply/class/513964652638088/">商务服务(642)</a>
+						</li>
+					</ul>
+				</div>
+				<div class="cp_choose_search">
+					<span>快速筛选: </span>
+
+					<select name="province" id="province"
+						onclick="setCitys(this.value)">
+						<option>
+							所有省份
+						</option>
+					</select>
+					|
+					<select name="eparchy_codeS" id="eparchy_codeS">
+						<option>
+							所有城市
+						</option>
+					</select>
+					|
+					<select name="part" id="part">
+						<option value=0>
+							选择日期范围
+						</option>
+						<option value=3>
+							三天
+						</option>
+						<option value=7>
+							一周
+						</option>
+						<option value=30>
+							一月
+						</option>
+						<option value=90>
+							三月
+						</option>
+						<option value=365>
+							不限
+						</option>
+					</select>
+					|
+					<input type="text" value="关键字" id="keyWords" name="keyWords"
+						size="16" onFocus="this.value=''" />
+					<input name="" type="button" value="筛 选" onclick="b2bsearsh();" />
+				</div>
+				<div class="list_left">
+					<div class="list_left_box" id="list_left_box">
+						<table width="100%" border="0" align="center" cellpadding="0"
+							cellspacing="0">
+							<tr>
+								<th width="16%">
+									产品图片
+								</th>
+								<th width="46%">
+									公司/主营产品、服务
+								</th>
+								<th width="12%">
+									供应地区
+								</th>
+								<th width="12%">
+									发布日期
+								</th>
+								<th width="14%">
+									联系方式
+								</th>
+							</tr>
+
+							<tr>
+								<td>
+									<a href="/supply/d/content-fFw6xbA6724RxVB.html"><img
+											src=/upload/714095083436895/bx36s5E0FGK1lvV.gif border=0
+											width=100 height=75 onmouseover="testMessageBox(event,'
+										<img src='+this.src+'>
+											' )" >
+									</a>
+								</td>
+								<td valign="top">
+									<span class="content_name link_xian"><a
+										href="/supply/d/content-fFw6xbA6724RxVB.html">供应测试</a>
+									</span>
+									<br>
+									<br>
+									<span class="link_xian">发布者: <a
+										href="/inc/include/InterimPages.jsp?cust_id=714095083436895"
+										target="_blank">&#19978;&#28023;&#28009;&#31119;&#26495;&#26448;&#26377;&#38480;&#20844;&#21496;</a>
+										[已核实] </span>
+									<div class="button" style="float: left; margin-right: 5px;">
+										<a href="/supply/d/content-fFw6xbA6724RxVB.html">产品信息</a>
+									</div>
+									<div class="button" style="float: left;">
+										<a
+											href="/inc/include/InterimPages.jsp?cust_id=714095083436895"
+											target="_blank">联系方式</a>
+									</div>
+								</td>
+								<td align="center">
+									&nbsp;
+									<script language="javascript">                  		if('上海地区'==''){                  			document.write('[未选定地区]');                  		}else{                  			document.write('上海地区');	                  		}                  	</script>
+								</td>
+								<td align="center">
+									2009-01-12
+								</td>
+								<td align="center">
+									<script language="javascript">                  		var phone = '86?1?1028190';                  		if(phone.length>12){                  			phone = phone.substring(0,12);                  		}                  		document.write(phone);                  	</script>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="/supply/d/content-593001047699765.html"><img
+											src=/images/default_wood.gif border=0 width=100 height=75>
+									</a>
+								</td>
+								<td valign="top">
+									<span class="content_name link_xian"><a
+										href="/supply/d/content-593001047699765.html">供应德国威力原装P23六轴四面刨(图)</a>
+									</span>
+									<br>
+									<br>
+									<span class="link_xian">发布者: <a
+										href="/inc/include/InterimPages.jsp?cust_id=715921114620199"
+										target="_blank">中山市惠宜木工机械有限公司</a> [已核实] </span>
+									<div class="button" style="float: left; margin-right: 5px;">
+										<a href="/supply/d/content-593001047699765.html">产品信息</a>
+									</div>
+									<div class="button" style="float: left;">
+										<a
+											href="/inc/include/InterimPages.jsp?cust_id=715921114620199"
+											target="_blank">联系方式</a>
+									</div>
+								</td>
+								<td align="center">
+									&nbsp;
+									<script language="javascript">                  		if('广东|中山'==''){                  			document.write('[未选定地区]');                  		}else{                  			document.write('广东|中山');	                  		}                  	</script>
+								</td>
+								<td align="center">
+									2008-12-24
+								</td>
+								<td align="center">
+									<script language="javascript">                  		var phone = '86&nbsp;0760&nbsp;85166161/13694956452';                  		if(phone.length>12){                  			phone = phone.substring(0,12);                  		}                  		document.write(phone);                  	</script>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="/supply/d/content-593007594657427.html"><img
+											src=/upload/PreviewImage/1902006811124853.summ.jpg border=0
+											width=100 height=75 onmouseover="testMessageBox(event,'
+										<img src='+this.src+'>
+											' )" >
+									</a>
+								</td>
+								<td valign="top">
+									<span class="content_name link_xian"><a
+										href="/supply/d/content-593007594657427.html">供应北美各种等级枫木地板坯料(图)</a>
+									</span>
+									<br>
+									<br>
+									<span class="link_xian">发布者: <a
+										href="/inc/include/InterimPages.jsp?cust_id=717113624780724"
+										target="_blank">上海森环木业有限公司</a> [已核实] </span>
+									<div class="button" style="float: left; margin-right: 5px;">
+										<a href="/supply/d/content-593007594657427.html">产品信息</a>
+									</div>
+									<div class="button" style="float: left;">
+										<a
+											href="/inc/include/InterimPages.jsp?cust_id=717113624780724"
+											target="_blank">联系方式</a>
+									</div>
+								</td>
+								<td align="center">
+									&nbsp;
+									<script language="javascript">                  		if('上海|上海'==''){                  			document.write('[未选定地区]');                  		}else{                  			document.write('上海|上海');	                  		}                  	</script>
+								</td>
+								<td align="center">
+									2008-12-24
+								</td>
+								<td align="center">
+									<script language="javascript">                  		var phone = '86&nbsp;021&nbsp;39597868';                  		if(phone.length>12){                  			phone = phone.substring(0,12);                  		}                  		document.write(phone);                  	</script>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="/supply/d/content-593019208437250.html"><img
+											src=/upload/PreviewImage/476332008122485344.summ.jpg border=0
+											width=100 height=75 onmouseover="testMessageBox(event,'
+										<img src='+this.src+'>
+											' )" >
+									</a>
+								</td>
+								<td valign="top">
+									<span class="content_name link_xian"><a
+										href="/supply/d/content-593019208437250.html">供应容桂精锴机械厂-多片锯MJ1280-A(图)</a>
+									</span>
+									<br>
+									<br>
+									<span class="link_xian">发布者: <a
+										href="/inc/include/InterimPages.jsp?cust_id=601117692973956"
+										target="_blank">佛山市顺德区容桂精锴机械厂</a> [已核实] </span>
+									<div class="button" style="float: left; margin-right: 5px;">
+										<a href="/supply/d/content-593019208437250.html">产品信息</a>
+									</div>
+									<div class="button" style="float: left;">
+										<a
+											href="/inc/include/InterimPages.jsp?cust_id=601117692973956"
+											target="_blank">联系方式</a>
+									</div>
+								</td>
+								<td align="center">
+									&nbsp;
+									<script language="javascript">                  		if('广东|佛山'==''){                  			document.write('[未选定地区]');                  		}else{                  			document.write('广东|佛山');	                  		}                  	</script>
+								</td>
+								<td align="center">
+									2008-12-24
+								</td>
+								<td align="center">
+									<script language="javascript">                  		var phone = '86&nbsp;1392&nbsp;3237894';                  		if(phone.length>12){                  			phone = phone.substring(0,12);                  		}                  		document.write(phone);                  	</script>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="/supply/d/content-593019680671023.html"><img
+											src=/images/default_wood.gif border=0 width=100 height=75>
+									</a>
+								</td>
+								<td valign="top">
+									<span class="content_name link_xian"><a
+										href="/supply/d/content-593019680671023.html">供应德国威力U23E六轴四面刨(图)</a>
+									</span>
+									<br>
+									<br>
+									<span class="link_xian">发布者: <a
+										href="/inc/include/InterimPages.jsp?cust_id=715921114620199"
+										target="_blank">中山市惠宜木工机械有限公司</a> [已核实] </span>
+									<div class="button" style="float: left; margin-right: 5px;">
+										<a href="/supply/d/content-593019680671023.html">产品信息</a>
+									</div>
+									<div class="button" style="float: left;">
+										<a
+											href="/inc/include/InterimPages.jsp?cust_id=715921114620199"
+											target="_blank">联系方式</a>
+									</div>
+								</td>
+								<td align="center">
+									&nbsp;
+									<script language="javascript">                  		if('广东|中山'==''){                  			document.write('[未选定地区]');                  		}else{                  			document.write('广东|中山');	                  		}                  	</script>
+								</td>
+								<td align="center">
+									2008-12-24
+								</td>
+								<td align="center">
+									<script language="javascript">                  		var phone = '86&nbsp;0760&nbsp;85166161/13694956452';                  		if(phone.length>12){                  			phone = phone.substring(0,12);                  		}                  		document.write(phone);                  	</script>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="/supply/d/content-593026227628685.html"><img
+											src=/upload/PreviewImage/1902006811125055.summ.jpg border=0
+											width=100 height=75 onmouseover="testMessageBox(event,'
+										<img src='+this.src+'>
+											' )" >
+									</a>
+								</td>
+								<td valign="top">
+									<span class="content_name link_xian"><a
+										href="/supply/d/content-593026227628685.html">供应北美各种等级红橡木地板坯料(图)</a>
+									</span>
+									<br>
+									<br>
+									<span class="link_xian">发布者: <a
+										href="/inc/include/InterimPages.jsp?cust_id=717113624780724"
+										target="_blank">上海森环木业有限公司</a> [已核实] </span>
+									<div class="button" style="float: left; margin-right: 5px;">
+										<a href="/supply/d/content-593026227628685.html">产品信息</a>
+									</div>
+									<div class="button" style="float: left;">
+										<a
+											href="/inc/include/InterimPages.jsp?cust_id=717113624780724"
+											target="_blank">联系方式</a>
+									</div>
+								</td>
+								<td align="center">
+									&nbsp;
+									<script language="javascript">                  		if('上海|上海'==''){                  			document.write('[未选定地区]');                  		}else{                  			document.write('上海|上海');	                  		}                  	</script>
+								</td>
+								<td align="center">
+									2008-12-24
+								</td>
+								<td align="center">
+									<script language="javascript">                  		var phone = '86&nbsp;021&nbsp;39597868';                  		if(phone.length>12){                  			phone = phone.substring(0,12);                  		}                  		document.write(phone);                  	</script>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="/supply/d/content-593026443020892.html"><img
+											src=/upload/PreviewImage/12620081114102865.summ.jpg border=0
+											width=100 height=75 onmouseover="testMessageBox(event,'
+										<img src='+this.src+'>
+											' )" >
+									</a>
+								</td>
+								<td valign="top">
+									<span class="content_name link_xian"><a
+										href="/supply/d/content-593026443020892.html">供应进口二手木工机械及机器配件(图)</a>
+									</span>
+									<br>
+									<br>
+									<span class="link_xian">发布者: <a
+										href="/inc/include/InterimPages.jsp?cust_id=715921114620199"
+										target="_blank">中山市惠宜木工机械有限公司</a> [已核实] </span>
+									<div class="button" style="float: left; margin-right: 5px;">
+										<a href="/supply/d/content-593026443020892.html">产品信息</a>
+									</div>
+									<div class="button" style="float: left;">
+										<a
+											href="/inc/include/InterimPages.jsp?cust_id=715921114620199"
+											target="_blank">联系方式</a>
+									</div>
+								</td>
+								<td align="center">
+									&nbsp;
+									<script language="javascript">                  		if('广东|中山'==''){                  			document.write('[未选定地区]');                  		}else{                  			document.write('广东|中山');	                  		}                  	</script>
+								</td>
+								<td align="center">
+									2008-12-24
+								</td>
+								<td align="center">
+									<script language="javascript">                  		var phone = '86&nbsp;0760&nbsp;85166161/13694956452';                  		if(phone.length>12){                  			phone = phone.substring(0,12);                  		}                  		document.write(phone);                  	</script>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="/supply/d/content-593044860599943.html"><img
+											src=/upload/PreviewImage/1902006811125308.summ.jpg border=0
+											width=100 height=75 onmouseover="testMessageBox(event,'
+										<img src='+this.src+'>
+											' )" >
+									</a>
+								</td>
+								<td valign="top">
+									<span class="content_name link_xian"><a
+										href="/supply/d/content-593044860599943.html">供应美国1COM4/4-8/4白橡木板材(图)</a>
+									</span>
+									<br>
+									<br>
+									<span class="link_xian">发布者: <a
+										href="/inc/include/InterimPages.jsp?cust_id=717113624780724"
+										target="_blank">上海森环木业有限公司</a> [已核实] </span>
+									<div class="button" style="float: left; margin-right: 5px;">
+										<a href="/supply/d/content-593044860599943.html">产品信息</a>
+									</div>
+									<div class="button" style="float: left;">
+										<a
+											href="/inc/include/InterimPages.jsp?cust_id=717113624780724"
+											target="_blank">联系方式</a>
+									</div>
+								</td>
+								<td align="center">
+									&nbsp;
+									<script language="javascript">                  		if('上海|上海'==''){                  			document.write('[未选定地区]');                  		}else{                  			document.write('上海|上海');	                  		}                  	</script>
+								</td>
+								<td align="center">
+									2008-12-24
+								</td>
+								<td align="center">
+									<script language="javascript">                  		var phone = '86&nbsp;021&nbsp;39597868';                  		if(phone.length>12){                  			phone = phone.substring(0,12);                  		}                  		document.write(phone);                  	</script>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="/supply/d/content-593056474379766.html"><img
+											src=/upload/PreviewImage/476332008122485514.summ.jpg border=0
+											width=100 height=75 onmouseover="testMessageBox(event,'
+										<img src='+this.src+'>
+											' )" >
+									</a>
+								</td>
+								<td valign="top">
+									<span class="content_name link_xian"><a
+										href="/supply/d/content-593056474379766.html">供应容桂精锴机械厂-多片锯MJ1280-B(图)</a>
+									</span>
+									<br>
+									<br>
+									<span class="link_xian">发布者: <a
+										href="/inc/include/InterimPages.jsp?cust_id=601117692973956"
+										target="_blank">佛山市顺德区容桂精锴机械厂</a> [已核实] </span>
+									<div class="button" style="float: left; margin-right: 5px;">
+										<a href="/supply/d/content-593056474379766.html">产品信息</a>
+									</div>
+									<div class="button" style="float: left;">
+										<a
+											href="/inc/include/InterimPages.jsp?cust_id=601117692973956"
+											target="_blank">联系方式</a>
+									</div>
+								</td>
+								<td align="center">
+									&nbsp;
+									<script language="javascript">                  		if('广东|佛山'==''){                  			document.write('[未选定地区]');                  		}else{                  			document.write('广东|佛山');	                  		}                  	</script>
+								</td>
+								<td align="center">
+									2008-12-24
+								</td>
+								<td align="center">
+									<script language="javascript">                  		var phone = '86&nbsp;1392&nbsp;3237894';                  		if(phone.length>12){                  			phone = phone.substring(0,12);                  		}                  		document.write(phone);                  	</script>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="/supply/d/content-593063493571201.html"><img
+											src=/upload/PreviewImage/1902006811125448.summ.jpg border=0
+											width=100 height=75 onmouseover="testMessageBox(event,'
+										<img src='+this.src+'>
+											' )" >
+									</a>
+								</td>
+								<td valign="top">
+									<span class="content_name link_xian"><a
+										href="/supply/d/content-593063493571201.html">供应北美FAS
+											4/4&quot;红橡木板材(图)</a>
+									</span>
+									<br>
+									<br>
+									<span class="link_xian">发布者: <a
+										href="/inc/include/InterimPages.jsp?cust_id=717113624780724"
+										target="_blank">上海森环木业有限公司</a> [已核实] </span>
+									<div class="button" style="float: left; margin-right: 5px;">
+										<a href="/supply/d/content-593063493571201.html">产品信息</a>
+									</div>
+									<div class="button" style="float: left;">
+										<a
+											href="/inc/include/InterimPages.jsp?cust_id=717113624780724"
+											target="_blank">联系方式</a>
+									</div>
+								</td>
+								<td align="center">
+									&nbsp;
+									<script language="javascript">                  		if('上海|上海'==''){                  			document.write('[未选定地区]');                  		}else{                  			document.write('上海|上海');	                  		}                  	</script>
+								</td>
+								<td align="center">
+									2008-12-24
+								</td>
+								<td align="center">
+									<script language="javascript">                  		var phone = '86&nbsp;021&nbsp;39597868';                  		if(phone.length>12){                  			phone = phone.substring(0,12);                  		}                  		document.write(phone);                  	</script>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="/supply/d/content-593068835275652.html"><img
+											src=/upload/PreviewImage/3442420081224111229.summ.jpg
+											border=0 width=100 height=75
+											onmouseover="testMessageBox(event,'
+										<img src='+this.src+'>
+											' )" >
+									</a>
+								</td>
+								<td valign="top">
+									<span class="content_name link_xian"><a
+										href="/supply/d/content-593068835275652.html">天旗供应0.2金丝柚直纹木皮(图)</a>
+									</span>
+									<br>
+									<br>
+									<span class="link_xian">发布者: <a
+										href="/inc/include/InterimPages.jsp?cust_id=354994775624392"
+										target="_blank">上海天旗木业</a> [已核实] </span>
+									<div class="button" style="float: left; margin-right: 5px;">
+										<a href="/supply/d/content-593068835275652.html">产品信息</a>
+									</div>
+									<div class="button" style="float: left;">
+										<a
+											href="/inc/include/InterimPages.jsp?cust_id=354994775624392"
+											target="_blank">联系方式</a>
+									</div>
+								</td>
+								<td align="center">
+									&nbsp;
+									<script language="javascript">                  		if('上海|上海'==''){                  			document.write('[未选定地区]');                  		}else{                  			document.write('上海|上海');	                  		}                  	</script>
+								</td>
+								<td align="center">
+									2008-12-24
+								</td>
+								<td align="center">
+									<script language="javascript">                  		var phone = '86&nbsp;021&nbsp;67350076';                  		if(phone.length>12){                  			phone = phone.substring(0,12);                  		}                  		document.write(phone);                  	</script>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="/supply/d/content-593082126542459.html"><img
+											src=/images/default_wood.gif border=0 width=100 height=75>
+									</a>
+								</td>
+								<td valign="top">
+									<span class="content_name link_xian"><a
+										href="/supply/d/content-593082126542459.html">供应北美1COM4/4-8/4红橡木板材(图)</a>
+									</span>
+									<br>
+									<br>
+									<span class="link_xian">发布者: <a
+										href="/inc/include/InterimPages.jsp?cust_id=717113624780724"
+										target="_blank">上海森环木业有限公司</a> [已核实] </span>
+									<div class="button" style="float: left; margin-right: 5px;">
+										<a href="/supply/d/content-593082126542459.html">产品信息</a>
+									</div>
+									<div class="button" style="float: left;">
+										<a
+											href="/inc/include/InterimPages.jsp?cust_id=717113624780724"
+											target="_blank">联系方式</a>
+									</div>
+								</td>
+								<td align="center">
+									&nbsp;
+									<script language="javascript">                  		if('上海|上海'==''){                  			document.write('[未选定地区]');                  		}else{                  			document.write('上海|上海');	                  		}                  	</script>
+								</td>
+								<td align="center">
+									2008-12-24
+								</td>
+								<td align="center">
+									<script language="javascript">                  		var phone = '86&nbsp;021&nbsp;39597868';                  		if(phone.length>12){                  			phone = phone.substring(0,12);                  		}                  		document.write(phone);                  	</script>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="/supply/d/content-593088398617832.html"><img
+											src=/images/default_wood.gif border=0 width=100 height=75>
+									</a>
+								</td>
+								<td valign="top">
+									<span class="content_name link_xian"><a
+										href="/supply/d/content-593088398617832.html">供应台湾手动封边机(图)</a>
+									</span>
+									<br>
+									<br>
+									<span class="link_xian">发布者: <a
+										href="/inc/include/InterimPages.jsp?cust_id=715921114620199"
+										target="_blank">中山市惠宜木工机械有限公司</a> [已核实] </span>
+									<div class="button" style="float: left; margin-right: 5px;">
+										<a href="/supply/d/content-593088398617832.html">产品信息</a>
+									</div>
+									<div class="button" style="float: left;">
+										<a
+											href="/inc/include/InterimPages.jsp?cust_id=715921114620199"
+											target="_blank">联系方式</a>
+									</div>
+								</td>
+								<td align="center">
+									&nbsp;
+									<script language="javascript">                  		if('广东|中山'==''){                  			document.write('[未选定地区]');                  		}else{                  			document.write('广东|中山');	                  		}                  	</script>
+								</td>
+								<td align="center">
+									2008-12-24
+								</td>
+								<td align="center">
+									<script language="javascript">                  		var phone = '86&nbsp;0760&nbsp;85166161/13694956452';                  		if(phone.length>12){                  			phone = phone.substring(0,12);                  		}                  		document.write(phone);                  	</script>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="/supply/d/content-593093479536617.html"><img
+											src=/images/default_wood.gif border=0 width=100 height=75>
+									</a>
+								</td>
+								<td valign="top">
+									<span class="content_name link_xian"><a
+										href="/supply/d/content-593093479536617.html">供应德国顶特全自动指接线一套(图)</a>
+									</span>
+									<br>
+									<br>
+									<span class="link_xian">发布者: <a
+										href="/inc/include/InterimPages.jsp?cust_id=715921114620199"
+										target="_blank">中山市惠宜木工机械有限公司</a> [已核实] </span>
+									<div class="button" style="float: left; margin-right: 5px;">
+										<a href="/supply/d/content-593093479536617.html">产品信息</a>
+									</div>
+									<div class="button" style="float: left;">
+										<a
+											href="/inc/include/InterimPages.jsp?cust_id=715921114620199"
+											target="_blank">联系方式</a>
+									</div>
+								</td>
+								<td align="center">
+									&nbsp;
+									<script language="javascript">                  		if('广东|中山'==''){                  			document.write('[未选定地区]');                  		}else{                  			document.write('广东|中山');	                  		}                  	</script>
+								</td>
+								<td align="center">
+									2008-12-24
+								</td>
+								<td align="center">
+									<script language="javascript">                  		var phone = '86&nbsp;0760&nbsp;85166161/13694956452';                  		if(phone.length>12){                  			phone = phone.substring(0,12);                  		}                  		document.write(phone);                  	</script>
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<a href="/supply/d/content-593093740322282.html"><img
+											src=/upload/PreviewImage/476332008122485663.summ.jpg border=0
+											width=100 height=75 onmouseover="testMessageBox(event,'
+										<img src='+this.src+'>
+											' )" >
+									</a>
+								</td>
+								<td valign="top">
+									<span class="content_name link_xian"><a
+										href="/supply/d/content-593093740322282.html">供应容桂精锴机械厂-多片锯MJ1280-C(图)</a>
+									</span>
+									<br>
+									<br>
+									<span class="link_xian">发布者: <a
+										href="/inc/include/InterimPages.jsp?cust_id=601117692973956"
+										target="_blank">佛山市顺德区容桂精锴机械厂</a> [已核实] </span>
+									<div class="button" style="float: left; margin-right: 5px;">
+										<a href="/supply/d/content-593093740322282.html">产品信息</a>
+									</div>
+									<div class="button" style="float: left;">
+										<a
+											href="/inc/include/InterimPages.jsp?cust_id=601117692973956"
+											target="_blank">联系方式</a>
+									</div>
+								</td>
+								<td align="center">
+									&nbsp;
+									<script language="javascript">                  		if('广东|佛山'==''){                  			document.write('[未选定地区]');                  		}else{                  			document.write('广东|佛山');	                  		}                  	</script>
+								</td>
+								<td align="center">
+									2008-12-24
+								</td>
+								<td align="center">
+									<script language="javascript">                  		var phone = '86&nbsp;1392&nbsp;3237894';                  		if(phone.length>12){                  			phone = phone.substring(0,12);                  		}                  		document.write(phone);                  	</script>
+								</td>
+							</tr>
+						</table>
+						<div class="cplist_page lin1">
+							<span id=fenye1><a href=./index.html>[首页]</a>第1页<a
+								href=2.html>[下一页]</a><a href=list.html?page=868&row=15>[最后]</a>共868页&nbsp;共13007条</span>
+							<script language="javascript">var totalPage = 9;var urlhref = window.location.href;var pageNum = urlhref.substring(urlhref.indexOf("=")+1,urlhref.lastIndexOf("&"));if(pageNum==''){pageNum = urlhref.substring(urlhref.lastIndexOf("/")+1,urlhref.lastIndexOf("."));}for(var i=1;i<=totalPage;i++){if(pageNum==i){document.getElementById("fenye"+i).style.display="block";}else{document.getElementById("fenye"+i).style.display="none";}}if(isNaN(pageNum)){document.getElementById("fenye1").style.display="block";}if(pageNum>=10){var data = Math.round(Math.random() * 10000);var myAjax = new Ajax.Updater('list_left_box','/member/comm/getArticleList.jsp?area_code=0&class_id=0&ch_id=7830633062&now_page='+pageNum+'&cont_mod=1&total_page=868&total_num=13007&row=15&data=' + data, {method : 'post',evalScripts : true});}</script>
+							<span id=fenye2 style="display: none;"><a
+								href=./index.html>[首页]</a>第2页<a href=index.html>[上一页]</a><a
+								href=3.html>[下一页]</a><a href=list.html?page=868&row=15>[最后]</a>共868页&nbsp;共13007条</span>
+							<script language="javascript">var totalPage = 9;var urlhref = window.location.href;var pageNum = urlhref.substring(urlhref.indexOf("=")+1,urlhref.lastIndexOf("&"));if(pageNum==''){pageNum = urlhref.substring(urlhref.lastIndexOf("/")+1,urlhref.lastIndexOf("."));}for(var i=1;i<=totalPage;i++){if(pageNum==i){document.getElementById("fenye"+i).style.display="block";}else{document.getElementById("fenye"+i).style.display="none";}}if(isNaN(pageNum)){document.getElementById("fenye1").style.display="block";}if(pageNum>=10){var data = Math.round(Math.random() * 10000);var myAjax = new Ajax.Updater('list_left_box','/member/comm/getArticleList.jsp?area_code=0&class_id=0&ch_id=7830633062&now_page='+pageNum+'&cont_mod=1&total_page=868&total_num=13007&row=15&data=' + data, {method : 'post',evalScripts : true});}</script>
+							<span id=fenye3 style="display: none;"><a
+								href=./index.html>[首页]</a>第3页<a href=2.html>[上一页]</a><a
+								href=4.html>[下一页]</a><a href=list.html?page=868&row=15>[最后]</a>共868页&nbsp;共13007条</span>
+							<script language="javascript">var totalPage = 9;var urlhref = window.location.href;var pageNum = urlhref.substring(urlhref.indexOf("=")+1,urlhref.lastIndexOf("&"));if(pageNum==''){pageNum = urlhref.substring(urlhref.lastIndexOf("/")+1,urlhref.lastIndexOf("."));}for(var i=1;i<=totalPage;i++){if(pageNum==i){document.getElementById("fenye"+i).style.display="block";}else{document.getElementById("fenye"+i).style.display="none";}}if(isNaN(pageNum)){document.getElementById("fenye1").style.display="block";}if(pageNum>=10){var data = Math.round(Math.random() * 10000);var myAjax = new Ajax.Updater('list_left_box','/member/comm/getArticleList.jsp?area_code=0&class_id=0&ch_id=7830633062&now_page='+pageNum+'&cont_mod=1&total_page=868&total_num=13007&row=15&data=' + data, {method : 'post',evalScripts : true});}</script>
+							<span id=fenye4 style="display: none;"><a
+								href=./index.html>[首页]</a>第4页<a href=3.html>[上一页]</a><a
+								href=5.html>[下一页]</a><a href=list.html?page=868&row=15>[最后]</a>共868页&nbsp;共13007条</span>
+							<script language="javascript">var totalPage = 9;var urlhref = window.location.href;var pageNum = urlhref.substring(urlhref.indexOf("=")+1,urlhref.lastIndexOf("&"));if(pageNum==''){pageNum = urlhref.substring(urlhref.lastIndexOf("/")+1,urlhref.lastIndexOf("."));}for(var i=1;i<=totalPage;i++){if(pageNum==i){document.getElementById("fenye"+i).style.display="block";}else{document.getElementById("fenye"+i).style.display="none";}}if(isNaN(pageNum)){document.getElementById("fenye1").style.display="block";}if(pageNum>=10){var data = Math.round(Math.random() * 10000);var myAjax = new Ajax.Updater('list_left_box','/member/comm/getArticleList.jsp?area_code=0&class_id=0&ch_id=7830633062&now_page='+pageNum+'&cont_mod=1&total_page=868&total_num=13007&row=15&data=' + data, {method : 'post',evalScripts : true});}</script>
+							<span id=fenye5 style="display: none;"><a
+								href=./index.html>[首页]</a>第5页<a href=4.html>[上一页]</a><a
+								href=6.html>[下一页]</a><a href=list.html?page=868&row=15>[最后]</a>共868页&nbsp;共13007条</span>
+							<script language="javascript">var totalPage = 9;var urlhref = window.location.href;var pageNum = urlhref.substring(urlhref.indexOf("=")+1,urlhref.lastIndexOf("&"));if(pageNum==''){pageNum = urlhref.substring(urlhref.lastIndexOf("/")+1,urlhref.lastIndexOf("."));}for(var i=1;i<=totalPage;i++){if(pageNum==i){document.getElementById("fenye"+i).style.display="block";}else{document.getElementById("fenye"+i).style.display="none";}}if(isNaN(pageNum)){document.getElementById("fenye1").style.display="block";}if(pageNum>=10){var data = Math.round(Math.random() * 10000);var myAjax = new Ajax.Updater('list_left_box','/member/comm/getArticleList.jsp?area_code=0&class_id=0&ch_id=7830633062&now_page='+pageNum+'&cont_mod=1&total_page=868&total_num=13007&row=15&data=' + data, {method : 'post',evalScripts : true});}</script>
+							<span id=fenye6 style="display: none;"><a
+								href=./index.html>[首页]</a>第6页<a href=5.html>[上一页]</a><a
+								href=7.html>[下一页]</a><a href=list.html?page=868&row=15>[最后]</a>共868页&nbsp;共13007条</span>
+							<script language="javascript">var totalPage = 9;var urlhref = window.location.href;var pageNum = urlhref.substring(urlhref.indexOf("=")+1,urlhref.lastIndexOf("&"));if(pageNum==''){pageNum = urlhref.substring(urlhref.lastIndexOf("/")+1,urlhref.lastIndexOf("."));}for(var i=1;i<=totalPage;i++){if(pageNum==i){document.getElementById("fenye"+i).style.display="block";}else{document.getElementById("fenye"+i).style.display="none";}}if(isNaN(pageNum)){document.getElementById("fenye1").style.display="block";}if(pageNum>=10){var data = Math.round(Math.random() * 10000);var myAjax = new Ajax.Updater('list_left_box','/member/comm/getArticleList.jsp?area_code=0&class_id=0&ch_id=7830633062&now_page='+pageNum+'&cont_mod=1&total_page=868&total_num=13007&row=15&data=' + data, {method : 'post',evalScripts : true});}</script>
+							<span id=fenye7 style="display: none;"><a
+								href=./index.html>[首页]</a>第7页<a href=6.html>[上一页]</a><a
+								href=8.html>[下一页]</a><a href=list.html?page=868&row=15>[最后]</a>共868页&nbsp;共13007条</span>
+							<script language="javascript">var totalPage = 9;var urlhref = window.location.href;var pageNum = urlhref.substring(urlhref.indexOf("=")+1,urlhref.lastIndexOf("&"));if(pageNum==''){pageNum = urlhref.substring(urlhref.lastIndexOf("/")+1,urlhref.lastIndexOf("."));}for(var i=1;i<=totalPage;i++){if(pageNum==i){document.getElementById("fenye"+i).style.display="block";}else{document.getElementById("fenye"+i).style.display="none";}}if(isNaN(pageNum)){document.getElementById("fenye1").style.display="block";}if(pageNum>=10){var data = Math.round(Math.random() * 10000);var myAjax = new Ajax.Updater('list_left_box','/member/comm/getArticleList.jsp?area_code=0&class_id=0&ch_id=7830633062&now_page='+pageNum+'&cont_mod=1&total_page=868&total_num=13007&row=15&data=' + data, {method : 'post',evalScripts : true});}</script>
+							<span id=fenye8 style="display: none;"><a
+								href=./index.html>[首页]</a>第8页<a href=7.html>[上一页]</a><a
+								href=9.html>[下一页]</a><a href=list.html?page=868&row=15>[最后]</a>共868页&nbsp;共13007条</span>
+							<script language="javascript">var totalPage = 9;var urlhref = window.location.href;var pageNum = urlhref.substring(urlhref.indexOf("=")+1,urlhref.lastIndexOf("&"));if(pageNum==''){pageNum = urlhref.substring(urlhref.lastIndexOf("/")+1,urlhref.lastIndexOf("."));}for(var i=1;i<=totalPage;i++){if(pageNum==i){document.getElementById("fenye"+i).style.display="block";}else{document.getElementById("fenye"+i).style.display="none";}}if(isNaN(pageNum)){document.getElementById("fenye1").style.display="block";}if(pageNum>=10){var data = Math.round(Math.random() * 10000);var myAjax = new Ajax.Updater('list_left_box','/member/comm/getArticleList.jsp?area_code=0&class_id=0&ch_id=7830633062&now_page='+pageNum+'&cont_mod=1&total_page=868&total_num=13007&row=15&data=' + data, {method : 'post',evalScripts : true});}</script>
+							<span id=fenye9 style="display: none;"><a
+								href=./index.html>[首页]</a>第9页<a href=8.html>[上一页]</a><a
+								href=list.html?page=10&row=15>[下一页]</a><a
+								href=list.html?page=868&row=15>[最后]</a>共868页&nbsp;共13007条</span>
+							<script language="javascript">var totalPage = 9;var urlhref = window.location.href;var pageNum = urlhref.substring(urlhref.indexOf("=")+1,urlhref.lastIndexOf("&"));if(pageNum==''){pageNum = urlhref.substring(urlhref.lastIndexOf("/")+1,urlhref.lastIndexOf("."));}for(var i=1;i<=totalPage;i++){if(pageNum==i){document.getElementById("fenye"+i).style.display="block";}else{document.getElementById("fenye"+i).style.display="none";}}if(isNaN(pageNum)){document.getElementById("fenye1").style.display="block";}if(pageNum>=10){var data = Math.round(Math.random() * 10000);var myAjax = new Ajax.Updater('list_left_box','/member/comm/getArticleList.jsp?area_code=0&class_id=0&ch_id=7830633062&now_page='+pageNum+'&cont_mod=1&total_page=868&total_num=13007&row=15&data=' + data, {method : 'post',evalScripts : true});}</script>
+						</div>
+
+
+					</div>
+				</div>
+				<div class="list_right">
+					<div class="list_right_box">
+						<div class="ad_180">
+							<img src="/templates/default/images/ad/ad3_180.gif" />
+						</div>
+						<div class="ad_180">
+							<img src="/templates/default/images/ad/ad1_180.gif" />
+						</div>
+						<div class="ad_180">
+							<img src="/templates/default/images/ad/ad2_180.gif" />
+						</div>
+						<div class="ad_180">
+							<img src="/templates/default/images/ad/ad4_180.gif" width="180"
+								height="90" />
+						</div>
+						<div class="ad_180">
+							<img src="/templates/default/images/ad/ad5_180.gif" />
+						</div>
+						<div class="ad_180">
+							<img src="/templates/default/images/ad/ad6_180.jpg" />
+						</div>
+						<div class="ad_180">
+							<img src="/templates/default/images/ad/ad7_180.jpg" />
+						</div>
+						<div class="ad_180">
+							<img src="/templates/default/images/ad/ad8_180.jpg" />
+						</div>
+						<div class="ad_180">
+							<img src="/templates/default/images/ad/ad9_180.jpg" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--footer-->
+		<div id="link">
+			友情链接:
+
+			<a href="http://www.chinaw3ood.com.cn/">木业行业</a> |
+			<a href="http://www.china-qiting.com/">奇挺古典</a> |
+			<a href="http://www.wsfggy.com/">文仿综合</a> |
+			<a href="http://www.meikangwood.com/">美康木业</a> |
+			<a href="http://www.jy-wood.com/">精英价格</a> |
+			<a href="http://www.dydongbang.com/">杭峰家具</a> |
+			<a href="http://www.cj-wood.com/">淳嘉古典</a> |
+			<a href="http://www.hy-md.com/">宏远工艺</a> |
+			<a href="http://www.dyybwood.com/">永斌弯头</a> |
+			<a href="http://www.dyxhhm.com/">鑫华红木</a> |
+			<a href="http://www.zlzmy.com/">众联竹木</a> |
+			<a href="http://www.xinghua-wood.com/">兴华木业</a> |
+			<a href="http://www.chenwood.com/">建华木艺</a> |
+			<a href="http://www.huifengframe.com/">慧峰相框</a> |
+			<a href="http://www.dy-wangli.com/">东阳旺利</a> |
+			<a href="http://www.xindewood.com/">信德木业</a> |
+			<a href="http://www.ydhmjj.com/">雅典红木</a> |
+			<a href="http://www.jhqianfeng.com/">钱丰木机</a> |
+			<a href="http://www.wantongwood.com/">万通木雕</a> |
+			<a href="http://www.fphmjj.com/">富平紫檀</a> |
+			<a href="http://www.jiaxinwood.com/">嘉欣木门</a> |
+			<a href="http://www.dyhhgy.com/">惠红工艺</a> |
+			<a href="http://www.yongjiandoor.com/">永坚木门</a> |
+			<a href="http://www.yongjinwood.com/">同心木业</a> |
+			<a href="http://www.dongriwood.com/">东日木业</a> |
+		</div>
+		<!--bottom-->
+		<div class="footernew">
+			<a href="/templates/default/jsp/about_us.jsp">关于我们</a> |
+			<a href="/templates/default/jsp/service.jsp">服务条款</a> |
+			<a href="/templates/default/jsp/recruitment.jsp">企业招聘</a> |
+			<a href="/templates/default/jsp/customer_service.jsp">客服中心</a> |
+			<a href="/templates/default/jsp/site_navigation.jsp">网站导航</a> |
+			<a href="/templates/default/jsp/copyright.jsp">版权所有</a>
+			<br />
+			<img src="/templates/default/images/ucs2.gif" align="absmiddle" />
+			&nbsp;产品购买咨询：肖先生 (QQ)
+			<a
+				href="http://wpa.qq.com/msgrd?V=1&Uin=31688721&Site=a-hai.net&Menu=yes tencent://message/?uin=31688721"
+				target=_blank class="lanse">31688721</a> (MSN)
+			<a href=msnim:chat?contact=xiaobo68@gmail.com>xiaobo68@gmail.com</a></span>
+			<a href="http://www.wanglong.cc" target="_blank" class="lanse">合肥贞龙信息技术有限公司</a>
+			版权所有 &copy; 2008 保留所有权利
+			<a href="http://www.miibeian.gov.cn/" target=_blank>皖ICP备07039386号</a>
+			<br />
+			<div class="lx">
+				服务热线：0551-5310317 | 传真：0551-5310317 |
+				销售支持论坛：http://www.wanglong.cc/bbs/forumdisplay.php?fid=4
+			</div>
+			<div style="width: 570px;">
+				<p>
+					<span class="fl"><a
+						href="http://www.sznet110.gov.cn/index.jsp" target="_blank"><img
+								src="/templates/default/images/816587.gif" width="36"
+								height="43" border="0">
+					</a>
+					</span>
+					<span class="fr"><a
+						href="http://www.sznet110.gov.cn/index.jsp" target="_blank">网络警察<br />
+							报警平台</a>
+					</span>
+				</p>
+				<p>
+					<span class="fl"><a
+						href="http://www.sznet110.gov.cn/webrecord/innernet/Welcome.jsp?bano=4403101010155"
+						target="_blank"><img
+								src="/templates/default/images/6743671.jpg" width="36"
+								height="42" border="0">
+					</a>
+					</span>
+					<span class="fr"><a
+						href="http://www.sznet110.gov.cn/webrecord/innernet/Welcome.jsp?bano=4403101010155"
+						target="_blank">公共信息安<br /> 全网络监察</a>
+					</span>
+				</p>
+
+				<p>
+					<span class="fl" style="width: 44px;"><a
+						href="http://net.china.com.cn/index.htm" target="_blank"><img
+								src="/templates/default/images/home_b.gif" width="44"
+								height="44" border="0">
+					</a>
+					</span>
+					<span class="fr" style="width: 64px;"><a
+						href="http://net.china.com.cn/index.htm" class="lcblack"
+						target="_blank">不良信息<br>
+								举报中心
+					</a>
+					</span>
+				</p>
+				<p>
+					<span class="fl" style="width: 44px;"><a
+						href="http://www.wenming.cn/" target="_blank"><img
+								src="/templates/default/images/wmlogo.gif" width="44"
+								height="42" border="0">
+					</a>
+					</span>
+					<span class="fr" style="width: 64px;"><a
+						href="http://www.wenming.cn/" class="lcblack" target="_blank">中国文明网<br>
+								传播文明
+					</a>
+					</span>
+				</p>
+			</div>
+		</div>
+		</div>
+
+	</body>
+</html>
+
+
+
+
+

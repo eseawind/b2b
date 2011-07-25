@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="/templates/default/style/enterprise.css" />
+<link rel="stylesheet" type="text/css" href="/templates/default/style/bookstore.css" />
+<script type='text/javascript' src='/dwr/interface/Productclass.js'></script>
+<script type='text/javascript' src='/dwr/engine.js'></script>
+<script type='text/javascript' src='/dwr/util.js'></script>
+<script type='text/javascript' src='/dwr/interface/AreaInfo.js'></script>
+
+<script language="javascript">
+
+	var fectureArray=new Array();
+	fectureArray=['请选择'];
+	function setChangeType() {
+		Productclass.getClassTypeLevels(function(data){
+			DWRUtil.removeAllOptions("changeType");
+			DWRUtil.addOptions("changeType",fectureArray);
+			DWRUtil.addOptions("changeType",data);
+		})
+		setProvince();
+	}
+	function setProvince(){	
+		AreaInfo.getAreaByParent('5J2mc0X0G85BH',function(data){
+			DWRUtil.removeAllOptions("province");
+			DWRUtil.addOptions("province",fectureArray);
+			DWRUtil.addOptions("province",data);
+		})
+	}
+	function setCitys(prov){
+	   var provence=prov;
+		 AreaInfo.getAreaByParent(provence,function(data){
+				   DWRUtil.removeAllOptions("eparchy_codeS");
+					 DWRUtil.addOptions("eparchy_codeS",fectureArray);
+					 DWRUtil.addOptions("eparchy_codeS",data);
+				   DWRUtil.removeAllOptions("city");
+					 DWRUtil.addOptions("city",fectureArray);
+		});
+	}	
+	function checkSel() {
+		if(document.getElementById("changeType").value=='请选择')	{
+			alert('请选择企业分类!');
+			return false;
+		}	
+		var changeType = document.getElementById("changeType").value;
+		var province;
+		if(document.getElementById("province").value=='请选择')	
+		{
+			province = '';
+		}	
+		var eparchy_codeS = document.getElementById("eparchy_codeS").value;	
+		window.open('/inc/include/searchEnterprisePage.html?changeType='+changeType+'&province='+province+'&eparchy_codeS='+eparchy_codeS);
+	}
+	
+</script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{ecms:this name="ch_name"/}---{ecms:base name="webtitle"/}</title>
+</head>
+<body onload="javascript:setChangeType()">
+<!--头部-->
+{ecms:include file="/templates/default/templates/top.html"/}
+<!--内容-->
+
+<div id="main" >
+	<div class="main_box">
+		<div class="path">您所在的位置 > <a href="/">首页</a> > 企业库</div>
+		<!--左边信息-->
+		<div id="books_left">
+			<!--企业分类-->
+			<div class="in_lmt">
+				<div class="in_lmt_name"><span>企业分类</span></div>
+			</div>
+			<div class="box">
+				<div class="box_left">
+					<div class="company_list link_xian" style="border-right:1px dashed #ccc;">
+						
+						{ecms:classlist row="8" type="3" up_class_id="000000000000000"}
+							<dl>
+							<dt><a href="[field:class_path/]">[field:class_name/]</a></dt>
+							{ecms:smallclasslist row="8" type="3" up_class_id="[field:class_id/]"}	
+							<dd><a href="[field:small_class_path/]">[field:small_class_name/]</a></dd>
+							{/ecms:smallclasslist}
+							</dl>
+						 {/ecms:classlist}
+						
+					</div>
+					
+					<div class="company_list link_xian">
+						
+						{ecms:classlist row="8" limit="8,8" type="3" up_class_id="000000000000000"}
+						<dl>
+						<dt><a href="[field:class_path/]">[field:class_name/]</a></dt>
+						{ecms:smallclasslist row="8" type="3" up_class_id="[field:class_id/]"}	
+						<dd><a href="[field:small_class_path/]">[field:small_class_name/]</a></dd>
+						{/ecms:smallclasslist}
+						</dl>
+						{/ecms:classlist}
+						
+					</div>
+				</div>
+			</div>
+		<script src='/inc/getSessCustId.jsp' language='javascript'></script>
+			<!--加入企业库-->
+			<div class="in_lmt" style="margin-top:10px;">
+				<div class="in_lmt_name"><span>加入企业库</span></div>
+			</div>
+		  <div class="box">
+		  	<div class="box_left">
+						<ul>
+							<script language="javascript">
+								if(document.getElementById("cust_id").value==''){
+
+									document.write("<li style='width:200px' style='display:block;' id='ifLoginSess1'>网上贸易 <a href='/login.html'>从此开始</a></li>");
+									document.write("<li style='width:200px'>手把手教你 <a href='/gettradeinterface.do?menu_id=2EEcDFDFmMM080X0G85B&trade_type_code=0120'>如何发布产品</a></li>");
+								}
+								if(document.getElementById("cust_id").value!=''){
+									document.write("<li style='width:200px' style='display:block;' id='ifLoginSess1'>恭喜您&nbsp;&nbsp;"+document.getElementById("se_cust_name").value+"("+document.getElementById("juristic_type_code").value +")</li>");
+									document.write("<li style='width:200px'>级别:&nbsp;&nbsp" + document.getElementById("para_code2").value +"&nbsp;&nbsp;<a href='/gettradeinterface.do?menu_id=2EEcDFDFmMM080X0G85B&trade_type_code=0120'>发布产品</a></li>");
+								}
+							</script>
+						</ul>
+				<div class="ljbutton"><a href="/member/Newcregister.html">立即免费注册</a></div> 
+			</div>
+		 </div>
+		</div>
+		<!--右边信息-->
+		<div id="books_right">
+			<div class="right_lmt"><div class="right_lmt_name"> 精确搜索</div></div>
+			<div class="box">
+				<div class="box_right">
+					<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+					  <tr>
+						<td width="35%" height="26" align="right">企业分类：</td>
+						<td width="65%">
+							<select name="changeType" id="changeType" class="list_input_box" style="width:120px">
+    				  	<option value="0">--请选择--</option>
+    					</select>
+						</td>
+					  </tr>
+					  <tr>
+						<td height="26" align="right">所属省份：</td>
+						<td>
+							<select class="list_input_box" name="province" id="province" onclick="setCitys(this.value);" style="width:120px">
+					      <option value="">--请选择--</option>
+				    	</select> 		
+						</td>
+					  </tr>
+					  <tr>
+						<td height="26" align="right">所属城市：</td>
+						<td>
+							<select name="eparchy_codeS" id="eparchy_codeS" class="list_input_box" style="width:120px">
+					  		<option value="">--请选择--</option>
+            	</select>
+						</td>
+					  </tr>
+					  
+					  <tr>
+							<td>&nbsp;</td>
+						<td><label>
+						  <input type="button" name="Submit2" value="搜索" class="button_14" onclick="checkSel()"/>
+						</label></td>
+					  </tr>
+					</table>
+				</div>
+			</div>
+			<!--最新加入-->
+			<div class="right_lmt" style="margin-top:10px;"><div class="right_lmt_name">最新加入</div></div>
+			<div class="box">
+				<div class="box_right link_xian">
+					<ul>
+						{ecms:articlelist row="10" orderby="indate" ch_id="5563378845" }
+							<li><a href="/inc/include/InterimPages.jsp?cust_id=[field:info_id/]">[field:title/]</a></li>
+							{/ecms:articlelist}
+					</ul>
+				</div>
+			</div>
+			<!--谷歌广告-->
+			<div class="right_newsad">
+				<h3 style="color:#0000FF;">汽车英文数字拦截飞…</h3>
+				深圳飞跃科技有限公司专业生产汽车信号拦截器.汽车千扰器.</Br>
+				<span style="color:#008000;">www.szfy168.com</span>
+			</div>
+		</div>
+	</div>
+</div>
+<!--footer-->
+<div id="link">友情链接:
+	{ecms:friendlink row="25"}
+		<a href="[field:link_url/]">[field:link_name/]</a> |
+	{/ecms:friendlink}
+</div>
+<!--footer-->
+{ecms:include file="/templates/default/templates/footer.html"/}
+</body>
+</html>
+
+
+

@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<%@ page contentType="text/html;charset=GBK"%>
+	<%@ page import="java.util.*"%>
+	<%@ page import="com.saas.biz.rightMgr.*"%>
+	<%@ page import="com.saas.biz.custMgr.Custinfo"%>
+	<%@ page import="com.saas.biz.custpersonMgr.CustPersonInfo"%>
+	<%@ page import="com.saas.biz.areaMgr.areaInfo"%>
+	<%
+		HttpSession logsession = request.getSession();
+		String session_cust_id = "";
+		if (null != session.getAttribute("SESSION_CUST_ID")) {
+			session_cust_id = session.getAttribute("SESSION_CUST_ID").toString();
+		}
+		CustPersonInfo custPersonInfo = new CustPersonInfo();
+		ArrayList custList = new Custinfo().genSpecCustInfo(session_cust_id);
+		String cust_name = "";
+		String province = "";
+		String eparchy = "";
+		String city = "";
+		String province_code = "";
+		String eparchy_code = "";
+		String city_code = "";
+		if (custList != null && custList.size() > 0) 
+		{
+			for (int i = 0; i < custList.size(); i++) 
+			{
+				HashMap custMap = (HashMap) custList.get(i);
+				if (!"".equals(session_cust_id)) {
+					cust_name = custPersonInfo.getUserNameByUserId(session_cust_id);
+				}
+				if (null != custMap.get("province")) {
+					province_code = custMap.get("province").toString();
+					province = new areaInfo().GenAreaByCode(province_code);
+				}
+				if (null != custMap.get("eparchy_code")) {
+					eparchy_code = custMap.get("eparchy_code").toString();
+					eparchy = new areaInfo().GenAreaByCode(eparchy_code);
+				}
+				if (null != custMap.get("city_code")) {
+					city_code = custMap.get("city_code").toString();
+					city = new areaInfo().GenAreaByCode(city_code);
+				}
+			}
+		}
+	%>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+		<title>有约网(http://www.uu81.com)</title>
+		<link href="/style/kbuzi.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+	<table width="100%" height="100%" border="0" cellspacing="0" cellpadding="0" align="absmiddle">
+		<tr>
+			<td>
+				<table border="0" align="center" cellpadding="0" cellspacing="0">
+					<tr><td width="703"><img src="/images/uu81_logon_03.gif" /></td></tr>
+					<tr><td background="/images/uu81_logon_05.gif">
+							<div class="welcome">
+								<div class="welcome_01">
+									<span style="font-size:14px; line-height:26px;">欢迎来自&nbsp;<%=cust_name%> 的 <%=user_name%> 用户 <br/>
+									你好！</font><span style="color:#FF6633;">你已成功登陆本站!</span></div>
+								<div class="welcome_02">现在是否进入您多功能的后台进行管理 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/member/mainMenu/default.jsp">进入后台</a></div>
+								<div class="welcome_02">进入主页查看信息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://b2b.bizoss.com/">进入主页</a></div>
+								<div class="welcome_02">去我的企业站&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="/admin/enterpriseMgr/InterimPages.jsp?cust_id=<%=cust_id%>">我的企业站</a></div>
+								<div style=" float:left;margin:20px; display:inline;"><img src="/images/uu81_logon_08.gif" /></div>
+							</div>
+						</td>
+					</tr>
+					<tr><td><img src="/images/uu81_logon_11.gif" /></td></tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+	</body>
+</html>
+
+
+
+

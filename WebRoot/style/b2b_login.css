@@ -1,0 +1,41 @@
+.loginCurrent {
+	background-image: url(/images/01.gif);
+	font-weight:bold;
+}
+.loginButton{
+	background-image: url(/images/01_.gif);
+	COLOR: #00486D; font-weight:bold;
+}
+.loginButton a:link {
+	text-decoration: none;
+	COLOR: #00486D; font-weight:bold;
+}
+.loginButton a:visited {
+ 	COLOR: #00486D; font-weight:bold;
+}
+.loginButton a:hover {
+	text-decoration: underline;
+	COLOR: #00486D; font-weight:bold;
+}
+
+A.login-zi {
+	COLOR: #FF6600; 
+	text-decoration: none;
+}
+a.login-zi :link {
+	COLOR: #FF6600; 
+	text-decoration: none;
+}
+a.login-zi :visited {
+ 	COLOR: #FF6600;
+	text-decoration: none;
+}
+a.login-zi :hover {
+	COLOR: #FF6600; 
+	text-decoration: underline;
+}
+
+.loginxinxi {
+	COLOR: #00486D; 
+	font-weight:bold;
+}

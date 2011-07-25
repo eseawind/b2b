@@ -1,0 +1,51 @@
+@import url("../style/layout.css");
+.list_left{
+	float:left;
+	width:760px;
+	height:auto;}
+.cp_choose{ float:left; width:950px; color:#333; font-size:14px; font-weight: bold; text-indent:0.6em;}
+.cp_choose_box{ float:left; width:948px; padding:8px 0; border: 1px solid #CFE2CF;}
+.cp_choose_box li{ float:left; color:#666; line-height:24px; text-indent:1em; width:auto; white-space:nowrap;}
+.cp_choose_search{float:left; width:950px; line-height:32px; color:#666; border-bottom: 1px solid #CC6633; background: url(../images/toubiao.gif) no-repeat left center;}
+.cp_choose_search span{ width:auto; color:#333; font-size:14px; line-height:32px; font-weight: bold; padding-left:16px;}
+
+.list_right{
+	float:right;
+	width:180px;
+	height:auto;}
+/*”“±ﬂ–≈œ¢*/
+.list_left_box{
+	float:left;
+	width: 758px;
+	height: auto;
+	padding-top:5px;
+}
+.list_left_box table th{ color:#555; font-weight:500;}
+.list_left_box table td{ padding:18px 0; border-bottom:1px solid #CFE2CF; color:#666;}
+.list_left_box table td .content_name{font-size: 14px;
+	font-weight: bold;}
+.list_right_box{
+	float:left;
+	width:180px;
+	height:auto;
+	padding:10px 0;}
+
+.cplist_page{
+	line-height: 22px;
+	width:98%;
+	font-size: 14px;
+	font-weight: bold;
+}
+.cplist_page span{ float:left; width:auto; line-height:32px; padding-top:10px; padding-right:6px; white-space:nowrap;}
+.cplist_page A:link,{
+     color:#333;
+	 text-decoration:none;
+	 }
+.cplist_page A:visited{
+		 color:#333;
+     text-decoration:none;
+	 }
+.cplist_page A:hover{ 
+	 color:#FF8000; 
+	 text-decoration: underline;
+	 }

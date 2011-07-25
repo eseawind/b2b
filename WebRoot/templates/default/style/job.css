@@ -1,0 +1,353 @@
+@import url("../style/layout.css");
+.job_main{
+	width: 950px;
+	height: auto;
+	clear:both;
+	float:left;
+	margin-top: 10px;
+	background: url(../images/job_di.gif) left bottom no-repeat;
+	padding-bottom: 6px;}
+/*栏目条*/
+.in_lmt{
+	float:left;
+	width:100%;
+	height:28px;
+	background:url(../images/abtob_lmt0.gif) no-repeat right top;
+}
+.in_lmt .in_lmt_name{
+	float:left;
+	width:auto;
+	height:auto;
+	padding-left:26px;
+	background:url(../images/abtob_lmt.gif) no-repeat left top;
+}
+.in_lmt .in_lmt_name span{
+	float:left;
+	width:auto;
+	font-size:14px;
+	font-weight:bold;
+	color:#FFFFFF;
+	padding:6px 50px 0 0;
+	line-height:22px;
+	background:url(../images/lmt_name.gif) no-repeat right top;
+}
+.job_left{
+	float: left;
+	width: 678px;
+	height: auto;
+	border-right:1px solid #F8DBDB;
+	border-left:1px solid #F8DBDB;
+}
+.left_list{
+	float: left;
+	width: 678px;
+	height:auto;
+}
+.left_list dt{ 
+		float:left;
+		width:678px;
+		height:25px;}
+.left_list dt li{ 
+		float:left;
+		width:auto;
+		padding-left:10px;
+		line-height:25px;
+		color:#666;
+		}
+.left_list dd{
+	float:left;
+	width:678px;
+	height:25px;
+	border-bottom:1px dashed #D1D3D1;
+}
+.left_list dd li{ 
+		float:left;
+		width:auto;
+		padding-left:10px;
+		line-height:25px;
+		font-family: Arial, Helvetica, sans-serif;
+		}
+.left_list dd span{
+	color:#E36A04;
+	font-size:12px;
+}
+.time{
+	color: #999;
+}
+/*左边信息*/
+.job_right{
+	float: right;
+	width: 253px;
+	height: auto;
+	background-color: #FDFDFD;
+	border-right:1px solid #F8DBDB;
+	border-left:1px solid #F8DBDB;
+}
+.right_list{
+	float: left;
+	width: 243px;
+	padding: 5px;
+	height:auto;	
+}
+.right_list_lmt{
+	float: left;
+	width: 243px;
+	height: auto;
+	border-bottom:1px solid #F8DBDB;
+	margin-bottom: 11px;
+}
+.right_list_lmt span{
+	float: left;
+	width: auto;
+	font-size: 14px;
+	color:#B42A12;
+	line-height: 26px;
+	font-weight: bold;
+}
+.right_list li{
+	float: left;
+	width: 215px;
+	line-height: 24px;
+	font-size:12px;
+	padding-left: 10px;
+	margin-left: 6px;
+	display: inline;
+	background: url(../images/ico.gif) left center no-repeat;}
+
+.right_list_two{
+	float: left;
+	width: 243px;
+	padding: 5px;
+	height:auto;	
+}
+.right_list_two li{
+	float: left;
+	width: auto;
+	line-height: 24px;}
+.right_list_two li span{
+	color:#E36A04;
+	font-size:12px;
+}
+.ico{
+	padding-left: 10px;
+	margin-left: 6px;
+	display: inline;
+	background: url(../images/ico.gif) left center no-repeat;
+}
+
+
+
+/*内容页面*/
+.content{
+	float:left;
+	width:950px;
+	height:auto;
+	margin-top:10px;
+	}
+.list_lmlb{
+	float:left;
+	width:96%;
+	line-height: 32px;
+	color: #ff0000;
+	border-bottom:1px dashed #f8dbdb;
+	font-size:14px;
+	font-weight:bold;
+	padding-left: 28px;
+	background: url(../images/lmt_bt_0.gif) no-repeat left center;}
+.list_lmlbone{
+	float:left;
+	width:90%;
+	line-height: 26px;
+	color: #FF0000;
+	font-size:14px;
+	font-weight:bold;
+	padding-left: 24px;
+	background: url(../images/lmt_bt_0.gif) no-repeat 7px center;}
+.list_box{
+	float:left;
+	width:100%;
+	padding: 10px 0px;
+	background-color: #fff;
+	margin-bottom:6px;
+}
+/*左边信息*/
+.job_content_left{
+	float:left;
+	width:690px;
+	height:auto;
+	padding: 10px;
+	border:1px solid #CFE2CF;
+	background-color: #fff;}
+.job_list_left{
+	float:left;
+	width:690px;
+	height:auto;
+	padding: 10px;
+	border:1px solid #F8DBDB;
+	background: url(../images/zhanhui.gif) repeat-x left top;}
+.job_list_left dt{
+	float:left;
+	width:99%;
+	height:auto;}
+.job_list_left dt li{
+	float:left;
+	width:auto;
+	line-height:32px;
+	color: #666;
+	font-weight: bold;
+	padding-left: 5px;}
+.job_list_left dd{
+	float:left;
+	width:99%;
+	height:auto;}
+.job_list_left dd li{
+	float:left;
+	width:auto;
+	color: #666;
+	font-family: Arial, Helvetica, sans-serif;
+	line-height:30px;
+	padding-left: 5px;}
+.job_list_left dd li span{
+	color:#999999;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:10px;}
+
+/*右边信息*/
+.list_right{
+	float:right;
+	width:220px;
+	height:auto;
+	border:1px solid #F8DBDB;
+	background: url(../images/zhanhui.gif) repeat-x left top;}
+
+.list_right_lmt{
+	float: left;
+	width: 215px;
+	height: 26px;
+	background: url(../images/abtob_24.gif) right top no-repeat;
+}
+.list_right_lmt span{
+	float: left;
+	width: auto;
+	line-height: 22px;
+	padding-left:20px;
+	padding-top:4px;
+	font-size:14px;
+	color: #FF0000;
+	font-weight:bold;
+	background: url(../images/abtob_24.gif) left top no-repeat;
+}
+.list_right_box{
+	float:left;
+	width: 208px;
+	padding:5px 0 5px 10px;
+}
+.list_right_box li span{
+	padding-left:12px;
+	color: #007131;
+}
+.list_right_box li{
+	float:left;
+	width:98%;
+	line-height:26px;
+	padding-left: 10px;
+	background: url(../images/ico.gif) left center no-repeat;}	
+
+
+.right_list{
+	float: left;
+	width: 243px;
+	padding: 5px;
+	height:auto;	
+}
+.content_lmlb{
+	float:left;
+	width:98%;
+	height:32px;
+	margin-top:10px;}
+.content_lmt{
+	float: left;
+	width: auto;
+	height: auto;
+	padding-right:50px;
+	background: url(../images/jobs.gif) right top no-repeat;
+}
+.content_lmt span{
+	float: left;
+	width: auto;
+	color: #458345;
+	font-size: 14px;
+	height:32px;
+	line-height: 32px;
+	font-weight: bold;
+	padding-left:30px;
+	background: url(../images/jobs.gif) left top no-repeat;
+}
+.content_table{
+	float: left;
+	color: #555;
+	line-height: 26px;
+	font-size:14px;
+	border: solid 1px #EAF2EA;
+	padding:1px;
+}
+.content_table .td_bg{ background-color:#F6F9F6; color:#406A40;}
+.pint{
+	margin-top:10px;
+	float: left;
+	width: 98%;
+	line-height: 36px;
+	font-size:14px;
+	color: #555;
+	text-align: center;
+}
+
+.huangse{
+	color: #E36A04;
+	font-size: 12px;
+}
+
+.meeting_pic{
+	float: left;
+	width: 660px;
+	height: auto;
+}
+.meeting_pic_list{
+	float: left;
+	width: 310px;
+	height: auto;
+	margin: 10px 20px 10px 0;
+	display: inline;
+}
+.meeting_pic_list img{
+	float: left;
+	margin-right: 10px;
+	font-weight: bold;
+}
+.meeting_bt{
+	float: left;
+	width: 660px;
+	line-height: 36px;
+	font-size: 18px;
+	text-align: center;
+	font-family:黑体;
+	padding-top: 10px;
+}
+.meeting_content_table{
+	float: left;
+	color: #555;
+	line-height: 26px;
+	font-size:12px;
+	border: solid 1px #EBF0F2;
+	padding:1px;
+}
+.meeting_content_table .td_bg{ background-color:#F6F9F6; color:#406A40;}
+.meeting_content_tabletwo{
+	float: left;
+	color: #333;
+	line-height: 26px;
+	font-size:12px;
+}
+
+
+

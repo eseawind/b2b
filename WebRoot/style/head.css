@@ -1,0 +1,84 @@
+.main_box {
+	MARGIN: 0px auto; WIDTH: 960px
+}
+#top_nav_bg {
+	WIDTH: 100%; BORDER-BOTTOM: #cdcdcd 1px solid; HEIGHT: 26px; BACKGROUND-COLOR: #f4f3f2
+}
+#top_nav {
+	CLEAR: both; VERTICAL-ALIGN: middle; PADDING-TOP: 0px; HEIGHT: 26px
+}
+#top_nav A:link {
+	COLOR: #333; TEXT-DECORATION: none
+}
+#top_nav A:visited {
+	COLOR: #333; TEXT-DECORATION: none
+}
+#top_nav A:hover {
+	COLOR: #ff6600; TEXT-DECORATION: underline
+}
+#top_nav UL {
+	MARGIN: 2px 0px 7px
+}
+#top_nav LI {
+	PADDING-RIGHT: 7px; PADDING-LEFT: 7px; PADDING-BOTTOM: 0px; BORDER-LEFT: #afa69e 1px solid; PADDING-TOP: 0px
+}
+#top_nav LI .zi {
+	PADDING-RIGHT: 7px; MARGIN-TOP: 5px; PADDING-LEFT: 7px; PADDING-BOTTOM: 0px; BORDER-LEFT: #afa69e 1px solid; PADDING-TOP: 0px
+}
+#top_nav .first {
+	PADDING-RIGHT: 7px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; BORDER-LEFT: #afa69e 1px solid; PADDING-TOP: 0px
+}
+#top_nav .last {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 7px; PADDING-BOTTOM: 0px; BORDER-LEFT: #afa69e 1px solid; PADDING-TOP: 0px
+}
+#top_nav LI A {
+	TEXT-DECORATION: none
+}
+#top_nav .left {
+	MARGIN-TOP: 5px; FLOAT: left
+}
+#top_nav .right {
+	MARGIN-TOP: 5px; FLOAT: right
+}
+#top_nav .right2 {
+	FLOAT: right
+}
+#top_nav .no_border {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+#top_nav .img_bt {
+	MARGIN: -4px -5px -3px
+}
+#top_nav .left2 {
+	MARGIN-LEFT: 22px
+}
+#top_nav2 .zuo {
+	FLOAT: left; WIDTH: 245px
+}
+#top_nav2 .zhong {
+	MARGIN-TOP: 5px; FLOAT: left; WIDTH: 465px; TEXT-ALIGN: center
+}
+#top_nav2 .you {
+	MARGIN-TOP: 5px; FLOAT: right; WIDTH: 245px
+}
+.foot_zi {
+	FONT-SIZE: 12px; LINE-HEIGHT: 180%; FONT-FAMILY: ??
+}
+.foot_zi A:link {
+	COLOR: #333; TEXT-DECORATION: none
+}
+.foot_zi A:visited {
+	COLOR: #333; TEXT-DECORATION: none
+}
+.foot_zi A:hover {
+	COLOR: #ff7300; TEXT-DECORATION: underline
+}
+.foot_zi A:link {
+	COLOR: #333; TEXT-DECORATION: none
+}
+.foot_zi A:visited {
+	COLOR: #333; TEXT-DECORATION: none
+}
+.foot_zi A:hover {
+	COLOR: #ff6600; TEXT-DECORATION: underline
+}

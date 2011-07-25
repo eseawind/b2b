@@ -1,0 +1,211 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<%@ taglib uri="/WEB-INF/struts-html.tld" prefix="html"%>
+<%@ taglib uri="/WEB-INF/struts-logic.tld" prefix="logic"%>
+<%@ taglib uri="/WEB-INF/struts-bean.tld" prefix="bean"%>
+<%@ page import="java.util.*"%>
+<%@ page import="com.saas.biz.custMgr.Custinfo"%>
+<%@ page import="com.saas.biz.commen.ParamethodMgr"%>
+<%@ page import="java.net.URLEncoder"%>
+<%@ page import="java.net.URLDecoder"%>
+<%@ page contentType="text/html;charset=GBK"%>
+<%
+		 request.setCharacterEncoding("gbk");
+   HttpSession  logsession = request.getSession(); 
+    String cust_aim_001="";
+    String iStart ="0";
+    String meun_idx="";
+		String itt = "0";
+		if (request.getParameter("i") != null) {
+			itt = request.getParameter("i");
+		}
+    if (request.getParameter("cust_aim_001") != null)
+    {
+        cust_aim_001 = request.getParameter("cust_aim_001");
+    }
+    if (request.getParameter("iStart") != null)
+    {
+        iStart = request.getParameter("iStart");
+    }
+    if (request.getParameter("menu_id") != null)
+    {
+        meun_idx = request.getParameter("menu_id");
+        logsession.setAttribute("menu_id",meun_idx);
+    }
+    if( logsession.getAttribute("menu_id")!= null)
+    {
+       meun_idx=(String)logsession.getAttribute("menu_id");
+    }
+      int counter=0;
+  	Custinfo custinfo=new Custinfo();
+  	ArrayList custList = new ArrayList();
+		if(itt.equals("1")){
+				cust_aim_001=URLDecoder.decode(cust_aim_001,"GBK");
+				cust_aim_001= new String(cust_aim_001.getBytes("ISO-8859-1"),"GBK");
+		}
+  	if(null==cust_aim_001 || cust_aim_001.equals("")){
+		  custList=custinfo.getCustList(Integer.valueOf(iStart).intValue(),20);
+		  ArrayList custList2=custinfo.getCustList();
+		  if(custList2!=null){
+		  	counter=custList2.size();
+		  }
+  	}else{
+  	  custList=custinfo.getCListByName("%"+cust_aim_001+"%",Integer.valueOf(iStart).intValue(),20);
+      ArrayList custList2=custinfo.getCListByName("%"+cust_aim_001+"%");
+      if(custList2!=null){
+      	counter=custList2.size();	
+      }
+  	}
+  	
+    int pages=(counter-1)/20+1;
+		int pageUp=0,pageDown=0;
+		int currenPage=Integer.valueOf(iStart).intValue();
+		if(pages>currenPage)
+		{
+		   if(currenPage>0)
+		   {
+			pageUp=currenPage-1;
+		   }
+			pageDown=currenPage+1;
+		}
+	    else if(pages==currenPage)
+		{
+		   pageUp=currenPage-1;
+		   pageDown=currenPage;
+		}
+%>
+<html>
+<head>
+<title>获取会员注册信息</title>
+<link href="/style/layout.css" rel="stylesheet" type="text/css">
+<style>
+  .chaxun{
+					background:url(/admin/images/chaxun.gif) left center no-repeat;
+					width:70px;
+				 	height:26px;
+					border:0px; 
+				 	cursor:hand;
+				}
+</style>
+</head>
+<body>
+<%
+		String top_menu_id="";
+		if (request.getParameter("menu_id") != null){
+        top_menu_id = request.getParameter("menu_id");
+    }
+	%>
+
+			<form name="findForm" method="post" action="memberMgr.jsp" target="_self">
+			<table width=100% border=0 cellpadding=0 cellspacing=0 align=center bgcolor="#FCB0B0">
+				<tr>
+					<td  align=left >请输入公司名称:</td>
+          <td  align=center width="22%">
+          	<input name="cust_aim_001" type="text" maxlength="100">
+          </td>
+          <td width="3%" align=left>					
+					</td>
+					<td width="15%" align=left>
+					<input id="custname" class="chaxun" type="submit"  name="comit" value="" style="cursor: hand;">
+					</td>
+					<td width="50%" align=left>			
+					</td>
+				</tr>
+			</table>
+		
+  <table width=100% border=0 cellpadding=1 cellspacing=1 align=center bgcolor="#FCB0B0">
+        <tr class="u4" height="25">
+          <td  align=left width="15%">客户名</td>
+          <td   align=left width="22%">公司地址</td>
+          <td   align=left width="15%">联系电话</td>
+          <td   align=left width="15%">传真号</td>
+          <td   align=left width="20%">注册时间</td>
+          <td   align=center width="10%" >修改资料</td>
+        </tr>
+        <%
+		            if(custList != null && custList.size()>0)
+		            {    int i=0;
+		              	 for (Iterator it = custList.iterator(); it.hasNext();)
+		                  {
+						        HashMap map = (HashMap) it.next();
+						        String cust_id=map.get("cust_id").toString();
+						        String cust_name="";
+						        String group_contact_phone="";
+						        String fax_nbr="";
+						        String company_address="";
+						        String email="";
+						        if(map.get("cust_aim") != null)
+						        {
+						           cust_name=map.get("cust_aim").toString();
+						        }
+						         if(map.get("group_contact_phone") != null)
+						        {
+						           group_contact_phone=map.get("group_contact_phone").toString();
+						        }
+						        if(map.get("company_address") != null)
+						        {
+						           company_address=map.get("company_address").toString();
+								       if(company_address.length()>14)
+									      {
+									        company_address=company_address.substring(0,14)+"...";
+									         company_address=company_address.replaceAll("<[^<>]+>","");
+									      }
+						        }
+						        if(map.get("fax_nbr") != null)
+						        {
+						           fax_nbr=map.get("fax_nbr").toString();
+						        }
+						        if(map.get("publish_date")!=null)
+						        {
+						         email=map.get("publish_date").toString();
+						         if(email.length()>10)email=email.substring(0,10);
+						        }
+						        %>
+        <tr class="u2" id="changcolor_tr<%=i%>">
+          <td align=left><a href="/admin/customerMgr/viewCustinfo.jsp?obj_cust_id=<%=cust_id%>"><%=cust_name%></a></td>
+          <td align=left><%=company_address%></td>
+          <td align=left><%=group_contact_phone%></td>
+          <td align=left><%=fax_nbr%></td>
+          <td align=left><%=email%></td>         
+          <td align=center>
+		  <a href="modfiyCust.jsp?cust_id=<%=cust_id%>" >
+		  <img src=/images/view.gif width=16 height=16 border=0 style="cursor: hand" alt="资料修改"></a></td>
+        </tr>
+        <%i++;
+		 }
+		 %>
+        <tr class="u1">
+          <td  align="left" colspan="3" style="font-weight:normal; padding:2px 5px;">共<%=counter%>条 &nbsp;第<%=Integer.parseInt(iStart)+1 %>页&nbsp;&nbsp;共<%=pages%>页</td>
+          <td  align="right" colspan="4"  style=" padding:2px 5px;">
+		  			<a href="memberMgr.jsp?iStart=0&menu_id=<%=top_menu_id%>&cust_aim_001=<%=cust_aim_001%>&i=1">首页 </a>&nbsp; &nbsp;
+            <% 
+							if(Integer.parseInt(iStart)>0){
+						%>
+            <a href="memberMgr.jsp?iStart=<%=pageUp%>&menu_id=<%=top_menu_id%>&cust_aim_001=<%=cust_aim_001%>&i=1">上一页</a> &nbsp;
+            <%
+							}
+							if(Integer.parseInt(iStart)<pages-1){
+						%>
+            <a href="memberMgr.jsp?iStart=<%=pageDown%>&menu_id=<%=top_menu_id%>&cust_aim_001=<%=cust_aim_001%>&i=1">下一页 </a>&nbsp;
+            <%
+							}
+						%>
+            <a  href="memberMgr.jsp?iStart=<%=pages-1%>&menu_id=<%=top_menu_id%>&cust_aim_001=<%=cust_aim_001%>&i=1">尾页</a></td>
+			        </tr>
+			      <%
+					  }else{
+					  %>
+        <tr bgcolor="white">
+          <td colspan="7" align="center"><b>无客户记录!</b></td>
+        </tr>
+        <%
+		          }
+		        	%>
+      </table>
+      </form>
+</body>
+</html>
+
+
+
+

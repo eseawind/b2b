@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="/templates/default/style/enterprise.css" />
+<link rel="stylesheet" type="text/css" href="/templates/default/style/bookstore.css" />
+<script type='text/javascript' src='/dwr/interface/Productclass.js'></script>
+<script type='text/javascript' src='/dwr/engine.js'></script>
+<script type='text/javascript' src='/dwr/util.js'></script>
+<script type='text/javascript' src='/dwr/interface/AreaInfo.js'></script>
+
+<script language="javascript">
+
+	var fectureArray=new Array();
+	fectureArray=['请选择'];
+	function setChangeType() {
+		Productclass.getClassTypeLevels(function(data){
+			DWRUtil.removeAllOptions("changeType");
+			DWRUtil.addOptions("changeType",fectureArray);
+			DWRUtil.addOptions("changeType",data);
+		})
+		setProvince();
+	}
+	function setProvince(){	
+		AreaInfo.getAreaByParent('5J2mc0X0G85BH',function(data){
+			DWRUtil.removeAllOptions("province");
+			DWRUtil.addOptions("province",fectureArray);
+			DWRUtil.addOptions("province",data);
+		})
+	}
+	function setCitys(prov){
+	   var provence=prov;
+		 AreaInfo.getAreaByParent(provence,function(data){
+				   DWRUtil.removeAllOptions("eparchy_codeS");
+					 DWRUtil.addOptions("eparchy_codeS",fectureArray);
+					 DWRUtil.addOptions("eparchy_codeS",data);
+				   DWRUtil.removeAllOptions("city");
+					 DWRUtil.addOptions("city",fectureArray);
+		});
+	}	
+	function checkSel() {
+		if(document.getElementById("changeType").value=='请选择')	{
+			alert('请选择企业分类!');
+			return false;
+		}	
+		var changeType = document.getElementById("changeType").value;
+		var province;
+		if(document.getElementById("province").value=='请选择')	
+		{
+			province = '';
+		}	
+		var eparchy_codeS = document.getElementById("eparchy_codeS").value;	
+		window.open('/inc/include/searchEnterprisePage.html?changeType='+changeType+'&province='+province+'&eparchy_codeS='+eparchy_codeS);
+	}
+	
+</script>
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>企业库---贞龙全行业电子商务平台(http://www.bizoss.com)</title>
+</head>
+<body onload="javascript:setChangeType()">
+<!--头部-->
+<div class="ad"><img src="/templates/default/images/ad/topad.jpg" /></div>
+<div id="top">
+	  <div class="width link_xian">
+	  		<div class="right"><A title=将本站设为你的首页 onclick="this.style.behavior='url(#default#homepage)';this.sethomepage('http://'+window.location.host);return false;" href="javascript:;">设为首页</a> | <a href=javascript:window.external.AddFavorite(top.location.href)>添加到收藏夹</a> | <a href="/member/index.html">登录</a> | <a href="/admin/index.jsp">运营商</a> | <a href="/member/Newcregister.html">免费注册</a> | <a href="/member/mainMenu/default.jsp">发布信息</a></div>
+	  </div>
+<!--//logo-->
+<div id="logo">
+		<div class="logo_img" style=" background:url(/templates/default/images/logo.png) no-repeat top center !important; background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src='/templates/default/images/logo.png'">
+			<div class="search">
+    				<div class="search_list"><span><input type="radio" name="search" checked onclick="tradeType('8855381456')"/>产品</span> | <span><input type="radio" name="search" onclick="tradeType('7830633062')">供应</span> | <span><input type="radio" name="search" onclick="tradeType('6871426767')">求购</span> | <span><input type="radio" name="search" onclick="tradeType('5563378845')">企业</span> | <span><input type="radio" name="search" onclick="tradeType('1455415210')">新闻</span> | <!--span>more</span--></div>
+        			<div class="search_box">
+            			<strong style=" float:left; font-size:14px;">商品搜索</strong> <span>
+            			 <input name="keyword" id="keyword" type="text" style="font-size:14px; width:300px; color:#666; line-height:18px; height:18px;" value="请输入您想查找的关键字"  onclick="this.value=''",size="42" /><input type="submit" name="Submit" value="全站搜索" onClick="Search()" class="search_button"/></span>
+            		     <!--img src="/templates/default/images/king_button.gif" /--> </div>
+            			<input type="hidden" name="tradeTypecode" id="tradeTypecode" value="8855381456" />
+        			</div>
+		</div>
+</div>
+<!--logo//-->
+	
+	   
+</div>
+
+<div id="nav">
+  <div class="nav_menu">
+    <ul>
+      <li class="nav_menu_bg" id="dis0"><span><a href="/">首页</a></span>|</li>
+      
+      	<li id="dis12"><span><a href="/default/supply/index.html">供应信息</a></span> |</li>     
+      	<li id="dis11"><span><a href="/default/stock/index.html">求购信息</a></span> |</li>     
+      	<li id="dis10"><span><a href="/default/product/index.html">产品库</a></span> |</li>     
+      	<li id="dis9"><span><a href="/default/enterprise/index.html">企业库</a></span> |</li>     
+      	<li id="dis5"><span><a href="/default/news/index.html">资讯</a></span> |</li>     
+      <li><span><a href="http://www.bizoss.com" target="_blank">贞龙</a></span> |</li>
+    </ul>
+  </div>
+</div>
+</div>
+<script type="text/javascript" src="/templates/default/js/setClassName.js"></script>
+<script type="text/javascript" src="/templates/default/js/topSearch.js"></script>
+<script type="text/javascript" src="/js/prototype.js"></script>
+<script language="javascript">
+		setTopName();//设置头部高亮----setClassName.js
+</script>
+
+
+
+
+
+<!--内容-->
+
+<div id="main" >
+	<div class="main_box">
+		<div class="path">您所在的位置 > <a href="/">首页</a> > 企业库</div>
+		<!--左边信息-->
+		<div id="books_left">
+			<!--企业分类-->
+			<div class="in_lmt">
+				<div class="in_lmt_name"><span>企业分类</span></div>
+			</div>
+			<div class="box">
+				<div class="box_left">
+					<div class="company_list link_xian" style="border-right:1px dashed #ccc;">
+						
+						
+							<dl>							<dt><a href="/default/enterprise/class/613591993212924/">洁具</a></dt>							
+								<dd><a href="/default/enterprise/class/612908478842024/">水龙头</a></dd>						
+								<dd><a href="/default/enterprise/class/612927111813282/">浴室柜</a></dd>						
+								<dd><a href="/default/enterprise/class/612945744784540/">淋浴房</a></dd>						
+								<dd><a href="/default/enterprise/class/612964377755799/">座便器</a></dd>						
+								<dd><a href="/default/enterprise/class/612983010727057/">立柱盆</a></dd>						
+								<dd><a href="/default/enterprise/class/613001643698315/">花洒</a></dd>						
+								<dd><a href="/default/enterprise/class/613020276669573/">浴缸</a></dd>						
+								<dd><a href="/default/enterprise/class/613038909640831/">浴巾架</a></dd>													</dl>						
+							<dl>							<dt><a href="/default/enterprise/class/613647892126699/">涂料</a></dt>							
+								<dd><a href="/default/enterprise/class/613560632836061/">乳胶漆</a></dd>						
+								<dd><a href="/default/enterprise/class/613579265807319/">水性漆</a></dd>						
+								<dd><a href="/default/enterprise/class/613597898778577/">纳米漆</a></dd>						
+								<dd><a href="/default/enterprise/class/613616531749836/">木器涂料</a></dd>						
+								<dd><a href="/default/enterprise/class/613635164721094/">通用涂料</a></dd>						
+								<dd><a href="/default/enterprise/class/613653797692352/">汽车涂料</a></dd>						
+								<dd><a href="/default/enterprise/class/613672430663610/">建筑涂料</a></dd>						
+								<dd><a href="/default/enterprise/class/613691063634868/">船舶涂料</a></dd>													</dl>						
+							<dl>							<dt><a href="/default/enterprise/class/613666525097957/">油漆</a></dt>							
+								<dd><a href="/default/enterprise/class/613746962548643/">聚酯漆</a></dd>						
+								<dd><a href="/default/enterprise/class/613765595519901/">木器漆</a></dd>						
+								<dd><a href="/default/enterprise/class/613784228491159/">硝基漆</a></dd>						
+								<dd><a href="/default/enterprise/class/613802861462418/">聚氨酯漆</a></dd>						
+								<dd><a href="/default/enterprise/class/613821494433676/">防锈漆</a></dd>						
+								<dd><a href="/default/enterprise/class/613840127404934/">防水油漆</a></dd>						
+								<dd><a href="/default/enterprise/class/613858760376192/">防火漆</a></dd>						
+								<dd><a href="/default/enterprise/class/613877393347450/">桥梁漆</a></dd>													</dl>						
+							<dl>							<dt><a href="/default/enterprise/class/613685158069215/">石材</a></dt>							
+								<dd><a href="/default/enterprise/class/613914659289967/">荒料地板</a></dd>						
+								<dd><a href="/default/enterprise/class/613933292261225/">环境装饰</a></dd>						
+								<dd><a href="/default/enterprise/class/613951925232483/">石雕</a></dd>						
+								<dd><a href="/default/enterprise/class/613970558203741/">石材家具</a></dd>						
+								<dd><a href="/default/enterprise/class/613989191175000/">异形工艺</a></dd>						
+								<dd><a href="/default/enterprise/class/614007824146258/">墓碑石</a></dd>						
+								<dd><a href="/default/enterprise/class/614026457117516/">石材机械</a></dd>													</dl>						
+							<dl>							<dt><a href="/default/enterprise/class/613703791040473/">厨具</a></dt>							
+								<dd><a href="/default/enterprise/class/617361758972734/">橱柜</a></dd>						
+								<dd><a href="/default/enterprise/class/614045090088774/">灶具</a></dd>						
+								<dd><a href="/default/enterprise/class/614063723060032/">油烟机</a></dd>						
+								<dd><a href="/default/enterprise/class/614082356031291/">燃气具</a></dd>						
+								<dd><a href="/default/enterprise/class/614100989002549/">厨房电器</a></dd>						
+								<dd><a href="/default/enterprise/class/614119621973807/">消毒柜</a></dd>						
+								<dd><a href="/default/enterprise/class/614138254945065/">烘烤设备</a></dd>						
+								<dd><a href="/default/enterprise/class/614156887916323/">水槽/洗涤槽</a></dd>													</dl>						
+							<dl>							<dt><a href="/default/enterprise/class/613722424011731/">窗帘</a></dt>							
+								<dd><a href="/default/enterprise/class/614212786830098/">窗饰</a></dd>						
+								<dd><a href="/default/enterprise/class/614231419801356/">电动窗帘</a></dd>						
+								<dd><a href="/default/enterprise/class/614250052772614/">布艺窗帘</a></dd>						
+								<dd><a href="/default/enterprise/class/614268685743873/">办公窗帘</a></dd>						
+								<dd><a href="/default/enterprise/class/614287318715131/">窗帘配件</a></dd>													</dl>						
+							<dl>							<dt><a href="/default/enterprise/class/613741056982990/">布艺</a></dt>							
+								<dd><a href="/default/enterprise/class/614305951686389/">窗帘布艺</a></dd>						
+								<dd><a href="/default/enterprise/class/614324584657647/">家居布艺</a></dd>						
+								<dd><a href="/default/enterprise/class/614343217628905/">沙发布艺</a></dd>						
+								<dd><a href="/default/enterprise/class/614361850600164/">其它布艺</a></dd>													</dl>						
+							<dl>							<dt><a href="/default/enterprise/class/613759689954248/">门窗</a></dt>							
+								<dd><a href="/default/enterprise/class/614380483571422/">门</a></dd>						
+								<dd><a href="/default/enterprise/class/614399116542680/">窗</a></dd>						
+								<dd><a href="/default/enterprise/class/614417749513938/">实木门</a></dd>						
+								<dd><a href="/default/enterprise/class/614436382485196/">玻璃钢门窗</a></dd>						
+								<dd><a href="/default/enterprise/class/614455015456455/">防盗门</a></dd>						
+								<dd><a href="/default/enterprise/class/614473648427713/">其它</a></dd>													</dl>						
+						
+					</div>
+					
+					<div class="company_list link_xian">
+						
+						
+						<dl>						<dt><a href="/default/enterprise/class/613778322925506/">锁具</a></dt>						
+							<dd><a href="/default/enterprise/class/614492281398971/">门窗锁</a></dd>					
+							<dd><a href="/default/enterprise/class/614510914370229/">电子锁</a></dd>					
+							<dd><a href="/default/enterprise/class/614529547341487/">IC卡锁</a></dd>					
+							<dd><a href="/default/enterprise/class/614548180312746/">特殊锁</a></dd>					
+							<dd><a href="/default/enterprise/class/614566813284004/">密码锁</a></dd>					
+							<dd><a href="/default/enterprise/class/614585446255262/">车锁</a></dd>					
+							<dd><a href="/default/enterprise/class/614604079226520/">保险柜锁</a></dd>					
+							<dd><a href="/default/enterprise/class/614622712197778/">锁具配件</a></dd>											</dl>					
+						<dl>						<dt><a href="/default/enterprise/class/613796955896764/">五金</a></dt>						
+							<dd><a href="/default/enterprise/class/614641345169037/">建筑五金</a></dd>					
+							<dd><a href="/default/enterprise/class/614659978140295/">机械五金</a></dd>					
+							<dd><a href="/default/enterprise/class/614678611111553/">喷涂设备</a></dd>					
+							<dd><a href="/default/enterprise/class/614697244082811/">厨房设施</a></dd>					
+							<dd><a href="/default/enterprise/class/614715877054069/">卫浴设施</a></dd>					
+							<dd><a href="/default/enterprise/class/614734510025328/">五金配件</a></dd>											</dl>					
+						<dl>						<dt><a href="/default/enterprise/class/613815588868022/">灯具</a></dt>						
+							<dd><a href="/default/enterprise/class/614753142996586/">室内灯具</a></dd>					
+							<dd><a href="/default/enterprise/class/614771775967844/">室外灯具</a></dd>					
+							<dd><a href="/default/enterprise/class/614790408939102/">车用灯具</a></dd>					
+							<dd><a href="/default/enterprise/class/614809041910360/">舞台灯具</a></dd>					
+							<dd><a href="/default/enterprise/class/614827674881619/">专用灯具</a></dd>					
+							<dd><a href="/default/enterprise/class/614846307852877/">彩灯</a></dd>					
+							<dd><a href="/default/enterprise/class/614864940824135/">电光源</a></dd>					
+							<dd><a href="/default/enterprise/class/614883573795393/">灯具配件</a></dd>											</dl>					
+						<dl>						<dt><a href="/default/enterprise/class/613834221839281/">园艺</a></dt>						
+							<dd><a href="/default/enterprise/class/614902206766651/">护栏</a></dd>					
+							<dd><a href="/default/enterprise/class/614920839737910/">灌溉工具</a></dd>					
+							<dd><a href="/default/enterprise/class/614939472709168/">栽培基质</a></dd>					
+							<dd><a href="/default/enterprise/class/614958105680426/">花架</a></dd>					
+							<dd><a href="/default/enterprise/class/614976738651684/">花盆容器</a></dd>					
+							<dd><a href="/default/enterprise/class/614995371622942/">其它园艺工具</a></dd>											</dl>					
+						<dl>						<dt><a href="/default/enterprise/class/613852854810539/">吊顶</a></dt>						
+							<dd><a href="/default/enterprise/class/615014004594201/">天花</a></dd>					
+							<dd><a href="/default/enterprise/class/615032637565459/">阳光板</a></dd>					
+							<dd><a href="/default/enterprise/class/615051270536717/">龙骨</a></dd>					
+							<dd><a href="/default/enterprise/class/615069903507975/">玻璃吊顶</a></dd>					
+							<dd><a href="/default/enterprise/class/615088536479233/">矿棉吸音板</a></dd>					
+							<dd><a href="/default/enterprise/class/615107169450492/">吊顶配件</a></dd>											</dl>					
+						<dl>						<dt><a href="/default/enterprise/class/613871487781797/">壁纸</a></dt>						
+							<dd><a href="/default/enterprise/class/615125802421750/">纸面壁纸</a></dd>					
+							<dd><a href="/default/enterprise/class/615144435393008/">胶面壁纸</a></dd>					
+							<dd><a href="/default/enterprise/class/615163068364266/">布面壁纸</a></dd>					
+							<dd><a href="/default/enterprise/class/615181701335524/">木面壁纸</a></dd>											</dl>					
+						<dl>						<dt><a href="/default/enterprise/class/613890120753055/">木业</a></dt>						
+							<dd><a href="/default/enterprise/class/615200334306783/">胶合板</a></dd>					
+							<dd><a href="/default/enterprise/class/615218967278041/">集成板</a></dd>					
+							<dd><a href="/default/enterprise/class/615237600249299/">装饰板</a></dd>					
+							<dd><a href="/default/enterprise/class/615256233220557/">木材原木</a></dd>					
+							<dd><a href="/default/enterprise/class/615274866191815/">木线</a></dd>					
+							<dd><a href="/default/enterprise/class/615293499163074/">木制品</a></dd>					
+							<dd><a href="/default/enterprise/class/615312132134332/">木地板</a></dd>					
+							<dd><a href="/default/enterprise/class/615330765105590/">人造板</a></dd>											</dl>					
+						<dl>						<dt><a href="/default/enterprise/class/613908753724313/">板材</a></dt>						
+							<dd><a href="/default/enterprise/class/615498461846914/">板材辅料</a></dd>					
+							<dd><a href="/default/enterprise/class/615405296990623/">铝塑板</a></dd>					
+							<dd><a href="/default/enterprise/class/615423929961881/">装饰板</a></dd>					
+							<dd><a href="/default/enterprise/class/615442562933139/">建筑模板</a></dd>					
+							<dd><a href="/default/enterprise/class/615461195904397/">防火板</a></dd>					
+							<dd><a href="/default/enterprise/class/615479828875656/">胶合板</a></dd>											</dl>					
+						
+					</div>
+				</div>
+			</div>
+		<script src='/inc/getSessCustId.jsp' language='javascript'></script>
+			<!--加入企业库-->
+			<div class="in_lmt" style="margin-top:10px;">
+				<div class="in_lmt_name"><span>加入企业库</span></div>
+			</div>
+		  <div class="box">
+		  	<div class="box_left">
+						<ul>
+							<script language="javascript">
+								if(document.getElementById("cust_id").value==''){
+
+									document.write("<li style='width:200px' style='display:block;' id='ifLoginSess1'>网上贸易 <a href='/login.html'>从此开始</a></li>");
+									document.write("<li style='width:200px'>手把手教你 <a href='/gettradeinterface.do?menu_id=2EEcDFDFmMM080X0G85B&trade_type_code=0120'>如何发布产品</a></li>");
+								}
+								if(document.getElementById("cust_id").value!=''){
+									document.write("<li style='width:200px' style='display:block;' id='ifLoginSess1'>恭喜您&nbsp;&nbsp;"+document.getElementById("se_cust_name").value+"("+document.getElementById("juristic_type_code").value +")</li>");
+									document.write("<li style='width:200px'>级别:&nbsp;&nbsp" + document.getElementById("para_code2").value +"&nbsp;&nbsp;<a href='/gettradeinterface.do?menu_id=2EEcDFDFmMM080X0G85B&trade_type_code=0120'>发布产品</a></li>");
+								}
+							</script>
+						</ul>
+				<div class="ljbutton"><a href="/member/Newcregister.html">立即免费注册</a></div> 
+			</div>
+		 </div>
+		</div>
+		<!--右边信息-->
+		<div id="books_right">
+			<div class="right_lmt"><div class="right_lmt_name"> 精确搜索</div></div>
+			<div class="box">
+				<div class="box_right">
+					<table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+					  <tr>
+						<td width="35%" height="26" align="right">企业分类：</td>
+						<td width="65%">
+							<select name="changeType" id="changeType" class="list_input_box" style="width:120px">
+    				  	<option value="0">--请选择--</option>
+    					</select>
+						</td>
+					  </tr>
+					  <tr>
+						<td height="26" align="right">所属省份：</td>
+						<td>
+							<select class="list_input_box" name="province" id="province" onclick="setCitys(this.value);" style="width:120px">
+					      <option value="">--请选择--</option>
+				    	</select> 		
+						</td>
+					  </tr>
+					  <tr>
+						<td height="26" align="right">所属城市：</td>
+						<td>
+							<select name="eparchy_codeS" id="eparchy_codeS" class="list_input_box" style="width:120px">
+					  		<option value="">--请选择--</option>
+            	</select>
+						</td>
+					  </tr>
+					  
+					  <tr>
+							<td>&nbsp;</td>
+						<td><label>
+						  <input type="button" name="Submit2" value="搜索" class="button_14" onclick="checkSel()"/>
+						</label></td>
+					  </tr>
+					</table>
+				</div>
+			</div>
+			<!--最新加入-->
+			<div class="right_lmt" style="margin-top:10px;"><div class="right_lmt_name">最新加入</div></div>
+			<div class="box">
+				<div class="box_right link_xian">
+					<ul>
+						
+					</ul>
+				</div>
+			</div>
+			<!--谷歌广告-->
+			<div class="right_newsad">
+				<h3 style="color:#0000FF;">汽车英文数字拦截飞…</h3>
+				深圳飞跃科技有限公司专业生产汽车信号拦截器.汽车千扰器.<Br>
+				<span style="color:#008000;">www.szfy168.com</span>
+			</div>
+		</div>
+	</div>
+</div>
+<!--footer-->
+<div id="link">友情链接:
+	
+		<a href="http://www.bizoss.com">合肥贞龙</a> |
+		<a href="http://www.anhui.net.cn">安徽企业网</a> |
+		<a href="http://www.ahqm.com.cn">安徽汽贸</a> |
+		<a href="http://www.ahqmdq.com">齐美电器</a> |
+		<a href="http://www.qichejishu.com">汽车技术</a> |
+</div>
+<!--footer-->
+<!--bottom-->
+<div class="footernew"> 
+	  <a href="http://www.bizoss.com/html/b2b/2009/0619/9.html" target="_blank">系统概述</a> 
+	| <a href="http://www.bizoss.com/html/b2b/2009/0619/10.html" target="_blank">功能概要</a> 
+	| <a href="http://www.bizoss.com/html/b2b/2009/0619/11.html" target="_blank">功能和特点</a> 
+	| <a href="http://www.bizoss.com/html/b2b/2009/0619/12.html" target="_blank">报价方案</a> 
+	| <a href="http://www.bizoss.com/html/b2b/2009/0619/12.html" target="_blank">报价方案</a> 
+	| <a href="http://www.bizoss.com/html/customer/2009/0619/7.html" target="_blank">客户与合作伙伴</a>
+	<br/>
+ 
+    <img src="/templates/default/images/ucs2.gif" align="absmiddle"/>
+    &nbsp;销售咨询：
+    <a href="http://wpa.qq.com/msgrd?V=1&Uin=923462250&Site=a-hai.net&Menu=yes tencent://message/?uin=923462250" target=_blank class="lanse">923462250</a> 
+    <a href="http://wpa.qq.com/msgrd?V=1&Uin=1182350564&Site=a-hai.net&Menu=yes tencent://message/?uin=1182350564" target=_blank class="lanse">1182350564</a> 
+    
+    </span>
+     <a href="http://www.bizoss.com" target="_blank" class="lanse">合肥贞龙信息科技有限责任公司</a> 
+     版权所有 &copy;  2008  保留所有权利 <a href="http://www.miibeian.gov.cn/" target=_blank>皖ICP备05015140号</a><br/>
+    <div class="lx">服务热线：0551-5310317 | 传真：0551-5310317 </div>
+    
+    <span style="text-indent:2em;font-size:11px;font-family:Verdana,Helvetica,Arial,sans-serif; height:32px; line-height:32px; width:100%; white-space:nowrap">
+        <img src="/favicon.gif" align="absmiddle" /> 
+        &nbsp;Powered by <a href="http://www.bizoss.com" target="_blank">BizOss</a>
+    </span>
+</div>
+</div>
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,49 @@
+body{margin:0px;text-align:center;}
+.css1 {
+	font-size: 12px;
+	color: #666666;
+	text-decoration: none;
+	text-align: right;
+}
+.css2 {
+	font-size: 12px;
+	color: #000;
+	text-decoration: none;
+	text-align: right;
+}
+a:link {
+	font-size: 12px;
+	color: #666666;
+	text-decoration: none;
+}
+a:hover {
+	font-size: 12px;
+	color: #FF9900;
+	text-decoration: underline;
+}
+a:visited {
+	font-size: 12px;
+	color: #ED1B24;
+	text-decoration: underline;
+}
+.ms {
+	font-size: 16px;
+	font-weight: bold;
+	color: #FF6600;
+	text-decoration: none;
+	text-align: right;
+}
+.ms1 {
+	font-size: 16px;
+	font-weight: bold;
+	color: #FF6600;
+	text-decoration: none;
+	text-align:left;
+}.hy {
+	font-size: 14px;
+	color: #666666;
+	text-decoration: none;
+	text-align: right;
+}
+.login_form{border-bottom:#D7D7D7 solid 1px;border-right:#D7D7D7 solid 1px;border-top:#D7D7D7 solid 1px;border-left:#D7D7D7 solid 1px; width:130px; height:21px; 
+line-height:21px; padding-left:2px;}

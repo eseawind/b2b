@@ -1,0 +1,11 @@
+body{ text-align:center;}
+.footernew {color:#515151;text-align:center;font-size:12px;line-height:24px;width:910px; margin:0 auto; padding-top:12px;}
+.footernew a {color:#515151;text-decoration:none;}
+.footernew a.lchot {color:#bd0a01;}
+.footernew a:hover {color:#bd0a01;text-decoration:underline;}
+.footernew a:visited {color:#515151;}
+.footernew div{width:546px; margin:0 auto;}
+.footernew p{float:left;width:120px;height:50px;border:1px solid #d2d2d2;padding:0;line-height:20px; margin:6px;font-size:12px;}
+.footernew .fl{float:left;padding:3px;}
+.footernew .fr{float:right; width:72px;padding:5px 3px 0 3px;}
+.footernew .lx{border-top:#ccc 1px dashed; width:90%; margin:0 auto; margin-top:5px;}

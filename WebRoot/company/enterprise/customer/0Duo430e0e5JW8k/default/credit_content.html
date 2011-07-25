@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="/company/enterprise/public/default/css/product_list.css" />
+<link href="/company/enterprise/public/default/css/new-ym-layout.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{ecms:field name="cust_aim"/}</title>
+<script type="text/javascript" src="/js/prototype.js"></script>
+<script type="text/javascript" src="/company/enterprise/public/default/js/genInfo.js"></script>
+<script type="text/javascript" src="/company/enterprise/public/default/js/setClassName.js"></script>
+<script>
+	 function setClassName()
+	{
+		document.getElementById("dis7").className = "new-dh"; 
+	}
+</script>
+</head>
+<body onload="setClassName()">
+<!--头部-->
+<table width="950" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+	<div class="new-ym-header">
+        <div class="new-ym-header4">&nbsp;&nbsp;&nbsp;&nbsp;
+			<a id="dis9" href="/company/web/{ecms:field name='cust_id'/}">首  页</a>&nbsp;&nbsp;&nbsp;	
+			{ecms:channel type="top" row="8" orderby="show_no"}
+			<a id="dis[field:show_no/]" href="[field:churl/]">[field:ch_name/]</a>&nbsp;&nbsp;&nbsp;
+			{/ecms:channel}
+		</div>
+      </div>
+      <div class="new-ym-header1">
+        <div class="new-ym-header2">{ecms:field name="cust_aim"/}
+          <!--合肥贞龙信息科技有限责任公司-->
+        </div>
+      </div>
+      <div class="new-ym-header3">
+        <div class="new-ym-header5">目前位置：<a href="/">首页</a>&nbsp;-&gt;&nbsp;资质荣誉</div>
+      </div></td>
+  </tr>
+</table>
+<!--内容-->
+<div id="main" >
+	<div class="main_box">
+		<div class="list_left">
+			<!--加入企业库-->
+		 <div class="cp_content_lmt"><span>荣誉证书</span></div>
+		  <div class="cp_list_box">
+		    <table width="95%" border="0" align="center" cellpadding="0" cellspacing="1">
+              <tr>
+                <td width="47%" align="center">
+				<table width="100%" border="0" cellspacing="0" cellpadding="5">
+                    <tr>
+                      <td align="center"><img src="{ecms:field name='mini_img'/}" id="be_img" width="270" height="246" /></td>
+                    </tr>
+                    <tr>
+                      <td align="center">&nbsp;<a href="javascript:window.external.AddFavorite(top.location.href)">
+					  <img src="/company/enterprise/public/default/image/Content_13.gif" width="80" height="15" border="0" /></a>
+					  </td>
+                    </tr>
+                </table>
+				</td>
+              </tr>
+            </table>
+		    <p>&nbsp;</p>
+		    <div style="display:block" id="detail">
+		    <table width="85%" border="0" align="center" cellpadding="4" cellspacing="1" bgcolor="E1E1E1">
+              <tr>
+                <td width="109" align="right" bgcolor="F2F2F2"><strong>证书名称：</strong></td>
+                <td width="1038" bgcolor="#FFFFFF">{ecms:field name="credit_title"/}</td>
+              </tr>
+              <tr>
+                <td width="109" align="right" bgcolor="F2F2F2"><strong>详细说明：</strong></td>
+                <td width="1038" bgcolor="#FFFFFF">
+                	{ecms:field name="credit_desc"/}                </td>
+              </tr>
+			  </table>
+			  <table  width="85%" border="0" align="center" cellpadding="4" cellspacing="1" bgcolor="E1E1E1">
+			   <tr>
+                <td width="114" align="right" bgcolor="F2F2F2"><strong>证书类型：</strong></td>
+                <td width="407" bgcolor="#FFFFFF">{ecms:field name="credit_type"/}</td>
+				<td width="106" align="right" bgcolor="F2F2F2"><strong>归属部门：</strong></td>
+                <td width="493" bgcolor="#FFFFFF">{ecms:field name="credit_department"/}</td>
+              </tr>
+			  <tr>
+                <td width="114" align="right" bgcolor="F2F2F2"><strong>开始时间：</strong></td>
+                <td width="407" bgcolor="#FFFFFF">
+				<script language="javascript">
+					var start_date ='{ecms:field name="credit_start_date" /}'.substring(0,10);
+					document.write(start_date);
+				</script>
+				</td>
+				<td width="106" align="right" bgcolor="F2F2F2"><strong>结束时间：</strong></td>
+                <td width="493" bgcolor="#FFFFFF">
+				<script language="javascript">
+					var end_date ='{ecms:field name="credit_end_date"/}'.substring(0,10);
+					document.write(end_date);
+				</script>
+				</td>
+              </tr>
+			</table>
+         </div>
+		  </div>
+		</div>
+		<!--右边信息-->
+		<div class="list_right">
+			<div class="list_right_lmtone">加入电子商务平台，开始网上交易</div>
+		    <div class="list_right_box">
+		  		<ul>
+					<li>免费推广产品，免费宣传公司，查找买家，结交商友轻松开展网上贸易！</li>  
+					<li><div class="red_button"><span>立即免费注册</span></div></li>
+					<li>想快速开展网上贸易，提升销量？</li>  
+					<li>咨询热线： 0550-8******* </li>  
+				</ul>
+		    </div>
+			<!--最新加入-->
+			<div class="list_right_lmttwo">最新加入</div>
+			<div class="list_right_boxtwo  link_xian">
+				<ul>
+					{ecms:articlelist row="10" titlelen="14" ch_id="7830633062"}
+					<li><a href="[field:arcurl/]">[field:title/]</a></li> 					 
+					{/ecms:articlelist}
+				</ul>
+			</div>
+			<div style="height:20px"></div>
+			<!--谷歌广告-->
+			<div class="right_newsad">
+				<h3 style="color:#0000FF;">汽车英文数字拦截飞…</h3>
+				深圳飞跃科技有限公司专业生产汽车信号拦截器.汽车千扰器.</Br>
+				<span style="color:#008000;">www.szfy168.com</span>
+			</div>			
+		</div>
+	</div>
+</div>
+<!--footer-->
+<!--内容-->
+<div style="width:950px; margin:10px auto; height:auto; text-align:center">Copyright◎2008 合肥贞龙信息科技有限责任公司  版权所有 <br>
+      咨询电话：0551-5310317 | 传真：0551-5310317 | 邮箱：admin@bizoss.com <br>
+      地址：安徽合肥高新区 技术支持：b2b.bizoss.com<br>
+      <img src="/images/cn.gif"></div>
+<script language="javascript">
+	function ResizeImages()
+	{
+	   var myimg,oldwidth;
+	   var maxwidth=600;
+	   for(i=0;i<document.images.length;i++){
+	     myimg = document.images[i];
+	     if(myimg.width > maxwidth)
+	     {
+	        oldwidth = myimg.width;
+	        myimg.style.width = maxwidth;
+	        myimg.style.height = "auto";
+	     }
+	   }
+	}
+	ResizeImages();
+  </script> 
+</body>
+</html>
+ 
+
+
+
+

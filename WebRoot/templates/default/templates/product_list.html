@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="/templates/default/style/product_list.css" />
+	<script language="javascript" src="/templates/default/js/disImage.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{ecms:this name="ch_name"/}--{ecms:this name="class_name"/}--{ecms:base name="webtitle"/}</title>
+</head>
+<body>
+{ecms:include file="/templates/default/templates/top.html"/}
+<!--内容-->
+
+<div id="main" >
+	<div class="main_box">
+		<div class="list_path">您所在的位置 > <a href="/">首页</a> > 木业产品</div>
+		<!--左边信息-->
+		<div class="list_left">
+			<!--加入企业库-->
+			<div class="cp_list_lmt">
+				<div class="cp_list_lmta2"><span>最新供应</span></div>
+			</div>
+		  <div class="cp_list_box">
+				<table width="98%" border="0" align="center" cellpadding="8" cellspacing="0">
+                <tr>
+                  <td width="16%" class="cp_list_xian0">产品图片</td>
+                  <td width="46%" class="cp_list_xian0">公司/主营产品、服务</td>
+                  <td width="12%" class="cp_list_xian0">供应地区</td>
+                  <td class="cp_list_xian0">发布日期</td>
+                  <td width="14%" class="cp_list_xian0">联系方式</td>
+                </tr>
+                
+                 {ecms:articlelist row="2" cmodel="product" imgwidth="100" imgheight="75"}
+                <tr>
+                  <td class="list_right_cp_xian"><a href="[field:arcurl/]">[field:imgurl/]</a></td>
+                  <td class="list_right_cp_xian">
+								  <span class="span"><a href="[field:arcurl/]">[field:title/]</a></span></br>
+								  <font>[field:info_dsec/]</font></br>
+								  <div class="button" style="float:left; margin-right:5px;"><a href="[field:arcurl/]">产品信息</a></div> <div class="button" style="float:left;"><a href="/inc/include/InterimPages.jsp?cust_id=[field:cust_id/]">联系方式</a></div>
+								  </td>
+                  <td class="list_right_cp_xian">[field:product_site/]</td>
+                  <td class="list_right_cp_xian">[field:in_date/]</td>
+                  <td class="list_right_cp_xian">[field:group_contact_phone/]</td>
+                </tr>
+								{/ecms:articlelist}
+				</table>
+			 
+		 </div>
+		<div class="cp_list_page">{ecms:listpage row="9" type="0"/}</div>
+		</div>
+		<!--右边信息-->
+		<div class="list_right">
+			<div class="list_right_lmtone">加入电子商务平台，开始网上交易</div>
+		    <div class="list_right_box">
+		  		<ul>
+					<li>免费推广产品，免费宣传公司，查找买家，结交商友轻松开展网上贸易！</li>  
+					<li><div class="red_button"><span>立即免费注册</span></div></li>
+					<li>想快速开展网上贸易，提升销量？</li>  
+					<li>咨询热线： 0550-8******* </li>  
+				</ul>
+		    </div>
+			<!--最新加入-->
+			<div class="list_right_lmttwo">最新加入</div>
+			<div class="list_right_boxtwo  link_xian">
+				<ul>
+					{ecms:articlelist row="14" orderby="indate" ch_id="8855381456"}
+					<li><a href="[field:arcurl/]">[field:title/]</a></li>
+					{/ecms:articlelist}
+				</ul>
+			</div>
+			<!--谷歌广告-->
+			<div class="right_newsad">
+				<h3 style="color:#0000FF;">汽车英文数字拦截飞…</h3>
+				深圳飞跃科技有限公司专业生产汽车信号拦截器.汽车千扰器.<Br>
+				<span style="color:#008000;">www.szfy168.com</span>
+			</div>
+		</div>
+	</div>
+</div>
+<!--footer-->
+<div id="link">友情链接:
+	{ecms:friendlink row="25"}
+		<a href="[field:link_url/]">[field:link_name/]</a> |
+	{/ecms:friendlink}
+</div>
+<!--footer-->
+{ecms:include file="/templates/default/templates/footer.html"/}
+</body>
+</html>
+
+
+
+

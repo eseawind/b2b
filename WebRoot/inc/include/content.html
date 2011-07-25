@@ -1,0 +1,185 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="/templates/default/style/aiwen.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>爱问---贞龙电子商务平台(http://b2b.bizoss.com)</title>
+<script type="text/javascript" src="/js/prototype.js"></script>
+<script type='text/javascript' src='/dwr/interface/Productclass.js'></script>
+<script type='text/javascript' src='/dwr/engine.js'></script>
+<script type='text/javascript' src='/dwr/util.js'></script>
+<script language="javascript" type="text/javascript" src="/templates/default/js/genInfo.js"></script>
+<script language="javascript" type="text/javascript" src="/templates/default/js/aiwen.js"></script>
+<script type="text/javascript" src="/templates/default/js/first.js"></script>
+
+
+<script language="javascript" type="text/javascript">
+function CheckAsk() 
+{
+	if(document.all.deal_content.value== '') {
+		document.all.deal_content.focus();
+		alert("请输入回答内容");
+		return false;
+	}
+	if(document.all.deal_user.value == '') {
+		document.all.deal_user.focus();
+		alert("请填写回答姓名");
+		return false;
+	}
+	return true;
+}
+</script>
+</head>
+<body>
+<!--<div id="out"></div>-->
+<div id="top">
+  <div class="width">
+    <div class="top_left">欢迎访问 中国木材市场网-中木爱问</div>
+    <div class="top_right"><a href="#">高级会员服务</a> | <a href="#">联系我们</a> | <span class="lin2"><a href="#">爱问帮助？</a></span></div>
+  </div>
+</div>
+<div id="head">
+  <div class="logo"><a href="/"><img src="/templates/default/images/logo.gif"  border="0" /></a></div>
+  <div class="head_right">
+    <div class="head_right_button">
+      <div class="button lin1"><span><a href="/member/index.html">免费发布信息</a></span></div>
+      <div class="button"><span><a href="/default/product/">产品中心</a></span></div>
+      <div class="button"><span><a href="/member/Newcregister.html">免费注册</a></span></div>
+      <div class="button"><span><a href="/member/index.html">登录</a></span></div>
+    </div>
+    <div class="nav_link">
+      <ul>
+        <li id="dis12"><a href="/default/supply/index.html">供应信息</a></li>
+        <li id="dis11"><a href="/default/stock/index.html">求购信息</a></li>
+        <li id="dis10"><a href="/default/product/index.html">产品库</a></li>
+        <li id="dis9"><a href="/default/enterprise/index.html">企业库</a></li>
+        <li id="dis8"><a href="/default/changyeJiaMeng/index.html">创业加盟</a></li>
+        <li id="dis7"><a href="/default/pingCe/index.html">评测</a></li>
+        <li id="dis6"><a href="/default/myzh/index.html">市场展会</a></li>
+        <li id="dis5"><a href="/default/news/index.html">资讯</a></li>
+        <li id="dis4"><a href="/default/aiwen/index.html">问答</a></li>
+        <li id="dis3"><a href="/default/job/index.html">人才</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div id="nav">
+  <div class="nav_menu">
+    <ul>
+      <li id="topT">
+        <div class="div_menu_bg"><span><a href="/default/aiwen/index.html">爱问首页</a></span></div>
+      </li>
+      <li id="topQ">
+        <div class="div_menu_bg"><span><a href="javascript:openMore('question');">待解决问题</a>&nbsp;&nbsp;|</span></div>
+      </li>
+      <li id="topA">
+        <div class="div_menu_bg"><span><a href="javascript:openMore('answers');">已解决问题</a>&nbsp;&nbsp;|</span></div>
+      </li>
+      <li><a href="/default/aiwen/woodKnowledge/index.html">企业知识</a>&nbsp;&nbsp;|</li>
+      <li><a href="/default/aiwen/woodPicture/index.html">企业图库</a>&nbsp;&nbsp;|</li>
+      <li><a href="/default/aiwen/technology/index.html">技术成果</a>&nbsp;&nbsp;|</li>
+    </ul>
+    <div class="nav_menu_sws">我的商务室</div>
+  </div>
+  <div class="nav_search_box">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-top:12px;">
+      <tr>
+        <td height="52" align="center"><span style="font-size:14px;">请输入您的问题：</span>
+          <input name="textfield" id="textfield" type="text" style="font-size:14px; line-height:18px; height:20px; border:1px solid #7F9DB9" value="" size="42" />
+          <input type="button" name="Submit" value="搜索答案" class="school_button" onclick="return searchanser('searchTwo')"/></td>
+        <td align="right" valign="top">
+			<a href="javascript:openMore('answers');"><img src="/templates/default/images/aiwen_15.gif" border="0" /></a>
+			<a href="javascript:openMore('question');"><img src="/templates/default/images/aiwen_16.gif" border="0" /></a>
+		</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div id="main" style="margin-bottom:10px;">
+  <div class="path">您所在的位置 > <a href="/">首页</a> > <span id="position">待解决问题</span> </div>
+  <div class="left">
+    <div id="view" style="float:left; height:660px;"></div>
+  </div>
+  <div class="right">
+    <!--搜索-->
+    <div class="text_box" style="height:156px;">
+      <form name="findreq" id="findreq" action=/doTradeReg.do method=post target="_self">
+        <div style="padding:10px 0;">
+          <input type="text" name="title" id="title" class="input_box" style="margin-bottom:5px;" value="请输入您问题/查找的关键字" size="26" onMouseDown="this.value=''" />
+          </br>
+          <input type="button" value="搜索答案" onclick="return searchanser('searchOne')"/>
+          <input type="button" value="我要提问" onclick="return submtreq()"/>
+          </br>
+          <input type="hidden" name="trade_type_code" id="trade_type_code" value="7777"/>
+          <script src='/inc/getSessCustId.jsp' language='javascript'></script>
+          <input type="hidden" name="ch_id" value="6145246578"  />
+          <input type="hidden" name="info_id" value=""  />
+          <input type="hidden" name="cust_id" value=""  />
+          <input type="hidden" name="user_id" value="222222"  />
+          <input type="hidden" name="sale_id" value="000000"  />
+          <input type="hidden" name="content" value=""  />
+          <input type="hidden" name="contents" value=""  />
+          <input type="hidden" name="cust_ch_id" value="" />
+          <input type="hidden" name="session_user_id" value="55555"  />
+          <input type="hidden" name="deal_tag" id="deal_tag" value="3"/>
+          <input type="hidden" name="rsrv_str3" value="" />
+          <input type="hidden" name="rsrv_str4" value="0"  />
+          <input type="hidden" name="rsrv_str5" value="" />
+          <input type="hidden" name="tag" value="0"  />
+          <input type="hidden" name="src" value="0"  />
+          <input type="hidden" name="author" value="0"  />
+          <input type="hidden" name="mini_img" value="0"  />
+          <input type="hidden" name="mimi_title" value="0"  />
+          <input type="hidden" name="user_temp" value="0"  />
+          <input type="hidden" name="pub_date" value="0"  />
+          <input type="hidden" name="title_color" value="0"  />
+          <input type="hidden" name="read_right" value="0"  />
+          <input type="hidden" name="create_tag" value="0"  />
+          <input type="hidden" name="info_dsec" value="0"  />
+          <input type="hidden" name="info_key" value="0"  />
+          <input type="hidden" name="message_tag" value="0"  />
+          <input type="hidden" name="log_tag" value="0"  />
+          <input type="hidden" name="other_tag" value="0"  />
+          <input type="hidden" name="in_date" value=""/>
+          <input type="hidden" name="remark" value="0"  />
+          <span style="line-height:18px; color:#666; margin-top:10px;">·商务字典现收录有关商务方面的词汇量高达35000多条。</br>
+          ·输入的关键字越精确，则查到的资料就越精确。</span> </div>
+      </form>
+    </div>
+    <!--公告区-->
+    <div class="text_box" style="height:230px;">
+      <div class="left_lmt"><span>企业知识</span>
+        <div class="more_lin"><a href="/default/aiwen/woodKnowledge/list">更多</a></div>
+      </div>
+      <div class="right_list lin3">
+        <ul>
+          <div id="custKnowledge"><img src="/images/wait.gif" border="0"><font size="3">加载中...</font></div>
+        </ul>
+      </div>
+    </div>
+    <!--木业专家之星-->
+    <div class="text_box" style="height:230px;">
+      <div class="left_lmt"><span>销售经验</span>
+        <div class="more_lin"><a href="/default/aiwen/woodKnowledge/list">更多</a></div>
+      </div>
+      <div class="right_list lin3">
+        <ul>
+          <div id="selKnowledge"><img src="/images/wait.gif" border="0"><font size="3">加载中...</font></div>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="footer"></div>
+</body>
+</html>
+<script language="javascript" type="text/javascript" src="/templates/default/js/custInfo.js"></script>
+<script>
+  	getCritiqueDivS('custKnowledge');  	
+  	getCritiqueDivS('selKnowledge'); 
+</script>
+
+
+
+
+

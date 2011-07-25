@@ -1,0 +1,96 @@
+@CHARSET "UTF-8";
+BODY {
+	MARGIN: 0px; FONT-FAMILY: Arial, Helvetica, sans-serif
+}
+TD {
+	FONT-SIZE: 12px; COLOR: #333; WORD-BREAK: break-all; FONT-FAMILY: Arial, Helvetica, sans-serif,Verdana
+}
+DEL {
+	FONT-SIZE: 13px
+}
+.gome_pad_top10 {
+	PADDING-TOP: 10px
+}
+.gome_pad_left10 {
+	PADDING-LEFT: 10px
+}
+.gome_pad_left15 {
+	PADDING-LEFT: 15px
+}
+.gome_pad_left30 {
+	PADDING-LEFT: 30px
+}
+A.gome_keyword {
+	COLOR: #333; TEXT-DECORATION: none
+}
+A.gome_keyword:hover {
+	COLOR: #f60
+}
+
+UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+.gome_line_height20 {
+	LINE-HEIGHT: 20px
+}
+.gome_bg_47 {
+	BACKGROUND: url(2/bg_47.gif)
+}
+.gome_big_orange {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #f60
+}
+.gome_line_height35 {
+	LINE-HEIGHT: 35px
+}
+.gome_bor_ebebeb {
+	BORDER-RIGHT: #ebebeb 1px solid; BORDER-TOP: medium none; BORDER-LEFT: #ebebeb 1px solid; BORDER-BOTTOM: #ebebeb 1px solid
+}
+.gome_bor_bott_ebebeb {
+	BORDER-BOTTOM: #ebebeb 1px solid
+}
+.gome_str_red {
+	FONT-WEIGHT: bold; COLOR: #ff0000
+}
+.gome_bg_fafafa {
+	BACKGROUND: #fafafa
+}
+
+.gome_pad_top3 {
+	PADDING-TOP: 3px
+}
+UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+.gome_line_height22 {
+	LINE-HEIGHT: 22px
+}
+
+.gome_w_gray {
+	COLOR: #666
+}
+* {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+body {margin:0px;font-size:12px;font-family:宋体;background-color:#fff;}
+form {margin:0px;padding:0px; list-style-type:none}
+div{text-align:left}
+ul {list-style: none;margin: 0px;padding: 0px;}
+img {border:0px;}
+a:link{color: #333333;text-decoration: none;}
+a:visited{color: #003278;text-decoration: none;}
+a:hover{color: #FF6600;text-decoration: underline;}
+.top_nav_bg {
+	width: 100%; border-bottom: #cdcdcd 1px solid; height: 26px; background-color: #f0f0f0; text-align:center
+}
+.main {
+	width:100%; text-align:center
+}
+.main_box{
+	width:970px; margin:auto; margin-bottom:10px; border:0px; display:table
+}
+.main_box_t{
+	width:970px;margin:auto
+}
+.top_menu {
+	text-align:right; padding-bottom:3px; padding-top:3px
+}

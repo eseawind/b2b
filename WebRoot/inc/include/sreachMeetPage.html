@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>搜索结果</title>
+		<script type="text/javascript" src="/js/prototype.js"></script>
+		<link rel="stylesheet" type="text/css" href="/templates/default/style/cn-b2b.css" />
+		<script type="text/javascript" src="/templates/default/js/searchMeet.js"></script>
+		<script type="text/javascript" src="/templates/default/js/getLogo.js"></script>
+		<link rel="stylesheet" type="text/css" href="/templates/wood/style/supply.css" />
+		<script type="text/javascript" src="/templates/default/js/topSearch.js"></script>
+	</head>
+	<body>
+		
+		<script language="javascript">
+			getLogo("logo");
+		</script>
+		
+<div id="top">
+	  <div class="width link_xian">
+		<div class="left"><A title=将本站设为你的首页 onclick="this.style.behavior='url(#default#homepage)';this.sethomepage('http://'+window.location.host);return false;" href="javascript:;">设为首页</a> | <a href=javascript:window.external.AddFavorite(top.location.href)>添加到收藏夹</a></div>
+		<div class="right">
+		<a href="/member/index.html">登录</a> | <a href="/admin/index.jsp">运营商</a> | <a href="/member/Newcregister.html">免费注册</a> | <a href="/member/mainMenu/default.jsp">发布信息</a></div>
+	  </div>
+<!--//logo-->
+<div id="logo">
+		
+</div>
+<!--logo//-->
+	
+	  <div class="nav_search_box">
+			<div class="search_list"><span><a href="#"  onclick="tradeType('8855381456')"> 产品</a></span> | <span><a href="#" onclick="tradeType('7830633062')">供应</a></span> | <span><a href="#" onclick="tradeType('6871426767')">求购</a></span> | <span><a href="#" onclick="tradeType('5563378845')">企业</a></span> | <span><a href="#" onclick="tradeType('1455415210')">新闻</a></span> | <!--span>more</span--></div>
+			<div class="search_box">
+			<strong style=" float:left; font-size:14px;">商品搜索</strong> <div class="search_box_bg"><span>
+			 <input name="keyword" id="keyword" type="text" style="font-size:14px; width:300px; color:#666; line-height:18px; height:18px;" value="请输入您想查找的关键字"  onclick="this.value=''",size="42" /><input type="submit" name="Submit" value="全站搜索" onClick="Search()" class="search_button"/></span></div> 
+		<!--img src="/templates/default/images/king_button.gif" /--> </div>
+			<input type="hidden" name="tradeTypecode" id="tradeTypecode" value="8855381456" />
+	</div>
+</div>
+
+
+
+     <div id="search" style="margin:0 auto;"></div>
+
+	</body>
+</html>
+<script>
+	var sear=window.location.search.substring(1);
+	infom=sear.split('&');
+	//第一个参数
+	var val=infom[0].split("=");
+	var param1=val[0];
+	var paraVa1=val[1];
+	//第2个参数
+	var val=infom[1].split("=");
+	var param2=val[0];
+	var paraVa2=val[1];
+	
+	genSearch("search",param1,paraVa1,param2,paraVa2);
+
+</script>
+<!--footer-->
+<div id="footer">
+<!--bottom-->
+<div class="footernew"> 
+	  <a href="http://www.bizoss.com/html/b2b/2009/0619/9.html" target="_blank">系统概述</a> 
+	| <a href="http://www.bizoss.com/html/b2b/2009/0619/10.html" target="_blank">功能概要</a> 
+	| <a href="http://www.bizoss.com/html/b2b/2009/0619/11.html" target="_blank">功能和特点</a> 
+	| <a href="http://www.bizoss.com/html/b2b/2009/0619/12.html" target="_blank">报价方案</a> 
+	| <a href="http://www.bizoss.com/html/b2b/2009/0619/12.html" target="_blank">报价方案</a> 
+	| <a href="http://www.bizoss.com/html/customer/2009/0619/7.html" target="_blank">客户与合作伙伴</a>
+	<br/>
+ 
+    <img src="/templates/default/images/ucs2.gif" align="absmiddle"/>
+    &nbsp;销售咨询：
+    <a href="http://wpa.qq.com/msgrd?V=1&Uin=923462250&Site=a-hai.net&Menu=yes tencent://message/?uin=923462250" target=_blank class="lanse">923462250</a> 
+    <a href="http://wpa.qq.com/msgrd?V=1&Uin=860537859&Site=a-hai.net&Menu=yes tencent://message/?uin=860537859" target=_blank class="lanse">860537859</a> 
+    <a href="http://wpa.qq.com/msgrd?V=1&Uin=537715360&Site=a-hai.net&Menu=yes tencent://message/?uin=537715360" target=_blank class="lanse">537715360</a> 
+    
+     <a href="http://www.bizoss.com" target="_blank" class="lanse">合肥贞龙信息科技有限责任公司</a> 
+     版权所有 &copy;  2008  保留所有权利 <a href="http://www.miibeian.gov.cn/" target=_blank>皖ICP备05015140号</a><br/>
+    <div class="lx">服务热线：0551-5333364 | 传真：0551-5333364 </div>
+    
+    <span style="text-indent:2em;font-size:11px;font-family:Verdana,Helvetica,Arial,sans-serif; height:32px; line-height:32px; width:100%; white-space:nowrap">
+        <img src="/favicon.gif" align="absmiddle" /> 
+        &nbsp;Powered by <a href="http://www.bizoss.com" target="_blank">BizOss</a>
+    </span>
+</div>
+</div>
+<script type="text/javascript" src="/templates/default/js/topSearch.js"></script>
+
+
+

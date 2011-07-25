@@ -1,0 +1,309 @@
+@import url("../style/layout.css");
+/*广告*/
+.ad_260x34{ float:left; margin-left:12px; display:inline;}
+.ad{ float:left; width:920px; margin-top:10px;}
+.ad li{ float:left; padding:0; margin:0;}
+
+.main_box{ 
+		float:left; 
+		width:920px; 
+		margin-top:10px; 
+		height: auto;}
+.main_left_button_box{
+		float:left; 
+		width:296px;  
+		border:1px solid #E4E4E4; 
+		padding:8px;}
+.main_left_button_box li{
+		float:left; 
+		width:95px; 
+		height:38px;
+		line-height:37px;  
+		padding-left:48px;
+		margin-bottom:10px;
+		font-size:14px;
+		font-weight:bold;}
+.main_left_button_box .a1{
+		background:url(../images/wood_53.gif) left top no-repeat; 
+		}
+.main_left_button_box .a2{
+		margin-left:9px;
+		display:inline;
+		background:url(../images/wood_53.gif) right top no-repeat; 
+		}
+.main_left_button_box .a3{
+		background:url(../images/wood_53.gif) left bottom no-repeat; 
+		}
+.main_left_button_box .a4{
+		margin-left:9px;
+		display:inline;
+		background:url(../images/wood_53.gif) right bottom no-repeat; 
+		}
+.left_contact{ 
+		float:left;
+		width:290px;
+		height:auto;}
+		
+/*右边信息*/
+.main_right{ float:right; width:320px;height:auto;}
+.right_lmtone{ 
+		float:left; 
+		width:320px;
+		height:26px; 
+		background:url(../images/wood_51.gif) right top no-repeat; 
+		border-bottom:3px solid #007131;}
+.right_lmttwo{
+		float:left; 
+		width:320px;
+		height:29px;
+		background:url(../images/wood_84.gif) right top no-repeat;}
+.right_lmttwo .name{ 
+		float:left; 
+		width:110px; 
+		height:24px; 
+		padding:5px 0 0 30px; 
+		background:url(../images/wood_84.gif) left top no-repeat; 
+		font-size:14px; 
+		font-weight: bold; 
+		color: White;
+}
+.right_box{ 
+		float:left;
+		width:308px;
+		height:auto;
+		padding:10px 0 5px 10px;
+		border:1px solid #007131;
+}
+.right_box li{
+		float:left;
+		width:280px;
+		margin:0px;
+		padding:0px;
+		line-height:24px;
+		background:url(../images/ico.gif) left center no-repeat;
+		padding-left:10px;
+		list-style-type:none;
+
+}
+.right_pic_image{
+		float:left;
+		width:308px;
+		height:auto;}
+.right_pic_image img{
+		float:left;
+		margin:5px 5px 5px 0;
+		width:116px;
+		height:75px;}	
+.right_pic_image li{
+		padding:0px;
+		width:180px;
+		line-height:22px;
+		background:url(../images/ ) left center no-repeat;}
+.right_pic_image li a:link, .right_pic_image li a:visited, .right_pic_image li a:hover{ 
+		text-decoration: underline;}
+
+/*左边信息*/
+.main_left{ float:left; width:588px; height:auto;}
+.left_table_menu{ 
+		float:left;
+		width:588px;
+		height:26px;
+		border-bottom:3px solid #EC6C00;
+		}
+.left_table_menu ul{ list-style-type:none; float:left;width:auto; height:26px; margin-left:19px; display:inline; font-weight: bold; font-size:14px;}
+.table_a2 {
+		cursor:hand;
+		float:left;
+		width:92px; 
+		color:#fff;
+		height:22px;
+		padding-top:4px; 
+		text-align:center;
+		background:url(../images/wood_60.gif) left bottom no-repeat;}
+.table_a1 {
+		cursor:hand;
+		float:left;
+		width:92px; 
+		color:#4D4D4D;
+		height:22px;
+		padding-top:4px; 
+		text-align:center;
+		background:url(../images/wood_60.gif) left top no-repeat;}
+.left_box_huangse{ 
+		float:left;
+		width:586px;
+		height:auto;
+		border:1px solid #EC6C00;}
+.left_box_huangse ul{
+		float:left; 
+		margin:5px 0 5px 0;}
+.left_box_huangse li{ 
+		float:left;
+		width:290PX;
+		line-height:24px;}
+.left_box_huangse li span{ 
+		color:#007132;
+		padding:0 5px 0 15px;
+		}		
+.left_box_lanse{ 
+		float:left;
+		width:586px;
+		height:auto;
+		border:1px solid #007131;}
+.cp_list{
+		float:left;
+		width:586px;
+		height:auto;}
+.cp_list ul{ 
+		float:left;
+		margin:10px 10px 0 10px;
+		display:inline;
+		}
+.cp_list li{ 
+		float:left;
+		width:113PX;
+		padding-bottom:4px;
+		text-align:center;
+		}
+.cp_list li img{ 
+		border:1px solid #D1D3D1;
+		}
+
+.box920_lanse{ 
+		float:left;
+		width:918px;
+		height:auto;
+		border:1px solid #007131;}
+
+.left_lmt_huangse{
+		float:left; 
+		width:588px;
+		height:29px;
+		background:url(../images/wood_82.gif) left top no-repeat;}
+.left_lmtone{
+		float:left; 
+		width:920px;
+		height:29px;
+		background:url(../images/wood_97.gif) left top no-repeat;}
+.left_lmttwo{
+		float:left; 
+		width:588px;
+		height:29px;
+		background:url(../images/wood_588.gif) left top no-repeat;}
+
+.cp_half,.news_half{
+		float:left;
+		width:277px;
+		margin:0px;
+		padding:5px 0 5px 15px;
+		height:auto;}
+
+.cp_half dt{ 
+		float:left;
+		width:265px;
+		padding-left:10px;
+		line-height:30px;
+		font-size:14px;
+		font-weight:bold;
+		background:url(../images/wood_91.gif) left center no-repeat;}
+.cp_half dd{
+		float:left; 
+		width:auto;
+		padding-right:5px;
+		line-height:24px;
+		WHITE-SPACE: nowrap;
+		color:#999999;
+}
+.cp_half dd a:link, .cp_half dd a:visited, .cp_half dd a:active, .cp_half dd a:hover{ 
+		text-decoration: underline;}
+
+
+/*中间信息*/
+.box920_right{ 
+		float:left;
+		width:612px;
+		height:auto;}
+.box920_right dt{ 
+		float:left;
+		width:612px;
+		height:25px;
+		background:url(../images/wood_100.gif) left top repeat-x;}
+.box920_right dt li{ 
+		float:left;
+		width:auto;
+		line-height:25px;
+		padding-left:12px;
+		color:#E36A04;
+		border-top:1px solid #D1D3D1;
+		border-right:1px solid #D1D3D1;
+		border-bottom:1px solid #D1D3D1;
+		}
+.box920_right dd li{ 
+		float:left;
+		width:auto;
+		line-height:25px;
+		padding-left:12px;
+		border-right:1px dashed #D1D3D1;
+		border-bottom:1px dashed #D1D3D1;
+		}	
+.box920_left{
+		float:left;
+		width:290px;
+		padding:5px 0 10px 15px;
+		height:auto;
+		background-color:#E7F6EE;
+		border-right:1px dashed #ccc;
+		}
+.dd_lanse{ color:#007131;}
+.dd_huangse{ color:#E36A04;}
+
+
+.newslist{ 
+		float:left;
+		height:auto;}
+.newslist dt{ 
+		float:left;
+		width:270px;
+		height:38px;}
+.newslist dt li{
+		float:left;}
+.newslist dd{ 
+		float:left;
+		width:270px;
+		height:auto;}
+.newslist dd li{
+		float:left;
+		width:270px;
+		color:#666;
+		font-family:Arial, Helvetica, sans-serif}
+.newslist dd li a:link, .newslist dd li a:visited, .newslist dd li a:hover{ 
+		text-decoration: underline;}
+.newslist_lmt_bt{
+		font-size:14px; 
+		line-height:38px;
+		font-weight:bold;}
+.newslist_lmt_xian{
+		width:146px;
+		height:38px;
+		margin:0 5px;
+		background:url(../images/xian.gif) left center repeat-x;}
+.newslist_lmt_more{
+		float:right;
+		line-height:38px;}
+		
+.search_body{width:930px; margin:6px; auto;}
+.search_body h3{
+	color:#0000CC; font-weight:500; line-height:22px; font-size:16px; text-align:left;
+}
+.search_body h3 a{ text-decoration:underline; color:#0000CC;}
+.search_body h3 a:link{ color:#0000CC;text-decoration: underline;}
+.search_body h3 a:visited,.search_body h3 a:hover{ color:#FF0000;text-decoration: underline;}
+.search_body p{ color:#333; font-size:12px; line-height:18px;}
+.search_body span{ color:#008000; font-size:12px; line-height:18px; font-family:Arial, Helvetica, sans-serif;}
+.search_body span a:link, .search_body span a:visited, .search_body span a:hover{ color:#7777CC;text-decoration: underline;}
+
+
+
+
+
+

@@ -1,0 +1,15 @@
+/* CSS Document */
+body{margin: 0px;padding: 0px; background:url(/images/kbu_zy_01.gif) left top repeat-x;font-size:12px; color:#333; line-height: 22px;}
+a:link,a:visited{ color:#333; text-decoration:none;}
+a:hover{ color:#ff8400; text-decoration:underline;}
+form{ padding:0px; margin:0px;}
+ul{ padding:0px; margin:0px; list-style-type:none;}
+
+.welcome{ float:left; height:auto; width:650px; margin-left:50px; margin-top:20px; display:inline; padding-bottom:20px;}
+.welcome_01{ float:left; height:auto; width:500px; margin-left:72px; display:inline; padding-bottom:20px;}
+.welcome_02{ float:left;font-size:14px; color:#333333; line-height:36px; margin-left:60px; margin-bottom:10px; display:inline; width:500px; padding-left:12px; border:1px dashed #BFBFBF; background-color:#FAFAFA;}
+.welcome_02 a:link, .welcome_02 a:visited{ color:#008A5C; font-size:14px; text-decoration:underline;}
+.welcome_02 a:hover{color:#ff8400; font-size:14px; text-decoration: none;}
+
+
+

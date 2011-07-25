@@ -1,0 +1,33 @@
+@import url("../style/layout.css");
+/*²úÆ·ÏêÏ¸Ò³*/
+.cp_content_lmt{
+	float:left;
+	width:950px;
+	height:28px;
+	background: url(../images/product_top.gif) right top repeat-x;}
+.cp_content_lmt span{
+	float:left;
+	width:auto;
+	color:#006600;
+	font-weight:bold;
+	font-size:14px;
+	line-height:28px;
+	padding-left:26px;
+	background: url(../images/product_top.gif) left top no-repeat;
+}
+.cp_content_box{
+	float: left;
+	width:948px;
+	border-bottom: 1px solid #CFE2CF;
+	border-left: 1px solid #CFE2CF;
+	border-right: 1px solid #CFE2CF;
+}
+
+.product_content_lmt{ float:left; width:950px; height:29px; background: url(../images/product_lmt.gif) left top no-repeat; margin:10px 0 5px 0;}
+.product_content_lmt span{ float:left; width:auto; line-height:22px; font-size:14px; color:#558D55; font-weight:bold; padding:7px 16px 0 0; margin-left:26px; display:inline; background: url(../images/product_lmt0.gif) right top no-repeat;}
+
+.product_vip_content{ float:right; width:260px; height:290px; padding:10px; background-color:#F8FDFF; border-left: dashed 1px #D1D9DF;}
+.product_vip_content li{ float:left;width:100%; padding:5px 0;}
+.product_vip_content li span{ font-size:16px; font-weight:bold;}
+
+

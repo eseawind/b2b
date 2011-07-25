@@ -1,0 +1,44 @@
+<div class="ad"><img src="/templates/default/images/ad/topad.jpg" /></div>
+<div id="top">
+	  <div class="width link_xian">
+	  		<div class="right"><A title=将本站设为你的首页 onclick="this.style.behavior='url(#default#homepage)';this.sethomepage('http://'+window.location.host);return false;" href="javascript:;">设为首页</a> | <a href=javascript:window.external.AddFavorite(top.location.href)>添加到收藏夹</a> | <a href="/member/index.html">登录</a> | <a href="/admin/index.jsp">运营商</a> | <a href="/member/Newcregister.html">免费注册</a> | <a href="/member/mainMenu/default.jsp">发布信息</a></div>
+	  </div>
+<!--//logo-->
+<div id="logo">
+		<div class="logo_img" style=" background:url({ecms:base name='logourl'/}) no-repeat top center !important; background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src='{ecms:base name='logourl'/}'">
+			<div class="search">
+    				<div class="search_list"><span><input type="radio" name="search" checked onclick="tradeType('8855381456')">产品</span> | <span><input type="radio" name="search" onclick="tradeType('7830633062')">供应</span> | <span><input type="radio" name="search" onclick="tradeType('6871426767')">求购</span> | <span><input type="radio" name="search" onclick="tradeType('5563378845')">企业</span> | <span><input type="radio" name="search" onclick="tradeType('1455415210')">新闻</span> | <!--span>more</span--></div>
+        			<div class="search_box">
+            			<strong style=" float:left; font-size:14px;">商品搜索</strong> <span>
+            			 <input name="keyword" id="keyword" type="text" style="font-size:14px; width:300px; color:#666; line-height:18px; height:18px;" value="请输入您想查找的关键字"  onclick="this.value=''",size="42" /><input type="submit" name="Submit" value="全站搜索" onClick="Search()" class="search_button"/></span>
+            		     <!--img src="/templates/default/images/king_button.gif" /--> </div>
+            			<input type="hidden" name="tradeTypecode" id="tradeTypecode" value="8855381456" />
+        			</div>
+		</div>
+</div>
+<!--logo//-->
+	
+	   
+</div>
+
+<div id="nav">
+  <div class="nav_menu">
+    <ul>
+      <li class="nav_menu_bg" id="dis0"><span><a href="/">首页</a></span>|</li>
+      {ecms:channel type="top" row="12" orderby="show_no"}
+      	<li id="dis[field:show_no/]"><span><a href="[field:churl/]">[field:ch_name/]</a></span> |</li>
+      {/ecms:channel}
+      <li><span><a href="http://www.bizoss.com" target="_blank">贞龙</a></span> |</li>
+    </ul>
+  </div>
+</div>
+<script type="text/javascript" src="/templates/default/js/setClassName.js"></script>
+<script type="text/javascript" src="/templates/default/js/topSearch.js"></script>
+<script type="text/javascript" src="/js/prototype.js"></script>
+<script language="javascript">
+		setTopName();//设置头部高亮----setClassName.js
+</script>
+
+
+
+

@@ -1,0 +1,121 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">s
+	<head>
+		<title>成员管理</title>
+		<link href="/style/layout.css" rel="stylesheet" type="text/css">
+		
+</head>
+	<body >
+		
+         <form method="post" name="NewRegisterForm" id="NewRegisterForm" action=/register.do onsubmit="return Check_Value() ">	
+	                        
+							  <table id="tabCompany" width="600" border="0" cellspacing="0" cellpadding="0" style="">
+								 <tr>
+									<td>
+										<div style="width:90%; text-align:center; padding-top:10px;"><img src="images/now.gif" border="0" align="absbottom"/></div>				        
+									</td>																
+								 </tr>
+								 <tr>
+									<td>										
+					          <h2>请完整填写您的企业资料，我们将为您提供更全面的服务</h2>
+									</td>																	
+								 </tr>
+										<tr>
+												<td width="80" height="30" align="center" valign="middle">
+														公司名称：	
+														</td>
+													<td width="">
+														<input name="cust_aim" type="text" maxlength="40" class="login_textarea">	
+													</td>												
+												</tr>
+                       <tr>
+	                        <td width="80"  align="center" valign="middle">
+														公司地址：	
+												</td>
+													<td width="34%">
+														<input name="company_address" type="text" maxlength="40" size="40" class="login_textarea">	
+													</td>
+                       	</tr>
+												<tr>
+													<td width="80" height="30" align="center" valign="middle">
+														公司网站：	
+
+												</td>
+													<td>
+														<input name="website" type="text" size="25" maxlength="25" class="login_textarea">
+												  </td>													
+												</tr>
+													<tr>
+													<td width="80" align="center" valign="middle">
+														用 户 数：
+												</td>
+													<td>
+														<select name="user_count" class="login_textarea">		
+															<option value="1">
+															10-20人															
+															</option>															
+															<option value="2">																
+															20-50人															
+															</option>														
+															<option value="3">													
+															50-60人															
+															</option>
+														</select>	
+
+												</td>
+												</tr>
+
+												<tr>
+													<td width="80" height="30" align="center" valign="middle">
+														传 真：		
+
+											</td>
+													<td>
+														<input name="fax_nbr" type="text" size="15" maxlength="15" class="login_textarea">
+												  </td>
+
+													<input type="hidden" id="calling_type_code" name="calling_type_code" value="">
+												</tr>
+
+												<tr>
+													<td width="80" height="30" align="center" valign="middle">
+														法人代表：	
+
+													</td>
+													<td colspan="3">
+														<input type="text" name="juristic" maxlength="15" class="login_textarea">		
+												  </td>
+												</tr>
+												<tr>
+													<td width="80" height="30" align="center" valign="middle">
+														经营范围：	
+														</td>												
+													<td colspan="3">
+														<textarea name="group_memo" cols="50" rows="6"></textarea>	
+												  </td>
+												</tr>
+												<input type="hidden" name="cust_aim" value="">
+												<tr>
+													<td width="80" height="90" align="center" valign="middle">
+														公司简介：	
+
+												</td>
+													<td height="90" colspan="3">
+														<textarea name="scope" cols="50" rows="6"></textarea>	
+													</td>
+												</tr>
+					       </table>					
+								<div style="float:right; padding-right:40px;">
+								  <input name="button" type="button" class="button"  value="提 交" />
+								</div>
+								<input type="hidden" name="trade_type_code" value="0810">
+								<input type="hidden" name="class_id" id="class_id" value="">
+								<input type="hidden" name="cust_id" id="cust_id" value="">
+			          </form>
+  
+	</body>
+</html>
+
+
+
+

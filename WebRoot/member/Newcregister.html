@@ -1,0 +1,579 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN""http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>新会员注册</title>
+		<script src="/js/UrlEncode.js" language="jscript" type="text/jscript"></script>
+		<script src="/js/newcregister.js" language="jscript" type="text/jscript"></script>
+		<link rel="stylesheet" type="text/css" href="/templates/default/style/layout.css" />
+		<link rel="stylesheet" type="text/css" href="/templates/default/style/login.css" />
+		<script type='text/javascript' src='/dwr/interface/UserInfo.js'></script>
+		<script type='text/javascript' src='/dwr/interface/AreaInfo.js'></script>
+		<script type='text/javascript' src='/dwr/interface/Productclass.js'></script>
+		<script type='text/javascript' src='/dwr/interface/ParamethodMgr.js'></script>
+		<script type='text/javascript' src='/dwr/engine.js'></script>
+		<script type='text/javascript' src='/dwr/util.js'></script>
+		<script language="javascript" src="/js/Calendar_Ly.js"></script>
+		<script type="text/javascript" src="/js/newRreg.js"></script>
+		<script type="text/javascript" src="/js/prototype.js"></script>
+		<script language="javascript" src="/templates/wood/js/changcode.js"></script>
+		<script language="javascript" src="/templates/default/js/selectArea.js"></script>
+		<script src='/inc/ifCloseLogin.jsp' language='javascript'></script>
+		<script type="text/javascript" src="/templates/default/js/setClassName.js"></script>
+		<script type="text/javascript" src="/dwr/interface/Productclass.js"></script>
+		<script type="text/javascript" src="/templates/default/js/topSearch.js"></script>
+		<script language="javascript">	
+			window.onload = function()
+			{
+				getRC( 'randomcode',1 );
+				setProvince();
+				setpara();
+				selectLevel('0');
+				
+			
+			}
+			function setpara()
+			{
+		 		ParamethodMgr.getParaCode3ByParam_code("calling_type_code",function(data){
+				 	DWRUtil.addOptions("calling_type_code",data);
+				});
+			
+			}
+			function getRC(div_id,n) { 
+				var data = Math.round(Math.random() * 10000);
+				var myAjax = new Ajax.Updater(div_id,
+						'/member/comm/randomCode.jsp?n=1&data=' + data, {
+							method : 'get',
+							evalScripts : true
+						});
+			}
+			if(document.getElementById('new_Search').value=='0') {					
+				alert('注册端口已关闭！');
+				history.go(-1);
+			}
+
+
+		</script>
+		<style type="text/css" media="screen">
+        .green {float:left;
+        border-color: #485E00;
+        border-style: solid;
+        background-color: #F7FFDD;
+        border-width: 1px;
+        font-size: 12px;
+        color: #485E00;
+        font-family: 宋体;
+        padding: 3px 3px;
+        
+        }
+        .orange {float:left;
+        font-size: 12px;
+        color: #006600;
+        font-family: 宋体;
+        padding: 3px 3px;
+        
+        }
+    </style>
+</head>
+<body>
+<div id="login_top">
+	<div class="logo" style="background:url(/templates/default/images/logo.png) no-repeat left top !important; background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src='/templates/default/images/logo.png'">
+	<h1><a href="" title="贞龙信息科技有限责任公司">贞龙信息科技有限责任公司电子商务平台</a></h1>
+	</div>
+	<div class="top_right lin4"> 
+		<A title=将本站设为你的首页 onclick="this.style.behavior='url(#default#homepage)';this.sethomepage('http://'+window.location.host);return false;" href="javascript:;">设为首页</a> | <a href=javascript:window.external.AddFavorite(top.location.href)>收藏本页</a><br>
+		如遇注册问题请拨打，<span>0551-5310317</span>
+  </div>
+</div>
+<div id="login_body">
+	<div id="login_box">
+		<div class="login_lmt">
+			<div class="lmt1">填写注册信息</div>
+			<div class="lmt2">打<font color="#ff0000">*</font>为必填项 </div>
+		</div>
+		<div class="login_text">为了更好的宣传您的企业，请填写详细资料方便客户联系！</div>
+		<form method="post" name="NewRegisterForm" id="NewRegisterForm" action=/register.do onsubmit="return SubmitReg()">
+		<table width="90%" border="0" cellspacing="0" cellpadding="0" align="center">
+									<tr>
+									<th height="40" align="left" class="t" colspan="3" ><img src="/templates/default/images/reg.gif" width="12" height="12" /> 	设置您的帐户信息</th>
+								</tr>
+							
+									<tr>
+										<td width="18%" height="40" align="right" class="t">
+											登陆名：<font color="#ff0000">*</font></td>
+										<td width="36%">
+											<input name="user_name" type="text" class="login_input" id="user_name" onfocus="user_name_focus(true);"  onblur="user_name_focus(false);" value="" size="20" maxlength="20">									
+										</td>
+										<td colspan="2">
+											<div id="divUsername">
+												用户名由6~20个字符，只能由小写英文字母和数字组成!
+											</div>										
+										</td>
+									</tr>
+									<tr>
+										<td height="40" align="right" class="t">
+											用户密码：<font color="#ff0000">*</font></td>
+										<td>
+											<input name="passwd" type="password" class="login_input" id="passwd[0]" onfocus="password_focus(true, 0);" onblur="password_focus(false, 0);" size="25" maxlength="20">
+										
+										</td>
+										<td colspan="2" id="tdPassword">
+											<div id="divPassword1">
+												密码由6-20个英文字母(区分大小写)或数字组成!
+											</div>										
+										</td>
+									</tr>
+									<tr>
+										<td height="40" align="right" class="t">确认密码：<font color="#ff0000">*</font></td>
+										<td>
+											<input name="passwd" type="password" class="login_input" id="passwd[1]" onfocus="password_focus(true, 1);" onblur="password_focus(false, 1);" size="25" maxlength="20">
+																					
+										</td>
+										<td colspan="2" id="tdRePassword">
+											<div id="divPassword2">
+												请再输入一遍您上面填写的密码!	
+											</div>										
+										</td>
+									</tr>
+									<tr>
+										<th height="40" align="left" class="t" colspan="3" >
+										<img src="/templates/default/images/reg.gif" width="12" height="12" /> 姓名和联系方式
+										</th>
+									</tr>
+									<tr>
+										<td height="40" align="right" class="t">
+											真实姓名：<font color="#ff0000">*</font
+										></td>
+										<td>
+											<input name="cust_name" type="text" class="login_input" id="cust_name" onfocus="user_name_real(false);"  onblur="user_name_real(true);" size="25" maxlength="20">
+										</td>
+											
+										<td colspan="2">
+											<div id="realname">
+												请填写您的真实姓名，以方便我们确认信息!
+											</div>										
+										</td>
+									</tr>
+									<tr>
+										<td height="40" align="right" class="t">
+											性别：<font color="#ff0000">*</font>			
+										</td>
+										<td>
+											<input type="radio"   name= "sex1" checked   id="sex1"   value= "0"/> 男
+											<input type="radio"   name= "sex1"  id="sex1"   value= "1"/> 女
+											<input type="hidden" name="sex" id="sex" value="">
+										</td>
+									</tr>
+									<tr>
+										<td height="40" align="right" class="t">
+											电子邮箱：<font color="#ff0000">*</font>
+										</td>
+										<td>
+											<input name="email" type="text" class="login_input" id="email" onfocus="checkEmail(true);" onblur="checkEmail(false)" value="" size="25" maxlength="100" >									
+										</td>
+										<td>
+											<div id="divQues"> 
+												请认真填写邮箱地址，系统激活邮件将发送到这个邮箱!
+											</div>
+											<input type="hidden" name="pspt_id" maxlength="20" value="0000">										
+										</td>
+									</tr>
+									<tr>
+										<td height="40" align="right" class="t">联系电话：<font color="#ff0000">*</font></td>
+										<td>										
+											<input name="group_contact_phone" type="text" onblur="checkTele(false)" onfocus="checkTele(true);" size="25" maxlength="25" class="login_input" value="">
+																		
+										</td>
+										<td colspan="2">
+											<div id="teleDiv">
+												请认真您个人的联系电话，以方便我们与您沟通!										
+											</div>
+										</td>
+									</tr> 
+									<tr>
+										<td height="40" align="right" class="t">
+											传真：
+										</td>
+										<td>										
+											<input name="fax_nbr" type="text" id="fax_nbr" size="25" maxlength="25" class="login_input" value="">
+										</td>
+									</tr> 
+									<input type="hidden" name="relation_type_code" value="1">
+									<input type="hidden" name="pspt_type_code" value="0">
+									<input type="hidden" name="user_type" value="0">
+									<input type="hidden" name="rsrv_str1" value="0">
+									<input type="hidden" name="exist" value="0">
+									<input type="hidden" name="ifFormMege" value="00">
+									
+									<tr>
+										<th height="40" align="left" class="t" colspan="3" ><img src="/templates/default/images/reg.gif" width="12" height="12" /> 公司名称和主营业务</th>
+									</tr>
+									<tr>
+										<td height="40" align="right" class="t">
+											公司名称：<font color="#ff0000">*</font>								
+										</td>
+										<td>
+											<input name="cust_aim" type="text" class="login_input" id="cust_aim" onfocus="CustName_focus(true, 1);" onblur="CustName_focus(false, 1);" value="" size="25" maxlength="20">
+											
+										</td>
+										<td align="left">
+											<div id="divCustName">
+												国内注册企业请用中文完整填写在工商局注册的全称!
+											</div>										
+										</td>
+									</tr>
+									<script>
+									//设置一级分类
+									function selectLevel(leveles)
+									{
+											 if(leveles=="0")
+											 {
+											   document.getElementById("typeInfo").style.display ="block";
+											   setOneClass("3");
+											   document.all("class_id1").style.display="none";
+											 }
+											 else
+											{
+											  document.getElementById("typeInfo").style.display ="none";
+											} 	
+										}
+										function setOneClass(val)
+										{
+											var type=val;
+											if( type != "0" )
+											{
+											 	document.getElementById("typeInfo").style.display="block";
+											 	Productclass.getProductClassByUpId("000000000000000",type,setSort1);
+											 	
+											}
+											else
+											{
+											 	document.getElementById("typeInfo").style.display="none";
+											 	document.NewRegisterForm.class_name.value="";
+											 	document.NewRegisterForm.class_desc.value="";
+											}
+										}
+										function setSort1(map_data)
+										{
+											var factory = document.getElementById("sort1");
+											DWRUtil.removeAllOptions("sort1");
+											DWRUtil.addOptions("sort1",{'000000000000000':'请选择...'});
+											DWRUtil.addOptions("sort1",map_data);
+											factory.options[0].selected=true;
+											document.getElementById("sort2").style.display="none";
+											document.getElementById("sort3").style.display="none"; 
+											document.getElementById("nextElement").style.display="none"; 
+										}
+										//设置二级分类
+										function setSecondClass(val)
+										{
+											var up_class_id=val;
+											var type="3";
+											Productclass.getProductClassByUpId(up_class_id,type,setSort2);
+											document.getElementById("class_id").value=up_class_id;
+										}
+										function setSort2(map_data)
+										{
+											DWRUtil.removeAllOptions("sort2");
+											DWRUtil.addOptions("sort2",map_data);
+											document.getElementById("sort3").style.display="none";
+											document.getElementById("nextElement").style.display="none"; 
+											 var item=document.getElementById("sort2").length;
+										     if(item==0)
+										    {
+										    	document.getElementById("sort2").style.display="none";
+										    	document.getElementById("class_id").value=document.getElementById("sort2").value;
+										    }
+										    else
+										    	{
+										    		document.getElementById("sort2").style.display="block";
+										    		document.getElementById("class_id").value=document.getElementById("sort2").value;
+											    	//document.getElementById("calling_type_code").value=document.getElementById("sort2").value;
+										    	}
+										}
+										//设置三级分类
+										function setTherdClass(val)
+										{
+											var up_class_id=val;
+											var type="3";
+											Productclass.getProductClassByUpId(up_class_id,type,setSort3);
+											document.getElementById("class_id").value=up_class_id;
+										}
+										function setSort3(map_data)
+										{
+											if(map_data!=null)
+											{
+												DWRUtil.removeAllOptions("sort3");
+											     DWRUtil.addOptions("sort3",map_data);
+											     var item=document.getElementById("sort3").length;
+											     if(item==0)
+											     {
+											    	document.getElementById("sort3").style.display="none";
+											    	document.getElementById("nextElement").style.display="none"; 
+											     }
+											     else
+											     	{
+											     		document.getElementById("sort3").style.display="block";
+											     		
+										    	document.getElementById("class_id").value=document.getElementById("sort3").value;
+											     		//document.getElementById("calling_type_code").value=document.getElementById("sort3").value;
+											     	}
+											}
+										}
+										function setTypeName(classId,leave)
+										{
+											document.NewRegisterForm.class_level.value=leave;
+											document.NewRegisterForm.up_class_id.value=classId;
+										}
+										 //动态生成下级分类信息
+										function cretateSelect(index,value)
+										{
+										 document.getElementById("nextElement").style.display="block";
+										 document.getElementById("class_level").value=index;
+										 var type=document.getElementById("class_type").value;
+										 var divId=parseInt(index)+parseInt(1);
+										 document.getElementById("index_s").value=index;
+										 document.getElementById(index).innerHTML="<select name=sort"+index+" id=sort"+index+" onchange=cretateSelect("+divId+",this.value) size=3 onclick=setTypeName(this.value) style=width:130px></select><div id="+divId+"></div>";
+										 DWRUtil.removeAllOptions("sort"+index);
+										 Productclass.getProductClassByUpId(value,type,setNewSelect);
+									    }
+									    //回调函数
+									     function setNewSelect(map_data){
+									      var id=document.getElementById("index_s").value;
+									       document.getElementById("class_level").value=id;
+									      DWRUtil.addOptions("sort"+id,map_data);
+									        var item=document.getElementById("sort"+id).length;
+										    if(item==0)
+										    {
+										    	document.getElementById(id).style.display="none"; 
+										    }
+										     else
+										   	{
+										   		document.getElementById(id).style.display="block";
+										   	}
+									    }
+									</script>
+									<input type="hidden" id="class_level" name="class_level">
+									<input type="hidden" id="up_class_id" name="up_class_id">
+									<tr>
+										<td height="40" align="right" class="t">
+										<input type="hidden" id="text2" name="text2" value="">
+											企业类型：<font color="#ff0000">*</font>
+			               					 <td>
+								                  <select name="class_id1" id="class_id1"  onClick="selectLevel(this.value)">
+								                    <option value="0">请选择分类</option>
+								                    <!--option value="3">企业分类</option-->
+								                  </select>									                      	
+													<table id="typeInfo" style="display:none" >
+													  <tr>
+														<td>
+														  <select name="sort1"  onChange="setSecondClass(this.value);setAreaValue(this.value);"	onclick="setTypeName(this.value,'1')" onfocus="selecttypeInfo(true,this.value);" onblur="selecttypeInfo(false,this.value);" >
+															<option selected value="0"> 请选择... </option>
+														  </select>
+														</td>
+														<td>
+														  <select name="sort2"  style="display: none" onChange="setTherdClass(this.value);setAreaValue(this.value);" onclick="setTypeName(this.value,'2')" onfocus="selecttypeInfo(true,this.value);" onblur="selecttypeInfo(true,this.value);">
+															<option value="0"> 请选择... </option>
+														  </select>
+														</td>
+														<td>
+														  <select name="sort3" style=" display: none" onclick="setTypeName(this.value,'3');setAreaValue(this.value);" onchange="cretateSelect('4',this.value)" onfocus="selecttypeInfo(true,this.value);" onblur="selecttypeInfo(true,this.value);">
+															<option value="0"> 请选择... </option>
+														  </select>
+														</td>
+														<td>
+															<div id="nextElement">
+																<div id="4" style="display:inline"></div>
+																<input type="hidden" name="index_s" id="index_s" value="4">
+															</div>
+														 </td>
+													  </tr>
+											</table>						                 
+          							   </td>
+          							  <td colspan="2">
+											<div id="index_s4">
+												请选择您的公司企业类型，以方便用户了解贵公司!											
+											</div>										
+										</td>
+         				   		  </tr>
+									<tr>
+										<td height="40" align="right" class="t">
+											公司所在地：<font color="#ff0000">*</font>
+										</td>
+										<td >
+											<select name="province" id="province" onclick="setCitys2(this.value)"  onfocus="selectarea(true);" onblur="selectarea(false);" >
+												<option>省份</option>
+											</select>
+											<select name="eparchy_code" id="eparchy_code" onclick="setAreas(this.value)" onfocus="selectarea(true);" onblur="selectarea(false);">
+												<option>城市</option>
+											</select>
+											<select name="city_code" id="city_code" style="display:inline" onfocus="selectarea(true);" onblur="selectarea(false);">
+												<option value="">地区</option>
+												<%=city_code1%>
+											</select>
+										</td>
+										<td align="left">
+											<div id="cityname">
+												请选择公司所在地!							
+											</div>										
+										</td>
+									</tr>
+									<tr>
+							                <td height="40" align="right" class="t">经营地址：<font color="#ff0000">*</font></td>
+							                <td>
+							                	<input name="company_address" type="text" class="login_input" id="company_address" onfocus="companyaddress(false);"  onblur="companyaddress(true);" size="25" maxlength="20">
+							                </td>
+										<td align="left">
+											<div id="company_address11">
+												请填写您的公司经营地址，以方便客户联系询贵公司!											
+											</div>										
+										</td>
+							        </tr>
+									<tr>
+							                <td height="40" align="right" class="t">行业类型：<font color="#ff0000">*</font></td>
+							                <td>
+							                	<select id="calling_type_code" name="calling_type_code" onfocus="selectcall(true);" onblur="selectcall(false);">
+							                  </select>
+							                </td>
+										<td align="left">
+											<div id="calltype1">
+												请选择贵公司的行业类型!								
+											</div>										
+										</td>
+							        </tr>
+									<tr>
+						                <td height="40" align="right" class="t"> 主营方向：<font color="#ff0000">*</font></td>
+						                <td>
+						                	<input type="radio" name="develope_channel" value="0" checked onclick="showSpan(this.value)">销售 
+						                	<input type="radio" name="develope_channel" value="1" onclick="showSpan(this.value)">采购
+						                	<input type="radio" name="develope_channel" value="2" onclick="showSpan(this.value)">两者都有
+						                	<script language="javascript">
+						                		function showSpan(val){
+						                			if(val==0){
+						                				document.getElementById('xiaoshou').style.display='block';
+						                				document.getElementById('caigou').style.display='none';
+						                			}
+						                			if(val==1){
+						                				document.getElementById('xiaoshou').style.display='none';
+						                				document.getElementById('caigou').style.display='block';
+						                			}
+						                			if(val==2){
+						                				document.getElementById('xiaoshou').style.display='block';
+						                				document.getElementById('caigou').style.display='block';
+						                			}
+						                		}
+						                	</script>
+						                	<br>
+						                	<span id="xiaoshou">
+						                		<font color="red">销售</font>的产品（提供的服务）：<br>
+						                		<input type="text" name="group_a" id="group_a" class="login_input" size="25" maxlength="25"  onfocus="group_a_b(false);" onblur="group_a_b(true);"><br>
+						                	</span>
+						                	<span id="caigou" style="display:none;">
+						                		<font color="red">采购</font>的产品（需要的服务）：<br>
+						                		<input type="text" name="group_b" id="group_b" class="login_input" size="25" maxlength="25" onfocus="group_a_b(true);" onblur="group_a_b(false);">
+						                	</span>
+						                	<input type="hidden" name="group_memo" id="group_memo" value="">
+						                </td>
+						                <td align="left">
+											<div id="groubab">
+												请填写贵公司的主营方向，以便客户更了解贵公司!								
+											</div>										
+										</td>
+						              </tr>
+						           
+									<input type="hidden" name="phone" value="">				
+									 <input type="hidden" name="post_code" value="">					
+									 <input type="hidden" name="city" id="city" value="">				
+									<input type="hidden" name="local_native_code" value="">		
+									<input type="hidden" name="community_id" value="">	
+									<input type="hidden" name="birthday" value="1977-12-12">					
+									<input name="develope_channel" type="hidden" maxlength="10" size="10" value="">											
+									<input type="hidden" name="passwd_ques" value="">						
+									<input type="hidden" name="passwd_answer" id="passwd_answer" maxlength="25" >	
+									<input type="hidden" name="qq" class="login_textarea">	
+									<input type="hidden" name="home_addr" >							
+									<input type="hidden" name="work_depart" value="">				
+									<input type="hidden" name="educate_degree_code" value="">										
+									<input type="hidden" name="folk_code"  value="">
+									 
+									<input name="pspt_addr" type="hidden" maxlength="40" class="login_textarea">	
+									<!--input type="hidden" name="eparchy_code" value=""-->			
+									<input type="hidden" name="post_addr" >		
+									<input type="hidden" name="blog" class="login_textarea">									
+									<input type="hidden" name="work_name">
+									<input type="hidden" name="job" >
+									<input type="hidden" name="marriage">
+									<!--input name="cust_aim" type="hidden"-->
+									<!--input name="company_address" type="hidden"-->	
+									<input name="website" type="hidden">					
+									<input name="user_count" type="hidden" value="1">
+									<input type="hidden" name="juristic" >					
+									<input type="hidden" name="sort1" value="">													
+									<input type="hidden" name="sort2" >
+									<input name="sort3" type="hidden">
+									<!--input type="hidden" name="index_s" -->
+									<!--input type="hidden" name="group_memo"-->		
+									<input type="hidden" name="cust_aim" value="">
+									<input name="scope" type="hidden" >
+									<input name="ch_id" type="hidden" value="3213713775">
+									<input name="sex" type="hidden" value="0">
+								</table>
+								<iframe name="randomcode" marginheight="0" marginwidth="0" src="/member/comm/regRandomCode.jsp?n=1" scrolling="no" frameborder="0" width="100%" height="45"></iframe>
+								<div class="login_buttom lin3 link_xian">
+								<input type="checkbox" checked name="agreement" id="agreement"/> 同意服务条款<br>
+								<a href="#" target="_blank">点此阅读会员注册服务条款</a><br>
+								<input type="hidden" name="userrand" id="userrand" value="">
+								<input name="rsrv_str1" id="rsrv_str1" type="hidden" value="0">
+								<INPUT id="subImage" name="imageField2" style=" font-size:14px; height:30px;" type="submit" value="同意服务条款,提交注册信息">
+								<input type="hidden" name="trade_type_code" value="0810">
+								<input type="hidden" name="class_id" id="class_id" value="">
+								<input type="hidden" name="cust_id" id="cust_id" value="">
+								<input type="hidden" name="contents" id="contents" value="00">														
+								<!--input type="hidden" name="class_level" value="1"-->
+								<input type="hidden" name="cust_class" value="2"><!--2为普通客户-->
+								<input type="hidden" name="cust_type" value="0">
+								<input name="id" type="hidden" value="">
+							</div>
+							
+		</form>
+	</div>
+	
+</div>
+
+
+
+<div id="footer">
+<!--bottom-->
+<div class="footernew"> 
+	  <a href="http://www.bizoss.com/html/b2b/2009/0619/9.html" target="_blank">系统概述</a> 
+	| <a href="http://www.bizoss.com/html/b2b/2009/0619/10.html" target="_blank">功能概要</a> 
+	| <a href="http://www.bizoss.com/html/b2b/2009/0619/11.html" target="_blank">功能和特点</a> 
+	| <a href="http://www.bizoss.com/html/b2b/2009/0619/12.html" target="_blank">报价方案</a> 
+	| <a href="http://www.bizoss.com/html/b2b/2009/0619/12.html" target="_blank">报价方案</a> 
+	| <a href="http://www.bizoss.com/html/customer/2009/0619/7.html" target="_blank">客户与合作伙伴</a>
+	<br/>
+ 
+    <img src="/templates/default/images/ucs2.gif" align="absmiddle"/>
+    &nbsp;销售咨询：
+    <a href="http://wpa.qq.com/msgrd?V=1&Uin=923462250&Site=a-hai.net&Menu=yes tencent://message/?uin=923462250" target=_blank class="lanse">923462250</a> 
+    <a href="http://wpa.qq.com/msgrd?V=1&Uin=860537859&Site=a-hai.net&Menu=yes tencent://message/?uin=860537859" target=_blank class="lanse">860537859</a> 
+    <a href="http://wpa.qq.com/msgrd?V=1&Uin=537715360&Site=a-hai.net&Menu=yes tencent://message/?uin=537715360" target=_blank class="lanse">537715360</a> 
+    
+     
+     <a href="http://www.bizoss.com" target="_blank" class="lanse">合肥贞龙信息科技有限责任公司</a> 
+     版权所有 &copy;  2008  保留所有权利 <a href="http://www.miibeian.gov.cn/" target=_blank>皖ICP备05015140号</a><br/>
+    <div class="lx">服务热线：0551-5310317 | 传真：0551-5310317 </div>
+    
+    <span style="text-indent:2em;font-size:11px;font-family:Verdana,Helvetica,Arial,sans-serif; height:32px; line-height:32px; width:100%; white-space:nowrap">
+        <img src="/favicon.gif" align="absmiddle" /> 
+        &nbsp;Powered by <a href="http://www.bizoss.com" target="_blank">BizOss</a>
+    </span>
+</div>
+</div>
+
+	</body>
+</html>
+
+
+
+
+

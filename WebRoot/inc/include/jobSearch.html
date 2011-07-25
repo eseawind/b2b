@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="/templates/default/style/job.css" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>人才</title>
+		<script type="text/javascript" src="/js/prototype.js"></script>
+		<script language="javascript" src="/templates/default/js/changcode.js"></script> 
+		<script language="javascript" type="text/javascript" src="/templates/default/js/jobSearch.js"></script>
+<script >
+	function Search()
+	{ 
+		var keywd=document.getElementById("keyword").value;
+     	var tradeType=document.getElementById("tradeTypecode").value;
+		if(keywd!=null&&keywd!=""&&keywd!="请输入您想查找的关键字")
+		{
+			window.open("/member/search/searchrst.html?"+keywd+","+tradeType);
+		}
+		else
+		{
+			 alert("请输入关键字!");
+			return;
+		}				
+	}
+		
+	function SearchNew(keyword,ch_id)
+	{
+		var keyw = decodeURI(keyword);
+		window.open("/member/search/searchrst.html?"+keyw+","+ch_id);			
+	}
+	
+  	function tradeType(val)
+	{
+		document.getElementById("tradeTypecode").value=val;
+	}
+</script>
+</head>
+<body>
+<div class="ad" style=" margin-bottom:5px;"><img src="/templates/default/images/ad/ba_120_1.gif" width="950" height="60" /></div>
+<div id="top">
+	  <div class="width link_xian">
+		<div class="left"><A title=将本站设为你的首页 onclick="this.style.behavior='url(#default#homepage)';this.sethomepage('http://'+window.location.host);return false;" href="javascript:;">设为首页</a> | <a href=javascript:window.external.AddFavorite(top.location.href)>添加到收藏夹</a></div>
+		<div class="right"><a href="/member/index.html">登录</a> | <a href="/member/mainMenu/reg.jsp">运营商入口</a> | <a href="/member/Newcregister.html">免费注册</a> | <a href="/member/mainMenu/default.jsp">发布信息</a></div>
+	  </div>
+
+	<div class="logo"></div>
+	  <div class="nav_search_box">
+			<div class="search_list"><span><a href="/default/product">产品</a></span> | <span><a href="/default/supply">供应</a></span> | <span><a href="/default/stock">求购</a></span> | <span><a href="/default/enterprise">企业</a></span> | <span><a href="/default/news">新闻</a></span> | <span>more</span></div>
+			<div class="search_box">
+			<strong style=" float:left; font-size:14px;">商品搜索</strong> <div class="search_box_bg"><span>
+			<input name="textfield" type="text" style="font-size:14px; color:#666; line-height:18px; height:18px;" value="请输入您想查找的关键字" size="42" /><input type="submit" name="Submit" value="产品搜索" class="search_button"/></span></div> 
+			<img src="/templates/default/images/king_button.gif" /></div>
+	</div>
+</div>
+     <div id="search" style="margin:0 auto;"></div>
+
+</body>
+</html>
+<script>
+	val = window.opener.document.getElementById("top").innerHTML;
+  	document.getElementById("top").innerHTML=val
+	nval = window.opener.document.getElementById("nav").innerHTML;
+  	document.getElementById("nav").innerHTML=nval
+	var urlstr=window.location.search.substring(1);
+	//alert( "urlstr=" + urlstr );
+    var num=urlstr.split("&");
+    var para1=num[0].split("=")[0];
+    var paraV1=num[0].split("=")[1];
+    
+	var para2=num[1].split("=")[0];
+    var paraV2=num[1].split("=")[1];
+    
+	var para3=num[2].split("=")[0];
+    var paraV3=num[2].split("=")[1];
+	
+	var para4=num[3].split("=")[0];
+    var paraV4=num[3].split("=")[1];
+    getCritiqueDiv('searchJob',paraV1,paraV2,paraV3,paraV4);
+</script>
+<!--footer-->
+<div id="footer">
+<!--bottom-->
+<div class="footernew"> 
+	  <a href="http://www.bizoss.com/html/b2b/2009/0619/9.html" target="_blank">系统概述</a> 
+	| <a href="http://www.bizoss.com/html/b2b/2009/0619/10.html" target="_blank">功能概要</a> 
+	| <a href="http://www.bizoss.com/html/b2b/2009/0619/11.html" target="_blank">功能和特点</a> 
+	| <a href="http://www.bizoss.com/html/b2b/2009/0619/12.html" target="_blank">报价方案</a> 
+	| <a href="http://www.bizoss.com/html/b2b/2009/0619/12.html" target="_blank">报价方案</a> 
+	| <a href="http://www.bizoss.com/html/customer/2009/0619/7.html" target="_blank">客户与合作伙伴</a>
+	<br/>
+ 
+    <img src="/templates/default/images/ucs2.gif" align="absmiddle"/>
+    &nbsp;销售咨询：
+    <a href="http://wpa.qq.com/msgrd?V=1&Uin=923462250&Site=a-hai.net&Menu=yes tencent://message/?uin=923462250" target=_blank class="lanse">923462250</a> 
+    <a href="http://wpa.qq.com/msgrd?V=1&Uin=860537859&Site=a-hai.net&Menu=yes tencent://message/?uin=860537859" target=_blank class="lanse">860537859</a> 
+    <a href="http://wpa.qq.com/msgrd?V=1&Uin=537715360&Site=a-hai.net&Menu=yes tencent://message/?uin=537715360" target=_blank class="lanse">537715360</a> 
+    
+     <a href="http://www.bizoss.com" target="_blank" class="lanse">合肥贞龙信息科技有限责任公司</a> 
+     版权所有 &copy;  2008  保留所有权利 <a href="http://www.miibeian.gov.cn/" target=_blank>皖ICP备05015140号</a><br/>
+    <div class="lx">服务热线：0551-5333364 | 传真：0551-5333364 </div>
+    
+    <span style="text-indent:2em;font-size:11px;font-family:Verdana,Helvetica,Arial,sans-serif; height:32px; line-height:32px; width:100%; white-space:nowrap">
+        <img src="/favicon.gif" align="absmiddle" /> 
+        &nbsp;Powered by <a href="http://www.bizoss.com" target="_blank">BizOss</a>
+    </span>
+</div>
+</div>
+
+
+

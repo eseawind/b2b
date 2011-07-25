@@ -1,0 +1,90 @@
+/* CSS Document */
+@import url("../style/layout.css");
+#books_left{ float:left; width:730px; height:auto;}
+#books_right{ float:right; width:206px; height:auto;}
+/*À¸Ä¿Ìõ*/
+.in_lmt{
+	float:left;
+	width:100%;
+	height:28px;
+	background:url(../images/abtob_lmt0.gif) no-repeat right top;
+}
+.in_lmt .in_lmt_name{
+	float:left;
+	width:auto;
+	height:auto;
+	padding-left:26px;
+	background:url(../images/abtob_lmt.gif) no-repeat left top;
+}
+.in_lmt .in_lmt_name span{
+	float:left;
+	width:auto;
+	font-size:14px;
+	font-weight:bold;
+	color:#ffffff;
+	padding:6px 50px 0 0;
+	line-height:22px;
+	background:url(../images/lmt_name.gif) no-repeat right top;
+}
+.right_lmt{ 
+		float:left; 
+		width:206px;
+		height:26px; 
+		background:url(../images/abtob_24.gif) right top no-repeat;}
+
+.right_lmt .right_lmt_name{
+	float:left;
+	width:auto;
+	font-size:14px;
+	font-weight:bold;
+	color:#B42A12;
+	text-indent:2em;
+	padding:4px 0 0 0;
+	line-height:22px;
+	background:url(../images/abtob_24.gif) left top no-repeat;}
+	
+.box{ float:left; width:100%; padding:0; height:auto; background:url(../images/abtob_665_bg.gif) no-repeat right bottom;}
+
+.box_730{ float:left; width:710px; padding:5px 10px; height:auto; background:url(../images/abtob_600_bg.gif) no-repeat left bottom;}
+.box_730 li{ float:left; width:auto; padding: 10px 0 10px 15px; line-height:20px;}
+.box_730 li img{ float:left; margin-right:5px; width:74px; height:115px; border:1px solid #eee; background:url(../images/pic_img.gif) no-repeat center;}
+.book_name{ float:left; width:160px; line-height:22px; height:22px; background:url(../images/books_lmt.gif) no-repeat left top; color:#CD5600; font-weight:bold; text-indent:1.8em;white-space:nowrap;overflow:hidden;text-overflow:ellipsis; margin-bottom:6px;
+}
+.box_206{ float:left; width:186px; padding:5px 0 5px 10px; height:auto; background:url(../images/abtob_270_bg.gif) no-repeat left bottom;}
+.box_206 li{ float:left; line-height:24px; padding-bottom:2px; text-indent:0.2em; width:93px; border-bottom:1px dashed #ccc;white-space:nowrap; verflow:hidden;text-overflow:ellipsis;}
+
+.booksearch{float:left; width:186px; line-height:30px; margin-top:10px; border-top:1px solid #B0BEC7; padding:10px 0;}
+
+/*ÏêÏ¸Ãæ*/
+.book_content{ float:left; width:698px; padding:10px 15px; height:auto; border:1px solid #CFE2CF;}
+.book_content li{ float:left; width:auto; padding: 10px 0 10px 20px; line-height:24px;}
+.book_content li span img{width:160px; height:200px; border:1px solid #eee; background:url(../images/pic_img.gif) no-repeat center;}
+.book_content_name{ float:left; width:100%; padding:10px 0;border-bottom:1px dashed #ccc; font-family:Arial, Helvetica, sans-serif;}
+.book_content_name h3{text-indent:1.2em; font-size:1.2em; background:url(../images/tb.gif) no-repeat left center; }
+.book_content0{ float:left; width:100%;  padding:10px 0; line-height:1.8em; font-size:1.2em;}
+
+
+
+
+
+
+
+.print{
+	float: left;
+	width: 100%;
+	line-height:32px;
+	text-align: right;
+	border-top:1px dashed #ccc;
+}
+
+
+
+
+
+
+
+
+
+
+
+

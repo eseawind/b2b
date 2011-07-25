@@ -1,0 +1,307 @@
+BODY {
+	FONT-SIZE: 12px; BACKGROUND: #f1efe2; MARGIN: 0px; COLOR: #6f7071; font-family:"宋体";
+}
+
+
+
+
+.lanse{
+     color:#003366;
+	 }	 
+.lanse a:link, .lanse a:visited, .lanse a:active{ 
+     color:#003366;
+	 text-decoration:none;
+	 }
+.lanse a:hover{ 
+	 color: #003366;
+	 text-decoration: underline;
+	 }
+
+
+.bntl {
+	border:0px; background:url(1/btn_login.gif); width:93px; height:29px; cursor:hand
+}
+A {
+	TEXT-DECORATION: underline
+}
+A:link,A:visited{
+     color:#333;
+	 text-decoration:none;
+	 }
+A:active{
+	 color:#990000;
+     text-decoration:none;
+	 }
+A:hover{ 
+	 color:#FF8000;  
+	 text-decoration: underline;
+	 }
+UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+H1 {
+	DISPLAY: none
+}
+STRONG {
+	FONT-WEIGHT: normal; COLOR: #ff9c00
+}
+P {
+	MARGIN: 0px
+}
+LABEL {
+	COLOR: #ff9c00
+}
+IMG {
+	BORDER-TOP-WIDTH: 0px; BORDER-LEFT-WIDTH: 0px; BORDER-BOTTOM-WIDTH: 0px; BORDER-RIGHT-WIDTH: 0px
+}
+.span_gauche {
+	DISPLAY: block; FLOAT: left; WIDTH: 40%; HEIGHT: 30px; TEXT-ALIGN: left
+}
+.span_droite {
+	DISPLAY: block; FLOAT: left; WIDTH: auto; TEXT-ALIGN: right
+}
+#form_contact .span_gauche {
+	PADDING-RIGHT: 10px; TEXT-ALIGN: right
+}
+#form_contact INPUT {
+	BACKGROUND: #fffcf8
+}
+#form_contact TEXTAREA {
+	BACKGROUND: #fffcf8
+}
+DIV#accueil {
+	DISPLAY: block; BACKGROUND: url(../images/photo_accueil.jpg) no-repeat 97% 0%; WIDTH: 100%; HEIGHT: 590px
+}
+DIV#configuration {
+	DISPLAY: block; BACKGROUND: url(../images/photo_configuration.jpg) no-repeat 97% 0%; WIDTH: 100%; HEIGHT: 750px
+}
+DIV#situation {
+	DISPLAY: block; BACKGROUND: url(../images/photo_situation.jpg) no-repeat 97% 0%; WIDTH: 100%; HEIGHT: 500px
+}
+DIV#partenaires {
+	DISPLAY: block; BACKGROUND: url(../images/photo_partenaires.jpg) no-repeat 97% 0%; WIDTH: 100%; HEIGHT: 500px
+}
+DIV#tarifs {
+	DISPLAY: block; BACKGROUND: url(../images/photo_tarifs.jpg) no-repeat 97% 0%; WIDTH: 100%; HEIGHT: 500px
+}
+DIV#contact {
+	PADDING-RIGHT: 0px; DISPLAY: block; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px auto; WIDTH: 100%; PADDING-TOP: 20px
+}
+#header {
+	BACKGROUND: url(../images/header.jpg); MARGIN: auto; WIDTH: 834px; HEIGHT: 88px
+}
+DIV#contenu {
+	DISPLAY: block; PADDING-LEFT: 10px; WIDTH: 60%
+}
+DIV#menu {
+	MARGIN: auto; WIDTH: 834px; HEIGHT: 37px
+}
+DIV#menu UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+DIV#menu UL LI {
+	FLOAT: left
+}
+DIV#menu UL LI A#m_piece1 {
+	DISPLAY: block; BACKGROUND: url(../images/m_piece1.jpg); WIDTH: 33px; HEIGHT: 37px
+}
+DIV#menu UL LI A#m_piece2 {
+	DISPLAY: block; BACKGROUND: url(../images/m_piece2.jpg); WIDTH: 118px; HEIGHT: 37px
+}
+DIV#menu UL LI A#m_piece3 {
+	DISPLAY: block; BACKGROUND: url(../images/m_piece3.jpg); WIDTH: 126px; HEIGHT: 37px
+}
+DIV#menu UL LI A#m_piece4 {
+	DISPLAY: block; BACKGROUND: url(../images/m_piece4.jpg); WIDTH: 130px; HEIGHT: 37px
+}
+DIV#menu UL LI A#m_piece5 {
+	DISPLAY: block; BACKGROUND: url(../images/m_piece5.jpg); WIDTH: 136px; HEIGHT: 37px
+}
+DIV#menu UL LI A#m_piece6 {
+	DISPLAY: block; BACKGROUND: url(../images/m_piece6.jpg); WIDTH: 133px; HEIGHT: 37px
+}
+DIV#menu UL LI A#m_piece7 {
+	DISPLAY: block; BACKGROUND: url(../images/m_piece7.jpg); WIDTH: 126px; HEIGHT: 37px
+}
+DIV#menu UL LI A#m_piece8 {
+	DISPLAY: block; BACKGROUND: url(../images/m_piece8.jpg); WIDTH: 32px; HEIGHT: 37px
+}
+DIV#menu UL LI A#m_piece2:hover {
+	DISPLAY: block; BACKGROUND: url(../images/m_piece2Hover.jpg); WIDTH: 118px; HEIGHT: 37px
+}
+DIV#menu UL LI A#m_piece3:hover {
+	DISPLAY: block; BACKGROUND: url(../images/m_piece3Hover.jpg); WIDTH: 126px; HEIGHT: 37px
+}
+DIV#menu UL LI A#m_piece4:hover {
+	DISPLAY: block; BACKGROUND: url(../images/m_piece4Hover.jpg); WIDTH: 130px; HEIGHT: 37px
+}
+DIV#menu UL LI A#m_piece5:hover {
+	DISPLAY: block; BACKGROUND: url(../images/m_piece5Hover.jpg); WIDTH: 136px; HEIGHT: 37px
+}
+DIV#menu UL LI A#m_piece6:hover {
+	DISPLAY: block; BACKGROUND: url(../images/m_piece6Hover.jpg); WIDTH: 133px; HEIGHT: 37px
+}
+DIV#menu UL LI A#m_piece7:hover {
+	DISPLAY: block; BACKGROUND: url(../images/m_piece7Hover.jpg); WIDTH: 126px; HEIGHT: 37px
+}
+DIV#global {
+	DISPLAY: block; BACKGROUND: url(../images/bg_contenu.jpg) repeat-y; MARGIN: auto; WIDTH: 834px
+}
+DIV#presentation { padding-left:10px; padding-right:10px; padding-top:10px;}
+
+DIV#infos {
+	CLEAR: both; DISPLAY: block; BACKGROUND: url(../images/bg_infos.jpg) no-repeat; MARGIN: 20px auto; WIDTH: 434px; HEIGHT: 134px
+}
+DIV#infos H2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 16px; MARGIN-LEFT: 20px; COLOR: #1875b1; PADDING-TOP: 20px; font-family:"宋体";
+}
+DIV#infos P {
+	MARGIN-LEFT: 20px; WIDTH: 90%
+}
+P.separation {
+	CLEAR: both; PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+DIV#footer {
+	CLEAR: both; BACKGROUND: url(../images/footer.jpg) no-repeat; MARGIN: auto; WIDTH: 834px; HEIGHT: 45px
+}
+DIV#footer H3 {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FLOAT: right; PADDING-BOTTOM: 0px; MARGIN: 0px 0px 20px; PADDING-TOP: 0px
+}
+DIV#footer H3 SPAN {
+	DISPLAY: none
+}
+DIV#footer H3 A {
+	DISPLAY: block; BACKGROUND: url(../images/logo_paintoo.gif) no-repeat; WIDTH: 40px; HEIGHT: 15px
+}
+DIV#paintoo {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px 20px 0px 0px; PADDING-TOP: 15px
+}
+DIV#copyright {
+	PADDING: 5px 0; MARGIN: auto; COLOR: #484b4f; PADDING-TOP: 5px;  TEXT-ALIGN: center;
+	font-family:Arial, Helvetica, sans-serif; line-height:20px;
+}
+DIV#form_configuration {
+	MARGIN: 10px 0px 0px; WIDTH: 100%
+}
+DIV#form_contact {
+	FLOAT: left; WIDTH: 400px
+}
+DIV.boutons_formulaire {
+	CLEAR: both; DISPLAY: block; MARGIN: 20px auto 0px; WIDTH: 50%; TEXT-ALIGN: center
+}
+DIV#presentation H3 {
+	CLEAR: both; MARGIN-TOP: 2px; PADDING-LEFT: 30px; FONT-SIZE: 12px; BACKGROUND: url(../images/bg-h3.jpg) no-repeat left top; MARGIN-LEFT: 40px; COLOR: #ff9c00; LINE-HEIGHT: 1.8em; FONT-FAMILY: 'Trebuchet-MS',sans-serif; HEIGHT: 22px
+}
+INPUT.texte {
+	BORDER-RIGHT: #dbdbd8 1px solid; BORDER-TOP: #dbdbd8 1px solid; BACKGROUND: #fff; BORDER-LEFT: #dbdbd8 1px solid; COLOR: #999999; BORDER-BOTTOM: #dbdbd8 1px solid
+}
+TEXTAREA {
+	BORDER-RIGHT: #dbdbd8 1px solid; BORDER-TOP: #dbdbd8 1px solid; BACKGROUND: #fff; BORDER-LEFT: #dbdbd8 1px solid; COLOR: #999999; BORDER-BOTTOM: #dbdbd8 1px solid
+}
+#menu_pagination {
+	MARGIN-TOP: 5px; MARGIN-LEFT: 360px; WIDTH: 50%; LIST-STYLE-TYPE: none
+}
+#menu_pagination A {
+	DISPLAY: block; FONT-WEIGHT: bold; FONT-SIZE: 10px; BACKGROUND: url(../images/bg_btn_tarifs.jpg) no-repeat; FLOAT: left; WIDTH: 20px; COLOR: #fff; LINE-HEIGHT: 1.8em; HEIGHT: 20px; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+#menu_pagination A:hover {
+	BACKGROUND: url(../images/bg_btn_tarifs_hover.jpg) no-repeat
+}
+#menu_pagination A#selected {
+	BACKGROUND: url(../images/bg_btn_tarifs_hover.jpg) no-repeat
+}
+DIV#recherche {
+	BACKGROUND: url(../images/bg_recherche.jpg) repeat-x; MARGIN: 0px auto; WIDTH: 805px; HEIGHT: 35px
+}
+DIV#recherche ul{list-style:none; margin:0 auto; padding-top:20px; padding-left:40px;}
+DIV#recherche ul li{ float:left;}
+DIV#recherche H2 {
+	DISPLAY: inline; FONT-SIZE: 12px; BACKGROUND: url(../images/etiquette_recherche.jpg) no-repeat left center; FLOAT: left; MARGIN: 10px 6px 0px 250px; WIDTH: 121px; TEXT-INDENT: -9999px; HEIGHT: 15px
+}
+DIV#recherche H2 SPAN {
+	DISPLAY: none
+}
+DIV#recherche INPUT {
+	MARGIN-TOP: 0.5em; VERTICAL-ALIGN: middle
+}
+DIV#recherche P {
+	DISPLAY: inline; MARGIN: 0px
+}
+SELECT {
+	FONT: 12px Verdana,sans-serif; COLOR: #656464
+}
+DIV#footer-contact {
+	BACKGROUND: url(../images/bg-contact.jpg) repeat-x right top; WIDTH: 100%; PADDING-TOP: 14px; HEIGHT: 16px
+}
+A.open-contact {
+	DISPLAY: block; BACKGROUND: url(../images/open-contact.jpg) no-repeat left top; FLOAT: right; WIDTH: 115px; MARGIN-RIGHT: 35px; HEIGHT: 19px
+}
+A.close-contact {
+	DISPLAY: block; BACKGROUND: url(../images/close-contact.jpg) no-repeat left top; FLOAT: right; WIDTH: 115px; MARGIN-RIGHT: 35px; HEIGHT: 19px
+}
+A.close-contact:hover {
+	BACKGROUND: url(../images/close-contact-hover.jpg) no-repeat left top
+}
+A.open-contact SPAN {
+	DISPLAY: none
+}
+A.close-contact SPAN {
+	DISPLAY: none
+}
+DIV#contact DIV#loader {
+	MARGIN-RIGHT: 15px
+}
+DIV#contact DIV#loader IMG {
+	VERTICAL-ALIGN: middle
+}
+DIV#infos-contact {
+	DISPLAY: inline; FONT-SIZE: 1em; FLOAT: left; MARGIN-LEFT: 50px; WIDTH: 250px; HEIGHT: 200px
+}
+DIV#infos-contact P {
+	MARGIN-TOP: 5px
+}
+DIV#target-result-contact {
+	Z-INDEX: 5000; BACKGROUND: #434343; MARGIN: 0px auto; WIDTH: 300px; COLOR: #fff; POSITION: relative; TOP: 100px; TEXT-ALIGN: center
+}
+DIV#target-result-configuration {
+	Z-INDEX: 5000; BACKGROUND: #434343; MARGIN: 0px auto; WIDTH: 300px; COLOR: #fff; POSITION: relative; TOP: 100px; TEXT-ALIGN: center
+}
+TABLE#produits {
+	MARGIN-TOP: 10px; MARGIN-LEFT: 30px; WIDTH: 80%
+}
+TABLE#produits TD.libelle {
+	PADDING-LEFT: 5px; FONT-SIZE: 12px; WIDTH: 80%; TEXT-ALIGN: left
+}
+TABLE#produits TR.paire {
+	BORDER-TOP: #cccccc 1px solid; BACKGROUND: #fff3e9
+}
+TABLE#produits TR.impaire {
+	BORDER-TOP: #cccccc 1px solid; BACKGROUND: #fff
+}
+TABLE#produits TD.tarif {
+	WIDTH: auto; TEXT-ALIGN: right
+}
+TABLE#produits TD.libelleConstructeur {
+	FONT-WEIGHT: bold; COLOR: #ffa800; PADDING-TOP: 5px
+}
+form-produits {
+	MARGIN: 0px
+}
+
+
+.button{ 
+	color:#fff;
+	font-weight:bold;
+	font-size:14px;
+	width:60px;
+	height:25px;
+	line-height:25px;
+	text-align:center;
+	border:0px;
+	background:url(../images/button_tj.jpg) no-repeat;}
+	
+	
+.u1{ color:#1875b1; font-size:12px; font-weight:bold; font-family:"宋体"; text-align:right; line-height:30px; height:30px; width:18%}
+.u2{ color:#666666; font-size:12px; font-family:"宋体"; text-align:left; line-height:30px; height:30px; padding-left:5px; width:82%;}
+.u3{ text-align:center; padding-top:5px; padding-bottom:5px;}
+.u4{ color:#1875b1; font-size:14px; font-weight:bold; font-family:"宋体"; text-align:right; line-height:30px; height:30px; width:30%}

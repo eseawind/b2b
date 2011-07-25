@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+
+<beans>
+	<!-- 使用spring代理工厂，无spring事务 -->
+	<bean id="tradeTarget" class="com.saas.sys.bpm.TradeReg" />
+	<bean id="bufferTarget" class="com.saas.sys.buffer.Buffers" />
+	<bean id="LogAdvisor" class="com.saas.sys.log.LogAdvisor" />
+	<bean id="ExceptionAdvisor" class="com.saas.sys.exp.ExceptionAdvisor" />
+	<bean id="trade" class="org.springframework.aop.framework.ProxyFactoryBean">
+	    <property name="proxyInterfaces">
+	        <value>com.saas.sys.bpm.TradeRegIntf</value>
+	    </property>
+	    <property name="target">
+	        <ref local="tradeTarget"/>
+	    </property>
+	    <property name="interceptorNames"> 
+	        <list>
+	            <value>LogAdvisor</value>
+	            <value>ExceptionAdvisor</value>
+	        </list>
+	    </property>    
+	</bean>
+	<bean id="queryTarget" class="com.saas.sys.bpm.TradeQuery" />
+	<bean id="query" class="org.springframework.aop.framework.ProxyFactoryBean">
+	    <property name="proxyInterfaces">
+	        <value>com.saas.sys.bpm.TradeQueryIntf</value>
+	    </property>
+	    <property name="target">
+	        <ref local="queryTarget"/>
+	    </property>
+	    <property name="interceptorNames"> 
+	        <list>
+	            <value>LogAdvisor</value>
+	            <value>ExceptionAdvisor</value>
+	        </list>
+	    </property>    
+	</bean>   
+	
+	<bean id="interfQueryTarget" class="com.saas.sys.bpm.TradeInterfQuery" />
+	<bean id="interfquery" class="org.springframework.aop.framework.ProxyFactoryBean">
+	    <property name="proxyInterfaces">
+	        <value>com.saas.sys.bpm.TradeInterfQueryIntf</value>
+	    </property>
+	    <property name="target">
+	        <ref local="interfQueryTarget"/>
+	    </property>
+	    <property name="interceptorNames"> 
+	        <list>
+	            <value>LogAdvisor</value>
+	            <value>ExceptionAdvisor</value>
+	        </list>
+	    </property>    
+	</bean>   
+<bean id="loggertradeTarget" class="com.saas.sys.bpm.TradeLogger" />
+	<bean id="loggertrade" class="org.springframework.aop.framework.ProxyFactoryBean">
+	    <property name="proxyInterfaces">
+	        <value>com.saas.sys.bpm.TradeLoggerIntf</value>
+	    </property>
+	    <property name="target">
+	        <ref local="loggertradeTarget"/>
+	    </property>
+	    <property name="interceptorNames"> 
+	        <list>
+	            <value>LogAdvisor</value>
+	            <value>ExceptionAdvisor</value>
+	        </list>
+	    </property>    
+	</bean> 
+	<bean id="checktradeTarget" class="com.saas.sys.bpm.TradeCheck" />
+	<bean id="checktrade" class="org.springframework.aop.framework.ProxyFactoryBean">
+	    <property name="proxyInterfaces">
+	        <value>com.saas.sys.bpm.TradeCheckIntf</value>
+	    </property>
+	    <property name="target">
+	        <ref local="checktradeTarget"/>
+	    </property>
+	    <property name="interceptorNames"> 
+	        <list>
+	            <value>LogAdvisor</value>
+	            <value>ExceptionAdvisor</value>
+	        </list>
+	    </property>    
+	</bean>  	
+	<bean id="buffer" class="org.springframework.aop.framework.ProxyFactoryBean">
+	   <property name="proxyInterfaces">
+	       <value>com.saas.sys.buffer.BufferIntf</value>
+	   </property>
+	   <property name="target">
+	       <ref local="bufferTarget"/>
+	</property>
+	</bean>  
+	<!-- 将动作管理委托给 Spring，无spring事务>
+	<bean id="staffintf" class="com.saas.biz.staffBiz.Staff" />
+	<bean name="/stafflogin" class="com.saas.struts.action.StaffloginAction">
+	    <property name="staffintf">
+	    	<ref bean="staffintf"/>
+	    </property>    
+  	</bean-->
+	
+	<!-- bean id ="transactionInterceptor" class="org.springframework.transaction.interceptor.TransactionInterceptor">
+	<property name="transactionManager">
+		<ref bean="transactionManager"/>
+	</property>
+	<property name="transactionAttributeSource">
+		<value>
+			com.saas.staff.ejb.StaffDAO.Add*=PROPAGATION_REQUIRED
+		</value>
+	</property>
+	</bean>
+
+	<bean id="addstaff" class="org.springframework.transaction.interceptor.TransactionProxyFactoryBean">
+		<property name="transactionManager">
+			<ref bean="transactionManager"/>
+		</property>
+		<property name="target">
+			<ref local="staffTarget"/>
+		</property>
+		<property name="transactionAttributes">
+		<props>
+			<prop key="Add*">PROPAGATION_REQUIRED</prop>
+			<prop key="*">PROPAGATION_REQUIRED,readOnly</prop>
+		</props>
+		</property>
+	</bean>
+	<bean id="dseTransactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+		<property name="driverClassName">
+			<value>oracle.jdbc.driver.OracleDriver</value>
+		</property>
+		<property name="url">
+			<value>jdbc:oracle:thin:@localhost:1521:oa</value>
+		</property>		
+		<property name="username">
+			<value>oasys</value>
+		</property>	
+		<property name="password">
+			<value>1234</value>
+		</property>	
+	</bean-->  
+
+
+</beans>

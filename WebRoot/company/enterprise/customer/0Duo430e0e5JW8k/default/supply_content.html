@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="/company/enterprise/public/default/css/product_list.css" />
+<link href="/company/enterprise/public/default/css/new-ym-layout.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{ecms:field name="cust_aim"/}</title>
+<script type="text/javascript" src="/js/prototype.js"></script>
+<script type="text/javascript" src="/company/enterprise/public/default/js/genInfo.js"></script>
+<script type="text/javascript" src="/company/enterprise/public/default/js/setClassName.js"></script>
+<script>
+	function stockEnqury()
+	{
+		if(document.getElementById("stock").style.display=="none")
+		{
+		  document.getElementById("stock").style.display="block"
+		}else{
+			document.getElementById("stock").style.display="none"
+				}
+		return;
+	}
+	 function sendStockMsg()
+	 {
+	 	 if(!document.getElementById("session_cust_id"))
+	    {
+	 	   alert('请先登陆!');
+	 	   return false;
+	 	  }
+	   var rsrv_str3=$F("rsrv_str3");
+	   rsrv_str3=delAllSpace(rsrv_str3);
+	   if(rsrv_str3=="" || rsrv_str3==null){
+	    alert("询价标题不能为空!");
+	    $("rsrv_str3").focus();
+	    return false;
+	   }
+	   var content=$F("content");
+	   content=delAllSpace(content);
+	   if(content=="" || content==null){
+	    alert("询价内容不能为空!");
+	    $("content").focus();
+	     return false;
+	   }
+	   return true;
+	 }	
+	function delAllSpace(str) 
+	{
+		return str.replace(/^\s+|\s+$/g, "")
+	}
+	getCritiqueDiv('session_cust','5136025130');
+	function setClassName()
+	{
+		document.getElementById("dis8").className = "new-dh"; 
+	}
+</script>
+</head>
+<body onload="setClassName()">
+<!--头部-->
+<table width="950" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+	<div class="new-ym-header">
+        <div class="new-ym-header4">&nbsp;&nbsp;&nbsp;&nbsp;
+			<a id="dis9" href="/company/web/{ecms:field name='cust_id'/}">首  页</a>&nbsp;&nbsp;&nbsp;	
+	      		{ecms:channel type="top" row="8" orderby="show_no"}
+				<a id="dis[field:show_no/]" href="[field:churl/]">[field:ch_name/]</a>&nbsp;&nbsp;&nbsp;
+			 	{/ecms:channel}
+		</div>
+      </div>
+      <div class="new-ym-header1">
+        <div class="new-ym-header2">{ecms:field name="cust_aim"/}
+          <!--合肥贞龙信息科技有限责任公司-->
+        </div>
+      </div>
+      <div class="new-ym-header3">
+        <div class="new-ym-header5">目前位置：<a href="/">首页</a>&nbsp;-&gt;&nbsp;最新供应</div>
+      </div></td>
+  </tr>
+</table>
+<!--菜单-->
+<!--内容-->
+<div id="main" >
+  <div class="main_box">
+    <div class="list_path">&nbsp;</div>
+    <!--左边信息-->
+    <div class="list_left">
+      <!--加入企业库-->
+      <div class="cp_content_lmt"><span>供应{ecms:field name="title"/}</span></div>
+      <div class="cp_list_box">
+        <table width="95%" border="0" align="center" cellpadding="0" cellspacing="1">
+          <tr>
+            <td width="47%" align="center"><table width="100%" border="0" cellspacing="0" cellpadding="5">
+                <tr>
+                  <td align="center"><img src="{ecms:field name="mini_img"/}" id="be_img" width="270" height="246" /></td>
+                </tr>
+                <tr>
+                  <td align="center">&nbsp;<a href="javascript:window.external.AddFavorite(top.location.href)"><img src="/company/enterprise/public/default/image/Content_13.gif" width="80" height="15" border="0" /></a></td>
+                </tr>
+              </table></td>
+            <td width="53%" valign="top"><table width="100%" border="0" cellspacing="0" cellpadding="2">
+                <tr>
+                  <td width="20%">公 司 名: </td>
+                  <td width="80%">{ecms:field name="cust_aim"/}</td>
+                </tr>
+                <tr>
+                  <td> 当 前 价:<span class="zi"> </span></td>
+                  <td><span class="zi">{ecms:field name="sale_price"/}</span></td>
+                </tr>
+                <tr>
+                  <td colspan="2"><table width="86%" border="0" cellpadding="5" cellspacing="1" bgcolor="FFC367">
+                      <tr>
+                        <td bgcolor="FFF8EE"><div style=" height:30px;"><img src="/company/enterprise/public/default/image/jingao.gif" width="10" height="13" />请 登录 后询价</div>
+                          <div><a href="javascript:stockEnqury();"><img src="/company/enterprise/public/default/image/Mouse.gif" width="118" height="34" border="0" /></a> <a href="tencent://message/?uin={ecms:field name="qq"/}&Site=bizoss&Menu=yes"><img src="/company/enterprise/public/default/image/qq.gif" width="60" height="16" border="0" align="absmiddle" /></a></div></td>
+                      </tr>
+                    </table></td>
+                </tr>
+                <tr>
+                  <td>所 在 地:</td>
+                  <td>{ecms:field name="sale_addr"/}</td>
+                </tr>
+                <tr>
+                  <td>发布日期:</td>
+                  <td>{ecms:field name="in_date"/}</td>
+                </tr>
+                <tr>
+                  <td>有 效 期:</td>
+                  <td><script language="javascript">	
+							var in_date = '{ecms:field name="end_date"/}'.substring(0,10);
+							document.write(in_date);
+						</script>
+                  </td>
+                </tr>
+              </table></td>
+          </tr>
+        </table>
+        <p>&nbsp;</p>
+        <div style="display:none " id="stock">
+          <form id="stockEnquiry" name="stockEnquiry" action="/doTradeReg.do" mehtod="post">
+            <table width="95%" border="0" align="center" cellpadding="4" cellspacing="1" bgcolor="E1E1E1">
+              <tr>
+                <td width="19%" bgcolor="F2F2F2"></td>
+                <td width="81%" align="right" bgcolor="F2F2F2">&nbsp;</td>
+              </tr>
+              <tr>
+                <td align="right" bgcolor="F2F2F2"><strong>询价标题：</strong></td>
+                <td bgcolor="#FFFFFF"><input type="text" name="rsrv_str3" id="rsrv_str3" ></td>
+              </tr>
+              <tr>
+                <td align="right" bgcolor="F2F2F2"><strong>询价内容：</strong></td>
+                <td bgcolor="#FFFFFF"><textarea name="content" id="content" cols="45" rows="6"></textarea>
+                </td>
+              </tr>
+              <tr>
+                <td colspan="2" align="center"><input type="submit" value="提交" name="stockenq" id="stockenq" style="width:80px" onClick="return sendStockMsg();"/>
+                  <input type="hidden" name="cust_id" name="cust_id" value="{ecms:field name="sale_unit"/}">
+                  <input type="hidden" name="user_id" name="user_id" value="{ecms:field name="publish_user_id"/}">
+                  <input type="hidden" name="sale_id" name="sale_id" value="{ecms:field name="sale_id"/}">
+                  <input type="hidden" name="deal_tag" id="deal_tag" value="0">
+                  <input type="hidden" name="rsrv_str4" id="rsrv_str4">
+                  <input type="hidden" name="rsrv_str5" id="rsrv_str5">
+                  <input type="hidden" name="trade_type_code" name="trade_type_code" value="1308">
+                </td>
+              </tr>
+            </table>
+          </form>
+        </div>
+        <div style="display:block" id="detail">
+          <table width="95%" border="0" align="center" cellpadding="4" cellspacing="1" bgcolor="E1E1E1">
+            <tr>
+              <td width="19%" bgcolor="F2F2F2"></td>
+              <td width="81%" align="right" bgcolor="F2F2F2"><a href="javascript:stockEnqury();"><img src="/company/enterprise/public/default/image/zx.gif" width="75" height="21" border="0" /></a>&nbsp;</td>
+            </tr>
+            <tr>
+              <td align="right" bgcolor="F2F2F2"><strong>标题：</strong></td>
+              <td bgcolor="#FFFFFF">{ecms:field name="title"/}</td>
+            </tr>
+            <tr>
+              <td align="right" bgcolor="F2F2F2"><strong>详细说明：</strong></td>
+              <td bgcolor="#FFFFFF"> {ecms:field name="content"/} </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+    <!--右边信息-->
+    <div class="list_right">
+      <div class="list_right_lmtone">加入电子商务平台,开始网上交易</div>
+      <div class="list_right_box">
+        <ul>
+          <li>免费推广产品，免费宣传公司，查找买家，结交商友轻松开展网上贸易！</li>
+          <li>
+            <div class="red_button"><span>立即免费注册</span></div>
+          </li>
+          <li>想快速开展网上贸易，提升销量？</li>
+          <li>咨询热线： 0550-8******* </li>
+        </ul>
+      </div>
+      <!--最新加入-->
+      <div class="list_right_lmttwo">最新加入</div>
+      <div class="list_right_boxtwo  link_xian">
+        <ul>
+          {ecms:articlelist row="10" titlelen="14" ch_id="7830633062"}
+          <li><a href="[field:arcurl/]">[field:title/]</a></li>
+          {/ecms:articlelist}
+        </ul>
+      </div>
+      <!--谷歌广告-->
+      <div class="right_newsad">
+        <h3 style="color:#0000FF;">汽车英文数字拦截飞…</h3>
+        深圳飞跃科技有限公司专业生产汽车信号拦截器.汽车千扰器.<Br>
+        <span style="color:#008000;">www.szfy168.com</span> </div>
+    </div>
+  </div>
+</div>
+<!--footer-->
+<!--内容-->
+<div style="width:950px; margin:10px auto; height:auto; text-align:center">Copyright◎2008 合肥贞龙信息科技有限责任公司  版权所有 <br>
+      咨询电话：0551-5310317 | 传真：0551-5310317 | 邮箱：admin@bizoss.com <br>
+      地址：安徽合肥高新区 技术支持：b2b.bizoss.com<br>
+      <img src="/images/cn.gif"></div>
+<script language="javascript">
+	function ResizeImages()
+	{
+	   var myimg,oldwidth;
+	   var maxwidth=600;
+	   for(i=0;i<document.images.length;i++){
+	     myimg = document.images[i];
+	     if(myimg.width > maxwidth)
+	     {
+	        oldwidth = myimg.width;
+	        myimg.style.width = maxwidth;
+	        myimg.style.height = "auto";
+	     }
+	   }
+	}
+	ResizeImages();
+  </script>
+</body>
+</html>
+
+
+

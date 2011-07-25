@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="/company/enterprise/public/default/css/job.css" />
+<link href="/company/enterprise/public/default/css/new-ym-layout.css" rel="stylesheet" type="text/css" />
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{ecms:field name="cust_aim"/}</title>
+	<script type="text/javascript" src="/company/enterprise/public/default/js/setClassName.js"></script>
+	<script>  
+	function setClassName()
+	{
+		document.getElementById("dis2").className = "new-dh"; 
+	}
+</script>
+</head>
+<body  onload="setClassName()">
+<!--头部-->
+<table width="950" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td><div class="new-ym-header">
+        <div class="new-ym-header4">&nbsp;&nbsp;&nbsp;&nbsp;
+			<a id="dis9" href="/company/web/{ecms:field name='cust_id'/}">首  页</a>&nbsp;&nbsp;&nbsp;	
+			{ecms:channel type="top" row="8" orderby="show_no"}
+			<a id="dis[field:show_no/]" href="[field:churl/]">[field:ch_name/]</a>&nbsp;&nbsp;&nbsp;
+			{/ecms:channel} 
+			 </div>
+      </div>
+      <div class="new-ym-header1">
+        <div class="new-ym-header2">{ecms:field name="cust_aim"/}
+          <!--合肥贞龙信息科技有限责任公司-->
+        </div>
+      </div>
+      <div class="new-ym-header3">
+        <div class="new-ym-header5">目前位置：<a href="/">首页</a>&nbsp;-&gt;&nbsp;招聘中心</div>
+      </div></td>
+  </tr>
+</table>
+<!--内容-->
+<div id="main" >
+	
+	<div class="content">
+		<div class="path">&nbsp;</div>
+		<!--左边信息-->
+	  <div class="job_list_left">
+	  		<!--栏目名称-->
+			<div class="content_lmlb">
+				<div class="content_lmt"><span>企业简介</span></div>
+			</div>
+				<table width="96%" border="0" cellspacing="2" cellpadding="2" align="left" class="content_table">
+				  <tr>
+					<td>{ecms:field name="scope"/}</td>  
+				  </tr>
+			   </table>
+
+			<div class="content_lmlb">
+				<div class="content_lmt"><span>联系方式</span></div>
+			</div>
+			 <table width="96%" border="0" cellspacing="2" cellpadding="2" align="left" class="content_table">
+				  <tr>
+					<td width="17%" align="right" bgcolor="#F7F7F7">公司名称：</td>
+					<td width="33%">{ecms:field name="cust_aim"/}</td>
+					<td width="17%" align="right" bgcolor="#F7F7F7">传真：</td>
+					<td width="33%">{ecms:field name="fax_nbr"/}</td>
+				  </tr>
+				  <tr>
+					<td align="right" bgcolor="#F7F7F7">电话：</td>
+					<td>{ecms:field name="group_contact_phone"/}</td>  
+					<td align="right" bgcolor="#F7F7F7">邮件：</td>
+					<td>{ecms:field name="email"/}</td>
+				  </tr>
+				  <tr>
+				    <td align="right" bgcolor="#F7F7F7">公司网址：</td>
+				    <td>{ecms:field name="website"/}</td>
+				    <td align="right" bgcolor="#F7F7F7">联系地址：</td>
+				    <td>{ecms:field name="company_address"/}</td>
+		       </tr>
+			</table>
+			<div class="content_lmlb">
+					<div class="content_lmt"><span>招聘信息</span></div>
+			</div>
+			 <table width="96%" border="0" cellspacing="2" cellpadding="2" align="left" class="content_table">
+				  <tr>
+					<td width="17%" align="right" bgcolor="#F7F7F7">招聘职位：</td>
+					<td width="33%"><a href="{ecms:field name="arcurl"/}">{ecms:field name="title"/}</a></td>
+					<td width="17%" align="right" bgcolor="#F7F7F7">发布日期：</td>
+					<td width="33%">{ecms:field name="in_date"/}</td>
+				  </tr>
+				  <tr>
+					<td align="right" bgcolor="#F7F7F7">招聘要求：</td>
+					<td colspan="3">{ecms:field name="request"/}</td>  
+				  </tr>
+				  <tr>
+					<td align="right" bgcolor="#F7F7F7">工作地址：</td>
+					<td colspan="3">{ecms:field name="job_addr"/}</td>  
+				</tr>
+				  <tr>
+					<td align="right" bgcolor="#F7F7F7">应聘此职位：</td>
+					<td colspan="3"><span class="huangse">
+					  <label>
+					  <input type="submit" name="Submit3" value="发送求职意向" />
+					  </label>
+				    发送求职意向,必须先登录</span></td>
+				</tr>
+			</table>
+			
+		<div class="pint">【<a href="javascript:window.close();">关闭窗口</a>】 【<a href="javascript: window.print();">打印该页</a>】</div>
+	</div>
+		
+		<!--右边信息-->
+		<div class="list_right">
+			<div class="list_lmlbone">岗位搜索</div>
+			<div class="list_box">
+				<table width="92%" border="0" align="center" cellpadding="0" cellspacing="0">
+				  <tr>
+					<td height="28" colspan="2"><label>
+					  <input name="radiobutton" type="radio" value="radiobutton" checked="checked" />
+				    人才信息 
+				    <input type="radio" name="radiobutton" value="radiobutton" /> 
+				    岗位信息
+</label></td>
+				  </tr>
+				  <tr>
+					<td width="30%" height="28" align="right">有效期限：</td>
+					<td width="70%" height="28"><label>
+					  <select name="select">
+					    <option>最一个月</option>
+				      </select>
+					</label></td>
+				  </tr>
+				  <tr>
+					<td height="28" align="right">关 键 词：</td>
+					<td height="28"><label>
+					  <input name="textfield2" type="text" size="16" class="list_input_box"/>
+					</label></td>
+				  </tr>
+				  <tr>
+					<td height="28">&nbsp;</td>
+					<td height="28"><form id="form1" name="form1" method="post" action="">
+					  <label>
+					    <input type="submit" name="Submit2" value="搜 索" />
+				      </label>
+					  </form>
+					</td>
+				  </tr>
+				</table>
+			</div>
+			
+			<div class="list_right_lmt">
+				<span>招聘排名</span> 
+				{ecms:channel row="1" type="self" ch_id="0341146200"}
+				<div class="more_lin lin3"><a href="[field:moreurl/]">更多>></a></div>
+				{/ecms:channel}	
+			</div>
+			<div class="list_right_box">
+				<ul>
+					{ecms:articlelist row="12" orderby="indate" titlelen="15" recommend="1" ch_id="0341146200" cmodel="job"}
+					<li><a href="[field:arcurl/]">[field:title/]</a></li>
+					{/ecms:articlelist}	
+				</ul>
+			</div>
+			
+			<div class="list_right_lmt" style="margin-top:10px;"><span>推荐企业</span> <div class="more_lin lin3"><a href="/wood/enterprise/">更多>></a></div>
+			</div>
+			<div class="list_right_box">
+				<ul>
+					{ecms:articlelist row="10" orderby="indate" recommend="1" ch_id="4821672782"}
+					<li><a href="#">[field:title/]</a></li>
+					{/ecms:articlelist}
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+</div>
+<!--内容-->
+<div style="width:950px; margin:10px auto; height:auto; text-align:center">Copyright◎2008 合肥贞龙信息科技有限责任公司  版权所有 </br>
+      咨询电话：0551-5310317 | 传真：0551-5310317 | 邮箱：admin@bizoss.com </br>
+      地址：安徽合肥高新区 技术支持：b2b.bizoss.com</br>
+      <img src="/images/cn.gif"></div>
+<script language="javascript">
+	function ResizeImages()
+	{
+	   var myimg,oldwidth;
+	   var maxwidth=600;
+	   for(i=0;i<document.images.length;i++){
+	     myimg = document.images[i];
+	     if(myimg.width > maxwidth)
+	     {
+	        oldwidth = myimg.width;
+	        myimg.style.width = maxwidth;
+	        myimg.style.height = "auto";
+	     }
+	   }
+	}
+	ResizeImages();
+  </script> 
+</body>
+</html>
+
+
+

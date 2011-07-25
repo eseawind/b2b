@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<%@ page contentType="text/html;charset=GBK"%>
+<html>
+	<head>
+		<title>error</title>
+		<link rel="stylesheet" type="text/css" href="/templates/wood/style/wood.css" />
+	</head>
+	<body >
+			<div id="out">
+<div id="top">
+  <div class="width">
+    <div class="left">收藏本站 | 繁体版</div>
+    <div class="right"><a href="/member/mainMenu/default.jsp">我的会员中心</a> | <a href="#">帮助</a></div>
+  </div>
+</div>
+<!--logo-->
+<div id="head">
+  <div class="logo"><a href="/"><img src="/templates/wood/images/logo.gif"  border="0" /></a> 最具商业价值的木业平台</div>
+  <div class="head_right">
+    <div class="head_right_button"> <span class="button"><a href="javascript:openReg();">免费注册</a></span> <span class="button"><a href="/member/index.html">发布信息</a></span> <span class="button"><a href="/wood/enterprise/">商铺直达</a></span> <span class="button"><a href="/wood/product/">产品中心</a></span> </div>
+    <form action="/stafflogin.do" name="loginForm" method="post">
+    <div class="head_right_login"> <span>会员登录</span> 用户名:
+      <input type="text" name="user_name1"  id="user_name1" size="8" class="input" onblur="javascript:document.getElementById('user_name').value=this.value;" />
+      <input type="hidden" name="user_name"  id="user_name" size="8" class="input" />
+      密码:
+      <input type="password" name="passwd" id="passwd" size="8" class="input" />
+      验证码:<input name="userrand" id="userrand" type="text" size="8" maxlength="4" class="input" onkeydown="keysubmit(loginForm)"  /> <img src="/checkImage" id="rc" onClick="changeCode()">
+       <input type="button" value="登录" class="login" style="cursor:hand;" onclick="return Check_Value();"/>
+       <input name="trade_type_code"  id="trade_type_code" type="hidden" value="0123">
+       <input name="cookietime"  id="cookietime" type="hidden" value="36000">
+    </div>
+   </form>
+  </div>
+</div>
+</div>
+<div style=" padding-top:50px; padding-bottom:50px; margin:0 auto;">       
+   <div style=" width:500px;margin:0 auto; text-align:center; height:139px; line-height:139px; background:url(/images/error_bg.gif); color:#666666; font-size:14px; font-weight:bold; padding-top:30px;"><img src="/images/BlueErrorIcon.gif" align="absmiddle" border="0"/>&nbsp;没有找到您要查询的信息</div> 
+</div>
+         <div style="border-top:#cccccc 1px solid; padding-bottom:10px; width:100%; margin:0 auto;">
+<div class="footernew">
+	<a href="/templates/default/jsp/about_us.jsp">关于我们</a> | <a href="/templates/default/jsp/service.jsp">服务条款</a> | <a href="/templates/default/jsp/recruitment.jsp">企业招聘</a> | <a href="/templates/default/jsp/customer_service.jsp">客服中心</a> | <a href="/templates/default/jsp/site_navigation.jsp">网站导航</a> | <a href="/templates/default/jsp/copyright.jsp">版权所有</a><br />
+<img src="/templates/default/images/ucs2.gif" align="absmiddle"/>&nbsp;产品购买咨询：肖先生
+    (QQ)<a href="http://wpa.qq.com/msgrd?V=1&Uin=31688721&Site=a-hai.net&Menu=yes tencent://message/?uin=31688721" target=_blank class="lanse">31688721</a> 
+    (MSN)<a href=msnim:chat?contact=xiaobo68@gmail.com>xiaobo68@gmail.com</a>  <a href="http://www.wanglong.cc" target="_blank" class="lanse">合肥贞龙信息技术有限公司</a> 版权所有 &copy;  2008  保留所有权利 <a href="http://www.miibeian.gov.cn/" target=_blank>皖ICP备07039386号</a><br />
+    <div class="lx">服务热线：0551-5310317 | 传真：0551-5310317 | 销售支持论坛：http://www.wanglong.cc/bbs/forumdisplay.php?fid=4</div>
+</div>
+<!--link-->
+<div class="footernew">
+	<div style="width:570px;">
+	<p>
+		<span class="fl"><a href="http://www.sznet110.gov.cn/index.jsp" target="_blank"><img src="/templates/default/images/816587.gif" width="36" height="43" border="0"></a></span>
+		<span class="fr"><a href="http://www.sznet110.gov.cn/index.jsp" target="_blank">网络警察<br />
+		报警平台</a></span>
+	</p>
+	<p>
+		<span class="fl"><a href="http://www.sznet110.gov.cn/webrecord/innernet/Welcome.jsp?bano=4403101010155" target="_blank"><img src="/templates/default/images/6743671.jpg" width="36" height="42" border="0"></a></span>
+		<span class="fr"><a href="http://www.sznet110.gov.cn/webrecord/innernet/Welcome.jsp?bano=4403101010155" target="_blank">公共信息安<br />
+		全网络监察</a></span>
+	</p>
+	
+	<p>
+		<span class="fl" style="width:44px;"><a href="http://net.china.com.cn/index.htm" target="_blank"><img src="/templates/default/images/home_b.gif" width="44" height="44" border="0"></a></span>
+		<span class="fr" style="width:64px;"><a href="http://net.china.com.cn/index.htm" class="lcblack" target="_blank">不良信息<br>
+		举报中心</a></span>
+	</p>
+	<p>
+		<span class="fl" style="width:44px;"><a href="http://www.wenming.cn/" target="_blank"><img src="/templates/default/images/wmlogo.gif" width="44" height="42" border="0"></a></span>
+		<span class="fr" style="width:64px;"><a href="http://www.wenming.cn/" class="lcblack" target="_blank">中国文明网<br>传播文明</a></span>
+	</p>
+	</div>	
+</div>
+</div>
+
+	</body>
+</html>
+
+
+
+

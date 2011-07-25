@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+	<head>
+		<title>搜索结果</title>
+		<script type="text/javascript" src="/js/prototype.js"></script>
+		<script type="text/javascript" src="/templates/default/js/searchSupply.js"></script>
+		<link rel="stylesheet" type="text/css" href="/templates/wood/style/supply.css" />
+		<script language="javascript" src="/templates/wood/js/changcode.js"></script>
+	</head>
+	<body>
+		<div id="out"></div>
+     <div id="search" style="margin:0 auto;"></div>
+		<div id="footer"></div>
+	</body>
+</html>
+<script>
+		function keysubmit(obj)
+  {
+		 if(event.keyCode != "13") return;
+		if (obj.user_name1.value == ""||obj.user_name1.value == null)
+		{
+			alert("用户名不可以为空！");
+			document.getElementById("user_name1").focus();
+			return false;
+		}
+		if (obj.passwd.value == ""||obj.passwd.value == null)
+		{
+			alert("密码不可以为空！");
+			document.getElementById("passwd").focus();
+			return false;
+		}
+    if (obj.userrand.value == ""||obj.userrand.value == null)
+		{
+			alert("请输入验证码！");
+			document.getElementById("userrand").focus();
+			return false;
+		}
+		obj.submit();
+ }
+	function openReg(){
+		window.open('/member/Newcregister.html');
+	}
+var sear=window.location.search.substring(1);
+infom=sear.split('&');
+//第一个参数
+var val=infom[0].split("=");
+var param1=val[0];
+var paraVa1=val[1];
+//第2个参数
+var val=infom[1].split("=");
+var param2=val[0];
+var paraVa2=val[1];
+//第3个参数
+var val=infom[2].split("=");
+var param3=val[0];
+var paraVa3=val[1];
+//第4个参数
+var val=infom[3].split("=");
+var param4=val[0];
+var paraVa4=val[1];
+//第5个参数
+var val=infom[4].split("=");
+var param5=val[0];
+var paraVa5=val[1];
+//第6个参数
+if(infom[5]!=null||infom[5]!=undefined)
+var val=infom[5].split("=");
+var param6=val[0];
+var paraVa6=val[1];
+
+genSearch   ("search",param1,paraVa1,param2,paraVa2,param3,paraVa3,param4,paraVa4,param5,paraVa5,param6,paraVa6);
+genNewSearch("search",paraVa1,paraVa2,paraVa3,paraVa4,paraVa5);//1,关键字，2，省，3，市，4，日期,5,type
+
+var val=window.opener.document.getElementById("out").innerHTML;
+document.getElementById("out").innerHTML=val;
+val=window.opener.document.getElementById("footer").innerHTML;
+document.getElementById("footer").innerHTML=val;
+</script>
+
+
+

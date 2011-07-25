@@ -1,0 +1,797 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="/templates/default/style/cn-b2b.css" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{ecms:base name='webtitle'/}</title>
+<SCRIPT language=javascript src="/templates/default/js/adurl.js"></SCRIPT>
+</head>
+<body>
+<!--头部-->
+{ecms:include file="/templates/default/templates/top.html"/}
+<!--菜单-->
+
+<!--内容-->
+					{ecms:articlelist orderby="indate" row="15" ch_id="7830633062" titlelen="10"}
+					<div id="marqA[field:num/]" style="display:none;">[供]<a href="[field:arcurl/]">[field:title/]</a>&nbsp;[field:in_date/]</div>
+      		{/ecms:articlelist}
+      		{ecms:articlelist orderby="indate" row="15" ch_id="6871426767" titlelen="15"}
+					<div id="marqB[field:num/]" style="display:none;">[求]<a href="[field:arcurl/]">[field:title/]</a>&nbsp;[field:in_date/]</div>
+      		{/ecms:articlelist}
+      		{ecms:articlelist orderby="indate" row="15" ch_id="8627826821" titlelen="12"}
+					<div id="marqC[field:num/]" style="display:none;"><a href="[field:arcurl/]">[field:title/]&nbsp;</a>[field:in_date/]</div>
+      		{/ecms:articlelist}
+
+<div id="main" >
+	<!--最新供求信息-->
+	<div class="time_950 lin1">
+		<div class="t1"><script src='/templates/default/jsp/getNowTime.jsp' language='javascript'></script></div>
+		<div class="t2">
+			<dl>
+				<dt style="float:left;">
+					<span>最新供应</span>
+					<span>最新求购</span>
+				</dt>
+				<dd>
+					<ul>
+					<script language="javascript">
+						
+								function getObjExist(val){
+									var exist = document.getElementById(val)?1:2;
+									return exist;   
+								}
+						
+						
+								var marqueeContent=new Array();//滚动新闻
+								for(var k = 0;k<9;){
+
+									
+									if(getObjExist('marqA'+k)==2 && getObjExist('marqB'+k)==2){
+										marqueeContent[k] = '';
+										marqueeContent[k+1] = '';
+									}
+									else if(getObjExist('marqA'+k)==1 && getObjExist('marqB'+k)==2){
+										marqueeContent[k] = document.getElementById('marqA'+k).innerHTML;
+										marqueeContent[k+1] = document.getElementById('marqA'+(k+1)).innerHTML;
+									}
+									else if(getObjExist('marqA'+k)==2 && getObjExist('marqB'+k)==1){
+										marqueeContent[k] = document.getElementById('marqB'+k).innerHTML;
+										marqueeContent[k+1] = document.getElementById('marqB'+(k+1)).innerHTML;
+									}
+									else if(getObjExist('marqA'+k)==1 && getObjExist('marqB'+k)==1){
+										marqueeContent[k] = document.getElementById('marqA'+k).innerHTML;
+										marqueeContent[k+1] = document.getElementById('marqB'+k).innerHTML;
+									}
+									
+									k = k + 2;
+									
+									
+								}
+								
+								var marqueeInterval=new Array();  //定义一些常用而且要经常用到的变量
+								var marqueeId=0;
+								var marqueeDelay=1000;
+								var marqueeHeight=68;
+								//接下来的是定义一些要使用到的函数
+								function initMarquee() {
+								 var str=marqueeContent[0];
+								 document.write('<div id=marqueeBox style="overflow:hidden;height:'+marqueeHeight+'px" onmouseover="clearInterval(marqueeInterval[0])" onmouseout="marqueeInterval[0]=setInterval(\'startMarquee()\',marqueeDelay)"><div>'+str+'</div></div>');
+								 marqueeId++;
+								 marqueeInterval[0]=setInterval("startMarquee()",marqueeDelay);
+								 }
+								function startMarquee() {
+								 var str=marqueeContent[marqueeId];
+								  marqueeId++;
+								 if(marqueeId>=marqueeContent.length) marqueeId=0;
+								 if(marqueeBox.childNodes.length==1) {
+								  var nextLine=document.createElement('DIV');
+								  nextLine.innerHTML=str;
+								  marqueeBox.appendChild(nextLine);
+								  }
+								 else {
+								  marqueeBox.childNodes[0].innerHTML=str;
+								  marqueeBox.appendChild(marqueeBox.childNodes[0]);
+								  marqueeBox.scrollTop=0;
+								  }
+								 clearInterval(marqueeInterval[1]);
+								 marqueeInterval[1]=setInterval("scrollMarquee()",20);
+								 }
+								function scrollMarquee() {
+								 marqueeBox.scrollTop++;
+								 if(marqueeBox.scrollTop%marqueeHeight==(marqueeHeight-1)){
+								  clearInterval(marqueeInterval[1]);
+								  }
+								 }
+								initMarquee();
+						</script>
+						
+					</ul>
+				</dd>
+				
+			</dl>
+			<div class="t2_button">
+					<span><a href="/member/saleMgr/addSale.jsp?menu_id=i3l2DA38N01p7r8">发布供应信息</a></span>
+					<span><a href="/member/stockMgr/addstockindex.jsp?menu_id=p265YH0tD34m1M2">发布求购信息</a></span>  
+ 			</div>
+		</div>
+		<div class="t3">
+			<span>商务快讯</span>
+			<ul>
+			
+			
+		<script language="javascript">
+					
+				var marqueeContenta=new Array();//滚动新闻
+				for(var p = 0;p<5;p++){
+					marqueeContenta[p] = document.getElementById('marqC'+p).innerHTML;
+				}
+				
+				var marqueeIntervala=new Array();  //定义一些常用而且要经常用到的变量
+				var marqueeIda=0;
+				var marqueeDelaya=1000;
+				var marqueeHeighta=28;
+				//接下来的是定义一些要使用到的函数
+				function initMarqueeRight() {
+				 var straa=marqueeContenta[0];
+				 document.write('<div id=marqueeBoxa style="overflow:hidden;height:'+marqueeHeighta+'px" onmouseover="clearInterval(marqueeIntervala[0])" onmouseout="marqueeIntervala[0]=setInterval(\'startMarqueeaa()\',marqueeDelaya)"><div>'+straa+'</div></div>');
+				 marqueeIda++;
+				 marqueeIntervala[0]=setInterval("startMarqueeaa()",marqueeDelaya);
+				 }
+				function startMarqueeaa() {
+				 var straa=marqueeContenta[marqueeIda];
+				  marqueeIda++;
+				 if(marqueeIda>=marqueeContenta.length) marqueeIda=0;
+				 if(marqueeBoxa.childNodes.length==1) {
+				  var nextLineaa=document.createElement('DIV');
+				  nextLineaa.innerHTML=straa;
+				  marqueeBoxa.appendChild(nextLineaa);
+				  }
+				 else {
+				  marqueeBoxa.childNodes[0].innerHTML=straa;
+				  marqueeBoxa.appendChild(marqueeBoxa.childNodes[0]);
+				  marqueeBoxa.scrollTop=0;
+				  }
+				 clearInterval(marqueeIntervala[1]);
+				 marqueeIntervala[1]=setInterval("scrollMarqueeaa()",20);
+				 }
+				function scrollMarqueeaa() {
+				 marqueeBoxa.scrollTop++;
+				 if(marqueeBoxa.scrollTop%marqueeHeighta==(marqueeHeighta-1)){
+				  clearInterval(marqueeIntervala[1]);
+				  }
+				}
+				initMarqueeRight();
+		</script>
+			
+			
+			</ul>
+		</div>
+	</div>
+	
+	<!--正文02-->
+	<div class="main_box">
+		<div class="table_one">
+			<dl>
+				<dt class="table_one_a2" id="d0" onmouseover="javascript:secBoard(0)">
+					<!--成功故事-->
+					{ecms:channel row="1" type="self" ch_id="4467277860"}
+					<a href="[field:moreurl/]">[field:ch_name/]</a>
+					{/ecms:channel}
+					
+				</dt>
+				<dt class="table_one_a1" id="d1" onmouseover="javascript:secBoard(1)">
+					<!--商务助手-->
+					{ecms:channel row="1" type="self" ch_id="5184127066"}
+					<a href="[field:moreurl/]">[field:ch_name/]</a>
+					{/ecms:channel}
+				</dt>
+				<dt class="table_one_a1" id="d2" onmouseover="javascript:secBoard(2)">
+					<!--创业宝典-->
+					{ecms:channel row="1" type="self" ch_id="5698741211"}
+					<a href="[field:moreurl/]">[field:ch_name/]</a>
+					{/ecms:channel}
+				</dt>
+				<dt class="table_one_a1" id="d3" onmouseover="javascript:secBoard(3)">
+					<!--展会信息-->
+					{ecms:channel row="1" type="self" ch_id="2263836050"}
+					<a href="[field:moreurl/]">展会信息</a>
+					{/ecms:channel}
+				</dt>
+				<!--01-->
+				<dd id="bo0">
+					{ecms:articlelist orderby="indate" row="1" ch_id="4467277860" titlelen="11"}
+					<div class="span"><b><a href="[field:arcurl/]">[field:title/]</a></b></br>
+      			[field:info_dsec/]
+      		</div>
+      		{/ecms:articlelist}
+					<ul>
+						{ecms:articlelist orderby="indate" row="4" limit="1,4" ch_id="4467277860" titlelen="11"}
+						<li><a href="[field:arcurl/]">[field:title/]</a></li>
+						{/ecms:articlelist}
+					</ul>	
+				</dd>
+				<!--02-->
+				<dd id="bo1" style="display: none">
+					{ecms:articlelist orderby="indate" row="1" ch_id="5184127066" titlelen="11"}
+					<div class="span"><b><a href="[field:arcurl/]">[field:title/]</a></b><br>
+      			[field:info_dsec/]
+      		</div>
+      		{/ecms:articlelist}
+					<ul>
+						{ecms:articlelist orderby="indate" row="4" limit="1,4" ch_id="5184127066" titlelen="11"}
+						<li><a href="[field:arcurl/]">[field:title/]</a></li>
+						{/ecms:articlelist}
+					</ul>	
+				</dd>
+				<!--03-->
+				<dd id="bo2" style="display: none">
+					{ecms:articlelist orderby="indate" row="1" ch_id="5698741211" titlelen="11"}
+					<div class="span"><b><a href="[field:arcurl/]">[field:title/]</a></b><br>
+      			[field:info_dsec/]
+      		</div>
+      		{/ecms:articlelist}
+					<ul>
+						{ecms:articlelist orderby="indate" row="4" limit="1,4" ch_id="5698741211" titlelen="11"}
+						<li><a href="[field:arcurl/]">[field:title/]</a></li>
+						{/ecms:articlelist}
+					</ul>	
+				</dd>
+				<!--04-->
+				<dd id="bo3" style="display: none">
+					{ecms:articlelist orderby="indate" row="1" ch_id="2263836050" titlelen="11"}
+					<div class="span"><b><a href="[field:arcurl/]">[field:title/]</a></b><br>
+      			[field:info_dsec/]
+      		</div>
+      		{/ecms:articlelist}
+					<ul>
+						{ecms:articlelist orderby="indate" row="4" limit="1,4" ch_id="2263836050" titlelen="11"}
+						<li><a href="[field:arcurl/]">[field:title/]</a></li>
+						{/ecms:articlelist}
+					</ul>	
+				</dd>
+			</dl>
+			 <!--选项结束-->
+		<script language=javascript>
+		function secBoard(n)
+		{
+			for(i=0;i<4;i++) {
+				if (i==n) {
+					document.all('d' + n).className="table_one_a2";
+				} else {
+				document.all('d' + i).className="table_one_a1";}
+			}
+			
+			for(i=0;i<4;i++) {
+				if (i==n) {
+					document.all('bo' + n).style.display="";
+				} else {
+				document.all('bo' + i).style.display="none";}
+			}
+			
+		}
+		</script>
+		<div class="ad_297"><img src="/templates/default/images/ad/abtob_20.gif" /></div>
+		</div>
+		<!--flash广告-->
+		<div class="ad_flash">
+		  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="380" height="200">
+            <param name="movie" value="/templates/default/images/flash/Pic.swf" />
+            <param name="quality" value="high" />
+            <embed src="/templates/default/images/flash/Pic.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="380" height="200"></embed>
+	      </object>
+		</div>
+		
+		<script src='/inc/getSessCustId.jsp' language='javascript'></script>
+		<!--登录table页-->
+		<div class="login_table">
+			<div class="login_table1">
+				<!--01-->
+				<dl class="link_xian">
+					<dt class="login_t2" id="log0" onmouseover="javascript:logBoard(0)">
+                    <span class="sp1"></span><span style="float:left; line-height:31px;">会员登录</span></dt>
+					<dt class="login_t1" id="log1" onmouseover="javascript:logBoard(1)">
+                    <span class="sp2"></span><span style="float:left; line-height:31px;">免费注册</span></dt>
+					<dd id="login0">
+						<ul>
+							<script language="javascript">
+								if(document.getElementById("cust_id").value==''){
+
+									document.write("<li style='width:200px' style='display:block;' id='ifLoginSess1'>网上贸易 <a href='/member/index.html'>从此开始</a></li>");
+									document.write("<li style='width:200px'>手把手教你 <a href='/gettradeinterface.do?menu_id=2EEcDFDFmMM080X0G85B&trade_type_code=0120'>如何发布产品</a></li>");
+								}
+								if(document.getElementById("cust_id").value!=''){
+									document.write("<li style='width:200px' style='display:block;' id='ifLoginSess1'>恭喜您&nbsp;&nbsp;"+document.getElementById("se_cust_name").value+"("+document.getElementById("juristic_type_code").value +")</li>");
+									document.write("<li style='width:200px'>级别:&nbsp;&nbsp" + document.getElementById("para_code2").value +"&nbsp;&nbsp;<a href='/gettradeinterface.do?menu_id=2EEcDFDFmMM080X0G85B&trade_type_code=0120'>发布产品</a></li>");
+								}
+							</script>
+						</ul>
+					</dd>
+					<dd id="login1" style="display: none">
+						<ul>
+							<li style="width:200px">还不是会员？ 立即 <a href="/member/Newcregister.html">免费注册</a></li>
+						</ul>
+					</dd>
+				</dl>
+				<!--02-->
+				<dl>
+					<dt class="login_t1" id="log2" onmouseover="javascript:logBoard(2)">
+                    <span class="sp3"></span><span style="float:left; line-height:31px;">诚信会员</span></dt>
+					<dt class="login_t1" id="log3" onmouseover="javascript:logBoard(3)">
+                    <span class="sp4"></span><span style="float:left; line-height:31px;">发布信息</span></dt>
+					<dd id="login2" style="display: none">
+						<ul>
+							<li style="width:200px"><a href="#">国内网络贸易推广第一助手！</a></li>
+						</ul>
+					</dd>
+					<dd id="login3" style="display: none">
+						<ul>
+							<li style="width:90px"><a href="/member/stockMgr/addstockindex.jsp?menu_id=p265YH0tD34m1M2">发布求购</a></li>
+							<li style="width:90px"><a href="/member/saleMgr/addSale.jsp?menu_id=i3l2DA38N01p7r8">发布供应</a></li>
+							<li style="width:90px"><a href="#">发布资讯</a></li>
+						</ul>
+					</dd>
+				</dl>
+				<!--03-->
+				<dl>
+					<dt class="login_t1" id="log4" onmouseover="javascript:logBoard(4)">
+                    <span class="sp5"></span><span style="float:left; line-height:31px;">推广公司</span></dt>
+					<dt class="login_t1" id="log5" onmouseover="javascript:logBoard(5)">
+                    <span class="sp6"></span><span style="float:left; line-height:31px;">帮助中心</span></dt>
+					<dd id="login4" style="display: none">
+						<ul>
+							<li style="width:90px"><a href="#">推广中心</a></li>
+							<li style="width:90px"><a href="#">竞价排名</a></li>
+	 						<li style="width:90px"><a href="#">黄金展位</a></li>
+						</ul>
+					</dd>
+					<dd id="login5" style="display: none">
+						<ul>
+							<li style="width:90px"><a href="#">网站建设</a></li>
+							<li style="width:90px"><a href="#">广告服务</a></li>
+							<li style="width:90px"><a href="#">我的商务室</a></li>
+						</ul>
+					</dd>
+				</dl>
+				
+				<div class="login_footer lin3"><span> <a href="#">给我们提意见</a> | <a href="#">在线发稿</a></span></div>
+				 <!--选项结束-->
+		<script language=javascript>
+		function logBoard(n)
+		{
+			for(i=0;i<6;i++) {
+				if (i==n) {
+					document.all('log' + n).className="login_t2";
+				} else {
+				document.all('log' + i).className="login_t1";}
+			}
+			
+			for(i=0;i<6;i++) {
+				if (i==n) {
+					document.all('login' + n).style.display="";
+				} else {
+				document.all('login' + i).style.display="none";}
+			}
+			
+		}
+		</script>
+			</div>
+		</div>
+	</div>
+	<div class="ad"><img src="/templates/default/images/ad/home_920x502.jpg" width="950" height="50"/></div>
+	<!--正文03-->
+	<div class="main_box">
+		<!--产品展示-->
+			<div class="in_lmt">
+				<div class="in_lmt_name"><span> 产品展示</span></div>
+				<div class="hot_c">热门产品:钢化 ┊ 防火建材 ┊ 建材瓶 ┊ 磨边机 ┊ 蒙砂粉 ┊ 金刚轮</div> 
+				<div class="more_lin"> <span class="lin1"><a href="/member/">如何发布产品？</a></span> <span class="lin2"><a href="/default/product">更多>></a></span></div>
+			</div>
+			<div class="box_950">
+				<div class="cp_list">
+					<ul>
+						{ecms:articlelist row="12" ch_id="8855381456" imgwidth="93" imgheight="76"  titlelen="6" }
+				     <li><a href="[field:arcurl/]">[field:imgurl/]</a><br><a href="[field:arcurl/]">[field:title/]</a></li>
+				    {/ecms:articlelist}
+					</ul>
+				</div>
+				<div class="cp_tuijian">
+					<div class="cp_tuijian_name">
+					<span class="cp_tuijian01">推荐产品</span>
+					<span class="cp_tuijian02"></span>
+					<span class="cp_tuijian03"><a href="/member/mainMenu/default.jsp">我要发布产品</a></span></div>
+					<ul class="link_xian">
+						{ecms:articlelist row="20" ch_id="8855381456" titlelen="5" recommend="1"}
+						<li><a href="[field:arcurl/]">[field:title/]</a> |</li>
+						{/ecms:articlelist}
+					</ul>
+				</div>
+			</div>
+	</div>	
+	<div class="ad"><img src="/templates/default/images/ad/home_920x501.gif" width="950" height="51"/></div>
+	
+	<!--正文04-->
+	<div class="main_box">
+		<!--产品列表-->
+		<div class="main_left">
+			<div class="in_lmt">
+				<div class="in_lmt_name" id="cplist0" onclick="javascript:cplistBoard(0)"> <span>产品列表</span></div>
+				<div class="in_lmt_name_one" id="cplist1" onclick="javascript:cplistBoard(1)"><span>锁具</span></div>
+				<div class="in_lmt_name_one" id="cplist2" onclick="javascript:cplistBoard(2)"><span>五金</span></div>
+				<div class="in_lmt_name_one" id="cplist3" onclick="javascript:cplistBoard(3)"><span>厨具</span></div>
+				<div class="in_lmt_name_one" id="cplist4" onclick="javascript:cplistBoard(4)"><span>石材</span></div>
+				<div class="more_lin"><span class="lin1"><a href="/member/">如何发布产品？</a></span> <span class="lin2"><a href="/default/product">更多>></a></span></div>
+			</div>
+			
+			<!--01-->
+			<div class="box_665" id="cp_list0">
+				<div class="table_list"><div class="table_list1">产品列表</div><div class="more_lin"><a href="/member/mainMenu/default.jsp">我要发布产品</a></div></div>
+				<div class="cp_half  link_xian" style="border-right: 1px dashed #ccc;">
+<script language="JavaScript1.2"> 
+function changeto(id){ 
+id.style.backgroundColor='#E8F7E7' 
+} 
+function changeback(id){ 
+id.style.backgroundColor='' 
+} 
+</script>
+					
+						{ecms:classlist row="7" limit="0,7" type="4" cmodel="product" up_class_id="000000000000000"}
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">	
+						<dt><a href="[field:class_path/]">[field:class_name/]</a></dt>
+						
+						{ecms:smallclasslist row="8" type="4" up_class_id="[field:class_id/]" cmodel="product"}	
+						<dd><a href="[field:small_class_path/]">[field:small_class_name/]</a> | </dd>
+						{/ecms:smallclasslist}
+					</dl>	
+						{/ecms:classlist}
+					
+				</div>
+				
+				<div class="cp_half  link_xian">
+					
+						{ecms:classlist row="7" limit="8,7" type="4" cmodel="product" up_class_id="000000000000000"}
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">	
+						<dt><a href="[field:class_path/]">[field:class_name/]</a></dt>
+						
+						{ecms:smallclasslist row="8" type="4" up_class_id="[field:class_id/]" cmodel="product"}	
+						<dd><a href="[field:small_class_path/]">[field:small_class_name/]</a> | </dd>
+						{/ecms:smallclasslist}
+					</dl>	
+						{/ecms:classlist}
+					
+				</div>
+			</div>
+			<!--02-->
+			<div class="box_665" id="cp_list1" style="display: none">
+				<div class="table_list"><div class="table_list1">锁具</div><div class="more_lin"><a href="/member/mainMenu/default.jsp">我要发布产品</a></div></div>
+				<div class="cp_half  link_xian" style="border-right: 1px dashed #ccc;">
+					
+						{ecms:classlist row="7" limit="0,7" type="4" cmodel="product" up_class_id="0Q2122T1r0e2spf"}
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">	
+						<dt><a href="[field:class_path/]">[field:class_name/]</a></dt>
+						
+						{ecms:smallclasslist row="8" type="4" up_class_id="[field:class_id/]" cmodel="product"}	
+						<dd><a href="[field:small_class_path/]">[field:small_class_name/]</a> | </dd>
+						{/ecms:smallclasslist}
+					</dl>	
+						{/ecms:classlist}
+					
+				</div>
+				
+				<div class="cp_half  link_xian">
+					
+						{ecms:classlist row="7" limit="8,7" type="4" cmodel="product" up_class_id="0Q2122T1r0e2spf"}
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">	
+						<dt><a href="[field:class_path/]">[field:class_name/]</a></dt>
+						
+						{ecms:smallclasslist row="8" type="4" up_class_id="[field:class_id/]" cmodel="product"}	
+						<dd><a href="[field:small_class_path/]">[field:small_class_name/]</a> | </dd>
+						{/ecms:smallclasslist}
+					</dl>	
+						{/ecms:classlist}
+					
+				</div>
+			</div>
+			<!--03-->
+			<div class="box_665" id="cp_list2" style="display: none">
+				<div class="table_list"><div class="table_list1">五金</div><div class="more_lin"><a href="/member/mainMenu/default.jsp">我要发布产品</a></div></div>
+				<div class="cp_half  link_xian" style="border-right: 1px dashed #ccc;">
+					
+						{ecms:classlist row="7" limit="0,7" type="4" cmodel="product" up_class_id="713796955896764"}
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">	
+						<dt><a href="[field:class_path/]">[field:class_name/]</a></dt>
+						
+						{ecms:smallclasslist row="8" type="4" up_class_id="[field:class_id/]" cmodel="product"}	
+						<dd><a href="[field:small_class_path/]">[field:small_class_name/]</a> | </dd>
+						{/ecms:smallclasslist}
+					</dl>	
+						{/ecms:classlist}
+					
+				</div>
+				
+				<div class="cp_half  link_xian">
+					
+						{ecms:classlist row="7" limit="8,7" type="4" cmodel="product" up_class_id="713796955896764"}
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">	
+						<dt><a href="[field:class_path/]">[field:class_name/]</a></dt>
+						
+						{ecms:smallclasslist row="8" type="4" up_class_id="[field:class_id/]" cmodel="product"}	
+						<dd><a href="[field:small_class_path/]">[field:small_class_name/]</a> | </dd>
+						{/ecms:smallclasslist}
+					</dl>	
+						{/ecms:classlist}
+					
+				</div>
+			</div>
+			<!--04-->
+			<div class="box_665" id="cp_list3" style="display: none">
+				<div class="table_list"><div class="table_list1">厨具</div><div class="more_lin"><a href="/member/mainMenu/default.jsp">我要发布产品</a></div></div>
+				<div class="cp_half  link_xian" style="border-right: 1px dashed #ccc;">
+					
+						{ecms:classlist row="7" limit="0,7" type="4" cmodel="product" up_class_id="713703791040473"}
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">	
+						<dt><a href="[field:class_path/]">[field:class_name/]</a></dt>
+						
+						{ecms:smallclasslist row="8" type="4" up_class_id="[field:class_id/]" cmodel="product"}	
+						<dd><a href="[field:small_class_path/]">[field:small_class_name/]</a> | </dd>
+						{/ecms:smallclasslist}
+					</dl>	
+						{/ecms:classlist}
+					
+				</div>
+				
+				<div class="cp_half  link_xian">
+					
+						{ecms:classlist row="7" limit="8,7" type="4" cmodel="product" up_class_id="713703791040473"}
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">	
+						<dt><a href="[field:class_path/]">[field:class_name/]</a></dt>
+						
+						{ecms:smallclasslist row="8" type="4" up_class_id="[field:class_id/]" cmodel="product"}	
+						<dd><a href="[field:small_class_path/]">[field:small_class_name/]</a> | </dd>
+						{/ecms:smallclasslist}
+					</dl>	
+						{/ecms:classlist}
+					
+				</div>
+			</div>
+			<!--05-->
+			<div class="box_665" id="cp_list4" style="display: none">
+				<div class="table_list"><div class="table_list1">石材</div><div class="more_lin"><a href="/member/mainMenu/default.jsp">我要发布产品</a></div></div>
+				<div class="cp_half  link_xian" style="border-right: 1px dashed #ccc;">
+
+					
+						{ecms:classlist row="7" limit="0,7" type="4" cmodel="product" up_class_id="713685158069215"}
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">	
+						<dt><a href="[field:class_path/]">[field:class_name/]</a></dt>
+						
+						{ecms:smallclasslist row="8" type="4" up_class_id="[field:class_id/]" cmodel="product"}	
+						<dd><a href="[field:small_class_path/]">[field:small_class_name/]</a> | </dd>
+						{/ecms:smallclasslist}
+					</dl>	
+						{/ecms:classlist}
+					
+				</div>
+				
+				<div class="cp_half  link_xian">
+					
+						{ecms:classlist row="7" limit="8,7" type="4" cmodel="product" up_class_id="713685158069215"}
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">	
+						<dt><a href="[field:class_path/]">[field:class_name/]</a></dt>
+						
+						{ecms:smallclasslist row="8" type="4" up_class_id="[field:class_id/]" cmodel="product"}	
+						<dd><a href="[field:small_class_path/]">[field:small_class_name/]</a> | </dd>
+						{/ecms:smallclasslist}
+					</dl>	
+						{/ecms:classlist}
+					
+				</div>
+			</div>
+			
+		<!--选项结束-->
+		<script language=javascript>
+		function cplistBoard(n)
+		{
+			for(i=0;i<5;i++) {
+				if (i==n) {
+					document.all('cplist' + n).className="in_lmt_name";
+				} else {
+				document.all('cplist' + i).className="in_lmt_name_one";}
+			}
+			
+			for(i=0;i<5;i++) {
+				if (i==n) {
+					document.all('cp_list' + n).style.display="";
+				} else {
+				document.all('cp_list' + i).style.display="none";}
+			}
+			
+		}
+		</script>
+
+		</div>
+		
+		<!--右边-->
+		<div class="main_right">
+			<!--推荐企业-->
+			<div class="right_lmt"><div class="right_lmt_name">推荐企业</div><div class="more_lin lin2"><a href="/default/enterprise/">更多>></a></div></div>
+			<div class="box_270">
+				<ul>
+					{ecms:articlelist row="13" orderby="indate" recommend="1" ch_id="3213713775"}
+					<li><a href="/inc/include/InterimPages.jsp?cust_id=[field:info_id/]" target="_blank">[field:title/]</a></li>
+					{/ecms:articlelist}   
+				</ul>
+			</div>
+			
+			<!--招标加盟-->
+			<div class="right_lmt" style="margin-top:10px;">
+				{ecms:channel row="1" type="self" ch_id="0531586180" titlelen="12"}	<!--招标加盟-->
+					<div class="right_lmt_name">[field:ch_name/]</div><div class="more_lin lin2"><a href="[field:moreurl/]">更多>></a></div>
+				{/ecms:channel}
+			</div>
+			<div class="box_270">
+				<ul>
+					{ecms:articlelist row="16" orderby="indate" ch_id="0531586180" titlelen="12"}
+					<li><a href="[field:arcurl/]">[field:title/]</a> [field:in_date/]</li>
+					{/ecms:articlelist}   
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+	<!--ad 通栏广告-->
+	<div class="ad"><img src="/templates/default/images/ad/home_920x50.gif" width="950" height="50"/></div>
+	
+	<!--正文05-->
+	<div class="main_box">
+		<!--信息资讯-->
+		<div class="main_left">
+			<!--ad_665
+			<div class="ad_665"><img src="/templates/default/images/ad/abtob_32.gif" width="665" height="60" /></div>-->
+			<div class="in_lmt">
+				<div class="in_lmt_name"><span> 信息资讯</span></div>
+			</div>
+			<div class="box_665 lin1"> 
+				<div class="news_half" style="border-right: 1px dashed #ccc;">	
+					<div class="newslist"> 
+						<!--木材知识-->
+						<dl>
+							<dt>
+								<ul>
+									{ecms:channel row="1" type="self" ch_id="7286471601"}	<!--行业资讯-->
+									<li class="newslist_lmt_bt">[field:ch_name/]</li>
+									<li class="newslist_lmt_xian"></li>
+									<li class="newslist_lmt_more lin2"><a href="[field:moreurl/]">更多>></a></li>
+									{/ecms:channel}
+								</ul>
+							</dt>
+							<dd>
+								<ul>
+									{ecms:articlelist row="9" orderby="indate" titlelen="16" ch_id="7286471601"}
+								     <li><a href="[field:arcurl/]">[field:title/]</a> [field:in_date/]</li>
+								   {/ecms:articlelist}
+								</ul>
+							</dd>
+						</dl>
+						<!--政策向导-->
+						<dl>
+							<dt>
+								<ul>
+									{ecms:channel row="1" type="self" ch_id="6620666133"}	<!--地区价格-->
+									<li class="newslist_lmt_bt">[field:ch_name/]</li>
+									<li class="newslist_lmt_xian"></li>
+									<li class="newslist_lmt_more lin2"><a href="[field:moreurl/]">更多>></a></li>
+									{/ecms:channel}
+								</ul>
+							</dt>
+							<dd>
+								<ul>
+									{ecms:articlelist row="9" orderby="indate" titlelen="16" ch_id="6620666133"}
+								     <li><a href="[field:arcurl/]">[field:title/]</a> [field:in_date/]</li>
+								   {/ecms:articlelist}
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="news_half">	
+					<div class="newslist"> 
+						
+						<!--市场分析-->
+						<dl>
+							<dt>
+								<ul>
+									{ecms:channel row="1" type="self" ch_id="2287630053"}	<!--市场分析-->
+									<li class="newslist_lmt_bt">[field:ch_name/]</li>
+									<li class="newslist_lmt_xian"></li>
+									<li class="newslist_lmt_more lin2"><a href="[field:moreurl/]">更多>></a></li>
+									{/ecms:channel}
+								</ul>
+							</dt>
+							<dd>
+								<ul>
+									{ecms:articlelist row="9" orderby="indate" titlelen="16" ch_id="2287630053"}
+								     <li><a href="[field:arcurl/]">[field:title/]</a> [field:in_date/]</li>
+								   {/ecms:articlelist}
+								</ul>
+							</dd>
+						</dl>
+						<!--世界林业-->
+						<dl>
+							<dt>
+								<ul>
+									{ecms:channel row="1" type="self" ch_id="6483106025"}	<!--政策向导-->
+									<li class="newslist_lmt_bt">[field:ch_name/]</li>
+									<li class="newslist_lmt_xian"></li>
+									<li class="newslist_lmt_more lin2"><a href="[field:moreurl/]">更多>></a></li>
+									{/ecms:channel}
+								</ul>
+							</dt>
+							<dd>
+								<ul>
+									{ecms:articlelist row="9" orderby="indate" titlelen="16" ch_id="6483106025"}
+								     <li><a href="[field:arcurl/]">[field:title/]</a> [field:in_date/]</li>
+								   {/ecms:articlelist}
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--加--> 
+		<div class="adg">
+		<div class="list_right">
+			<div class="list_right_box">
+				<div class="ad_180"><img src="/templates/default/images/ad/guangg.gif" /></div>
+			</div>
+		</div>
+		
+		
+	</div>
+	
+</div>
+
+
+
+		 
+
+<!--友情链接-->
+<div class="ad">
+			<div class="in_lmt1">
+				<div class="in_lmt_name1"><span>友情链接</span></div>
+					<div id="link">
+	<ul>
+	{ecms:friendlink row="25"}
+		<li><a href="[field:link_url/]">[field:link_name/]</a> |</li>
+	{/ecms:friendlink}
+	</ul>
+</div>
+	<div class="box_950">
+			
+				
+			</div>
+	</div>	
+	
+</div>
+
+
+
+<!--footer-->
+<div id="footer">
+{ecms:include file="/templates/default/templates/footer.html"/}
+</div>
+</body>
+</html>
+
+<script type="text/javascript" src="/js/prototype.js"></script>
+<script language="javascript" type="text/javascript" src="/templates/default/js/genInfo.js"></script>
+<script type="text/javascript" src="/templates/default/js/first.js"></script>
+<script>
+  	getCritiqueDiv('noSolve','6145246578');
+  	getCritiqueDiv('solve','6145246578');
+</script>
+
+
+
+

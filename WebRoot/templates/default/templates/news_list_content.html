@@ -1,0 +1,181 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="/templates/default/style/news_list.css" />
+
+<script type="text/javascript" src="/js/prototype.js"></script>
+<script language="javascript" type="text/javascript" src="/templates/default/js/genInfo.js"></script>
+<script language="JavaScript" type="text/javascript">
+//========================= 设置字体大中小 start =============
+	function doZoom(size){
+		var artibody = document.getElementById('artibody');
+		if(!artibody){
+			return;
+		}
+		var artibodyChild = artibody.childNodes;
+		artibody.style.fontSize = size + 'px';
+		//再对artibody div内的直接html节点设置fontSize属性
+		for(var i = 0; i < artibodyChild.length; i++){
+			if(artibodyChild[i].nodeType == 1){
+				artibodyChild[i].style.fontSize = size + 'px';
+			}
+		}		
+	}
+	
+	getCritiqueDiv('critique','{ecms:field name="news_id"/}');
+	
+</script>
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{ecms:field name="infochannel" type="0"/}{ecms:field name="title"/}---{ecms:base name="webtitle"/}</title>
+</head>
+<body>
+<!--头部-->
+{ecms:include file="/templates/default/templates/top.html"/}
+<!--内容-->
+<div id="main" >
+	
+	<div class="content_box">
+		<div class="list_path">您所在的位置 > <a href="/">首页</a> > {ecms:field name="infochannel" type="1"/}{ecms:field name="title"/}</div>
+		<!--左边信息-->
+		<div class="list_left_content">
+				<h3>{ecms:field name="title"/}</h3>
+			    <div class="content_time">2008-09-24 文字选择：【<a href="javascript:doZoom(16)">大</a> <a href="javascript:doZoom(14)">中</a> <a href="javascript:doZoom(12)">小</a>】</div> 
+				<div class="text_content" id="artibody">{ecms:field name="content"/}
+				</div>
+				<div class="print">【<a href="javascript:copyurl();">复制本文地址</a>】 【<a href="javascript:window.print();">打印该页</a>】 </div>
+				
+				<script language="javascript"> 
+				function copyurl() { 
+					var clipBoardContent="复制本贴标题和地址，发给QQ|Msn上的好友的代码 \r\n"; 
+					strHref = window.location.href; 
+					strUrl = strHref.split("?"); 
+					clipBoardContent += strUrl[0]; 
+					if (window.clipboardData){ 
+						if(window.clipboardData.setData("Text",clipBoardContent)){ 
+							document.getElementById('copyshow').innerHTML = ' 复制成功，请粘贴到QQ\\MSN\\电邮发送给好友'; 
+						}	 
+					} else{ 
+						document.getElementById('copyshow').innerHTML = ' 您使用的浏览器不支持此功能，请到地址栏复制链接'; 
+					} 
+				} 
+			</script> 
+				<form name="classForm" method="post" action="/doTradeReg.do" target="_self">
+				<div class="ly_div">
+					
+					<div id="critique" >暂时没有人发表评论</div>
+					
+					<span class="dd_huangse" style="width:98%;">注意：请不要在评论中含与内容无关的广告链接，违者封IP。 </span> <br />
+					
+					<span style="width:98%;">评论者姓名:<input name="rsrv_str5" id="rsrv_str5" type="text" value="" class="list_input_box"/></span><br />
+					
+					<input type="hidden" id="trade_type_code" name="trade_type_code" value="1308"/>
+					<input type="hidden" name="sale_id" name="sale_id" value="{ecms:field name='news_id'/}">
+					<input type="hidden" name="deal_tag" name="deal_tag" value="4">
+					<input type="hidden" name="rsrv_str3" name="rsrv_str3" value="{ecms:field name='title'/}">
+					<input type="hidden" name="rsrv_str4" name="rsrv_str4" value="">
+					<input type="hidden" name="cust_id" name="cust_id" value="{ecms:field name='cust_id'/}">
+					<input type="hidden" name="user_id" name="user_id" value="{ecms:field name='publish_user_id'/}">
+					<input type="hidden" name="session_user_id" name="session_user_id" value="">
+					
+					<span style="width:98%;"><textarea id="content" name="content" cols="80" rows="6" class="list_input_box"></textarea>
+					</span><br />
+					<span style="width:98%;">
+						验证码：<input name="loguserrand" id="loguserrand" type="text" size="8"  maxlength="4" class="input" onKeyDown="submiting()"/>&nbsp;
+						<img src="/checkImage" id="rc" align="absmiddle"/>
+					</span><br />
+					
+					<span style="width:98%;"><input type="button" value="确认发送评论" onclick="ifOpen()" /></span><br />
+					<span style="width:98%; color:#999; margin-top:20px;">
+						发帖须知：<br />
+						一、所发文章必须遵守《互联网电子公告服务管理规定》；<br /> 
+						二、严禁发布供求代理信息、公司介绍、产品信息等广告宣传信息；<br /> 
+						三、严禁恶意重复发帖； <br />
+						四、严禁对个人、实体、民族、国家等进行漫骂、污蔑、诽谤。 
+					</span>
+				</div>
+				</form>
+				<div class="xg_news_list">
+					<dl>
+						<dt>相关新闻</dt>
+						<dd>
+							<ul>
+								{ecms:articlelist row="5" orderby="indate" titlelen="17"}
+								<li><a href="[field:arcurl/]">[field:title/]</a><span>[field:in_date/]</span></li>
+								{/ecms:articlelist}
+							</ul>
+						</dd>
+					</dl>
+				
+				</div>
+					
+		
+		
+		
+		</div>
+		<!--右边信息-->
+		<div class="list_right">
+			<div class="list_right_lmt"><span>最新推荐</span></div>
+			<div class="list_right_box link_xian">
+				<ul>
+					{ecms:articlelist row="10" orderby="indate" titlelen="15" recommend="1" }
+					<li><a href="[field:arcurl/]">[field:title/]</a></li>
+					{/ecms:articlelist}
+				</ul>
+			</div>
+			<div class="right_newsad">
+				<h3 style="color:#0000FF;">汽车英文数字拦截飞…</h3>
+				深圳飞跃科技有限公司专业生产汽车信号拦截器.汽车千扰器.<Br>
+				<span style="color:#008000;">www.szfy168.com</span>
+			</div>
+		</div>
+		
+	</div>
+</div>
+<!--footer-->
+<!--footer-->
+{ecms:include file="/templates/default/templates/footer.html"/}
+</body>
+</html>
+<script src='/inc/newsdis.jsp' language='javascript'></script>
+<script src='/inc/getSessCustId.jsp' language='javascript'></script>
+<script src='/templates/default/jsp/getRandomcode.jsp' language='javascript'></script>
+<script language="javascript">
+		function ifOpen() {
+			if(document.getElementById('new_Search').value=='0') {
+				alert("评论端口已经关闭！");
+				return false;
+			}
+			if(document.getElementById('cust_id').value == ''){
+				alert("请登陆后评论！");
+				return false;
+			}
+			if(document.getElementById('rsrv_str5').value=='') {
+				alert("评论者姓名不能为空！");
+				return false;
+			}
+			if(document.getElementById('content').value=='') {
+				alert("评论内容不能为空！");
+				return false;
+			}
+			
+			var loguserrand = document.getElementById( "loguserrand" ).value;
+ 	    var randomcode = document.getElementById("se_randomcode").value;
+  	  if(loguserrand=='' || loguserrand==null) {
+ 	  	  alert("验证码不能为空");
+ 	  	  return false;
+ 	    }
+ 	    if(loguserrand != randomcode) {
+ 	   	  alert("验证码输入不正确!");
+ 	  	  return false;
+ 	    }
+			document.classForm.submit();
+		}
+</script>
+
+
+
+
+

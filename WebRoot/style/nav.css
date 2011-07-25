@@ -1,0 +1,231 @@
+BODY {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; FONT-SIZE: 12px; MARGIN: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px; FONT-FAMILY: ËÎÌו; BACKGROUND-COLOR: #fff
+}
+FORM {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px
+}
+INPUT {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; FONT-SIZE: 12px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; HEIGHT: 25px
+}
+UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+IMG {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+A:link {
+	COLOR: #001d4c; TEXT-DECORATION: none
+}
+A:visited {
+	COLOR: #001d4c; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #ff6600; TEXT-DECORATION: underline
+}
+.redtext A {
+	COLOR: #ff7300
+}
+.redtext A:link {
+	COLOR: #ff7300
+}
+.redtext A:visited {
+	COLOR: #ff7300
+}
+.redtext A:hover {
+	COLOR: #ff7300
+}
+#top_nav_bg {
+	FONT-SIZE: 12px; WIDTH: 100%; BORDER-BOTTOM: #cdcdcd 1px solid; HEIGHT: 26px; BACKGROUND-COLOR: #f4f3f2
+}
+#top_nav {
+	CLEAR: both; VERTICAL-ALIGN: middle; PADDING-TOP: 0px; HEIGHT: 26px
+}
+#top_nav UL {
+	MARGIN: 7px 0px
+}
+#top_nav LI {
+	PADDING-RIGHT: 7px; PADDING-LEFT: 7px; PADDING-BOTTOM: 0px; BORDER-LEFT: #afa69e 1px solid; PADDING-TOP: 0px
+}
+#top_nav .first {
+	PADDING-RIGHT: 7px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; BORDER-LEFT: #afa69e 1px solid; PADDING-TOP: 0px
+}
+#top_nav .last {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 7px; PADDING-BOTTOM: 0px; BORDER-LEFT: #afa69e 1px solid; PADDING-TOP: 0px
+}
+#top_nav LI A {
+	TEXT-DECORATION: none
+}
+#top_nav .left {
+	FLOAT: left
+}
+#top_nav .right {
+	FLOAT: right
+}
+#top_nav .no_border {
+	BORDER-RIGHT: 0px; BORDER-TOP: 0px; BORDER-LEFT: 0px; BORDER-BOTTOM: 0px
+}
+#top_nav .img_bt {
+	MARGIN: -4px -5px -3px
+}
+#main_nav {
+	CLEAR: both; MARGIN-TOP: 7px; WIDTH: 778px
+}
+#main_nav .icon {
+	MARGIN-TOP: 5px; FLOAT: right; MARGIN-RIGHT: 10px
+}
+#main_nav LI {
+	FONT-SIZE: 14px; VERTICAL-ALIGN: middle
+}
+#main_nav LI A {
+	TEXT-DECORATION: none
+}
+#main_nav .more {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 12px; FONT-WEIGHT: normal; BACKGROUND: url(http://img.china.alibaba.com/images/cn/home/070215/main_nav_arrow.gif) no-repeat 0px 5px; FLOAT: right; PADDING-BOTTOM: 0px; PADDING-TOP: 5px
+}
+#main_nav .left {
+	FLOAT: left
+}
+#main_nav .right {
+	PADDING-RIGHT: 13px; PADDING-LEFT: 12px; FONT-WEIGHT: bold; BACKGROUND: url(http://img.china.alibaba.com/images/cn/home/070215/home_left_menu_flog.gif) no-repeat 0px 7px; FLOAT: right; PADDING-BOTTOM: 0px; PADDING-TOP: 5px
+}
+#main_nav .after_site {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 12px; FLOAT: right; PADDING-BOTTOM: 0px; PADDING-TOP: 5px
+}
+#c_fship {
+	MARGIN-LEFT: -3px; WIDTH: 85px; important: 
+}
+#c_fship A {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 4px; PADDING-BOTTOM: 20px; WIDTH: 83px; PADDING-TOP: 0px
+}
+#c_fship .alk {
+	PADDING-RIGHT: 18px; BACKGROUND: url(http://img.china.alibaba.com/images/cn/home/070215/c_index_nav_club_arrow_a.gif) no-repeat 67px 0px
+}
+#c_fship .ahv {
+	PADDING-RIGHT: 18px; BACKGROUND: url(http://img.china.alibaba.com/images/cn/home/070215/c_index_nav_club_arrow_up.gif) no-repeat -1px -3px
+}
+#float_menu {
+	TEXT-ALIGN: left
+}
+#float_menu UL.cship_list LI {
+	DISPLAY: block; FLOAT: left; MARGIN: 0px; WIDTH: 83px
+}
+#float_menu UL.cship_list LI.top_border {
+	BORDER-TOP: #c2bbb5 1px solid; MARGIN-TOP: 0px
+}
+#float_menu UL.cship_list LI A {
+	PADDING-RIGHT: 20px; DISPLAY: block; PADDING-LEFT: 10px; FONT-WEIGHT: normal; FONT-SIZE: 12px; PADDING-BOTTOM: 3px; WIDTH: 83px; CURSOR: pointer; PADDING-TOP: 4px; BACKGROUND-COLOR: #fff
+}
+#float_menu UL.cship_list LI A:hover {
+	DISPLAY: block; FONT-WEIGHT: normal; FONT-SIZE: 12px; CURSOR: pointer; BACKGROUND-COLOR: #ffefd5
+}
+.main_box {
+	MARGIN: 0px auto; WIDTH: 750px
+}
+.main_box_free {
+	MARGIN: 0px auto; WIDTH: 98%
+}
+.clr {
+	CLEAR: both
+}
+#main_nav_index {
+	CLEAR: both; MARGIN-TOP: 7px
+}
+#main_nav_index .icon {
+	MARGIN-TOP: 5px; FLOAT: right; MARGIN-RIGHT: 10px
+}
+#main_nav_index LI {
+	FONT-SIZE: 14px; VERTICAL-ALIGN: middle
+}
+#main_nav_index LI A {
+	TEXT-DECORATION: none
+}
+#main_nav_index .more {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 12px; FONT-WEIGHT: normal; BACKGROUND: url(http://img.china.alibaba.com/images/cn/home/070215/main_nav_arrow.gif) no-repeat 0px 5px; FLOAT: right; PADDING-BOTTOM: 0px; PADDING-TOP: 5px
+}
+#main_nav_index .left {
+	FLOAT: left
+}
+#main_nav_index .right {
+	PADDING-RIGHT: 13px; PADDING-LEFT: 12px; FONT-WEIGHT: bold; BACKGROUND: url(http://img.china.alibaba.com/images/cn/home/070215/home_left_menu_flog.gif) no-repeat 0px 7px; FLOAT: right; PADDING-BOTTOM: 0px; PADDING-TOP: 5px
+}
+#main_nav_index .after_site {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 12px; FLOAT: right; PADDING-BOTTOM: 0px; PADDING-TOP: 5px
+}
+#main_nav .left {
+	FONT-SIZE: 12px; FLOAT: left
+}
+#main_nav .left A:hover {
+	COLOR: #ff7300
+}
+#main_nav .right {
+	BACKGROUND: none transparent scroll repeat 0% 0%; FLOAT: right
+}
+#main_nav .right .noritem {
+	PADDING-RIGHT: 13px; PADDING-LEFT: 14px; FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND: url(http://img.china.alibaba.com/images/cn/community/0703161/top_arrow_normal.gif) no-repeat 0px 0px; FLOAT: left; PADDING-BOTTOM: 1px; PADDING-TOP: 1px
+}
+#main_nav .right .actitem {
+	PADDING-RIGHT: 13px; PADDING-LEFT: 14px; FONT-WEIGHT: bold; FONT-SIZE: 12px; BACKGROUND: url(http://img.china.alibaba.com/images/cn/community/0703161/top_arrow_active.gif) no-repeat 0px 0px; FLOAT: left; PADDING-BOTTOM: 1px; PADDING-TOP: 1px
+}
+#main_nav .right A {
+	COLOR: #333
+}
+.logofz {
+	FONT-SIZE: 11px; WORD-SPACING: 10px; COLOR: #ff6600; FONT-FAMILY: arial
+}
+.logofz A:link {
+	FONT-SIZE: 11px; WORD-SPACING: 10px; COLOR: #ff6600; FONT-FAMILY: arial
+}
+.logofz A:hover {
+	FONT-SIZE: 11px; WORD-SPACING: 10px; COLOR: #ff6600; FONT-FAMILY: arial
+}
+.logofz A:visited {
+	FONT-SIZE: 11px; WORD-SPACING: 10px; COLOR: #ff6600; FONT-FAMILY: arial
+}
+.logoali A:link {
+	COLOR: #808080
+}
+.logoali A:hover {
+	COLOR: #808080
+}
+.logoali A:visited {
+	COLOR: #808080
+}
+#main_nav_free {
+	CLEAR: both; MARGIN-TOP: 7px; WIDTH: 100%
+}
+#main_nav_free .icon {
+	MARGIN-TOP: 5px; FLOAT: right; MARGIN-RIGHT: 10px
+}
+#main_nav_free LI {
+	FONT-SIZE: 14px; VERTICAL-ALIGN: middle
+}
+#main_nav_free LI A {
+	TEXT-DECORATION: none
+}
+#main_nav_free .more {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 12px; FONT-WEIGHT: normal; BACKGROUND: url(http://img.china.alibaba.com/images/cn/home/070215/main_nav_arrow.gif) no-repeat 0px 5px; FLOAT: right; PADDING-BOTTOM: 0px; PADDING-TOP: 5px
+}
+#main_nav_free .left2 {
+	PADDING-LEFT: 15px
+}
+#main_nav_free .after_site {
+	PADDING-RIGHT: 8px; PADDING-LEFT: 12px; FLOAT: right; PADDING-BOTTOM: 0px; PADDING-TOP: 5px
+}
+#main_nav_free .left {
+	FONT-SIZE: 12px; FLOAT: left
+}
+#main_nav_free .left A:hover {
+	COLOR: #ff7300
+}
+.inforDiv {
+	FONT-SIZE: 12px; COLOR: #999999; PADDING-TOP: 5px; TEXT-ALIGN: left
+}
+.inforDiv A:link {
+	FONT-SIZE: 12px; COLOR: #f36815; TEXT-DECORATION: underline
+}
+.inforDiv A:visited {
+	FONT-SIZE: 12px; COLOR: #f36815; TEXT-DECORATION: underline
+}
+.inforDiv A:hover {
+	FONT-SIZE: 12px; COLOR: #f36815; TEXT-DECORATION: underline
+}

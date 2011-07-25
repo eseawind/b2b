@@ -1,0 +1,110 @@
+BODY,P,td,tr,table,text{FONT-SIZE: 12px; FONT-STYLE: normal; FONT-WEIGHT: normal;TEXT-DECORATION: none;word-break:break-all;line-height: 20px;cOLOR: #333333;}
+.biaoti{font-weight: bold;}
+
+img{border:0;}
+.table_xian {
+	border-bottom: #CDD4DA 1px dashed; margin-top:1px
+}
+.login_textarea{
+	font-size: 12px;
+	background-color: #FFFFFF;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #DFDFDF;
+	border-top-style: solid;
+	border-right-style: solid;
+	border-left-style: solid;
+	border-right-width: 1px;
+	border-right-color: #DFDFDF;
+	border-top-width: 1px;
+	border-left-width: 1px;
+	border-top-color: #999999;
+	border-left-color: #999999;
+	line-height: 18px;
+}
+.table_left_right_xian {
+	border-left: #CDD4DA 1px dashed;border-right: #CDD4DA 1px dashed;
+}
+.time{color:#999999;}
+
+.shanchu{
+	color: #666666;
+	FONT-SIZE: 9pt;
+	text-decoration: none;
+}
+.shanchu A:visited {
+	COLOR: #666666;
+	FONT-SIZE: 9pt;
+	text-decoration: none;
+}
+.shanchu A:link {
+	COLOR: #666666;
+	FONT-SIZE: 9pt;
+	text-decoration: none;
+}
+.shanchu A:hover {
+	COLOR: #FF6600;
+	FONT-SIZE: 9pt;
+	text-decoration: underline;
+}
+.list_news{
+	color: #0B72BF;
+	FONT-SIZE: 9pt;
+	text-decoration: none;
+}
+.list_news A:visited {
+	COLOR: #0B72BF;
+	FONT-SIZE: 9pt;
+	text-decoration: none;
+}
+.list_news A:link {
+	COLOR: #0B72BF;
+	FONT-SIZE: 9pt;
+	text-decoration: none;
+}
+.list_news A:hover {
+	COLOR: #FF6600;
+	FONT-SIZE: 9pt;
+	text-decoration: underline;
+}
+.bottom{
+	color: #666666;
+	FONT-SIZE: 9pt;
+	text-decoration: none;
+}
+.bottom A:visited {
+	COLOR: #144C73;
+	FONT-SIZE: 9pt;
+	text-decoration: none;
+}
+.bottom A:link {
+	COLOR:  #144C73;
+	FONT-SIZE: 9pt;
+	text-decoration: none;
+}
+.bottom A:hover {
+	COLOR: #FF6600;
+	FONT-SIZE: 9pt;
+	text-decoration: underline;
+}
+
+.loginCurrent {
+	background-image: url(images/tis_06.gif);
+	font-weight:bold;
+}
+.loginButton{
+	background-image: url(images/ti_04.gif);
+	COLOR: #737373; font-weight:bold;
+}
+.loginButton a:link {
+	text-decoration: none;
+	COLOR: #737373; font-weight:bold;
+}
+.loginButton a:visited {
+	color: #333333;
+ 	COLOR: #737373; font-weight:bold;
+}
+.loginButton a:hover {
+	text-decoration: underline;
+	COLOR: #737373; font-weight:bold;
+}

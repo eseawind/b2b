@@ -1,0 +1,167 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+<title>欢迎使用电子商务业务管理系统</title>
+<style type="text/css">
+<!--
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+}
+-->
+</style>
+<link href="css/css1.css" rel="stylesheet" type="text/css">
+		<script language="javascript">
+		 
+	 	function submited()
+		{
+			if (document.getElementById("user_name").value == "" || document.getElementById("user_name").value == "会员名/邮箱" )
+			{
+				alert('用户名不可以为空！');
+				document.getElementById("user_name").focus();
+				return false;
+			}
+			if (document.getElementById("passwd").value == "" || document.getElementById("passwd").value == null)
+			{
+				alert("密码不可以为空！");
+				document.getElementById("passwd").focus();
+				return false;
+			}
+			if( window.frames["randomcode"].document.getElementById("loginrand").style.display != "none")
+			{
+				var loguserrand = window.frames["randomcode"].document.getElementById("loguserrand").value;
+				if( loguserrand == "" )
+				{
+					alert('验证码不可以为空！');
+					window.frames["randomcode"].document.getElementById("loguserrand").focus();
+					return false;
+				}
+				document.getElementById( "userrand" ).value=loguserrand;
+			}	
+			
+			document.loginForm.submit();
+			 
+		}
+		function hand()   
+		{   
+		  document.all.loginForm.bout.style.cursor='hand'   
+		}  
+		function openReg(){
+			window.open('Newcregister.html');
+		}
+		 
+	</script>
+</head>
+
+<body>
+<table width="921" height="439" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td valign="top"><table width="100%" height="58"  border="0" cellpadding="0" cellspacing="0">
+      <tr>
+        <td width="22%"><a href="/"><img src="image/l_logo.gif" width="185" height="76" border="0"></a></td>
+        <td width="78%"><table width="30%" height="32"  border="0" align="right" cellpadding="0" cellspacing="0">
+          <tr>
+            <td> <a href="/">返回首页 </a></td>
+          </tr>
+        </table>          </td>
+      </tr>
+    </table>
+      <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td height="2" bgcolor="#FF5E06"></td>
+        </tr>
+      </table>      
+      <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="54%" height="323" valign="top"><table width="100%" height="68"  border="0" cellpadding="0" cellspacing="0">
+            <tr>
+              <td class="ms"><a href="/member/Newcregister.html">马上注册 &gt;&gt;</a></td>
+            </tr>
+          </table>
+            <table width="100%" height="63"  border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td bgcolor="#FF5E06"><table width="100%" height="33"  border="0" cellpadding="0" cellspacing="0">
+                  <tr>
+                    <td width="19%"><div align="center"><a href="#"><img src="image/ban1.png" width="62" height="95" border="0"></a></div></td>
+                    <td width="19%"><a href="#"><img src="image/ban2.png" width="62" height="95" border="0"></a></td>
+                    <td width="19%"><a href="#"><img src="image/ban3.png" width="62" height="95" border="0"></a></td>
+                    <td width="19%"><a href="#"><img src="image/ban4.png" width="62" height="95" border="0"></a></td>
+                    <td width="17%"><a href="#"><img src="image/ban5.png" width="62" height="95" border="0"></a></td>
+                    <td width="7%" background="image/bg.gif">&nbsp;</td>
+                  </tr>
+                </table></td>
+              </tr>
+            </table>
+          <table width="100%"  border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td height="160" background="image/bg1.gif"><table width="95%"  border="0" align="center" cellpadding="0" cellspacing="2">
+                <tr>
+                  <td height="26" class="ms1"> 整合网上海量商机 </td>
+                  <td class="ms1"> 完整记录客户资料 </td>
+                </tr>
+                <tr>
+                  <td height="26" class="css1"> 及时迅速联系客户 </td>
+                  <td class="css1"> 图形，报表 </td>
+                </tr>
+                <tr>
+                  <td height="26" class="ms1"> 随时随地查阅资源 </td>
+                  <td class="ms1"> 全盘掌握公司状况 </td>
+                </tr>
+                <tr>
+                  <td height="26" class="css1"> 图文并茂在线谈生意 </td>
+                  <td class="css1"> 跟踪分析业务 </td>
+                </tr>
+              </table></td>
+            </tr>
+          </table></td>
+          <td width="46%" valign="top"><table width="82%"  border="0" cellspacing="0" cellpadding="0">
+            <tr>
+              <td><img src="image/deng_01.gif" width="342" height="44"></td>
+            </tr>
+          </table>
+            <table width="81%" height="271"  border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td height="281" valign="top" background="image/deng_02.gif"><br><br><br>
+                    &nbsp;
+                    <iframe name="randomcode" marginheight="0" marginwidth="0" src="/member/comm/randomCode.jsp?n=2" scrolling="no" frameborder="0" allowtransparency="0" width="330" height="168"></iframe>
+                
+                </td>
+              </tr>
+            </table>
+            <table width="82%" height="16"  border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td><img src="image/deng_03.gif" width="342" height="16"></td>
+              </tr>
+          </table>          </td>
+        </tr>
+      </table>
+      <table width="100%" height="57"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td>&nbsp;</td>
+        </tr>
+      </table>      <br>
+      <table width="85%" height="1"  border="0" align="center" cellpadding="0" cellspacing="0" bgcolor="#CCCCCC">
+        <tr>
+          <td></td>
+        </tr>
+      </table>
+      <br>      <br>
+      <table width="100%" height="57"  border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td> <div align="center" style="font-size:12px"><a href="http://www.bizoss.com/html/b2b/2009/0619/9.html">系统概述 </a> | <a href="http://www.bizoss.com/html/b2b/2009/0619/10.html">功能概要 </a> | <a href="http://www.bizoss.com/html/b2b/2009/0619/11.html">功能和特点 </a> | <a href="http://www.bizoss.com/html/b2b/2009/0619/12.html">报价方案 </a> | <a href="http://www.bizoss.com/html/b2b/2009/0619/12.html">报价方案 </a> | <a href="http://www.bizoss.com/html/customer/2009/0619/7.html">客户与合作伙伴 </a><br>            
+              <img src="/templates/default/images/ucs2.gif"> 销售咨询： 
+    <a href="http://wpa.qq.com/msgrd?V=1&Uin=923462250&Site=a-hai.net&Menu=yes tencent://message/?uin=923462250">923462250 </a>
+    <a href="http://wpa.qq.com/msgrd?V=1&Uin=1182350564&Site=a-hai.net&Menu=yes tencent://message/?uin=1182350564">1182350564 </a>
+    <a href="http://www.bizoss.com">合肥贞龙信息科技有限责任公司 </a> 版权所有 @ 2008 保留所有权利 <a href="http://www.miibeian.gov.cn/">皖ICP备05015140号 </a><br>
+服务热线：0551-5310317 | 传真：0551-5310317 <img src="/favicon.gif"> Powered by <a href="http://www.bizoss.com">BizOss </a> </div></td>
+        </tr>
+      </table>
+      <p>&nbsp;</p></td>
+  </tr>
+</table>
+</body>
+</html>

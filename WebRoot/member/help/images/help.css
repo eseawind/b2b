@@ -1,0 +1,19 @@
+BODY { padding:0px; BACKGROUND: #fff; margin:0px; FONT: 12px verdana,"ËÎÌו", arial; COLOR: #28374b;}
+
+A {
+	COLOR: #000; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #fff; TEXT-DECORATION: underline
+}
+.left_bg{ width:384px; background:url(../images/help_13.gif) left top repeat-y; height:30px; line-height:30px;}
+.left_bg1{ width:24px; background:url(../images/help_02.gif) left top repeat-y;}
+.left_bg1 img{float:left; margin-left:5px; margin-top:9px;}
+.left_bg a{ margin-left:10px; font-size:12px; text-decoration:none; color:#000;}
+.left_bg a:hover{ margin-left:10px; font-size:12px; text-decoration:none; color:#fff; background-color:#99aac0; border:#7b8ea6 1px solid; }
+
+.home_bt{background:url(../images/help_09.gif) left top repeat-x; height:30px;}
+.home_bt img{ float:left;}
+.home_bt p{margin-left:50px; font-size:14px;color:#28374b; height:30px; line-height:30px; font-weight:bold;}
+
+.home_box{ border:#acbace 1px solid; margin:20px auto; line-height:30px;}

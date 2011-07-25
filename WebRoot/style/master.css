@@ -1,0 +1,115 @@
+/* 基本信息 */
+BODY,P,td,tr,table,text{
+	 font-size:12px;
+}
+
+body{
+     margin:0px;
+	 padding:0px;
+	 font-size:12px;
+	 line-height:20px;
+	 background:url(/images/bg.gif) left top repeat-x;
+}
+
+a:link {
+     font-size:12px; 
+     color:#666; 
+	 font-family: Arial; 
+	 text-decoration: none;
+}
+a:visited {
+     font-size:12px; 
+     color: #666; 
+	 font-family: Arial; 
+	 text-decoration: none;
+}
+a:active {
+	 font-family: Arial;
+	 text-decoration:none;
+}
+a:hover { 
+     font-size:12px; 
+	 color: #000;  
+	 text-decoration: none;
+}
+
+/* 头部信息 */
+.header{
+     width:760px;
+	 height:66px;
+	 margin-bottom:5px;
+}
+.headerleft{
+     width:269px;
+	 height:66px;
+	 float:left;
+	 background:url(../images/logo.gif) left top no-repeat;
+}
+.headerright{
+     width:491px;
+	 height:66px;
+	 float:left;
+	 background: url(../images/01.gif) left top no-repeat;
+	 text-align:right;
+}
+.headerright1{
+     margin:38px 0 0 0 ;
+	 line-height:22px;
+	 letter-spacing:2px;
+	 
+}
+/* 中间信息 */
+.content{
+     width:760px;
+	 height:auto;
+	 margin-bottom:8px;
+	 float:left;
+}
+.contentleft{
+     width:545px;
+	 height:155px;
+	 float:left;
+}
+.contentright{
+     width:208px;
+	 height:160px;
+	 float:right;
+	 background:url(../images/logon.gif) left top no-repeat;
+}
+
+.contentone{
+     width:760px;
+	 height:295px;
+	 float:left;
+	 
+}
+.an{
+     width:47px;
+	 height:22px;
+	 border:0px;
+	 background:url(../images/02.gif) left center no-repeat;
+}
+.an1{
+     width:47px;
+	 height:22px;
+	 background: url(../images/03.gif) left center no-repeat;
+	 margin-left:1px;
+	 border:0px;
+}
+.an2{
+     width:67px;
+	 height:22px;
+	 background:url(../images/04.gif) left center no-repeat;
+	 margin-left:1px;
+	 border:0px;
+}
+
+/* 底部信息 */
+.footer{
+     width:auto;
+	 height:auto;
+	 line-height:22px;
+	 text-align:center;
+	 margin-top:8px;
+}
+

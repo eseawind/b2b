@@ -1,0 +1,93 @@
+/*添加头部信息*/
+.container_login { background: url(/images/login_4.gif); width:960px;text-align:left; float:left;}
+.header_login{width:880px; min-height:100px;}
+.logo_login {width:880px;height:66px; float:left; text-align:left; min-height:66px;margin-left:40px;}
+.top_include3 {width:880px;100px;margin-bottom:2px;margin-left:40px;}
+
+/*添加头部信息*/
+.middleBody{
+	width: 810px;
+	border: 1px #D2D2D2 solid;
+	margin: 10px auto;
+}
+.bg{
+	width: 810px;
+	height: 25px;
+	background: #FF943E;
+	line-height: 25px;
+	color: White;
+	font-weight: bolder;
+}
+.logintable{
+	width: 690px;
+	height: 200px;
+	text-align: left;
+	margin: 20px 60px;
+
+}
+.logintable img{
+	margin: auto 5px;
+}
+/*~{PB~}login~{QyJ=~}*/
+.login_top{
+	width: 727px;
+	height: 44px;
+	background: url(../images/login_1.gif);
+}
+#login-body{
+	width: 762px;
+	margin:0 auto;
+}
+.logo_login {width:900px; height:66px; text-align:left; }
+#lg_content{
+	background: url(../images/sign_06.gif) repeat-y;
+	width:762px;
+	margin:0 auto;
+}
+
+#lg_user{
+	width: 100%;
+	height: 47px;
+	margin-top: 25px;
+	text-align: left;
+	}
+#lg_text{ margin:0 auto;
+	width: 762px;
+}
+
+#lg_title{
+	width: auto;
+	height: 32px;
+	width:762px;
+	line-height:34px;
+	font-size: 20px;
+	color: #ffffff;
+	padding-left:80px;
+	font-weight: bolder;
+	text-align: left;
+	background: url(../images/sign_03.gif) left top no-repeat;
+}
+#lg_title1{ width:150px; margin:0 auto; text-align:center;
+}
+#lg_reg{
+	width: 750px; margin:0 auto; border-bottom:#999999 1px dashed; padding-top:20px;
+}
+.login_textarea {width:150px;}
+
+.login_bottom{
+	width: 727px;
+	height: 27px;
+	clear:both;
+	background: url(../images/login_5.gif);
+}
+/*~{PB~}login~{QyJ=~}*/
+
+
+
+
+
+
+.s_main1 {width:762px;
+	margin:0px auto;
+}
+.t{ font-size:12px;}

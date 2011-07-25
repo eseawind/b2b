@@ -1,0 +1,360 @@
+/* 基本信息*/
+
+body{
+     margin:0px;
+	 padding:0px;
+	 line-height:20px;
+	 font-size:12px;
+	 color:#003278;
+	 }
+tr,td,p,table{
+	 line-height:20px;
+	 font-size:12px;
+	 color:#003278;
+	 }
+A:link{
+     color:#003278;
+	 text-decoration:none;
+	 }
+
+A:visited{
+     color:#003278;
+	 text-decoration:none;
+	 }
+
+a:active{
+     text-decoration:none;
+	 }
+
+A:hover{ 
+	 color:#003278;  
+	 text-decoration:none;
+	 }
+
+
+.new-dh{
+     color:#002045;
+	 background-color:#FFFFFF;
+	 filter:alpha(opacity=40);
+	 padding:4px 5px 2px 5px;
+	 border:1px solid #A3BCDA;
+	 }	 
+.new-dh a:link, .new-dh a:visited, .new-dh a:active{ 
+     color:#002045;
+	 text-decoration:none;
+	 }
+.new-dh a:hover{ 
+	 color:#002045;
+	 text-decoration:none;
+	 }
+
+
+
+
+/*商业页面*/	 
+
+  /*导航*/
+  .new-ym-header{
+       width:948px;
+	   height:31px;
+	   line-height:31px;
+	   border-left:1px solid #A3BCDA;
+	   border-right:1px solid #A3BCDA;
+	   background:url(/company/enterprise/public/default/image/new-ym01.gif) left center repeat-x;
+	   }
+	   
+  .new-ym-header1{
+	   width:950px;
+	   height:185px;
+	   background:url(/company/enterprise/public/default/image/new-ym02.gif) left top no-repeat;
+	   margin:1px 0px;
+	   }
+  .new-ym-header2{
+	   width:auto;
+	   height:auto;
+	   line-height:40px;
+	   float:right;
+	   text-align:right;
+	   margin:20px 20px 0 0;
+	   font-size:30px;
+	   font-weight:500px;
+	   color:#FFF;
+	   letter-spacing:1PX;
+	   font-family:"黑体"
+	   }
+  .new-ym-header3{
+	   width:948px;
+	   height:25px;
+	   line-height:25px;
+	   border:1px solid #A3BCDA;
+	   }
+
+  .new-ym-header4{
+       width:auto;
+	   text-align:left;
+	   margin-left:15px;
+	   font-size:14px;
+	   font-weight:bolder;
+	   }
+  .new-ym-header5{
+       width:auto;
+	   text-align:left;
+	   margin-left:8px;
+	   }
+
+.new-ym-left{
+     width:240px;
+	 height:auto;
+	 float:left;
+	 margin-top:8px;
+	 }
+.new-ym-right{
+     width:700px;
+	 height:auto;
+	 float:right;
+	 margin-top:8px;
+	 }
+
+  /*左边*/
+  .new-ym-left1{
+       width:240px;
+	   height:auto;
+	   float:left;
+	   margin-bottom:10px;
+	   }
+  .new-ym-left2{
+       width:238px;
+	   height:28px;
+	   float:left;
+	   line-height:28px;
+	   background:url(/company/enterprise/public/default/image/new-ym03.gif) left top repeat-x;
+	   border-left:1px solid #A3BCDA;
+	   border-right:1px solid #A3BCDA;
+	   }
+  .new-ym-left3{
+       width:238px;
+	   height:auto;
+	   float:left;
+	   border-left:1px solid #A3BCDA;
+	   border-right:1px solid #A3BCDA;
+	   border-bottom:1px solid #A3BCDA;
+	   }
+  .new-ym-left4{
+       width:auto;
+	   float:left;
+	   margin-left:8px;
+	   font-size:14px;
+	   font-weight:bold;
+	   }
+  .new-ym-left5{
+       width:218px;
+	   height:auto;
+	   float:left;
+	   margin:10px 0px 10px 10px;
+	   }
+
+  .new-ym-left5 ol{
+       margin:0px;
+	   padding:0px;
+	   float:left;
+	   }
+  .new-ym-left5 li{
+       margin:0px;
+	   padding:0px;
+	   width:208px;
+	   list-style-type:none;
+	   }
+  .new-ym-left6{
+       width:218px;
+	   height:auto;
+	   float:left;
+	   margin:10px 0px 10px 10px;
+	   }
+
+  .new-ym-left6 ol{
+       margin:0px;
+	   padding:0px;
+	   float:left;
+	   }
+  .new-ym-left6 li{
+       margin:0px;
+	   line-height:23px;
+	   background:url(/company/enterprise/public/default/image/new-ym04.gif) left center no-repeat;
+	   padding-left:28px;
+	   width:188px;
+	   list-style-type:none;
+	   }
+  /*右边*/
+  .new-ym-right1{
+       width:700px;
+	   height:auto;
+	   float:left;
+	   margin-bottom:10px;
+	   }
+  .new-ym-right2{
+       width:698px;
+	   height:28px;
+	   float:left;
+	   line-height:28px;
+	   background:url(/company/enterprise/public/default/image/new-ym03.gif) left top repeat-x;
+	   border-left:1px solid #A3BCDA;
+	   border-right:1px solid #A3BCDA;
+	   }
+  .new-ym-right3{
+       width:698px;
+	   height:auto;
+	   float:left;
+	   border-left:1px solid #A3BCDA;
+	   border-right:1px solid #A3BCDA;
+	   border-bottom:1px solid #A3BCDA;
+	   }
+  .new-ym-right4{
+       width:auto;
+	   float:left;
+	   margin-left:8px;
+	   font-size:14px;
+	   font-weight:bold;
+	   }
+  .new-ym-right5{
+       width:668px;
+	   height:auto;
+	   float:left;
+	   margin:10px 0px 10px 10px;
+	   }
+  .new-ym-right5 ol{
+       margin:0px;
+	   padding:0px;
+	   float:left;
+	   }
+  .new-ym-right5 li{
+       margin:0px 8px;
+	   float:left;
+	   width:144px;
+	   height:auto;
+	   list-style-type:none;
+	   }	   
+  .new-ym-right51{
+       width:142px;
+	   height:auto;
+	   float:left;
+	   text-align:center;
+	   margin:5px 0px 10px 0px;
+	   line-height:25px;
+	   border:1px solid #ccc;
+	   }	   
+  .new-ym-right52{
+	   padding:2px;
+	   float:left;
+	   border:1px solid #ccc;
+	   width:140px;
+	   height:110px;
+	   }	   
+  .new-ym-right6{
+       width:auto;
+	   float:right;
+	   margin-right:8px;
+	   }
+  .new-ym-right7{	
+       width:140px;
+	   height:auto;
+	   padding:3px;
+	   float:left;
+	   border:1px solid #ccc;
+	   }
+  .new-ym-right8{
+       width:500px;
+	   height:auto;
+	   float:right;
+	   letter-spacing:1px;
+	   text-indent:25px;
+	   }	   
+  .new-ym-right8 p{
+       margin:0px 0px 10px 0px;
+	   }	   
+	   
+	   
+  .new-ym-right9{
+       width:668px;
+	   height:auto;
+	   float:left;
+	   margin:10px 0px 10px 10px;
+	   }	   
+  .new-ym-right9 ol{
+       margin:0px;
+	   padding:0px;
+	   float:left;
+	   }
+  .new-ym-right9 li{
+       margin:0px;
+	   padding:0px;
+	   float:left;
+	   width:668px;
+	   list-style-type:none;
+	   }  
+  .new-ym-right10{
+       margin:0px;
+	   float:left;
+	   line-height:23px;
+	   background: url(/company/enterprise/public/default/image/new-rc05.gif) left center no-repeat;
+	   padding-left:15px;
+	   width:auto;
+	   }
+  .new-ym-right13{
+       margin:0px;
+	   float:left;
+	   line-height:23px;
+	   color:#999;
+	   margin-left:15px;
+	   width:80px;;
+	   }
+  .new-ym-right11{
+       margin:0px;
+	   padding-left:15px;
+	   width:653px;
+	   color:#666;
+	   padding-bottom:5px;
+	   border-bottom:1px dashed #ccc;
+	   margin-bottom:5px;
+	   }	   
+	   	   	   
+  .new-ym-right12{
+     width:668px;
+	 height:auto;
+	 margin: 0px 0px 10px 0px;
+	 float:left;
+	 line-height:30px;
+	 text-align:center;
+	 }
+
+  .new-ym-right12 a:link,   .new-ym-right12 a:visited,   .new-ym-right12 a:active{ 
+     color:#0066CC;
+	 width:auto;
+	 text-decoration:none;
+	 border:1px solid #0066CC;
+	 padding:1px 4px;
+	 margin:0px 3px;
+	 }
+  .new-ym-right12 a:hover{ 
+	 color:#fff;
+	 text-decoration:none;
+	 background-color:#0066CC;
+	 padding:1px 4px;
+	 margin:0px 3px;
+	 }	
+  .cp{
+	width:160px;
+	height:auto;
+	float:left;
+	} 
+	.tp{
+	width:334px;
+	height:auto;
+	float:left;
+}     
+/*底部*/   
+.moban-bottom{
+	height:83px;
+	margin-top:3px;
+	margin-bottom:0px;
+	text-align:center;
+	}

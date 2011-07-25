@@ -1,0 +1,132 @@
+/* CSS Document */
+@import url("../style/layout.css");
+.mid_one{
+	float:left;
+	width:250px;
+	height:195px;
+	}
+.mid_two{
+	float:right;
+	width:685px;
+	height:200px;
+	background:url(../images/bg_one.gif) left top no-repeat;
+}
+.jg_lmt{
+	float:left;
+	width: 680px;
+	border-bottom:dashed 1px #AFBBC5;
+}
+.jg_lmt0{
+	float:left;
+	width:240px;
+	height:27px;
+	line-height:22px;
+	padding: 5px 0 0 10px;
+	white-space: nowrap;
+	font-size: 14px;
+	font-weight: bold;
+}
+.mid_two_box{
+	float:left;
+	width: 685px;
+	height: auto;
+}
+.mid_two_left{
+	float: left;
+	width: 234px;
+	margin: 5px 0;
+	padding: 5px 0 5px 15px;
+	border-right: 1px dashed #ccc;
+}
+.mid_two_left ul{float:left; height:144px;}
+.mid_two_left li{
+	float:left;
+	width: 220px;
+	line-height: 24px;
+	padding-left:6px;
+	background: url(../images/ico.gif) no-repeat left center;
+	font-family: Arial;
+	color: #999;
+}
+.mid_two_right{
+	float:right;
+	width: 428px;
+}
+.mid_two_right dt{ 
+		float:left;
+		width:428px;
+		height:25px;}
+.mid_two_right dt li{ 
+		float:left;
+		width:auto;
+		line-height:25px;
+		padding-left:2px;
+		color:#555;
+		border-right:1px dashed #D1D3D1;
+		border-bottom:1px dashed #D1D3D1;
+		}
+.mid_two_right dd li{ 
+		float:left;
+		width:auto;
+		line-height:25px;
+		padding-left:2px;
+		border-right:1px dashed #D1D3D1;
+		border-bottom:1px dashed #D1D3D1;
+		overflow:hidden;
+		}
+		
+		
+.jg_left{
+	float:left;
+	width:470px;}
+.jg_right{
+	float:right;
+	width:470px;}
+.jg_lmtone{
+	float:left; 
+	width:465px;
+	height:28px;
+	padding-right:5px;
+	margin-top:10px;
+	background:url(../images/news_lmt.gif) left top no-repeat;}
+.jgdiv_lmt{
+	float:left;
+	width:auto;
+	font-size:14px;
+	font-weight:bold;
+	color:#B42A12;
+	text-indent:2em;
+	padding:6px 0 0 0;
+	line-height:22px;}
+.jg_box{
+	float:left;
+	width:470px;
+	height:auto;
+	background:url(../images/news_bg.gif) left bottom no-repeat;}
+.jg_box ul{
+	float:left;
+	width:310px;
+	height:auto;
+	padding:10px 0 6px 10px;}
+.jg_box li{
+	float:left;
+	width: 230px;
+	line-height: 24px;
+	padding-left:6px;
+	background: url(../images/ico.gif) no-repeat left center;
+	font-family: Arial;
+	color: #999;
+}
+
+.jg_pic{
+	float:left;
+	width:130px;
+	height:auto;
+	text-align:center;}
+.jg_pic img{ 
+	margin-top:10px;}	
+
+
+
+
+

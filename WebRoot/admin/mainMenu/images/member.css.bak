@@ -1,0 +1,207 @@
+BODY {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; BACKGROUND: #fff; PADDING-BOTTOM: 0px; MARGIN: 0px auto; FONT: 12px verdana,"ËÎÌå", arial; COLOR: #333; PADDING-TOP: 0px; 
+}
+
+A {
+	COLOR: #ffffff; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #003399; TEXT-DECORATION: underline
+}
+.topnav {
+	BACKGROUND: url(topnavbg.gif) repeat-x; HEIGHT: 74px
+}
+.topmenu TD {
+	COLOR: #fff
+}
+.topmenu {
+	MARGIN-BOTTOM: 1px; HEIGHT: 31px; BACKGROUND: url(topmenubg.gif) repeat-x;
+}
+.topmenu a:hover {
+	FONT-WEIGHT: bold; COLOR: #fff; TEXT-DECORATION: none
+}
+.topmenu a:link {
+	FONT-WEIGHT: bold; COLOR: #fff; TEXT-DECORATION: underline}
+.topspace {
+	HEIGHT: 5px; BACKGROUND-COLOR: #e1e1e1
+}
+.leftside {
+	BORDER-RIGHT: #85aad6 1px solid; WIDTH: 160px; BACKGROUND-COLOR: #dcedfc
+}
+.leftmenutitle {
+	PADDING-LEFT: 15px; FONT-WEIGHT: bold; FONT-SIZE: 14px; MARGIN-BOTTOM: 1px; COLOR: #BE2626; LINE-HEIGHT: 31px;  HEIGHT: 31px;
+	BACKGROUND: url(left_03.gif) repeat-x; TEXT-ALIGN: left
+}
+
+.hovermenu {
+	background-color: #FFFFFF;
+}
+
+.leftmenu A {
+	DISPLAY: block; PADDING-LEFT: 35px; FONT-SIZE: 12px; BACKGROUND: url(lujian_1.gif) no-repeat 20px 6px; LINE-HEIGHT: 22px; TEXT-ALIGN: left; COLOR: #112482;
+}
+.container {
+	BACKGROUND-COLOR: #FFFFFF;
+	TEXT-ALIGN: left;
+	padding: 20px;
+}
+.boxout {
+}
+.mtitle {
+	PADDING-LEFT: 15px;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 14px;
+	HEIGHT: 31px;
+	BACKGROUND: url(left_03.gif) repeat-x;
+	color: #112482;
+}
+.mtitle1 {
+	PADDING-LEFT: 15px;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 12px;
+	HEIGHT: 25px;
+	BACKGROUND-COLOR: #fff6e8;
+	color: #FF3300;
+}
+.blue_mtitle1 {
+	PADDING-LEFT: 15px;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 12px;
+	HEIGHT: 25px;
+	BACKGROUND-COLOR: #D1E6FC;
+	color: #FF3300;
+}
+.tishi {
+	FONT-SIZE: 12px;
+	BACKGROUND-COLOR: #fff6e8;
+	line-height: 180%;
+	padding: 5px;
+	border-left-color: #0066CC;
+	margin-bottom: 10px;
+}
+.zhuangtai {
+	FONT-SIZE: 12px;
+	line-height: 200%;
+	border-left: #85aad6 1px solid;
+	border-right: #85aad6 1px solid;
+	border-top: #85aad6 1px solid;
+}
+.feedback {
+	font-size: 12px;
+	line-height: 180%;
+	color: #333333;
+}
+
+.tishi1 {
+	color: #999999;
+	font-size: 12px;
+	margin-top: 5px;
+	line-height: 16px;
+}
+.f14 {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px
+}
+.f12 {
+	FONT-WEIGHT: bold; FONT-SIZE: 12px
+}
+.shuoming {
+FONT-SIZE: 12px
+}
+.footer {
+	BORDER-TOP: #e5c57e 1px solid; LINE-HEIGHT: 170%
+}
+.tradelist {
+	line-height: 170%;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #CCCCCC;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.links {
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #CCCCCC;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+.jobs {
+	border-bottom-width: 1px;
+	border-bottom-style: dashed;
+	border-bottom-color: #CCCCCC;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.productkuang {
+	font-size: 12px;
+	line-height: 180%;
+	border: 1px solid #E0E0E0;
+	padding: 5px;
+	text-align: center;
+}
+.title16 {
+	font-size: 20px;
+	margin-bottom: 10px;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	border-bottom-color: #CCCCCC;
+	padding-bottom: 5px;
+	font-family: "ºÚÌå";
+	margin-top: 10px;
+}
+.title14 {
+	font-size: 14px;
+	font-weight: bold;
+	color: #FB4E02;
+}
+.ptag {
+	MARGIN: 5px 0px; BORDER-BOTTOM: #FA5F02 2px solid
+}
+.now {
+	BORDER-RIGHT: #FA5F02 1px solid; PADDING-RIGHT: 0px; BORDER-TOP: #FA5F02 1px solid; PADDING-LEFT: 0px; BACKGROUND-IMAGE: url(zq02_r2_c2.jpg); PADDING-BOTTOM: 0px; BORDER-LEFT: #FA5F02 1px solid; COLOR: white; LINE-HEIGHT: 22px; PADDING-TOP: 3px; BORDER-BOTTOM: #FA5F02 1px solid; BACKGROUND-REPEAT: repeat-x; BACKGROUND-COLOR: #FA5F02; TEXT-ALIGN: center
+}
+.now A:link {
+	COLOR: white; TEXT-DECORATION: none
+}
+.now A:visited {
+	COLOR: white; TEXT-DECORATION: none
+}
+.tag02 {
+	BORDER-RIGHT: #ddd 1px solid; BORDER-TOP: #ddd 1px solid; BACKGROUND-IMAGE: url(zq03_r2_c4.jpg); BORDER-LEFT: #ddd 1px solid; COLOR: #000; LINE-HEIGHT: 22px; BORDER-BOTTOM: #ddd 1px; BACKGROUND-REPEAT: repeat-x; BACKGROUND-COLOR: white; TEXT-ALIGN: center
+}
+.tabls_2 {
+	MARGIN-TOP: 5px; WIDTH: 100%
+}
+.tabls_2 .tabls_head TD {
+	BACKGROUND-COLOR: #EBF7FC;
+	TEXT-ALIGN: center;
+	font-weight: bold;
+}
+.tabls_2 TD {
+	PADDING-RIGHT: 0px; BORDER-TOP: white 1px solid; PADDING-LEFT: 0px; PADDING-BOTTOM: 5px; BORDER-LEFT: white 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #ddd 1px solid
+}
+.company {
+	font-size: 12px;
+	line-height: 180%;
+}
+.S {
+	font-size: 12px;
+	line-height: 160%;
+}
+.mainwz {
+
+	font-size: 14px;
+	line-height: 200%;
+}
+#lastbuybizpanel table {
+	padding-right: 10px;
+	padding-left: 10px;
+}
+.zhuangtai .shuzi {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+	font-weight: bold;
+	color: #FF0000;
+	padding-right: 3px;
+	padding-left: 3px;
+}

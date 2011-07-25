@@ -1,0 +1,67 @@
+@import url("../style/layout.css");
+
+	
+.product_lmt{
+	float:left;
+	width: 950px;
+	height:28px;
+	background:url(../images/abtob_lmt0.gif) no-repeat right top;}
+
+.div_lmt{
+	float:left;
+	width:auto;
+	height:auto;
+	color:#ffffff;
+	padding-left:26px;
+	background:url(../images/abtob_lmt.gif) no-repeat left top;
+}
+.div_lmt span{
+	float:left;
+	width:auto;
+	font-size:14px;
+	font-weight:bold;
+	padding:6px 50px 0 0;
+	line-height:22px;
+	background:url(../images/lmt_name.gif) no-repeat right top;
+}
+.prodct_list{
+	float: left;
+	width: 920px;
+	padding: 9px 9px 9px 19px;
+	height: auto;
+	border-bottom:1px solid #CFE2CF; border-left:1px solid #CFE2CF; border-right:1px solid #CFE2CF;
+}
+
+.prodct_list dt{
+	float:left;
+	width:98%;
+	height: auto;
+	font-size: 14px;
+	font-weight: bold;
+	padding-left: 10px;
+	background: url(../images/wood_91.gif) left center no-repeat;}
+	
+.prodct_list dd{
+	float:left;
+	width:auto;
+	padding-right: 6px;
+	WHITE-SPACE: nowrap;
+}
+.prodct_list_img{
+	float: left;
+	width: 920px;
+	padding: 9px 0 9px 28px;
+	height: auto;
+	border-bottom:1px solid #CFE2CF; border-left:1px solid #CFE2CF; border-right:1px solid #CFE2CF;
+}
+.prodct_list_img li{
+	float: left;
+	width: 14%;
+	height: auto;
+	line-height:30px;
+}
+.prodct_list_img li img{
+	border:1px solid #D1D3D1;
+}
+
+	

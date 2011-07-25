@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="/company/enterprise/public/default/css/news_list.css" />
+<link href="/company/enterprise/public/default/css/new-ym-layout.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/prototype.js"></script>
+<script language="javascript" type="text/javascript" src="/company/enterprise/public/default/js/genInfo.js"></script>
+<script type="text/javascript" src="/company/enterprise/public/default/js/setClassName.js"></script>
+<script language="JavaScript" type="text/javascript">
+//========================= 设置字体大中小 start =============
+	function doZoom(size){
+		var artibody = document.getElementById('artibody');
+		if(!artibody){
+			return;
+		}
+		var artibodyChild = artibody.childNodes;
+		artibody.style.fontSize = size + 'px';
+		//再对artibody div内的直接html节点设置fontSize属性
+		for(var i = 0; i < artibodyChild.length; i++){
+			if(artibodyChild[i].nodeType == 1){
+				artibodyChild[i].style.fontSize = size + 'px';
+			}
+		}		
+	}
+				
+	getCritiqueDiv('critique','{ecms:field name="repository_id"/}');
+	function setClassName()
+	{
+		document.getElementById("dis5").className = "new-dh"; 
+	}
+</script>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{ecms:field name="cust_aim"/}</title>
+</head>
+<body  onload="setClassName()">
+<!--头部-->
+<table width="950" border="0" cellspacing="0" cellpadding="0" align="center">
+  <tr>
+    <td>
+		<div class="new-ym-header">
+        <div class="new-ym-header4">&nbsp;&nbsp;&nbsp;&nbsp;
+			<a id="dis9" href="/company/web/{ecms:field name='cust_id'/}">首  页</a>&nbsp;&nbsp;&nbsp;	
+			{ecms:channel type="top" row="8" orderby="show_no"}
+			<a id="dis[field:show_no/]" href="[field:churl/]">[field:ch_name/]</a>&nbsp;&nbsp;&nbsp;
+			{/ecms:channel}
+      	</div>
+		</div>
+	    <div class="new-ym-header1">
+		  <div class="new-ym-header2">{ecms:field name="cust_aim"/}</div>
+	    </div>
+        <div class="new-ym-header3">
+          <div class="new-ym-header5">目前位置：<a href="/">首页</a>&nbsp;-&gt;&nbsp;公司技术</div>
+        </div>
+	</td>
+  </tr>
+</table>
+<!--内容-->
+<div id="main" >
+	
+	<div class="content_box">
+		<div class="list_path">&nbsp;</div>
+		<!--左边信息-->
+		<div class="list_left_content">
+				<h3>{ecms:field name="title"/}</h3>
+			    <div class="content_time">2008-09-24 文字选择：【<a href="javascript:doZoom(16)">大</a> <a href="javascript:doZoom(14)">中</a> <a href="javascript:doZoom(12)">小</a>】</div> 
+				<div class="text_content" id="artibody">
+					{ecms:field name="content"/}
+				</div>
+				<div class="print">
+					【<A onclick=copyToClipBoard() href="javascript:" class="lanse">复制本文地址</A>】
+						<SCRIPT type=text/javascript>
+						this.URL=window.location.href;
+						function copyToClipBoard()
+						{
+							var clipBoardContent='';//初始清空
+							clipBoardContent+='';//写入Title
+							clipBoardContent+='\r\n';
+							clipBoardContent+=this.URL;//换行，写入URL
+							window.clipboardData.setData('Text',clipBoardContent);//写入ClipBoard
+							alert("成功复制标题及链接,现在可以粘贴到QQ/MSN发给好友了!");
+						}</SCRIPT>
+					【<A href="javascript: window.print();" class="lanse">打印该页</A>】
+				</div>				
+				<div class="xg_news_list">
+					<dl>
+						<dt>相关新闻</dt>
+						<dd>
+							<ul>
+								{ecms:articlelist row="5" orderby="indate" titlelen="17"}
+								<li><a href="[field:arcurl/]">[field:title/]</a><span>[field:in_date/]</span></li>
+								{/ecms:articlelist}
+							</ul>
+						</dd>
+					</dl>
+				
+				</div>
+					
+		
+		
+		
+		</div>
+		<!--右边信息-->
+		<div class="list_right">
+			<div class="list_right_lmt"><span>最新推荐</span></div>
+			<div class="list_right_box link_xian">
+				<ul>
+					{ecms:articlelist row="10" orderby="indate" titlelen="15" recommend="1" }
+					<li><a href="[field:arcurl/]">[field:title/]</a></li>
+					{/ecms:articlelist}
+				</ul>
+			</div>
+			<div style="height:20px"></div>
+			<div class="right_newsad">
+				<h3 style="color:#0000FF;">汽车英文数字拦截飞…</h3>
+				深圳飞跃科技有限公司专业生产汽车信号拦截器.汽车千扰器.</Br>
+				<span style="color:#008000;">www.szfy168.com</span>
+			</div>
+		</div>
+		
+	</div>
+</div>
+<!--内容-->
+<div style="width:950px; margin:10px auto; height:auto; text-align:center">Copyright◎2008 合肥贞龙信息科技有限责任公司  版权所有 <br>
+      咨询电话：0551-5310317 | 传真：0551-5310317 | 邮箱：admin@bizoss.com <br>
+      地址：安徽合肥高新区 技术支持：b2b.bizoss.com<br>
+      <img src="/images/cn.gif"></div>
+	<script language="javascript">
+	function ResizeImages()
+	{
+	   var myimg,oldwidth;
+	   var maxwidth=600;
+	   for(i=0;i<document.images.length;i++){
+	     myimg = document.images[i];
+	     if(myimg.width > maxwidth)
+	     {
+	        oldwidth = myimg.width;
+	        myimg.style.width = maxwidth;
+	        myimg.style.height = "auto";
+	     }
+	   }
+	}
+	ResizeImages();
+  </script> 
+</body>
+</html>
+
+
+

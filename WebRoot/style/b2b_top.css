@@ -1,0 +1,44 @@
+.dh_50 {
+	CURSOR: hand;
+	background:url(/images/b2b_c_c_a.gif) right top no-repeat;
+}
+.dh_50 A:visited,.dh_50 A:link {
+	COLOR: #FFFFFF;
+	text-decoration: none;
+}
+.dh_50 A:hover {
+	COLOR: #CDDAF7;
+	text-decoration: none;
+}
+.dh_64 {
+	CURSOR: hand;
+	background:url(/images/b2b_c_c_b.gif) right top no-repeat;
+}
+.dh_64 A:visited,.dh_64 A:link {
+	COLOR: #FFFFFF;
+	text-decoration: none;
+}
+.dh_64 A:hover {
+	COLOR: #CDDAF7;
+	text-decoration: none;
+}
+.dh_78 {
+	CURSOR: hand;
+	background:url(/images/b2b_c_c_c.gif) right top no-repeat;
+}
+.dh_78 A:visited,.dh_78 A:link {
+	COLOR: #FFFFFF;
+	text-decoration: none;
+}
+.dh_78 A:hover {
+	COLOR: #CDDAF7;
+	text-decoration: none;
+}
+
+.box_dh14 td{ font-size:14px;}
+.box_dh14 td A:visited,.box_dh14 td A:link {
+	text-decoration: none;
+}
+.box_dh14 td A:hover {
+	text-decoration: none;
+}

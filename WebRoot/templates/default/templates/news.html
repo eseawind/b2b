@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="/templates/default/style/news.css" />	
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{ecms:this name="ch_name"/}---{ecms:base name="webtitle"/}</title>
+</head>
+<body>
+<!--头部-->
+{ecms:include file="/templates/default/templates/top.html"/}
+<!--内容-->
+<!--ad 1个广告位-->
+	<div class="ad"><img src="/templates/default/images/ad/gg.gif" width="950" height="51" /></div>
+<div id="main" >
+	<div class="main_box">
+		<div class="news_mid_left">
+			<!--新闻图片-->
+			<div class="news_mid_left_pic">
+				{ecms:articlelist row="1" orderby="indate" all="news"}
+					<a href="[field:arcurl/]">[field:imgurl/]</a>
+				{/ecms:articlelist}
+				<ul>
+					{ecms:articlelist row="5" orderby="indate" all="news"}
+					<li>
+						<a href="[field:arcurl/]">
+							<script language="javascript">
+									var jobname = '[field:title/]'.substring(0,12);
+									document.write(jobname);
+								</script>
+						</a>&nbsp;&nbsp;
+						<span>
+							[field:in_date/]
+						</span>
+					</li>
+					{/ecms:articlelist}
+				</ul>
+			</div>
+			
+			<!--最新新闻-->
+			<div class="news_mid_left_news">
+				<div class="news_dt"><img src="/templates/default/images/huati.gif" align="absmiddle" /></div>
+				<div class="table_name">
+					<div class="table_name1" style="margin-left:8px; display: inline;" id="d0" onmouseover="javascript:secBoard(0)">最新新闻</div>
+					<div class="table_name2" style="margin-left:15px; display: inline;" id="d1" onmouseover="javascript:secBoard(1)">网络营销</div>
+				</div>
+				<!--01-->
+				<ul id="bo0">
+					<div class="news_mid_left_newsbt">
+						{ecms:articlelist row="1" titlelen="12" orderby="indate" ch_id="4467277860"}
+						<a href="[field:arcurl/]"><font>[field:title/]</font></a></br>
+						[field:info_dsec/]
+						{/ecms:articlelist}
+					</div>
+					{ecms:articlelist row="6" limit="2,6" orderby="indate" ch_id="4467277860"}
+						<li>[最新新闻] 
+							<a href="[field:arcurl/]">								
+								<script language="javascript">
+									var jobname = '[field:title/]'.substring(0,12);
+									document.write(jobname);
+								</script>
+							</a>
+							<span>
+								[field:in_date/]
+							</span>
+						</li>
+					{/ecms:articlelist}
+				</ul>
+				<!--02-->
+				<ul id="bo1" style="display: none">
+					<div class="news_mid_left_newsbt">
+						{ecms:articlelist row="1" titlelen="12" orderby="indate" ch_id="5184127066"}
+						<font><a href="[field:arcurl/]">[field:title/]</a></font><br>
+						[field:info_dsec/]
+						{/ecms:articlelist}
+					</div>
+					{ecms:articlelist row="6" limit="2,6" orderby="indate" ch_id="5184127066"}
+					<li>[网络营销] 
+						<a href="[field:arcurl/]">
+								<script language="javascript">
+									var jobname = '[field:title/]'.substring(0,12);
+									document.write(jobname);
+								</script>
+						</a>
+						<span>
+							[field:in_date/]
+						</span>
+					</li>
+					{/ecms:articlelist}
+				</ul>
+			</div>
+			<!--最新新闻选项结束-->
+			<script language=javascript>
+			function secBoard(n)
+			{
+				for(i=0;i<2;i++) {
+					if (i==n) {
+						document.all('d' + n).className="table_name1";
+					} else {
+					document.all('d' + i).className="table_name2";}
+				}
+				
+				for(i=0;i<2;i++) {
+					if (i==n) {
+						document.all('bo' + n).style.display="";
+					} else {
+					document.all('bo' + i).style.display="none";}
+				}
+				
+			}
+			</script>
+			
+		</div>
+		<div class="news_mid_right">
+			<div class="table_nameone">
+				<div class="table_nameone1" id="n0" onmouseover="javascript:necBoard(0)">热点新闻</div>
+				<div class="table_nameone2" id="n1" onmouseover="javascript:necBoard(1)">本周排行</div>
+			</div>
+			<!--01-->
+			<ul id="neo0">
+				{ecms:articlelist row="11" titlelen="12" orderby="indate" ch_id="0531586180"}
+					<li><a href="[field:arcurl/]">[field:title/]</a></li>
+					{/ecms:articlelist}
+			</ul>
+			<!--02-->
+			<ul id="neo1" style="display: none">
+				{ecms:articlelist row="11" titlelen="12" orderby="indate" ch_id="0520420424"}
+					<li><a href="[field:arcurl/]">[field:title/]</a></li>
+				{/ecms:articlelist}
+			</ul>
+		</div>
+		<!--热点新闻选项结束-->
+			<script language=javascript>
+			function necBoard(n)
+			{
+				for(i=0;i<2;i++) {
+					if (i==n) {
+						document.all('n' + n).className="table_nameone1";
+					} else {
+					document.all('n' + i).className="table_nameone2";}
+				}
+				
+				for(i=0;i<2;i++) {
+					if (i==n) {
+						document.all('neo' + n).style.display="";
+					} else {
+					document.all('neo' + i).style.display="none";}
+				}
+				
+			}
+			</script>
+	</div>
+	
+	<!--新闻列表-->
+	<div class="news_main">
+		<div class="in_lmt">
+			<div class="in_lmt_name"><span>市场资讯</span></div>
+		</div>
+		<div class="news_left">
+			<!--行业新闻-->
+			<div class="news_left_list">
+				<div class="news_left_list_lmt"><span>行业新闻 </span>
+					{ecms:channel type="self" ch_id="3571224104"}
+						<div class="more_lin lin2"> <a href="[field:moreurl/]">更多>></a>
+					{/ecms:channel}
+				</div>
+				</div>
+				<div class="news_left_list_pic lin1">
+					{ecms:articlelist row="1" titlelen="12" orderby="indate" ch_id="3571224104"}
+						<a href="[field:arcurl/]">[field:imgurl/]</a>
+						<a href="[field:arcurl/]">[field:title/]</a>
+						<script language="javascript">
+									var jobname = '[field:info_dsec/]'.substring(0,12);
+									document.write(jobname);
+						</script>
+					{/ecms:articlelist}
+				</div>
+				<ul class="link_xian">
+				{ecms:articlelist row="6" titlelen="12" orderby="indate" ch_id="3571224104"}
+					<li><a href="[field:arcurl/]">[field:title/]</a>&nbsp;&nbsp;<span>[field:in_date/]</span></li>
+				{/ecms:articlelist}
+				</ul>
+			</div>
+			
+			<!--市场分析-->
+			<div class="news_left_list">
+				<div class="news_left_list_lmt"><span>市场分析 </span>
+					{ecms:channel type="self" ch_id="5260677638"} 
+						<div class="more_lin lin2"> <a href="[field:moreurl/]">更多>></a>
+					{/ecms:channel}
+				</div>
+				</div>
+				<div class="news_left_list_pic lin1">
+					{ecms:articlelist row="1" titlelen="12" orderby="indate" ch_id="5260677638"}
+						<a href="[field:arcurl/]">[field:imgurl/]</a>
+						<a href="[field:arcurl/]">[field:title/]</a>
+						<script language="javascript">
+									var jobname = '[field:info_dsec/]'.substring(0,12);
+									document.write(jobname);
+						</script>
+					{/ecms:articlelist}
+					</div>
+				<ul class="link_xian">
+				{ecms:articlelist row="6" titlelen="12" orderby="indate" ch_id="5260677638"}
+					<li><a href="[field:arcurl/]">[field:title/]</a>&nbsp;&nbsp;<span>[field:in_date/]</span></li>
+				{/ecms:articlelist}
+				</ul>
+			</div>
+			
+			<!--政策向导-->
+			<div class="news_left_list">
+				<div class="news_left_list_lmt"><span>政策向导 </span>
+					{ecms:channel type="self" ch_id="3132134150"} 
+						<div class="more_lin lin2"> <a href="[field:moreurl/]">更多>></a>
+					{/ecms:channel}
+					</div>
+				</div>
+				<div class="news_left_list_pic lin1">
+					{ecms:articlelist row="1" titlelen="12" orderby="indate" ch_id="3132134150"}
+						<a href="[field:arcurl/]">[field:imgurl/]</a>
+						<a href="[field:arcurl/]">[field:title/]</a>
+						<script language="javascript">
+									var jobname = '[field:info_dsec/]'.substring(0,12);
+									document.write(jobname);
+						</script>
+					{/ecms:articlelist}
+				</div>
+				<ul class="link_xian">
+				{ecms:articlelist row="6" titlelen="12" orderby="indate" ch_id="3132134150"}
+					<li><a href="[field:arcurl/]">[field:title/]</a>&nbsp;&nbsp;<span>[field:in_date/]</span></li>
+				{/ecms:articlelist}
+				</ul>
+			</div>
+			
+			<!--价格分析-->
+			<div class="news_left_list">
+				<div class="news_left_list_lmt"><span>价格分析 </span>
+					{ecms:channel type="self" ch_id="8154318753"} 
+						<div class="more_lin lin2"> <a href="[field:moreurl/]">更多>></a>
+					{/ecms:channel}
+				</div>					
+				</div>
+				<div class="news_left_list_pic lin1">
+					{ecms:articlelist row="1" titlelen="12" orderby="indate" ch_id="8154318753"}
+						<a href="[field:arcurl/]">[field:imgurl/]</a>
+						<a href="[field:arcurl/]">[field:title/]</a>
+						<script language="javascript">
+									var jobname = '[field:info_dsec/]'.substring(0,12);
+									document.write(jobname);
+						</script>
+					{/ecms:articlelist}
+				</div>
+				<ul class="link_xian">
+				{ecms:articlelist row="6" titlelen="12" orderby="indate" ch_id="8154318753"}
+					<li><a href="[field:arcurl/]">[field:title/]</a>&nbsp;&nbsp;<span>[field:in_date/]</span></li>
+				{/ecms:articlelist}
+				</ul>
+			</div>
+			
+		</div>
+		<div class="news_right">
+			<!--木材知识-->
+			<div class="news_right_list">
+				<div class="news_right_list_lmt"><span>商业新闻</span>
+					{ecms:channel type="self" ch_id="7172460488"} 
+						<div class="more_lin lin2"> <a href="[field:moreurl/]">更多>></a>
+					{/ecms:channel}
+				</div>
+				</div>
+				<ul>
+					{ecms:articlelist row="10" titlelen="12" orderby="indate" ch_id="7172460488"}
+				<li><a href="[field:arcurl/]">[field:title/]</a></li>
+					{/ecms:articlelist}
+				</ul>
+			</div>
+			<!--世界林业 -->
+			<div class="news_right_list">
+				<div class="news_right_list_lmt"><span>经济资讯 </span>
+					{ecms:channel type="self" ch_id="4446803331"}
+						<div class="more_lin lin2"> <a href="[field:moreurl/]">更多>></a>
+					{/ecms:channel}
+					</div>
+				</div>
+				<ul>
+					{ecms:articlelist row="10" titlelen="12" orderby="indate" ch_id="4446803331"}
+				<li><a href="[field:arcurl/]">[field:title/]</a></li>
+					{/ecms:articlelist}
+				</ul>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+<!--footer-->
+<!--footer-->
+<div id="link">友情链接:
+	{ecms:friendlink row="25"}
+		<a href="[field:link_url/]">[field:link_name/]</a> |
+	{/ecms:friendlink}
+</div>
+<!--footer-->
+{ecms:include file="/templates/default/templates/footer.html"/}
+</body>
+</html>
+
+
+
+

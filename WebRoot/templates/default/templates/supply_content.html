@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="/templates/default/style/product_content.css" />
+	<script language="javascript" src="/templates/default/js/selectArea.js"></script>
+	<script type='text/javascript' src='/dwr/interface/AreaInfo.js'></script>
+    <script type='text/javascript' src='/dwr/engine.js'></script>
+    <script type='text/javascript' src='/dwr/util.js'></script>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{ecms:field name="infochannel" type="0"/}{ecms:field name="infoclass" type="0"/}{ecms:field name="title"/}---{ecms:base name="webtitle"/}</title>
+</head>
+<body onLoad="setProvince();">
+<script src='/inc/getSessCustId.jsp' language='javascript'></script>
+<!--头部-->
+{ecms:include file="/templates/default/templates/top.html"/}
+<!--菜单-->
+<!--内容-->
+<div id="main" >
+	<div class="main_box">
+		<div class="path">
+		<b>您当前位置：</b> <a href="/">首页</a> > {ecms:field name="infochannel" type="1"/}{ecms:field name="infoclass" type="1"/}{ecms:field name="title"/}</div>
+		<!--加入企业库-->
+				<span>快速筛选: </span>
+
+		<select name="province" id="province" onclick="setCitys(this.value)"><option>所有省份</option></select> |  
+		<select name="eparchy_codeS" id="eparchy_codeS" ><option>所有城市</option></select> | 
+	  <select name="part" id="part" >
+	  <option value=0>选择日期范围</option>
+	  <option value=3>三天</option>
+	  <option value=7>一周</option>
+	  <option value=30>一月</option>
+	  <option value=30>三月</option>
+	  <option value=365>不限</option>
+	  </select> | <input type="text" value="关键字" id="keyWords"  name="keyWords" size="16" onFocus="this.value=''" /> <input name="" type="button" value="筛 选" onclick="b2bsearsh();"/>
+		<div class="cp_content_lmt"><span>供应{ecms:field name="title"/}</span></div>
+		  <div class="cp_content_box">
+		    <table width="70%" border="0" style="float:left; margin-top:10px;" cellpadding="0" cellspacing="1">
+              <tr>
+                <td width="47%" align="center">
+				<table width="100%" border="0" cellspacing="0" cellpadding="0">
+                    <tr>
+                      <td align="center"><img id="be_img" src="{ecms:field name="mini_img"/}" width="270" height="246" /></td>
+                    </tr>
+                    <tr>
+                      <td align="center" height="36">&nbsp;
+                      	<a href="javascript:window.external.AddFavorite(top.location.href)">
+                      		<img src="/templates/default/images/Content_13.gif" width="80" height="15" border="0"/>
+                      	</a>
+                      	<font size="2" color="#CC0000" onclick="copyToClipBoard()" style="cursor: hand"><u>推荐给朋友</u></font>&nbsp;
+                      	<a href="/member/Report/Report.jsp?info_id={ecms:field name="info_id"/}"><font size="2" color="#CC0000" style="cursor: hand"><u>举报此信息</u></font></a>
+                      </td>
+                    </tr>
+                </table>
+				</td>
+                <td width="53%" valign="top">
+				
+				<table width="100%" border="0" cellspacing="0" cellpadding="2">
+                    <tr>
+                      <td width="20%">公 司 名: </td>
+                      <td width="80%">{ecms:field name="cust_name"/}</td>
+                    </tr>
+                    <tr>
+                      <td> 当 前 价:<span class="zi"> </span></td>
+                      <td><span class="zi">{ecms:field name="sale_price"/}</span></td>
+                    </tr>
+                    <tr>
+                      <td>经营模式:</td>
+                      <td>生产型 贸易型 </td>
+                    </tr>
+                    <tr>
+                      <td colspan="2"><table width="90%" border="0" cellpadding="5" cellspacing="1" bgcolor="FFC367">
+                          <tr>
+                            <td bgcolor="FFF8EE"><div style=" height:30px;"><img src="/templates/default/images/jingao.gif" width="10" height="13" /> 请 登录 后询价</div>
+                                <div><a href="javascript:stockEnqury();"><img src="/templates/default/images/Mouse.gif" width="118" height="34" border="0" /></a> <a href="tencent://message/?uin={ecms:field name="qq"/}&Site=bizoss&Menu=yes"><img src="/templates/default/images/qq.gif" width="60" height="16" border="0" align="absmiddle" /></a>
+                                	<a href="/supply/order/b2c_content.jsp?sale_id={ecms:field name='sale_id'/}"><font size="3"><img src="/images/goumai.gif" border=0  align="absmiddle"></font></a>
+                                </div></td>
+                          </tr>
+                      </table></td>
+                    </tr>
+                    <tr>
+                      <td>所 在 地:</td>
+                      <td>{ecms:field name="sale_addr"/}</td>
+                    </tr>
+                    <tr>
+                      <td>发布日期:</td>
+                      <td>{ecms:field name="in_date"/}</td>
+                    </tr>
+                    <tr>
+                      <td>有 效 期:</td>
+                      <td>
+					  	<script language="javascript">	
+							var in_date = '{ecms:field name="end_date"/}'.substring(0,10);
+							document.write(in_date);
+						</script>
+					  </td>
+                    </tr>
+					<tr>
+                      <td colspan="2">
+                      	<SCRIPT language="javascript">
+							function makevisible(cur,which){
+								if (which==0){
+									cur.filters.alpha.opacity=100;
+									cur.border='1';
+									cur.width=49;
+									cur.height=39;
+								}else{
+									cur.filters.alpha.opacity=70;
+									cur.border='0';
+									cur.width=50;
+									cur.height=40;
+								}
+							}
+							function changeImg(val){
+								document.getElementById('be_img').src=val.src;
+							}
+						</SCRIPT>
+                      	{ecms:field name="all_img"/}
+                      </td>
+                    </tr>
+                </table></td>
+              </tr>
+            </table>
+						<div class="product_vip_content">
+				<ul>
+					<li><span class="link_xian"><a href="/inc/include/InterimPages.jsp?cust_id={ecms:field name='cust_id'/}" target="_blank">{ecms:field name="cust_name"/}</a></span>  <!--<img src="/templates/default/images/icon_tianjiasy.gif" align="absmiddle" /><a href="#"> 加为客户</a>--></li>
+					<li style="height:36px;"><a href="/inc/include/InterimPages.jsp?cust_id={ecms:field name='cust_id'/}" target="_blank"><img src="/templates/default/images/company_web.gif" border="0"/></a><img src="/templates/default/images/company_lx.gif" style="cursor:hand;" onclick="showContact()"/></li>
+					
+					<li class="link_xian"><a href="/inc/include/InterimPages.jsp?cust_id={ecms:field name='cust_id'/}" target="_blank">最新供应</a> | <a href="/inc/include/InterimPages.jsp?cust_id={ecms:field name='cust_id'/}" target="_blank">最新求购</a></li>
+					<li>经营模式：生产加工</li>
+					<li>诚信通指数：<script src='/templates/default/jsp/getUserMoney.jsp?user_id={ecms:field name='publish_user_id'/}' language='javascript'></script></li>
+					<li>身份信息：已经过实名认证</li>
+					<li id="contact" style="display:none;">
+						电话：{ecms:field name="group_contact_phone"/}</br>
+						Email：<a href="mailto:{ecms:field name='email'/}">{ecms:field name="email"/}</a><br>
+						网站：<a href="http://{ecms:field name='website'/}">{ecms:field name="website"/}</a><br>
+					</li>
+					<script language="javascript">
+						function showContact(){
+							if(document.getElementById('contact').style.display=='none'){
+								document.getElementById('contact').style.display='block';
+							}else{
+								document.getElementById('contact').style.display='none';
+							}
+						}
+					</script>
+				</ul>
+			</div>
+		</div>
+		<div class="product_content_lmt">
+			<span>详细信息</span>
+			<div class="more_lin">
+				<a href="javascript:stockEnqury();"><img src="/templates/default/images/zx.gif" width="75" height="21" border="0" /></a>
+			</div>
+		</div>
+		
+		
+			<div style="display:none; margin:0 auto; " id="stock">
+				  <form id="stockEnquiry" name="stockEnquiry" action="/doTradeReg.do" method="post">
+					<table width="97%" border="0" align="center" cellpadding="4" cellspacing="1" bgcolor="E1E1E1">
+					  <tr>
+						<td width="19%" bgcolor="F2F2F2"></td>
+						<td width="81%" align="right" bgcolor="F2F2F2">&nbsp;</td>
+					  </tr>
+					  <tr>
+						<td align="right" bgcolor="F2F2F2"><strong>询价标题：</strong></td>
+						<td bgcolor="#FFFFFF"><input type="text" name="rsrv_str3" id="rsrv_str3" ></td>
+					  </tr>
+					  <tr>
+						<td align="right" bgcolor="F2F2F2"><strong>询价内容：</strong></td>
+						<td bgcolor="#FFFFFF"><textarea name="content" id="content" cols="45" rows="6"></textarea>
+						</td>
+					  </tr>
+					  <tr>
+						<td align="right" bgcolor="F2F2F2"><strong>期望价格：</strong></td>
+						<td bgcolor="#FFFFFF"><input  type="text" name="cust_adv_id" id="cust_adv_id" onKeyUp="if(isNaN(value))execCommand('undo')" >
+						</td>
+					  </tr>
+					  <tr>
+						<td align="right" bgcolor="F2F2F2"><strong>定货总量：</strong></td>
+						<td bgcolor="#FFFFFF"><input type="text" name="mount" id="mount"  onKeyUp="if(isNaN(value))execCommand('undo')" >
+						</td>
+					  </tr>
+					  <tr>
+					  	<td align="right" bgcolor="F2F2F2"><strong>验证码：</strong></td>
+							<td bgcolor="#FFFFFF">
+								<input name="loguserrand" id="loguserrand" type="text" size="8"  maxlength="4" class="input"/>&nbsp;
+								<img src="/checkImage" id="rc" align="absmiddle"/>
+							</td>
+					  </tr>
+					  <tr>
+						<td colspan="2" align="center"><input type="submit" value="提交" name="stockenq" id="stockenq" style="width:80px" onClick="return sendStockMsg();">
+						  <input type="hidden" name="cust_id" id="cust_id" value={ecms:field name='sale_unit'/}>
+						  <input type="hidden" name="user_id" id="user_id" value={ecms:field name='publish_user_id'/}>
+						  <input type="hidden" name="sale_id" id="sale_id" value={ecms:field name='sale_id'/}>
+						  <input type="hidden" name="deal_tag" id="deal_tag" value="1">
+						  <input type="hidden" name="rsrv_str4" id="rsrv_str4">
+						  <input type="hidden" name="rsrv_str5" id="rsrv_str5">
+						  <input type="hidden" name="trade_type_code" id="trade_type_code" value="0077">
+						</td>
+					  </tr>
+					</table>
+				  </form>
+				</div>
+		
+		
+		
+		<table width="97%" border="0" align="center" cellpadding="4" cellspacing="1" bgcolor="E1E1E1">
+		  <tr>
+			<td align="right" bgcolor="#F9F9F9" width="15%"><strong>供应标题：</strong></td>
+			<td bgcolor="#FFFFFF">{ecms:field name="title"/}</td>
+		  </tr>
+		  <tr>
+			<td align="right" bgcolor="#F9F9F9"><strong>详细说明：</strong></td>
+			<td bgcolor="#FFFFFF">{ecms:field name="content"/}</td>
+		  </tr>
+		  <tr>
+			<td align="right" bgcolor="#F9F9F9"><strong>产品价格：</strong></td>
+			<td bgcolor="#FFFFFF">{ecms:field name="sale_price"/}</td>
+		  </tr>
+		</table>
+	</div>
+</div>
+<!--footer-->
+{ecms:include file="/templates/default/templates/footer.html"/}
+</body>
+</html>
+
+<script src="/inc/getNewSearch.jsp" language="javascript"></script>
+<script src="/inc/getSessCustId.jsp" language="javascript"></script>
+<script type="text/javascript" src="/js/prototype.js"></script>
+<script src='/templates/default/jsp/getRandomcode.jsp' language='javascript'></script>
+
+<script>
+	function stockEnqury()
+	{
+		if(document.getElementById('new_Search').value=='0') {
+			document.getElementById("stock").style.display="none";
+			alert('询价功能已经关闭!');
+		}else {
+			if(document.getElementById("stock").style.display=="none"){
+			  document.getElementById("stock").style.display="block";
+			}else{
+				document.getElementById("stock").style.display="none";
+			}
+		}		
+		return;
+	}
+	 function sendStockMsg()
+	 {
+	 	 if(document.getElementById("se_cust_id").value=='')
+	    {
+	 	   alert('请先登陆!');
+	 	   return false;
+	 	  }
+	   var rsrv_str3=$F("rsrv_str3");
+	   rsrv_str3=delAllSpace(rsrv_str3);
+	   if(rsrv_str3=="" || rsrv_str3==null){
+	    alert("询价标题不能为空!");
+	    $("rsrv_str3").focus();
+	    return false;
+	   }
+	   var content=$F("content");
+	   content=delAllSpace(content);
+	   if(content=="" || content==null){
+	    alert("询价内容不能为空!");
+	    $("content").focus();
+	     return false;
+	   }
+	   if(document.getElementById("cust_adv_id").value=='')
+	    {
+	 	   alert('期望价格不能为空!');
+	 	   return false;
+	 	  }
+	 	  if(document.getElementById("mount").value=='')
+	    {
+	 	   alert('定货总量不能为空!');
+	 	   return false;
+	 	  }
+	 	  
+	 	  var loguserrand = document.getElementById("loguserrand").value;
+	 	  var randomcode = document.getElementById("se_randomcode").value;
+	 	  if(loguserrand=='' || loguserrand==null) {
+	 	  	alert("验证码不能为空");
+	 	  	return false;
+	 	  }
+	 	  if(loguserrand != randomcode) {
+	 	  	alert("验证码输入不正确!");
+	 	  	return false;
+	 	  }
+	 	  
+	   return true;
+	 }	
+	function delAllSpace(str) 
+	{
+		return str.replace(/^\s+|\s+$/g, "")
+	}
+</script>
+<script language="javascript">
+	function copyToClipBoard(){	
+		var clipBoardContent="";
+		clipBoardContent+=this.location.href; //获取地址		
+		window.clipboardData.setData("Text",clipBoardContent);
+		alert("您已经成功复制本页地址!");
+	}
+</script>
+
+
+

@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE dwr PUBLIC "-//GetAhead Limited//DTD Direct Web Remoting 1.0//EN" "http://www.getahead.ltd.uk/dwr/dwr10.dtd">
+<dwr>
+	<allow>
+		<create creator="new" javascript="CustClass" > 
+			<param name="class" value="com.saas.biz.custMgr.CustClass" /> 
+		</create>
+		<create creator="new" javascript="RoleInfo" > 
+			<param name="class" value="com.saas.biz.roleMgr.RoleInfo" /> 
+		</create>
+		<create creator="new" javascript="PriceRankInfo" > 
+			<param name="class" value="com.saas.biz.pricerankMgr.PriceRankInfo" /> 
+		</create> 
+		<create creator="new" javascript="AdvertiseInfo" > 
+			<param name="class" value="com.saas.biz.advertiseMgr.AdvertiseInfo" /> 
+		</create> 
+		<create creator="new" javascript="InfoList" > 
+			<param name="class" value="com.saas.biz.infoListMgr.InfoList" /> 
+		</create> 
+		<create creator="new" javascript="SearchJob" > 
+			<param name="class" value="com.saas.biz.searchMgr.SearchJob" /> 
+		</create> 
+		<create creator="new" javascript="DepartInfo" > 
+			<param name="class" value="com.saas.biz.departMgr.DepartInfo" /> 
+		</create> 
+		<create creator="new" javascript="NotifyInfo" > 
+			<param name="class" value="com.saas.biz.notifyMgr.NotifyInfo" /> 
+		</create> 
+		<create creator="new" javascript="ChargeInfo" > 
+			<param name="class" value="com.saas.biz.chargeMgr.ChargeInfo" /> 
+		</create> 
+		<create creator="new" javascript="CalendarInfo" > 
+			<param name="class" value="com.saas.biz.xcalendarMgr.CalendarInfo" /> 
+		</create> 
+		<create creator="new" javascript="TelBookInfo" > 
+			<param name="class" value="com.saas.biz.telbookMgr.TelBookInfo" /> 
+		</create> 
+		<create creator="new" javascript="SiteBookInfo" > 
+			<param name="class" value="com.saas.biz.sitebookMgr.SiteBookInfo" /> 
+		</create> 
+		<create creator="new" javascript="NotBookInfo" > 
+			<param name="class" value="com.saas.biz.notebookMgr.NotBookInfo" /> 
+		</create> 
+		<create creator="new" javascript="PostInfo" > 
+			<param name="class" value="com.saas.biz.postMgr.PostInfo" /> 
+		</create> 
+		<create creator="new" javascript="OrganizeInfo" > 
+			<param name="class" value="com.saas.biz.organizeMgr.OrganizeInfo" /> 
+		</create> 
+		<create creator="new" javascript="RightMenu" > 
+			<param name="class" value="com.saas.biz.rightMgr.RightMenu" /> 
+		</create> 
+		<create creator="new" javascript="EntityClassInfo" > 
+			<param name="class" value="com.saas.biz.entityclassMgr.EntityClassInfo" /> 
+		</create> 
+		<create creator="new" javascript="UserInfo" > 
+			<param name="class" value="com.saas.biz.userMgr.UserInfo" /> 
+    </create>
+    <create creator="new" javascript="AreaInfo" > 
+			<param name="class" value="com.saas.biz.AreaInfoMgr.AreaInfo" /> 
+		</create> 
+		<create creator="new" javascript="Custinfo" > 
+			<param name="class" value="com.saas.biz.custMgr.Custinfo" /> 
+		</create> 
+		<create creator="new" javascript="BpmInfo" > 
+			<param name="class" value="com.saas.biz.bpmdefinitionMgr.BpmInfo" /> 
+		</create> 
+		<create creator="new" javascript="GroupInfo" > 
+			<param name="class" value="com.saas.biz.groupInfoMgr.GroupInfo" /> 
+		</create> 
+		<create creator="new" javascript="PleasetableInfo" > 
+			<param name="class" value="com.saas.biz.pleasetableMgr.PleasetableInfo" /> 
+		</create>
+		<create creator="new" javascript="PleaseItemInfo" > 
+			<param name="class" value="com.saas.biz.pleaseItemMgr.PleaseItemInfo" /> 
+		</create>
+		<create creator="new" javascript="Productclass" > 
+			<param name="class" value="com.saas.biz.productclassMgr.Productclass" /> 
+		</create> 
+		<create creator="new" javascript="NewAreaList" > 
+			<param name="class" value="com.saas.biz.areaMgr.NewAreaList" /> 
+		</create> 
+		<create creator="new" javascript="AddProductInfo" > 
+			<param name="class" value="com.saas.biz.addproductMgr.AddProductInfo" /> 
+		</create> 
+		<create creator="new" javascript="wareHouseInfo" > 
+			<param name="class" value="com.saas.biz.wareHouseMgr.wareHouseInfo" /> 
+		</create>
+		<create creator="new" javascript="WareHousePosInfo" > 
+			<param name="class" value="com.saas.biz.wareHousePosMgr.WareHousePosInfo" /> 
+		</create>
+		<create creator="new" javascript="AddProductAttrInfo" > 
+			<param name="class" value="com.saas.biz.addproductattrMgr.AddProductAttrInfo" /> 
+		</create>
+		<create creator="new" javascript="GoodsInfo" > 
+			<param name="class" value="com.saas.biz.goodsMgr.GoodsInfo" /> 
+		</create>
+		<create creator="new" javascript="StoreformInInfo" > 
+			<param name="class" value="com.saas.biz.storeformInMgr.StoreformInInfo" /> 
+		</create>
+		<create creator="new" javascript="ParamethodMgr" > 
+			<param name="class" value="com.saas.biz.commen.ParamethodMgr" /> 
+		</create>
+		<create creator="new" javascript="DamageInfo" > 
+			<param name="class" value="com.saas.biz.damageMgr.DamageInfo" /> 
+		</create>
+		<create creator="new" javascript="SalePriceInfo" > 
+			<param name="class" value="com.saas.biz.salePriceMgr.SalePriceInfo" /> 
+		</create>
+		<create creator="new" javascript="ProductDistribution" > 
+			<param name="class" value="com.saas.biz.productdistributionMgr.ProductDistribution" /> 
+		</create>
+		<create creator="new" javascript="ShopOrderInfo" > 
+			<param name="class" value="com.saas.biz.shopOrderMgr.ShopOrderInfo" /> 
+		</create>
+		<create creator="new" javascript="ShoptaskInfo" > 
+			<param name="class" value="com.saas.biz.shoptaskMgr.ShoptaskInfo" /> 
+		</create>
+		<create creator="new" javascript="CustlinkInfo" > 
+			<param name="class" value="com.saas.biz.custlinkMgr.CustlinkInfo" /> 
+		</create>
+		<create creator="new" javascript="CarInfo" > 
+			<param name="class" value="com.saas.biz.carMgr.CarInfo" /> 
+		</create>
+		<create creator="new" javascript="ShoppingCartInfo" > 
+			<param name="class" value="com.saas.biz.shoppingcartMgr.ShoppingCartInfo" /> 
+		</create>
+		<create creator="new" javascript="OrderCast" > 
+			<param name="class" value="com.saas.biz.ordercastMgr.OrderCast" /> 
+		</create>
+		<create creator="new" javascript="ChannelInfo" > 
+			<param name="class" value="com.saas.biz.channelMgr.ChannelInfo" /> 
+		</create>
+		<create creator="new" javascript="commMethodMgr" > 
+			<param name="class" value="com.saas.biz.commen.commMethodMgr" /> 
+		</create>
+		<create creator="new" javascript="KeyPriceInfo" > 
+			<param name="class" value="com.saas.biz.keyPriceMgr.KeyPriceInfo" /> 
+		</create>
+		<create creator="new" javascript="FeeSetInfo" > 
+			<param name="class" value="com.saas.biz.feeSetMgr.FeeSetInfo" /> 
+		</create>
+	</allow>
+</dwr>

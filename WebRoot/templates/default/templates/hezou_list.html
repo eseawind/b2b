@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="/templates/default/style/news_list.css" />
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{ecms:this name="ch_name"/}---{ecms:base name="webtitle"/}</title>
+</head>
+<body>
+<!--头部-->
+{ecms:include file="/templates/default/templates/top.html"/}
+<!--菜单-->
+<div id="main" >
+	
+	<div class="content_box">
+		<div class="list_path">您所在的位置 > <a href="/">首页</a> > {ecms:this name="ch_name"/}</div>
+		<!--左边信息-->
+		<div class="list_left" id="list_left_box">
+			<dl>
+				<dt>
+					<ul>
+						<li>{ecms:this name="ch_name"/}</li>
+					</ul>
+				</dt>
+				<dd>
+					<ul>
+						{ecms:articlelist row="10" orderby="indate" cmodel="hezou"}
+						<li><a href="[field:arcurl/]">[field:title/]</a><span>[field:in_date/]</span></li>
+						{/ecms:articlelist}
+					</ul>
+				</dd>
+			</dl>
+			<div class="list_page lin1">{ecms:listpage row="10" type="0"/}</div>
+			
+		</div>
+		<!--右边信息-->
+		<div class="list_right">
+			<div class="list_right_lmt"><span>最新推荐</span></div>
+			<div class="list_right_box link_xian">
+				<ul>
+					{ecms:articlelist row="10" orderby="indate" recommend="1"}
+					<li><a href="[field:arcurl/]">[field:title/]</a></li>
+					{/ecms:articlelist}
+				</ul>
+			</div>
+			<div class="right_newsad">
+				<h3 style="color:#0000FF;">汽车英文数字拦截飞…</h3>
+				深圳飞跃科技有限公司专业生产汽车信号拦截器.汽车千扰器.</Br>
+				<span style="color:#008000;">www.szfy168.com</span>
+			</div>
+		</div>
+		
+	</div>
+</div>
+<!--footer-->
+<div id="link">友情链接:
+	{ecms:friendlink row="25"}
+		<a href="[field:link_url/]">[field:link_name/]</a> |
+	{/ecms:friendlink}
+</div>
+<!--footer-->
+{ecms:include file="/templates/default/templates/footer.html"/}
+</body>
+</html>
+
+
+
+

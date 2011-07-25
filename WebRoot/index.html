@@ -1,0 +1,847 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+ 
+<link rel="stylesheet" type="text/css" href="/templates/default/style/cn-b2b.css"/>
+
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>贞龙全行业电子商务平台(http://www.bizoss.com)</title>
+<SCRIPT language=javascript src="/templates/default/js/adurl.js"></SCRIPT>
+</head>
+<body>
+<!--头部-->
+<div class="ad"><img src="/templates/default/images/ad/topad.jpg" /></div>
+<div id="top">
+	  <div class="width link_xian">
+	  		<div class="right"><A title=将本站设为你的首页 onclick="this.style.behavior='url(#default#homepage)';this.sethomepage('http://'+window.location.host);return false;" href="javascript:;">设为首页</a> | <a href=javascript:window.external.AddFavorite(top.location.href)>添加到收藏夹</a> | <a href="/member/index.html">登录</a> | <a href="/admin/index.jsp">运营商</a> | <a href="/member/Newcregister.html">免费注册</a> | <a href="/member/mainMenu/default.jsp">发布信息</a></div>
+	  </div>
+<!--//logo-->
+<div id="logo">
+		<div class="logo_img" style=" background:url(/templates/default/images/logo.png) no-repeat top center !important; background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src='/templates/default/images/logo.png'">
+			<div class="search">
+    				<div class="search_list"><span><input type="radio" name="search" checked onclick="tradeType('8855381456')"/>产品</span> | <span><input type="radio" name="search" onclick="tradeType('7830633062')"/>供应</span> | <span><input type="radio" name="search" onclick="tradeType('6871426767')"/>求购</span> | <span><input type="radio" name="search" onclick="tradeType('5563378845')"/>企业</span> | <span><input type="radio" name="search" onclick="tradeType('1455415210')"/>新闻</span> | <!--span>more</span--></div>
+        			<div class="search_box">
+            			<strong style=" float:left; font-size:14px;">商品搜索</strong> <span>
+            			 <input name="keyword" id="keyword" type="text" style="font-size:14px; width:300px; color:#666; line-height:18px; height:18px;" value="请输入您想查找的关键字"  onclick="this.value=''",size="42" /><input type="submit" name="Submit" value="全站搜索" onClick="Search()" class="search_button"/></span>
+            		     <!--img src="/templates/default/images/king_button.gif" /--> </div>
+            			<input type="hidden" name="tradeTypecode" id="tradeTypecode" value="8855381456" />
+        			</div>
+		</div>
+</div>
+<!--logo//-->
+	
+	   
+</div>
+
+<div id="nav">
+  <div class="nav_menu">
+    <ul>
+      <li class="nav_menu_bg" id="dis0"><span><a href="/">首页</a></span>|</li>
+      
+      	<li id="dis12"><span><a href="/default/supply/index.html">供应信息</a></span> |</li>     
+      	<li id="dis11"><span><a href="/default/stock/index.html">求购信息</a></span> |</li>     
+      	<li id="dis10"><span><a href="/default/product/index.html">产品库</a></span> |</li>     
+      	<li id="dis9"><span><a href="/default/enterprise/index.html">企业库</a></span> |</li>     
+      	<li id="dis5"><span><a href="/default/news/index.html">资讯</a></span> |</li>     
+      <li><span><a href="http://www.bizoss.com" target="_blank">贞龙</a></span> |</li>
+    </ul>
+  </div>
+</div>
+  
+<script type="text/javascript" src="/templates/default/js/setClassName.js"></script>
+<script type="text/javascript" src="/templates/default/js/topSearch.js"></script>
+<script type="text/javascript" src="/js/prototype.js"></script>
+<script language="javascript">
+		setTopName();//设置头部高亮----setClassName.js
+</script>
+
+
+
+
+
+<!--菜单-->
+
+<!--内容-->
+					
+      		
+      		
+
+<div id="main" >
+	<!--最新供求信息-->
+	<div class="time_950 lin1">
+		<div class="t1"><script src='/templates/default/jsp/getNowTime.jsp' language='javascript'></script></div>
+		<div class="t2">
+			<dl>
+				<dt style="float:left;">
+					<span>最新供应</span>
+					<span>最新求购</span>
+				</dt>
+				<dd>
+					<ul>
+					<script language="javascript">
+						
+								function getObjExist(val){
+									var exist = document.getElementById(val)?1:2;
+									return exist;   
+								}
+						
+						
+								var marqueeContent=new Array();//滚动新闻
+								for(var k = 0;k<9;){
+
+									
+									if(getObjExist('marqA'+k)==2 && getObjExist('marqB'+k)==2){
+										marqueeContent[k] = '';
+										marqueeContent[k+1] = '';
+									}
+									else if(getObjExist('marqA'+k)==1 && getObjExist('marqB'+k)==2){
+										marqueeContent[k] = document.getElementById('marqA'+k).innerHTML;
+										marqueeContent[k+1] = document.getElementById('marqA'+(k+1)).innerHTML;
+									}
+									else if(getObjExist('marqA'+k)==2 && getObjExist('marqB'+k)==1){
+										marqueeContent[k] = document.getElementById('marqB'+k).innerHTML;
+										marqueeContent[k+1] = document.getElementById('marqB'+(k+1)).innerHTML;
+									}
+									else if(getObjExist('marqA'+k)==1 && getObjExist('marqB'+k)==1){
+										marqueeContent[k] = document.getElementById('marqA'+k).innerHTML;
+										marqueeContent[k+1] = document.getElementById('marqB'+k).innerHTML;
+									}
+									
+									k = k + 2;
+									
+									
+								}
+								
+								var marqueeInterval=new Array();  //定义一些常用而且要经常用到的变量
+								var marqueeId=0;
+								var marqueeDelay=1000;
+								var marqueeHeight=68;
+								//接下来的是定义一些要使用到的函数
+								function initMarquee() {
+								 var str=marqueeContent[0];
+								 document.write('<div id=marqueeBox style="overflow:hidden;height:'+marqueeHeight+'px" onmouseover="clearInterval(marqueeInterval[0])" onmouseout="marqueeInterval[0]=setInterval(\'startMarquee()\',marqueeDelay)"><div>'+str+'</div></div>');
+								 marqueeId++;
+								 marqueeInterval[0]=setInterval("startMarquee()",marqueeDelay);
+								 }
+								function startMarquee() {
+								 var str=marqueeContent[marqueeId];
+								  marqueeId++;
+								 if(marqueeId>=marqueeContent.length) marqueeId=0;
+								 if(marqueeBox.childNodes.length==1) {
+								  var nextLine=document.createElement('DIV');
+								  nextLine.innerHTML=str;
+								  marqueeBox.appendChild(nextLine);
+								  }
+								 else {
+								  marqueeBox.childNodes[0].innerHTML=str;
+								  marqueeBox.appendChild(marqueeBox.childNodes[0]);
+								  marqueeBox.scrollTop=0;
+								  }
+								 clearInterval(marqueeInterval[1]);
+								 marqueeInterval[1]=setInterval("scrollMarquee()",20);
+								 }
+								function scrollMarquee() {
+								 marqueeBox.scrollTop++;
+								 if(marqueeBox.scrollTop%marqueeHeight==(marqueeHeight-1)){
+								  clearInterval(marqueeInterval[1]);
+								  }
+								 }
+								initMarquee();
+						</script>
+						
+					</ul>
+				</dd>
+				
+			</dl>
+			<div class="t2_button">
+					<span><a href="/member/saleMgr/addSale.jsp?menu_id=i3l2DA38N01p7r8">发布供应信息</a></span>
+					<span><a href="/member/stockMgr/addstockindex.jsp?menu_id=p265YH0tD34m1M2">发布求购信息</a></span>  
+ 			</div>
+		</div>
+		<div class="t3">
+			<span>商务快讯</span>
+			<ul>
+			
+			
+		<script language="javascript">
+					
+				var marqueeContenta=new Array();//滚动新闻
+				for(var p = 0;p<5;p++){
+					marqueeContenta[p] = document.getElementById('marqC'+p).innerHTML;
+				}
+				
+				var marqueeIntervala=new Array();  //定义一些常用而且要经常用到的变量
+				var marqueeIda=0;
+				var marqueeDelaya=1000;
+				var marqueeHeighta=28;
+				//接下来的是定义一些要使用到的函数
+				function initMarqueeRight() {
+				 var straa=marqueeContenta[0];
+				 document.write('<div id=marqueeBoxa style="overflow:hidden;height:'+marqueeHeighta+'px" onmouseover="clearInterval(marqueeIntervala[0])" onmouseout="marqueeIntervala[0]=setInterval(\'startMarqueeaa()\',marqueeDelaya)"><div>'+straa+'</div></div>');
+				 marqueeIda++;
+				 marqueeIntervala[0]=setInterval("startMarqueeaa()",marqueeDelaya);
+				 }
+				function startMarqueeaa() {
+				 var straa=marqueeContenta[marqueeIda];
+				  marqueeIda++;
+				 if(marqueeIda>=marqueeContenta.length) marqueeIda=0;
+				 if(marqueeBoxa.childNodes.length==1) {
+				  var nextLineaa=document.createElement('DIV');
+				  nextLineaa.innerHTML=straa;
+				  marqueeBoxa.appendChild(nextLineaa);
+				  }
+				 else {
+				  marqueeBoxa.childNodes[0].innerHTML=straa;
+				  marqueeBoxa.appendChild(marqueeBoxa.childNodes[0]);
+				  marqueeBoxa.scrollTop=0;
+				  }
+				 clearInterval(marqueeIntervala[1]);
+				 marqueeIntervala[1]=setInterval("scrollMarqueeaa()",20);
+				 }
+				function scrollMarqueeaa() {
+				 marqueeBoxa.scrollTop++;
+				 if(marqueeBoxa.scrollTop%marqueeHeighta==(marqueeHeighta-1)){
+				  clearInterval(marqueeIntervala[1]);
+				  }
+				}
+				initMarqueeRight();
+		</script>
+			
+			
+			</ul>
+		</div>
+	</div>
+	
+	<!--正文02-->
+	<div class="main_box">
+		<div class="table_one">
+			<dl>
+				<dt class="table_one_a2" id="d0" onmouseover="javascript:secBoard(0)">
+					<!--成功故事-->
+					
+					<a href="/default/news/zuixinxinwen/list">最新新闻</a>				
+					
+				</dt>
+				<dt class="table_one_a1" id="d1" onmouseover="javascript:secBoard(1)">
+					<!--商务助手-->
+					
+					<a href="/default/news/wangluoyingxiao/list">网络营销</a>				
+				</dt>
+				<dt class="table_one_a1" id="d2" onmouseover="javascript:secBoard(2)">
+					<!--创业宝典-->
+					
+					<a href="/default/supply/DaiLi/list">代理信息</a>				
+				</dt>
+				<dt class="table_one_a1" id="d3" onmouseover="javascript:secBoard(3)">
+					<!--展会信息-->
+					
+				</dt>
+				<!--01-->
+				<dd id="bo0">
+					
+					<ul>
+						
+					</ul>	
+				</dd>
+				<!--02-->
+				<dd id="bo1" style="display: none">
+					
+					<ul>
+						
+					</ul>	
+				</dd>
+				<!--03-->
+				<dd id="bo2" style="display: none">
+					
+					<ul>
+						
+					</ul>	
+				</dd>
+				<!--04-->
+				<dd id="bo3" style="display: none">
+					
+					<ul>
+						
+					</ul>	
+				</dd>
+			</dl>
+			 <!--选项结束-->
+		<script language=javascript>
+		function secBoard(n)
+		{
+			for(i=0;i<4;i++) {
+				if (i==n) {
+					document.all('d' + n).className="table_one_a2";
+				} else {
+				document.all('d' + i).className="table_one_a1";}
+			}
+			
+			for(i=0;i<4;i++) {
+				if (i==n) {
+					document.all('bo' + n).style.display="";
+				} else {
+				document.all('bo' + i).style.display="none";}
+			}
+			
+		}
+		</script>
+		<div class="ad_297"><img src="/templates/default/images/ad/abtob_20.gif" /></div>
+		</div>
+		<!--flash广告-->
+		<div class="ad_flash">
+		  <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=7,0,19,0" width="380" height="200">
+            <param name="movie" value="/templates/default/images/flash/Pic.swf" />
+            <param name="quality" value="high" />
+            <embed src="/templates/default/images/flash/Pic.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="380" height="200"></embed>
+	      </object>
+		</div>
+		
+		<script src='/inc/getSessCustId.jsp' language='javascript'></script>
+		<!--登录table页-->
+		<div class="login_table">
+			<div class="login_table1">
+				<!--01-->
+				<dl class="link_xian">
+					<dt class="login_t2" id="log0" onmouseover="javascript:logBoard(0)">
+                    <span class="sp1"></span><span style="float:left; line-height:31px;">会员登录</span></dt>
+					<dt class="login_t1" id="log1" onmouseover="javascript:logBoard(1)">
+                    <span class="sp2"></span><span style="float:left; line-height:31px;">免费注册</span></dt>
+					<dd id="login0">
+						<ul>
+							<script language="javascript">
+								if(document.getElementById("cust_id").value==''){
+
+									document.write("<li style='width:200px' style='display:block;' id='ifLoginSess1'>网上贸易 <a href='/member/index.html'>从此开始</a></li>");
+									document.write("<li style='width:200px'>手把手教你 <a href='/gettradeinterface.do?menu_id=2EEcDFDFmMM080X0G85B&trade_type_code=0120'>如何发布产品</a></li>");
+								}
+								if(document.getElementById("cust_id").value!=''){
+									document.write("<li style='width:200px' style='display:block;' id='ifLoginSess1'>恭喜您&nbsp;&nbsp;"+document.getElementById("se_cust_name").value+"("+document.getElementById("juristic_type_code").value +")</li>");
+									document.write("<li style='width:200px'>级别:&nbsp;&nbsp" + document.getElementById("para_code2").value +"&nbsp;&nbsp;<a href='/gettradeinterface.do?menu_id=2EEcDFDFmMM080X0G85B&trade_type_code=0120'>发布产品</a></li>");
+								}
+							</script>
+						</ul>
+					</dd>
+					<dd id="login1" style="display: none">
+						<ul>
+							<li style="width:200px">还不是会员？ 立即 <a href="/member/Newcregister.html">免费注册</a></li>
+						</ul>
+					</dd>
+				</dl>
+				<!--02-->
+				<dl>
+					<dt class="login_t1" id="log2" onmouseover="javascript:logBoard(2)">
+                    <span class="sp3"></span><span style="float:left; line-height:31px;">诚信会员</span></dt>
+					<dt class="login_t1" id="log3" onmouseover="javascript:logBoard(3)">
+                    <span class="sp4"></span><span style="float:left; line-height:31px;">发布信息</span></dt>
+					<dd id="login2" style="display: none">
+						<ul>
+							<li style="width:200px"><a href="#">国内网络贸易推广第一助手！</a></li>
+						</ul>
+					</dd>
+					<dd id="login3" style="display: none">
+						<ul>
+							<li style="width:90px"><a href="/member/stockMgr/addstockindex.jsp?menu_id=p265YH0tD34m1M2">发布求购</a></li>
+							<li style="width:90px"><a href="/member/saleMgr/addSale.jsp?menu_id=i3l2DA38N01p7r8">发布供应</a></li>
+							<li style="width:90px"><a href="#">发布资讯</a></li>
+						</ul>
+					</dd>
+				</dl>
+				<!--03-->
+				<dl>
+					<dt class="login_t1" id="log4" onmouseover="javascript:logBoard(4)">
+                    <span class="sp5"></span><span style="float:left; line-height:31px;">推广公司</span></dt>
+					<dt class="login_t1" id="log5" onmouseover="javascript:logBoard(5)">
+                    <span class="sp6"></span><span style="float:left; line-height:31px;">帮助中心</span></dt>
+					<dd id="login4" style="display: none">
+						<ul>
+							<li style="width:90px"><a href="#">推广中心</a></li>
+							<li style="width:90px"><a href="#">竞价排名</a></li>
+	 						<li style="width:90px"><a href="#">黄金展位</a></li>
+						</ul>
+					</dd>
+					<dd id="login5" style="display: none">
+						<ul>
+							<li style="width:90px"><a href="#">网站建设</a></li>
+							<li style="width:90px"><a href="#">广告服务</a></li>
+							<li style="width:90px"><a href="#">我的商务室</a></li>
+						</ul>
+					</dd>
+				</dl>
+				
+				<div class="login_footer lin3"><span> <a href="#">给我们提意见</a> | <a href="#">在线发稿</a></span></div>
+				 <!--选项结束-->
+		<script language=javascript>
+		function logBoard(n)
+		{
+			for(i=0;i<6;i++) {
+				if (i==n) {
+					document.all('log' + n).className="login_t2";
+				} else {
+				document.all('log' + i).className="login_t1";}
+			}
+			
+			for(i=0;i<6;i++) {
+				if (i==n) {
+					document.all('login' + n).style.display="";
+				} else {
+				document.all('login' + i).style.display="none";}
+			}
+			
+		}
+		</script>
+			</div>
+		</div>
+	</div>
+	<div class="ad"><img src="/templates/default/images/ad/home_920x502.jpg" width="950" height="50"/></div>
+	<!--正文03-->
+	<div class="main_box">
+		<!--产品展示-->
+			<div class="in_lmt">
+				<div class="in_lmt_name"><span> 产品展示</span></div>
+				<div class="hot_c">热门产品:钢化 ┊ 防火建材 ┊ 建材瓶 ┊ 磨边机 ┊ 蒙砂粉 ┊ 金刚轮</div> 
+				<div class="more_lin"> <span class="lin1"><a href="/member/">如何发布产品？</a></span> <span class="lin2"><a href="/default/product">更多>></a></span></div>
+			</div>
+			<div class="box_950">
+				<div class="cp_list">
+					<ul>
+						
+					</ul>
+				</div>
+				<div class="cp_tuijian">
+					<div class="cp_tuijian_name">
+					<span class="cp_tuijian01">推荐产品</span>
+					<span class="cp_tuijian02"></span>
+					<span class="cp_tuijian03"><a href="/member/mainMenu/default.jsp">我要发布产品</a></span></div>
+					<ul class="link_xian">
+						
+					</ul>
+				</div>
+			</div>
+	</div>	
+	<div class="ad"><img src="/templates/default/images/ad/home_920x501.gif" width="950" height="51"/></div>
+	
+	<!--正文04-->
+	<div class="main_box">
+		<!--产品列表-->
+		<div class="main_left">
+			<div class="in_lmt">
+				<div class="in_lmt_name" id="cplist0" onclick="javascript:cplistBoard(0)"> <span>产品列表</span></div>
+				<div class="in_lmt_name_one" id="cplist1" onclick="javascript:cplistBoard(1)"><span>锁具</span></div>
+				<div class="in_lmt_name_one" id="cplist2" onclick="javascript:cplistBoard(2)"><span>五金</span></div>
+				<div class="in_lmt_name_one" id="cplist3" onclick="javascript:cplistBoard(3)"><span>厨具</span></div>
+				<div class="in_lmt_name_one" id="cplist4" onclick="javascript:cplistBoard(4)"><span>石材</span></div>
+				<div class="more_lin"><span class="lin1"><a href="/member/">如何发布产品？</a></span> <span class="lin2"><a href="/default/product">更多>></a></span></div>
+			</div>
+			
+			<!--01-->
+			<div class="box_665" id="cp_list0">
+				<div class="table_list"><div class="table_list1">产品列表</div><div class="more_lin"><a href="/member/mainMenu/default.jsp">我要发布产品</a></div></div>
+				<div class="cp_half  link_xian" style="border-right: 1px dashed #ccc;">
+<script language="JavaScript1.2"> 
+function changeto(id){ 
+id.style.backgroundColor='#E8F7E7' 
+} 
+function changeback(id){ 
+id.style.backgroundColor='' 
+} 
+</script>
+					
+						
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">							<dt><a href="/default/product/class/G42A36DNd4StqSl/">畜牧</a></dt>												
+							<dd><a href="/default/product/class/I1qpY76GBr7Y0vW/">兔肉</a> | </dd>					
+							<dd><a href="/default/product/class/mt286Q1STd75646/">驴</a> | </dd>					
+							<dd><a href="/default/product/class/QetF2I6fmt17pSq/">猪</a> | </dd>					
+							<dd><a href="/default/product/class/JfiW68N30etT11K/">牛</a> | </dd>					
+							<dd><a href="/default/product/class/jwcFuyU06sVB405/">羊</a> | </dd>					
+							<dd><a href="/default/product/class/Q7XT7u0XpD7KO6j/">马</a> | </dd>					
+							<dd><a href="/default/product/class/8Q1Bhoth3UN20Bp/">鸡</a> | </dd>					
+							<dd><a href="/default/product/class/4QPJ05x4G16X7R5/">鸭</a> | </dd>										</dl>						
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">							<dt><a href="/default/product/class/HDvsdk22740Lv60/">粮食</a></dt>												
+							<dd><a href="/default/product/class/2EV34l48XvgLI20/">稻米</a> | </dd>					
+							<dd><a href="/default/product/class/aj41T6gNs71w850/">麦类</a> | </dd>					
+							<dd><a href="/default/product/class/k1se61FC1V8P5RY/">玉米</a> | </dd>					
+							<dd><a href="/default/product/class/Jqm5660BGK875k8/">高粱、粟、黍</a> | </dd>					
+							<dd><a href="/default/product/class/15jS86G72566I84/">豆类</a> | </dd>					
+							<dd><a href="/default/product/class/864POOt75m301YN/">薯类</a> | </dd>					
+							<dd><a href="/default/product/class/ulINx32QJmn1377/">其他粮食</a> | </dd>					
+							<dd><a href="/default/product/class/85Dc467356C44Ua/">猪食</a> | </dd>										</dl>						
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">							<dt><a href="/default/product/class/300471YW65c0160/">五金</a></dt>												
+							<dd><a href="/default/product/class/48FbCPLsx3c8X24/">建筑五金</a> | </dd>					
+							<dd><a href="/default/product/class/v5L3G071B23eoBv/">机械五金</a> | </dd>					
+							<dd><a href="/default/product/class/0038v6P25j88kMB/">喷涂设备</a> | </dd>					
+							<dd><a href="/default/product/class/8QIcr83LC52S018/">厨房设施</a> | </dd>					
+							<dd><a href="/default/product/class/66tT830Hk17y2PE/">卫浴设施</a> | </dd>					
+							<dd><a href="/default/product/class/7h30P51J70U86iA/">五金配件</a> | </dd>										</dl>						
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">							<dt><a href="/default/product/class/04g2l003487XeO4/">板材</a></dt>												
+							<dd><a href="/default/product/class/GMYWc64JA0x4j1o/">板材辅料</a> | </dd>					
+							<dd><a href="/default/product/class/v5t436PE4Nq4380/">铝塑板</a> | </dd>					
+							<dd><a href="/default/product/class/8130T7wq76n66I6/">装饰板</a> | </dd>					
+							<dd><a href="/default/product/class/7s501V3m3M85584/">建筑模板</a> | </dd>					
+							<dd><a href="/default/product/class/421aQWW4F2r14AY/">防火板</a> | </dd>					
+							<dd><a href="/default/product/class/2F7rA4183wr66AK/">胶合板</a> | </dd>										</dl>						
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">							<dt><a href="/default/product/class/k3nfFfyy77p51Yu/">幕墙</a></dt>												
+							<dd><a href="/default/product/class/15t3I52816gm24Q/">幕墙</a> | </dd>					
+							<dd><a href="/default/product/class/Xeln32l37gsRGy2/">幕墙胶</a> | </dd>					
+							<dd><a href="/default/product/class/0vdJlEy013243dk/">幕墙</a> | </dd>										</dl>						
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">							<dt><a href="/default/product/class/6S57yg2eX544388/">锁具</a></dt>												
+							<dd><a href="/default/product/class/42068212HCB73Ud/">门窗锁</a> | </dd>					
+							<dd><a href="/default/product/class/14M82X1nC2u83A7/">电子锁</a> | </dd>					
+							<dd><a href="/default/product/class/jVT67d6eX4ao2Ut/">IC卡锁</a> | </dd>					
+							<dd><a href="/default/product/class/Vi4M7404m42q6g8/">特殊锁</a> | </dd>					
+							<dd><a href="/default/product/class/6538111iJ0VHj36/">密码锁</a> | </dd>					
+							<dd><a href="/default/product/class/s070T445h2OrIP5/">车锁</a> | </dd>					
+							<dd><a href="/default/product/class/51x04BW00521PuD/">保险柜锁</a> | </dd>					
+							<dd><a href="/default/product/class/Ad4nS515l5s88r4/">锁具配件</a> | </dd>										</dl>						
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">							<dt><a href="/default/product/class/5L00i2AE1L44Kbp/">木业</a></dt>												
+							<dd><a href="/default/product/class/2215J216kW8b84h/">胶合板</a> | </dd>					
+							<dd><a href="/default/product/class/pm12p16d7581CW7/">集成板</a> | </dd>					
+							<dd><a href="/default/product/class/hQN17107484scC8/">装饰板</a> | </dd>					
+							<dd><a href="/default/product/class/w211am1452Vy86l/">木材原木</a> | </dd>					
+							<dd><a href="/default/product/class/BWvli8ME7j2A0k7/">木线</a> | </dd>					
+							<dd><a href="/default/product/class/55e1XA67Ek2pV30/">木制品</a> | </dd>					
+							<dd><a href="/default/product/class/E7EHbD73x7xgVd1/">木地板</a> | </dd>					
+							<dd><a href="/default/product/class/2ad13DI8a5OwbL0/">人造板</a> | </dd>										</dl>						
+					
+				</div>
+				
+				<div class="cp_half  link_xian">
+					
+						
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">							<dt><a href="/default/product/class/520606r3wn8Tv7M/">壁纸</a></dt>												
+							<dd><a href="/default/product/class/G58i0I2BS4GESOm/">纸面壁纸</a> | </dd>					
+							<dd><a href="/default/product/class/2U1pbYRekCu0R65/">胶面壁纸</a> | </dd>					
+							<dd><a href="/default/product/class/1447J4AO3051Ksn/">布面壁纸</a> | </dd>					
+							<dd><a href="/default/product/class/E3Mr8R178p0H1E2/">木面壁纸</a> | </dd>										</dl>						
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">							<dt><a href="/default/product/class/y777XErmx31n7xw/">阀门</a></dt>												
+							<dd><a href="/default/product/class/KH1rE4vD5s07doB/">电磁阀</a> | </dd>					
+							<dd><a href="/default/product/class/61hEc52dFT7rGR4/">球阀</a> | </dd>					
+							<dd><a href="/default/product/class/W6K505d8e54Rxp6/">调节阀</a> | </dd>					
+							<dd><a href="/default/product/class/7C3643528B856Nm/">蝶阀</a> | </dd>					
+							<dd><a href="/default/product/class/23J3T0U7h2737hK/">减压阀</a> | </dd>					
+							<dd><a href="/default/product/class/31uNI137TxqcGoa/">氧气阀门</a> | </dd>					
+							<dd><a href="/default/product/class/3Vw3Rnydb24468B/">防腐阀门</a> | </dd>					
+							<dd><a href="/default/product/class/6f7257s521BYRN4/">止回阀</a> | </dd>										</dl>						
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">							<dt><a href="/default/product/class/0Q2122T1r0e2spf/">灯具</a></dt>												
+							<dd><a href="/default/product/class/bh2C46cdD03SeIe/">室内灯具</a> | </dd>					
+							<dd><a href="/default/product/class/1516A3A82t7J7PN/">室外灯具</a> | </dd>					
+							<dd><a href="/default/product/class/RR85iWpM001300Y/">车用灯具</a> | </dd>					
+							<dd><a href="/default/product/class/6gU04w6e152YE51/">舞台灯具</a> | </dd>					
+							<dd><a href="/default/product/class/7lK66S06L672p03/">专用灯具</a> | </dd>					
+							<dd><a href="/default/product/class/7pkip4YTVHP0aEm/">彩灯</a> | </dd>					
+							<dd><a href="/default/product/class/2I6edYt6nvkIVvx/">电光源</a> | </dd>					
+							<dd><a href="/default/product/class/C13JX5645s5eX8X/">灯具配件</a> | </dd>										</dl>						
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">							<dt><a href="/default/product/class/2YLWJ54T80BB4T1/">吊顶</a></dt>												
+							<dd><a href="/default/product/class/4b0268y1Rb10xT8/">天花</a> | </dd>					
+							<dd><a href="/default/product/class/t8s6uw36fc542pX/">阳光板</a> | </dd>					
+							<dd><a href="/default/product/class/32286810lHnxQM8/">龙骨</a> | </dd>					
+							<dd><a href="/default/product/class/h804ed062nv6P6q/">玻璃吊顶</a> | </dd>					
+							<dd><a href="/default/product/class/f7dT1QU20768v01/">矿棉吸音板</a> | </dd>					
+							<dd><a href="/default/product/class/74V1ik448764w64/">吊顶配件</a> | </dd>										</dl>						
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">							<dt><a href="/default/product/class/m025u21k6c5G702/">布艺</a></dt>												
+							<dd><a href="/default/product/class/8m7U3wQnB55b17m/">纱布</a> | </dd>					
+							<dd><a href="/default/product/class/6di1jH82q06131n/">靠垫被</a> | </dd>					
+							<dd><a href="/default/product/class/780j6Jy2IYg0D2O/"> 蚕丝被</a> | </dd>					
+							<dd><a href="/default/product/class/63674AwPp83f0p0/">床单式</a> | </dd>					
+							<dd><a href="/default/product/class/136Tlk62f3Co87B/">绣花</a> | </dd>					
+							<dd><a href="/default/product/class/g33n68sLA60n5FR/">羊绒</a> | </dd>					
+							<dd><a href="/default/product/class/GN5Y7h828wL4w8j/">四件套</a> | </dd>					
+							<dd><a href="/default/product/class/6Oy6o4632I71Lt4/">蕾丝</a> | </dd>										</dl>						
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">							<dt><a href="/default/product/class/H4y3GX81rx0beTO/">石材</a></dt>												
+							<dd><a href="/default/product/class/4J8JVtG720U02G3/">荒料地板</a> | </dd>					
+							<dd><a href="/default/product/class/5onX04im0cu50re/">环境装饰</a> | </dd>					
+							<dd><a href="/default/product/class/qv6C3w472TK0d7q/">石雕</a> | </dd>					
+							<dd><a href="/default/product/class/LE6C02b56CN8073/">石材家具</a> | </dd>					
+							<dd><a href="/default/product/class/N6c8846v6sx8YT6/">异形工艺</a> | </dd>					
+							<dd><a href="/default/product/class/6QHMag46264w8B1/">墓碑石</a> | </dd>					
+							<dd><a href="/default/product/class/6S22CmS40p14gAJ/">石材机械</a> | </dd>										</dl>						
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">							<dt><a href="/default/product/class/hGhM8gR8YLgF7o0/">门窗</a></dt>												
+							<dd><a href="/default/product/class/AuS53i44J3Q26vU/">门</a> | </dd>					
+							<dd><a href="/default/product/class/dD615rh4n2J28qn/">窗</a> | </dd>					
+							<dd><a href="/default/product/class/03781rqAFE7X040/">实木门</a> | </dd>					
+							<dd><a href="/default/product/class/4524X7B63051m3D/">玻璃钢门窗</a> | </dd>					
+							<dd><a href="/default/product/class/e2i0075i7I3cK8c/">防盗门</a> | </dd>					
+							<dd><a href="/default/product/class/i81C0454QN00Ep8/">其它</a> | </dd>										</dl>						
+					
+				</div>
+			</div>
+			<!--02-->
+			<div class="box_665" id="cp_list1" style="display: none">
+				<div class="table_list"><div class="table_list1">锁具</div><div class="more_lin"><a href="/member/mainMenu/default.jsp">我要发布产品</a></div></div>
+				<div class="cp_half  link_xian" style="border-right: 1px dashed #ccc;">
+					
+						
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">							<dt><a href="/default/product/class/bh2C46cdD03SeIe/">室内灯具</a></dt>																	</dl>						
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">							<dt><a href="/default/product/class/1516A3A82t7J7PN/">室外灯具</a></dt>																	</dl>						
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">							<dt><a href="/default/product/class/RR85iWpM001300Y/">车用灯具</a></dt>																	</dl>						
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">							<dt><a href="/default/product/class/6gU04w6e152YE51/">舞台灯具</a></dt>																	</dl>						
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">							<dt><a href="/default/product/class/7lK66S06L672p03/">专用灯具</a></dt>																	</dl>						
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">							<dt><a href="/default/product/class/7pkip4YTVHP0aEm/">彩灯</a></dt>																	</dl>						
+					<dl onMouseover="changeto(this)" onMouseout="changeback(this)">							<dt><a href="/default/product/class/2I6edYt6nvkIVvx/">电光源</a></dt>																	</dl>						
+					
+				</div>
+				
+				<div class="cp_half  link_xian">
+					
+						
+					
+				</div>
+			</div>
+			<!--03-->
+			<div class="box_665" id="cp_list2" style="display: none">
+				<div class="table_list"><div class="table_list1">五金</div><div class="more_lin"><a href="/member/mainMenu/default.jsp">我要发布产品</a></div></div>
+				<div class="cp_half  link_xian" style="border-right: 1px dashed #ccc;">
+					
+						
+					
+				</div>
+				
+				<div class="cp_half  link_xian">
+					
+						
+					
+				</div>
+			</div>
+			<!--04-->
+			<div class="box_665" id="cp_list3" style="display: none">
+				<div class="table_list"><div class="table_list1">厨具</div><div class="more_lin"><a href="/member/mainMenu/default.jsp">我要发布产品</a></div></div>
+				<div class="cp_half  link_xian" style="border-right: 1px dashed #ccc;">
+					
+						
+					
+				</div>
+				
+				<div class="cp_half  link_xian">
+					
+						
+					
+				</div>
+			</div>
+			<!--05-->
+			<div class="box_665" id="cp_list4" style="display: none">
+				<div class="table_list"><div class="table_list1">石材</div><div class="more_lin"><a href="/member/mainMenu/default.jsp">我要发布产品</a></div></div>
+				<div class="cp_half  link_xian" style="border-right: 1px dashed #ccc;">
+
+					
+						
+					
+				</div>
+				
+				<div class="cp_half  link_xian">
+					
+						
+					
+				</div>
+			</div>
+			
+		<!--选项结束-->
+		<script language=javascript>
+		function cplistBoard(n)
+		{
+			for(i=0;i<5;i++) {
+				if (i==n) {
+					document.all('cplist' + n).className="in_lmt_name";
+				} else {
+				document.all('cplist' + i).className="in_lmt_name_one";}
+			}
+			
+			for(i=0;i<5;i++) {
+				if (i==n) {
+					document.all('cp_list' + n).style.display="";
+				} else {
+				document.all('cp_list' + i).style.display="none";}
+			}
+			
+		}
+		</script>
+
+		</div>
+		
+		<!--右边-->
+		<div class="main_right">
+			<!--推荐企业-->
+			<div class="right_lmt"><div class="right_lmt_name">推荐企业</div><div class="more_lin lin2"><a href="/default/enterprise/">更多>></a></div></div>
+			<div class="box_270">
+				<ul>
+					   
+				</ul>
+			</div>
+			
+			<!--招标加盟-->
+			<div class="right_lmt" style="margin-top:10px;">
+				
+	<!--招标加盟-->					<div class="right_lmt_name">热点新闻</div><div class="more_lin lin2"><a href="/default/news/hotnews/list">更多>></a></div>			
+			</div>
+			<div class="box_270">
+				<ul>
+					   
+				</ul>
+			</div>
+		</div>
+		
+	</div>
+	<!--ad 通栏广告-->
+	<div class="ad"><img src="/templates/default/images/ad/home_920x50.gif" width="950" height="50"/></div>
+	
+	<!--正文05-->
+	<div class="main_box">
+		<!--信息资讯-->
+		<div class="main_left">
+			<!--ad_665
+			<div class="ad_665"><img src="/templates/default/images/ad/abtob_32.gif" width="665" height="60" /></div>-->
+			<div class="in_lmt">
+				<div class="in_lmt_name"><span> 信息资讯</span></div>
+			</div>
+			<div class="box_665 lin1"> 
+				<div class="news_half" style="border-right: 1px dashed #ccc;">	
+					<div class="newslist"> 
+						<!--木材知识-->
+						<dl>
+							<dt>
+								<ul>
+									
+								</ul>
+							</dt>
+							<dd>
+								<ul>
+									
+								</ul>
+							</dd>
+						</dl>
+						<!--政策向导-->
+						<dl>
+							<dt>
+								<ul>
+									
+								</ul>
+							</dt>
+							<dd>
+								<ul>
+									
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+				<div class="news_half">	
+					<div class="newslist"> 
+						
+						<!--市场分析-->
+						<dl>
+							<dt>
+								<ul>
+									
+	<!--市场分析-->									<li class="newslist_lmt_bt">市场分析</li>									<li class="newslist_lmt_xian"></li>									<li class="newslist_lmt_more lin2"><a href="/default/news/woodNewsClass/scfx/list">更多>></a></li>								
+								</ul>
+							</dt>
+							<dd>
+								<ul>
+									
+								</ul>
+							</dd>
+						</dl>
+						<!--世界林业-->
+						<dl>
+							<dt>
+								<ul>
+									
+	<!--政策向导-->									<li class="newslist_lmt_bt">新闻知识</li>									<li class="newslist_lmt_xian"></li>									<li class="newslist_lmt_more lin2"><a href="/default/news/woodNewsClass/mczs/list">更多>></a></li>								
+								</ul>
+							</dt>
+							<dd>
+								<ul>
+									
+								</ul>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--加--> 
+		<div class="adg">
+		<div class="list_right">
+			<div class="list_right_box">
+				<div class="ad_180"><img src="/templates/default/images/ad/guangg.gif" /></div>
+			</div>
+		</div>
+		
+		
+	</div>
+	
+</div>
+
+
+
+		 
+
+<!--友情链接-->
+<div class="ad">
+			<div class="in_lmt1">
+				<div class="in_lmt_name1"><span>友情链接</span></div>
+					<div id="link">
+	<ul>
+	
+		<li><a href="http://www.bizoss.com">合肥贞龙</a> |</li>
+		<li><a href="http://www.anhui.net.cn">安徽企业网</a> |</li>
+		<li><a href="http://www.ahqm.com.cn">安徽汽贸</a> |</li>
+		<li><a href="http://www.ahqmdq.com">齐美电器</a> |</li>
+		<li><a href="http://www.qichejishu.com">汽车技术</a> |</li>
+	</ul>
+</div>
+	<div class="box_950">
+			
+				
+			</div>
+	</div>	
+	
+</div>
+
+
+
+<!--footer-->
+<div id="footer">
+<!--bottom-->
+<div class="footernew"> 
+	  <a href="http://www.bizoss.com/html/b2b/2009/0619/9.html" target="_blank">系统概述</a> 
+	| <a href="http://www.bizoss.com/html/b2b/2009/0619/10.html" target="_blank">功能概要</a> 
+	| <a href="http://www.bizoss.com/html/b2b/2009/0619/11.html" target="_blank">功能和特点</a> 
+	| <a href="http://www.bizoss.com/html/b2b/2009/0619/12.html" target="_blank">报价方案</a> 
+	| <a href="http://www.bizoss.com/html/b2b/2009/0619/12.html" target="_blank">报价方案</a> 
+	| <a href="http://www.bizoss.com/html/customer/2009/0619/7.html" target="_blank">客户与合作伙伴</a>
+	<br/>
+ 
+    <img src="/templates/default/images/ucs2.gif" align="absmiddle"/>
+    &nbsp;销售咨询：
+    <a href="http://wpa.qq.com/msgrd?V=1&Uin=923462250&Site=a-hai.net&Menu=yes tencent://message/?uin=923462250" target=_blank class="lanse">923462250</a> 
+    <a href="http://wpa.qq.com/msgrd?V=1&Uin=1182350564&Site=a-hai.net&Menu=yes tencent://message/?uin=1182350564" target=_blank class="lanse">1182350564</a> 
+    
+   
+     <a href="http://www.bizoss.com" target="_blank" class="lanse">合肥贞龙信息科技有限责任公司</a> 
+     版权所有 &copy;  2008  保留所有权利 <a href="http://www.miibeian.gov.cn/" target=_blank>皖ICP备05015140号</a><br/>
+    <div class="lx">服务热线：0551-5310317 | 传真：0551-5310317 </div>
+    
+    <span style="text-indent:2em;font-size:11px;font-family:Verdana,Helvetica,Arial,sans-serif; height:32px; line-height:32px; width:100%; white-space:nowrap">
+        <img src="/favicon.gif" align="middle" /> 
+        &nbsp;Powered by <a href="http://www.bizoss.com" target="_blank">BizOss</a>
+    </span>
+</div>
+</div>
+
+</div>
+</body>
+</html>
+
+<script type="text/javascript" src="/js/prototype.js"></script>
+<script language="javascript" type="text/javascript" src="/templates/default/js/genInfo.js"></script>
+<script type="text/javascript" src="/templates/default/js/first.js"></script>
+<script>
+  	getCritiqueDiv('noSolve','6145246578');
+  	getCritiqueDiv('solve','6145246578');
+</script>
+
+
+
+
+
+
+

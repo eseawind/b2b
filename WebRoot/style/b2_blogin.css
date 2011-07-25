@@ -1,0 +1,98 @@
+
+TD {
+	FONT-SIZE: 14px; COLOR: #000; FONT-FAMILY: ËÎÌו
+}
+SELECT {
+	FONT-SIZE: 12px
+}
+INPUT {
+	FONT-SIZE: 12px
+}
+A:link {
+	COLOR: #3d362b
+}
+A:visited {
+	COLOR: #3d362b
+}
+A:hover {
+	COLOR: #f60
+}
+
+.Nav UL {
+	PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; LIST-STYLE-TYPE: none
+}
+.Nav {
+	WIDTH: 820px
+}
+
+.Nav .NavLogo {
+	MARGIN-TOP: 5px; FLOAT: left; TEXT-ALIGN: left;LINE-HEIGHT: 150%
+}
+.Nav A:link {
+	COLOR: #000000;text-decoration: none; 
+}
+.Nav A:visited {
+	COLOR: #000000;text-decoration: none;
+}
+.Nav A:hover {
+	COLOR: #000000;text-decoration: underline;
+}
+.Nav .NavLinks {
+	MARGIN-TOP: 2px; FONT-SIZE: 12px; FLOAT: right; WIDTH: 560px
+}
+.Nav .NavLinks .right {
+	FLOAT: right; LINE-HEIGHT: 150%
+}
+.Nav #NavBar {
+	CLEAR: right; FLOAT: right; WIDTH: 413px; POSITION: relative; padding-top:10px;
+}
+.Nav #NavBar LI {
+	FONT-WEIGHT: bold; FLOAT: left; LINE-HEIGHT: 24px; TEXT-ALIGN: center
+}
+.Nav #NavBar UL LI.one {
+	BORDER-TOP: #ff7300 1px solid; FONT-SIZE: 14px; BORDER-LEFT: #ff7300 1px solid; WIDTH: 80px; BORDER-BOTTOM: #ff7300 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.Nav #NavBar LI#two {
+	BORDER-RIGHT: #ff7300 1px solid; BORDER-TOP: #ff7300 1px solid; FONT-SIZE: 14px; BORDER-LEFT: #ff7300 1px solid; WIDTH: 64px; BORDER-BOTTOM: #ff7300 1px solid; BACKGROUND-COLOR: #ffffff
+}
+.Nav #NavBar LI.two {
+	BORDER-TOP: #ff7300 1px solid; FONT-SIZE: 14px; BORDER-LEFT: #ff7300 1px solid; WIDTH: 64px; BORDER-BOTTOM: #ff7300 1px solid; BACKGROUND-COLOR: #ffffff
+}
+
+.S {
+	FONT-SIZE: 12px
+}
+.C {
+	FONT-SIZE: 14px
+}
+.M {
+	FONT-WEIGHT: bold; FONT-SIZE: 14px; LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-VARIANT: normal
+}
+
+
+A.lanse {
+	cOLOR: #073E66;
+	FONT-SIZE: 9pt;
+	text-decoration: none;
+}
+A.lanse:visited {
+	COLOR: #073E66;
+	FONT-SIZE: 9pt;
+	text-decoration: none;
+}
+A.lanse:link {
+	COLOR: #073E66;
+	FONT-SIZE: 9pt;
+	text-decoration: none;
+}
+A.lanse:hover {
+	COLOR: #FF7E00;
+	FONT-SIZE: 9pt;
+	text-decoration: underline;
+}
+.text1{ font-family:"ËÎÌו"; font-size:14px; color:#ff7300; font-weight:bold;}
+.text2{ font-family:"ËÎÌו"; font-size:12px; color:#000000;}
+
+
+
+

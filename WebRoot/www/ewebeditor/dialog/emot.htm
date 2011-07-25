@@ -1,0 +1,100 @@
+<HTML>
+<HEAD>
+<META http-equiv=Content-Type content="text/html; charset=gb2312">
+<script language="javascript" src="dialog.js"></script>
+<link href='dialog.css' type='text/css' rel='stylesheet'>
+<TITLE>插入表情图标</TITLE>
+
+<script language=javascript>
+
+function emotclick(){
+	if ("IMG"==event.srcElement.tagName.toUpperCase()) {
+		var url = relativePath2setPath(event.srcElement.getAttribute("src", 2).substr(3));
+		dialogArguments.insertHTML("<IMG id=eWebEditor_TempElement_Img SRC=" + url + ">");
+
+		var oTempElement = dialogArguments.eWebEditor.document.getElementById("eWebEditor_TempElement_Img");
+		oTempElement.src = url;
+		oTempElement.removeAttribute("id");
+
+		window.returnValue = null;
+		window.close();
+	}
+}
+document.onclick=emotclick;
+
+function InitDocument(){
+	adjustDialog();
+}
+</script>
+</HEAD>
+
+<BODY onload="InitDocument()">
+<table border=0 cellpadding=0 cellspacing=5 id=tabDialogSize><tr><td>
+
+
+<TABLE cellSpacing=5 border=0 align=center bgcolor=#FFFFFF>
+  <TBODY>
+  <TR>
+    <TD><IMG src="../sysimage/emot/001.gif"></TD>
+	<TD><IMG src="../sysimage/emot/002.gif"></TD>
+	<TD><IMG src="../sysimage/emot/003.gif"></TD>
+	<TD><IMG src="../sysimage/emot/004.gif"></TD>
+	<TD><IMG src="../sysimage/emot/005.gif"></TD>
+	<TD><IMG src="../sysimage/emot/006.gif"></TD>
+	<TD><IMG src="../sysimage/emot/007.gif"></TD>
+	<TD><IMG src="../sysimage/emot/008.gif"></TD>
+	<TD><IMG src="../sysimage/emot/009.gif"></TD>
+	<TD><IMG src="../sysimage/emot/010.gif"></TD></TR>
+  <TR>
+    <TD><IMG src="../sysimage/emot/011.gif"></TD>
+	<TD><IMG src="../sysimage/emot/012.gif"></TD>
+	<TD><IMG src="../sysimage/emot/013.gif"></TD>
+	<TD><IMG src="../sysimage/emot/014.gif"></TD>
+	<TD><IMG src="../sysimage/emot/015.gif"></TD>
+	<TD><IMG src="../sysimage/emot/016.gif"></TD>
+	<TD><IMG src="../sysimage/emot/017.gif"></TD>
+	<TD><IMG src="../sysimage/emot/018.gif"></TD>
+	<TD><IMG src="../sysimage/emot/019.gif"></TD>
+	<TD><IMG src="../sysimage/emot/020.gif"></TD></TR>
+  <TR>
+    <TD><IMG src="../sysimage/emot/021.gif"></TD>
+	<TD><IMG src="../sysimage/emot/022.gif"></TD>
+	<TD><IMG src="../sysimage/emot/023.gif"></TD>
+	<TD><IMG src="../sysimage/emot/024.gif"></TD>
+	<TD><IMG src="../sysimage/emot/025.gif"></TD>
+	<TD><IMG src="../sysimage/emot/026.gif"></TD>
+	<TD><IMG src="../sysimage/emot/027.gif"></TD>
+	<TD><IMG src="../sysimage/emot/028.gif"></TD>
+	<TD><IMG src="../sysimage/emot/029.gif"></TD>
+	<TD><IMG src="../sysimage/emot/030.gif"></TD></TR>
+  <TR>
+    <TD><IMG src="../sysimage/emot/031.gif"></TD>
+	<TD><IMG src="../sysimage/emot/032.gif"></TD>
+	<TD><IMG src="../sysimage/emot/033.gif"></TD>
+	<TD><IMG src="../sysimage/emot/034.gif"></TD>
+	<TD><IMG src="../sysimage/emot/035.gif"></TD>
+	<TD><IMG src="../sysimage/emot/036.gif"></TD>
+	<TD><IMG src="../sysimage/emot/037.gif"></TD>
+	<TD><IMG src="../sysimage/emot/038.gif"></TD>
+	<TD><IMG src="../sysimage/emot/039.gif"></TD>
+	<TD><IMG src="../sysimage/emot/040.gif"></TD></TR>
+  <TR>
+    <TD><IMG src="../sysimage/emot/041.gif"></TD>
+	<TD><IMG src="../sysimage/emot/042.gif"></TD>
+	<TD><IMG src="../sysimage/emot/043.gif"></TD>
+	<TD><IMG src="../sysimage/emot/044.gif"></TD>
+	<TD><IMG src="../sysimage/emot/045.gif"></TD>
+	<TD><IMG src="../sysimage/emot/046.gif"></TD>
+	<TD><IMG src="../sysimage/emot/047.gif"></TD>
+	<TD><IMG src="../sysimage/emot/048.gif"></TD>
+	<TD><IMG src="../sysimage/emot/049.gif"></TD>
+	<TD><IMG src="../sysimage/emot/050.gif"></TD></TR>
+</TBODY></TABLE>
+
+
+</td></tr></table>
+</BODY></HTML>
+
+
+
+

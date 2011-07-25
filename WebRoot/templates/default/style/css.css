@@ -1,0 +1,82 @@
+@import url("../style/layout.css");
+BODY {
+	MaRGIN: 0px;
+	COLOR: #656565
+}
+a {
+	COLOR: #656565;
+	TEXT-aLIGN: right;
+	TEXT-DECORaTION: none
+}
+a:hover {
+	COLOR: #656565;
+	TEXT-DECORaTION: underline
+}
+img.daohang {
+	BORDER-TOP-WIDTH: 0px;
+	PaDDING-RIGHT: 5px;
+	BORDER-LEFT-WIDTH: 0px;
+	BORDER-BOTTOM-WIDTH: 0px;
+	BORDER-RIGHT-WIDTH: 0px
+}
+td.daohang {
+	PaDDING-RIGHT: 10px
+}
+td.zuodaohang {
+	PaDDING-LEFT: 45px;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 12px;
+	FONT-FaMILY: "";
+	TEXT-aLIGN: left
+}
+a.zuodaohang {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 12px;
+	COLOR: #656565;
+	TEXT-DECORaTION: none;width:179px; height:21px;
+}
+.zdhbg1 {
+	BaCKGROUND-IMaGE: url(../images/zdhbg2.jpg);
+	BaCKGROUND-REPEaT: no-repeat
+}
+td.neirongbiaoti {
+	PaDDING-LEFT: 40px;
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 12px;
+	VERTICaL-aLIGN: middle;
+	FONT-FaMILY: "";
+	TEXT-aLIGN: left
+}
+td.sjdynrbg2 {
+	BORDER-RIGHT: #e5e5e5 1px solid;
+	BORDER-LEFT: #e5e5e5 1px solid
+}
+td.rdmore {
+	FONT-SIZE: 12px;
+	VERTICaL-aLIGN: top;
+	LINE-HEIGHT: 23px;
+	FONT-FaMILY: "";
+	TEXT-aLIGN: right
+}
+td.biaoti {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 12px;
+	line-height:20px;
+	FONT-FaMILY: ""
+}
+td.dtbt {
+	FONT-WEIGHT: bold;
+	FONT-SIZE: 12px; color:#ffffff;
+	line-height:30px; width:120px; height:30px; background:url(../images/dtbt.gif) center left no-repeat; text-align:center;
+}
+td.neirong {
+	FONT-WEIGHT: 500;
+	FONT-SIZE: 12px;
+	LINE-HEIGHT: 26px;
+}
+a.rdmore {
+	FONT-SIZE: 12px;
+	COLOR: #ed8000;
+	TEXT-DECORaTION: none
+}
+.img{ padding-top:5px;}

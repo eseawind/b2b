@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link rel="stylesheet" type="text/css" href="/templates/default/style/product.css" />
+	<script language="javascript" src="/templates/default/js/disImage.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312" />
+<title>{ecms:this name="ch_name"/}---{ecms:base name="webtitle"/}</title>
+</head>
+<body>
+<!--头部-->
+{ecms:include file="/templates/default/templates/top.html"/}
+
+<!--内容-->
+<div id="main" >
+	<!--木业产品分类-->
+	<div class="main_box">
+			<div class="product_lmt"> 
+				<div class="div_lmt"><span>产品分类</span></div>
+				{ecms:channel type="self"} 
+				<div class="more_lin lin2"><a href="[field:moreurl/]">更多>></a></div>
+				{/ecms:channel}
+			</div>
+			<div class="prodct_list link_xian">
+				{ecms:classlist row="10" type="2" cmodel="product" up_class_id="000000000000000"}
+					<dl>
+						<dt><a href="[field:class_path/]">[field:class_name/]</a></dt>
+						{ecms:smallclasslist row="100" type="2" up_class_id="[field:class_id/]" cmodel="product"}	
+						<dd><a href="[field:small_class_path/]">[field:small_class_name/]</a> |</dd>
+						{/ecms:smallclasslist}
+					</dl>
+				{/ecms:classlist}
+			</div>
+		</div>
+	
+	<!--产品推荐-->
+	<div class="main_box">
+		<div class="product_lmt"> 
+			<div class="div_lmt"><span>产品推荐</span></div>
+			{ecms:channel type="self"} 
+			<div class="more_lin lin2"><a href="[field:moreurl/]">更多>></a></div>
+			{/ecms:channel}
+		</div>
+		<div class="prodct_list_img">
+			<ul>
+				{ecms:articlelist row="14" recommend="1" imgwidth="93" imgheight="76" titlelen="9" cmodel="product"}
+				<li><a href="[field:arcurl/]">[field:imgurl/]</a><br><a href="[field:arcurl/]">[field:title/]</a></li>
+				{/ecms:articlelist}
+			</ul>	
+		</div>
+	</div>
+</div>
+
+
+<!--footer-->
+<!--footer-->
+<div id="link">友情链接:
+	{ecms:friendlink row="25"}
+		<a href="[field:link_url/]">[field:link_name/]</a> |
+	{/ecms:friendlink}
+</div>
+<!--footer-->
+{ecms:include file="/templates/default/templates/footer.html"/}
+</body>
+</html>
+
+
