@@ -48,7 +48,7 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=GBK" />
-		<title> 贞龙 电子商务平台--<%=paran%>
+		<title> 中国生产商 电子商务平台--<%=paran%>
 		</title>
 		<script type="text/javascript" src="/js/prototype.js"></script>
 		<style type="text/css">

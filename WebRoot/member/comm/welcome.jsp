@@ -37,7 +37,7 @@ body {
     }
     else if( cust_id == "" || cust_id.equals("") )
     {
-       temp = "欢迎您！ -进入贞龙电子商务平台";
+       temp = "欢迎您！ -进入中国生产商电子商务平台";
     }
     out.print(temp);
 %>

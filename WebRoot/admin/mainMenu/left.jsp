@@ -12,6 +12,7 @@
 	if (request.getParameter("subsys_code") != null) 
 	{
 		subsys_code = request.getParameter("subsys_code");
+		System.out.println("-->"+subsys_code);
 	}
 	HttpSession left_session = request.getSession();
 	String user_name = "", user_id = "", user_class = "", role_code = "", user_type = "",cust_type = "",cust_id="";

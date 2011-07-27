@@ -75,7 +75,7 @@
  </center>
  <center> 
 	<p><a href="/admin/mainMenu/onlineUser.jsp?username=<%=username%>">返回</a> </p>
-  	<p>合肥贞龙信息技术有限公司 制作</p>
+  	<p> 中国生产商信息技术有限公司 制作</p>
  	<p><a href="/admin/out.jsp?username=<%=username%>">退出系统</a> 
  </center> 
 </body> 

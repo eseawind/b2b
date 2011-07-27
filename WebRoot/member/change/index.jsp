@@ -175,7 +175,7 @@
 <span><IMG src="/admin/images/ucs2.gif" align="absmiddle"> 产品购买咨询：肖先生
     (QQ)<a href="http://wpa.qq.com/msgrd?V=1&Uin=31688721&Site=a-hai.net&Menu=yes tencent://message/?uin=31688721" target=_blank class="lanse">31688721</a> 
     (MSN)<a href=msnim:chat?contact=xiaobo68@gmail.com>xiaobo68@gmail.com</a></span> <BR>
-  	<a href="http://www.wanglong.cc" target="_blank" class="lanse">合肥贞龙信息技术有限公司</a> 版权所有 &copy;  2008  保留所有权利 <BR>
+  	<a href="http://www.wanglong.cc" target="_blank" class="lanse"> 中国生产商信息技术有限公司</a> 版权所有 &copy;  2008  保留所有权利 <BR>
 		<A href="http://www.wanglong.cc/html/wanglongxinwen/200808/20-17.html" target="_blank" class="lanse">关于我们</A> | <A href="http://www.wanglong.cc/html/yonghubangzhu/200808/18-12.html" target="_blank" class="lanse">联系我们</A> | <A href="http://www.miibeian.gov.cn/" target=_blank>皖ICP备07039386号</A> 
 		<br />
 

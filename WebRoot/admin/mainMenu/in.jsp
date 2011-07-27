@@ -110,7 +110,7 @@
                 你好！ <span style="color:#FF6633;">你已成功登陆本站!</span> </div>
                 	  <div class="welcome_02">进入主页查看信息&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://b2b.bizoss.com/">进入主页</a></div>
 						<%if(ifCertfied){%>
-						<span style="color:#666; line-height:36px;">欢迎首次进入贞龙电子商务平台！为确保信息的完整性，请把下面的资料填写完整。</span><br>
+						<span style="color:#666; line-height:36px;">欢迎首次进入中国生产商电子商务平台！为确保信息的完整性，请把下面的资料填写完整。</span><br>
 						<%}
 						if (cust_class.equals("1")) {
 						%>

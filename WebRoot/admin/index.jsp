@@ -295,7 +295,7 @@ body {
 												<a
 													href="http://wpa.qq.com/msgrd?V=1&Uin=1182350564&Site=a-hai.net&Menu=yes tencent://message/?uin=1182350564">1182350564
 												</a>
-												<a href="http://www.bizoss.com">合肥贞龙信息科技有限责任公司 </a> 版权所有 @
+												<a href="http://www.bizoss.com"> 中国生产商信息科技有限责任公司 </a> 版权所有 @
 												2008 保留所有权利
 												<a href="http://www.miibeian.gov.cn/">皖ICP备05015140号 </a>
 												<br>

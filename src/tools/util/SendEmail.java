@@ -26,7 +26,7 @@ public class SendEmail
       localPopupAuthenticator.performCheck("eatba", "05568925952");
       Session localSession = Session.getInstance(localProperties, localPopupAuthenticator);
       MimeMessage localMimeMessage = new MimeMessage(localSession);
-      localMimeMessage.setDescription("合肥吃吧");
+      localMimeMessage.setDescription(" 吃吧");
       localMimeMessage.setFrom(new InternetAddress("eatba@163.com"));
       localMimeMessage.setRecipient(Message.RecipientType.TO, new InternetAddress(paramString));
       String str1 = "邮件主题subject";
