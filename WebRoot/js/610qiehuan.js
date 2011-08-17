@@ -581,9 +581,9 @@ if(keyW&&keyW!="")document.getElementById("sr_keyw").value = decodeURI(keyW);
 }
 function getQuery(name)
 {
- var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
- var r = location.href.substr(location.href.indexOf("\?")+1).match(reg);
- if (r!=null) return r[2]; return null;
+　　var reg = new RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
+　　var r = location.href.substr(location.href.indexOf("\?")+1).match(reg);
+　　if (r!=null) return r[2]; return null;
 }
 function getkeyword(obj){
 var skey = document.getElementById("sr_keyw").value;

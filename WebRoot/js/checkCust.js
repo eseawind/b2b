@@ -47,8 +47,8 @@ function CheckCustValue()
 					mail.charAt(0)=="@"|| 
 					mail.indexOf('@', 0) == -1 || 
 					mail.indexOf('.', 0) == -1 || 
-					mail.lastIndexOf("@")  
-					  ==mail.length-1 || 
+					mail.lastIndexOf("@") ¡¡¡¡
+					¡¡ ==mail.length-1 || 
 					mail.lastIndexOf(".")
 					==mail.length-1)
 					{

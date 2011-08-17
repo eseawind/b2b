@@ -169,7 +169,7 @@
           }
         function changeCode2()
           {
-           document.getElementById("rc").src= "../checkImage";
+           document.getElementById("rc").src= "../../checkImage";
           }
          function keysubmit(obj)
 		  	{
