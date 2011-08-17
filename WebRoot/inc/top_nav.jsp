@@ -40,7 +40,7 @@
 	<td colspan="2" valign="top">
 		<div class="top-bj">
 			<div class="top-logo">
-				<img src="images/logo.png" width="189" height="70" />
+				<img src="images/ad/logo1.jpg" width="189" height="70" />
 			</div>
 			<div class="top-logo" style="margin-left:10px">
 				 

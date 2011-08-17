@@ -78,7 +78,8 @@ A:hover{
 		color:#fff;}
 .button_14{font-size:14px; width:60px; color:#444; font-weight:bold;}
 .button{ background:url(../images/button.gif) left center no-repeat; width:56px; height:20px; padding-left:17px; line-height:20px; font-size:12px; border:0;}
-.search_button{font-size:14px; text-align:center; font-weight:bold; color:#000; background:url(../images/search_button.gif) no-repeat; height:27px; line-height:26px; width:113px; letter-spacing:0.1em; border:0;}
+.search_button{font-size:14px; text-align:center;Padding-right:10px;
+font-weight:bold; color:#000; background:url(../images/search_button.gif) no-repeat; height:27px; line-height:26px; width:113px; letter-spacing:0.1em; border:0;}
 .link_xian a:link, .link_xian a:visited, .link_xian a:hover{ 
 		text-decoration: underline;}
 .dd_luse{ color:#006D08; font-weight:bold;}
@@ -103,9 +104,9 @@ A:hover{
 
 
 
-#logo{ height:72px; width:500px; position: relative; float:left;}
+#logo{Padding-left:0px; height:72px; width:500px; position: relative; float:left;}
 
-#logo .logo_img{height:72px; margin:0 auto; width:370px;float:left}
+#logo .logo_img{height:76px;margin:1 auto; width:300px;float:left}
 #logo .logo_img h1 {left:325px; position:absolute; top: 10px;}
 #logo .logo_img.search {left:200px; position:absolute; top: 10px;}
 #logo .logo_img h1 a{position: relative; z-index:2; DISPLAY: block; width:650px; text-indent:20px; height:52px;}
@@ -116,16 +117,16 @@ A:hover{
 
 /*菜单搜索框*/
 .nav_search_box{ width:700px; margin:0 auto; height:50px;}
-.search_list{ float:left; width:700px; text-align:center; color:#000;}
+.search_list{Padding-top:10px;Padding-right:50px;   width:800px; text-align:right; color:#000;}
 .search_list span{ cursor:hand; color:#000; padding:5px 5px ; font-family:Arial, Helvetica, sans-serif;}
-.search_box{ float:left; width:500px; line-height:32px; padding-left:230px;}
+.search_box{ width:700px; line-height:32px; padding-left:450px;Margin-top：100px}
 /*.search_box_bg{ float:left; background:url(../images/search_t_09.gif) right top no-repeat; width:auto; margin:0 5px;}*/
 .search_box_bg span{ float:left; left top no-repeat; height:39px; padding:4px; width:420px;}
 
 /*菜单*/
-#nav{ width:950px; height:37px; margin:0 auto; MARGIN-TOP: 5px; background:url(../images/abtob_nav_bg.gif) left top no-repeat;}
+#nav{ width:950px; height:37px; margin:0 auto; MARGIN-TOP: 75px; background:url(../images/abtob_nav_bg.gif) left top no-repeat;}
 #nav .nav_menu{ float:left; width:550px; padding-left:33em; }
-#nav .nav_menu li{ float:left; width:auto; line-height:29px; font-size:14px; font-weight:bold; padding:6px 5px 0 0; color:#fff; WHITE-SPACE: nowrap;}
+#nav .nav_menu li{ float:left; width:auto; line-height:30px; font-size:14px; font-weight:bold; padding:4px 5px 0 0; color:#fff; WHITE-SPACE: nowrap;}
 
 
 /*id调用菜单背景色*/

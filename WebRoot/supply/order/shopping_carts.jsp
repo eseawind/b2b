@@ -74,7 +74,7 @@
 	  </div>
 <!--//logo-->
 <div id="logo">
-		<div class="logo_img" style=" background:url(/templates/default/images/logo.png) no-repeat top center !important; background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src='/templates/default/images/logo.png'">
+		<div class="logo_img" style=" background:url(/templates/default/images/ad/logo1.jpg) no-repeat top center !important; background:none; _filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src='/templates/default/images/ad/logo1.jpg'">
 			<h1>
 				<a href="http://www.huipoo.com"></a>
 			</h1>

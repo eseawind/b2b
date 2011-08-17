@@ -7,7 +7,7 @@
 
 .time_950{ float:left; width:950px; height:62px; margin-top:10px; background:url(/templates/default/images/abtob_18.gif) left top no-repeat;}
 .time_950 .t1{ float:left; width:95px; font-size:30px; letter-spacing:0.1em; color:#EC4E17; text-align:center; line-height:62px; font-weight:bold; font-family:Arial, Helvetica, sans-serif;}
-.time_950 .t2{ float:left; width:544px; margin-top:10px; }
+.time_950 .t2{ float:left; width:520px; margin-top:9px; }
 .time_950 .t2_button{width:94px; float:right;}
 .time_950 .t2_button span{width:94px; float:left; text-indent:1em;}
 .time_950 .t2 dt{ width:90px; padding-top:2px;}

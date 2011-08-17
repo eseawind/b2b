@@ -10,7 +10,7 @@
 <body>
 
 <div id="login_top">
-	<div class="logo" style="background:url(/templates/default/images/logo.png) no-repeat left top !important; background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src='/templates/default/images/logo.png'">
+	<div class="logo" style="background:url(/templates/default/images/ad/logo1.jpg) no-repeat left top !important; background:none; _filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=image, src='/templates/default/images/ad/logo1.jpg'">
 	<h1><a href="http://b2b.bizoss.com" title="安徽制造业信息化商务平台(http://www.huipoo.com)">安徽制造业信息化商务平台(http://www.huipoo.com)</a></h1>
 	</div>
 	<div class="top_right lin4"> 
